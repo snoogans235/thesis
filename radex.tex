@@ -1,0 +1,68 @@
+\chapter{RADEX}\label{appendixRADEX}
+
+
+RADEX \citep{2007A&A...468..627V} is a one-dimenional non-local thermal equilibrium (LTE) statistical radiative transfer code. It was originally written by John Black with improvements made in Leiden. The code uses the escape probability formulation assuming an isothermal and homogeneous medium without large-scale velocity fields. Since the code assumes a homogeneous medium, it does not know anything about the geometry or velocity fields. It also does not know if the escape probability assumption holds true. This code is similar to the large velocity gradient (LVG) method and provides a simple way to constrain physical conditions such as density and kinetic temperature using observational data. 
+
+\section{Escape Probability}
+
+ The probability that the photon will escape the medium from where it was created, $\beta$, depends only on the optical depth $\tau$. RADEX offers the user a choice of three different escape probabilities for specific geometry assumptions. The first is the expression used for an expanding spherical shell also known as the LVG approximation, 
+ \begin{equation}
+ \beta_{LVG} = \frac{1}{\tau} \int_0^\tau e^{-\tau^{\prime}}\,d\tau^{\prime} = \frac{1 - e^{-\tau}}{\tau}.
+ \end{equation}
+The second is for the case of a static, homogenous spherically symmetric medium given by
+\begin{equation}
+\beta_{sphere} = \frac{1.5}{\tau}\left[ 1- \frac{2}{\tau^{2}} +\left(\frac{2}{\tau} + \frac{2}{\tau^{2}}\right)e^{-\tau}\right].
+\end{equation}
+The third is for a plane-parallel ``slab" geometry, applicable to shocks given by
+\begin{equation}
+\beta_{slab} = \frac{1-e^{-3\tau}}{3\tau}
+\end{equation}
+Figure \ref{radextauplot} taken from \citet{2007A&A...468..627V} shows the behaviour of $\beta$ as a function of $\tau$ for comparison. For our analysis we use the LVG approximation escape probability. This will enable us to compare our results with previous LVG modeling 
+
+\begin{figure}[h]
+\centering
+%$\begin{array}{c@{\hspace{0.5in}}c}
+\includegraphics[scale=0.8]{ThesisFigures/radextauplotappendix.png} %& \includegraphics[trim=2cm 17cm 3cm 0cm, clip,scale=0.42]{ProposalFigures/wkk2031hst814.pdf}
+%\end{array}$
+\caption[Escape probability $\beta$ as a function of $\tau$]{Escape probability $\beta$ as a function of $\tau$ taken from \citet{2007A&A...468..627V} for different geometries: uniform sphere (solid line), expanding sphere (LVG; dotted line) and plane-parallel slab (dashed line).}
+\label{radextauplot}
+\end{figure}
+
+\section{Capabilities}
+
+For a homogeneous medium, the optical depth is given by
+\begin{equation}
+\tau = \frac{c^{3}}{8\pi \nu_{ul}^{3}} \frac{A_{ul}N_{mol}}{1.064\Delta V} \left[ x_{l}\frac{g_{u}}{g_{l}} -x_{u}\right]
+\end{equation}
+where $A_{ul}$ is the Einstein coefficient for spontaneous emission, $N_{mol}$ is the molecular column density, $\Delta V$ is the full width half-maximum (FWHM) in velocity units, $x_{i}$ is the fraction population of level $i$ and $g_{i}$ is the statistical weight of level $i$.  
+RADEX takes the following inputs:
+\begin{itemize}
+\item The molecule required for modeling 
+\item The name of the output file
+\item Spectral range of the required transition lines for the output in GHz 
+\item The blackbody temperature of the background radiation field (taken to be $T_{CBR}$ =2.73K)
+\item The kinetic temperature of the molecular cloud in K 
+\item The number density of the collisional partner (in most cases H$_{2}$) in cm$^{-3}$
+\item The column density of the molecule in cm$^{-2}$
+\item The FWHM of the line in km s$^{-1}$; assumed the same for all transition lines
+\end{itemize}
+The output file contains the inputs from the user and the radiative transfer solution which includes:
+\begin{itemize}
+\item The excitation temperature of the molecule (K)
+\item The optical depth, $\tau$ at the line center 
+\item $T_{R}$. the Rayleigh-Jeans equivalent of the intensity of the line with the background subtracted; this is the value that is observed by the telescope.
+\item The upper and lower population levels
+\item The flux in units of K km s$^{-1}$ and erg cm$^{-2}$ s$^{-1}$.
+\end{itemize}
+Figure \ref{radexoutput} shows a sample output for two RADEX runs which show that runs with the same $N/dV$ values result in the same output. For the ratio values, we make use of the flux in K km s$^{-1}$. 
+
+
+
+\begin{figure}[h]
+\centering
+%$\begin{array}{c@{\hspace{0.5in}}c}
+\includegraphics[trim= 1cm 10cm 1cm 3.1cm,clip,scale=0.8]{ThesisFigures/Ndv.pdf} %& \includegraphics[trim=2cm 17cm 3cm 0cm, clip,scale=0.42]{ProposalFigures/wkk2031hst814.pdf}
+%\end{array}$
+\caption[Sample output from two RADEX runs]{Sample output from two RADEX runs with $T_{kin}$ =20 K and density of H$_{2}$=10$^{4}$ cm$^{-3}$. The first run has a column density of $N(^{12}CO)$ = 10$^{15}$ cm$^{-2}$ and line width dV=1 km s$^{-1}$. The second run has a column density of $N(^{12}CO)$ = 10$^{17}$ cm$^{-2}$ and line width dV=100 km s$^{-1}$. Both runs have the same $N/dV$ values which result in the same output.}
+\label{radexoutput}
+\end{figure}

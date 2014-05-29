@@ -1,0 +1,230 @@
+\chapter{Results}
+
+\section{Line Ratios}
+
+Using the ratio maps (see Figure \ref{RatioMaps}), we obtain the ratio values at the peak pixel of each region in the $^{12}$CO J=3-2 map. The ratio and 1$\sigma$ values are presented in Table \ref{lineratios}. The 1$\sigma$ values are calculated assuming a 20$\%$ calibration error for each map for the $^{12}$CO $\frac{J=3-2}{J=2-1}$ and $^{12}$CO $\frac{J=2-1}{J=1-0}$ and a 10$\%$ calibration error for each map for the $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=2-1 ratio since these maps were observed simultaneously. The $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=2-1 ratios reveal that regions A and B have similar physical conditions and regions C and A$^\prime$ have similar physical conditions. We see that including short spacings with the JCMT maps does not change the peak ratio values significantly for each major region except for the disk portion of region A. It is interesting to see that before correcting for missing short spacings, the physical conditions of the disk portion of region A are similar to those of region C. 
+
+Our interferometric $^{12}$CO $\frac{J=3-2}{J=2-1}$ ratio values are the first for Arp 299. \citet{1995A&A...300..369A} calculated CO  line ratios for Arp 299 using the 12 m NRAO observatory. With the poor resolution, line ratios for each individual region were difficult to obtain. They find the following line ratios : $^{12}$CO $\frac{J=2-1}{J=1-0}$ = 0.95 $\pm$0.06, $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=1-0 $\geq$ 19, $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=2-1 =17 $\pm$ 2 and $^{13}$CO $\frac{J=2-1}{J=1-0}$ $\geq$ 1.2 for region A. We see that the $^{12}$CO $\frac{J=2-1}{J=1-0}$ line ratio differs from our own value greatly (see Table 3.1). This could be explained by a line ratio gradient. Our $^{12}$CO $\frac{J=2-1}{J=1-0}$ line ratio does not include short spacings making the value sensitive only to small scale structures. \citet{1997ApJ...475L.107A}  used the OVRO to calculate line ratios. They found $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=1-0 that ranged from 10 $\pm$ 3 (region C) to 60 $\pm$ 15 (region A). \citet{1997ApJ...475L.107A} suggest that the unusually high ($>$ 20) $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=1-0 line ratios are due to a small or moderate optical depth ($\tau$ $\leq$ 1) in the $^{12}$CO J=1-0 line. Our $^{12}$CO $\frac{J=2-1}{J=1-0}$ line ratios also indicate that the $^{12}$CO J=1-0 line has an optical depth of less than 1 (i.e. optically thin) which is quite unusual. \\
+\indent \citet{1999A&A...346..663C} used the PdB combined with the IRAM 30m dish to calculate similar line ratios to those of \citet{1997ApJ...475L.107A}. They found $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=1-0 line ratios of 24 $\pm$2 for region A, 29 $\pm$ 3 for region B, 16$\pm$ 1 for region C and 10 $\pm$ 1.5 for region A$^{\prime}$. These ratio values are very similar to what we find with $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=2-1 and are quite different from what \citet{1997ApJ...475L.107A} found. \citet{1999A&A...346..663C} suggests that the difference in the line ratios arises from the way the continuum subtraction is performed. They suggest that \citet{1997ApJ...475L.107A}  may have removed too much continuum for region A from their $^{13}$CO J=1-0 map giving rise to a larger line ratio although they do warn that it is difficult to compare the two results because their maps include short spacings. 
+
+\begin{deluxetable}{lcccc}
+\tablecolumns{5}
+\tablewidth{0pt}
+\tablecaption{CO Line Ratios}
+\label{lineratios}
+\tablehead{\colhead{Region} & \colhead{$^{12}$CO $\frac{J=3-2}{J=2-1}$\tablenotemark{a}} &  \colhead{$^{12}$CO $\frac{J=3-2}{J=2-1}$\tablenotemark{b}} &\colhead{$^{12}$CO $\frac{J=2-1}{J=1-0}$} & \colhead{$\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=2-1} }
+\startdata
+A (IC 694)		&0.74 $\pm$ 0.21	&0.71 $\pm$ 0.20	&1.45 $\pm$ 0.41	&30.9 $\pm$ 4.4		\\
+B (NGC 3690)	&0.72 $\pm$ 0.20	&0.73 $\pm$ 0.21	&1.77 $\pm$ 0.50	&27.3 $\pm$ 3.9		\\
+C (Overlap)	&0.51 $\pm$ 0.15	&0.52 $\pm$ 0.15	&1.50 $\pm$ 0.42	&17.2 $\pm$ 2.4		\\
+A$^\prime$ (IC 694 Disk)	&0.77 $\pm$ 0.22 	&0.58 $\pm$ 0.16	&1.54 $\pm$ 0.44	&12.6 $\pm$ 1.8		\\
+\enddata
+\tablenotetext{a}{Using feathered maps}
+\tablenotetext{b}{Using SMA only maps}
+\end{deluxetable}
+
+\section{Properties}
+
+The dynamical mass, $M_{dyn}$, of each region can be calculated using the $^{12}$CO J=3-2 map which has the best resolution and the equation from \citet{1990ApJ...363..435W} 
+\begin{equation}
+M_{dyn} = 99\Delta V_{FWHM}^{2} D\mbox{(pc)} M_{\odot}
+\end{equation}
+where $\Delta V_{FWHM}$ is the CO line full width half-maximum in km s$^{-1}$ and $D$(pc) is the diameter of the cloud/region in pc. The velocity line width FWHM of each region was fitted to a Gaussian and the results are presented in Table \ref{dv}. The FWHM values are quite consistent through each map. The size of each region was obtained by fitting to a two dimensional Gaussian. The source sizes listed in Table 3.3 are deconvolved from the beam size and measured in the $^{12}$CO J=3-2 map (the best resolution map). Using the dynamical masses and source sizes, we can put an upper limit to the column density of $^{12}$CO using the prior in \citet{2010A&A...518L..37P}
+
+\begin{equation}\label{column}
+\mathrm{N(^{12}CO)} < \frac{M_{dyn}x_{CO}}{m_{H_{2}}\mu} \times \frac{1}{\pi R^{2}}
+\end{equation}
+where $x_{CO}$ is the abundance of CO relative to H$_{2}$, $x_{CO}$ = 3 $\times$ 10$^{-4}$ (Ward et al. 2003), $m_{H_{2}}$ is the mass of a molecular hydrogen molecule, $\mu$ is the mean molecular weight in units of $m_{H_{2}}$ (=1.4) and R is the radius of the region. This prior assures us that the $^{12}$CO column density obtained from the radiative transfer fits does not exceed the dynamical mass of each region (see Table 3.4). 
+
+
+\begin{deluxetable}{ccccc}
+\tablecolumns{5}
+\tablewidth{0pt}
+\tablecaption{Fitted Gaussian Line Width (FWHM) for each region}
+\label{dv}
+\tablehead{\colhead{} & \multicolumn{4}{c}{FWHM (km s$^{-1}$)}  \\ \cline{2-5} \\ \colhead{Region} & \colhead{$^{12}$CO J=1-0}& \colhead{$^{12}$CO J=2-1}& \colhead{$^{13}$CO J=2-1}& \colhead{$^{12}$CO J=3-2} }
+\startdata
+A 	&290	&310	&290	& 325	\\
+B 	&185	&180	&150	&185	\\
+C 	&80		&80		&70		&80		\\
+A$^\prime$	&90		&90		&100	&90		 
+\enddata
+ %\tablenotetext{}{}
+\end{deluxetable}
+
+\begin{deluxetable}{ccc}
+\tablecolumns{3}
+\tablewidth{0pt}
+\tablecaption{Deconvolved Gaussian Source Sizes}
+\label{size}
+\tablehead{\colhead{Region} & \colhead{FWHM (arcsec)} & \colhead{FWHM (parsec)}  }
+\startdata
+A 	&1.7 $\times$ 1.2	&360 $\times$ 260		\\
+B 	&2.0 $\times$ 1.4	&430 $\times$ 300		\\
+C 	&10 $\times$ 1.6	&2100 $\times$ 340			\\
+A$^\prime$	&6.1 $\times$ 2.3	&1300 $\times$ 490		
+\enddata
+ %\tablenotetext{}{}
+\end{deluxetable}
+
+\begin{deluxetable}{cccc}
+\tablecolumns{4}
+\tablewidth{0pt}
+\tablecaption{Dynamical Masses and Priors}
+\label{priors}
+\tablehead{\colhead{Region} & \colhead{M$_{dyn}$} & \colhead{Diameter}  &\colhead{Column Density Prior} \\ \colhead{} & \colhead{($M_{\odot}$)} & \colhead{(pc)} & \colhead{(cm$^{-2}$)} }
+\startdata
+A 	&3.2 $\times$ 10$^{9}$ 	& 300	&	6.2 $\times$ 10$^{20}$ 	\\
+B 	&1.3 $\times$ 10$^{9}$ 	& 360	&	1.7 $\times$ 10$^{20}$ 	\\
+C 	&5.0 $\times$ 10$^{8}$ 	& 845	&	1.2 $\times$ 10$^{19}$ 
+\enddata
+ %\tablenotetext{}{}
+\end{deluxetable}
+
+
+\section{RADEX}
+
+To constrain the temperature and density of each region, we use the radiative transfer code RADEX \citep{2007A&A...468..627V}. RADEX is a simple radiative transfer code that assumes a homogeneous medium making it a useful tool to constrain the physical conditions such as density and temperature using observational data. The user must input a molecular column density ($N$(cm$^{-2}$)), the collision partner (i.e. H$_{2}$) and its density ($n(H_{2}$)), kinetic temperature ($T_{kin}$) and line width (km s$^{-1}$) for the particular observation (see appendix \ref{appendixRADEX} for more details). The code was run for each region and the disk portion of region A. We created a 3D grid of models varying $N$($^{12}$CO) in steps of 0.1 $\times$ 10$^{18}$ cm$^{-2}$, $T_{kin}$ in steps of 1K and log($n$(H$_{2}$)) in steps of 0.02. The input for each region is presented in Table 3.5. We use a $^{12}$CO to $^{13}$CO abundance ratio of 50. The RADEX solutions were plotted with $T_{kin}$ vs. $n(H_{2})$ for the appropriate line ratio and $\pm$1$\sigma$. The solutions are picked out where the three line ratios overlap within the $\pm$1$\sigma$ by inspection by eye (see Figure \ref{radexsolutions}). For region A, A$^{\prime}$ and B we see two situations, a density constrained with temperature unconstrained solution and a temperature constrained with density unconstrained solution. For region C, we have a constrained solution for both temperature and density. The solutions are summarized in Table 3.6. We discuss the solutions in Chapter 4.
+
+\begin{deluxetable}{clcccc}
+\tablecolumns{6}
+\tablewidth{0pt}
+\tablecaption{Radex INPUT Parameters}
+\label{radexinput}
+\tablehead{ \colhead{} & \colhead{} & \colhead{} &\colhead{}   & \multicolumn{2}{c}{Linewidth (dV)} \\  \cline{5-6}\\ \colhead{Region} & \colhead{T$_{kin}$} & \colhead{log($n(H_{2})$)} &\colhead{$N(^{12}$CO)\tablenotemark{a}}  & \colhead{$^{12}$CO} &\colhead{$^{13}$CO} \\ \colhead{} & \colhead{(K)} & \colhead{(cm$^{-3}$)} &\colhead{($\times$10$^{18}$ cm$^{-2}$)}   & \colhead{(km s$^{-1}$)} &\colhead{(km s$^{-1}$)}}
+\startdata
+A 	& 10-1000	& 2-8	& 0.9 - 50   & 325 & 325 \\
+B 	& 10-1000	& 2-8	& 0.9 - 50   & 185 & 185 \\
+C 	& 10-500		& 2-8	& 0.8 - 5  & 80  & 80 \\
+A$^{\prime}$  & 10-1000	& 2-8	& 0.9 - 50 &  90 & 90 \\
+\enddata
+ \tablenotetext{a}{Abundance ratio of [$^{12}$CO]/[$^{13}$CO] = 50 was used to determine $N(^{13}CO)$}
+\end{deluxetable}
+
+\begin{deluxetable}{ccccccc}
+\tablecolumns{7}
+\tablewidth{0pt}
+\tablecaption{Radex Results}
+\label{radexsol}
+\tablehead{\colhead{Region} & \colhead{N($^{12}$CO)} & \colhead{T$_{kin}$} & \colhead{n(H$_{2}$)} &\colhead{$\tau_{1-0}$} &\colhead{$\tau_{2-1}$} & \colhead{$\tau_{3-2}$} \\ \colhead{} & \colhead{(cm$^{-2}$)} & \colhead{(K)} & \colhead{(cm$^{-3}$)} & \colhead{} & \colhead{}& \colhead{}}
+\startdata
+A 	&1-10 $\times$ 10$^{18}$	&15-500	&$>$10$^{2.5}$	&-	 &- &-\\
+B 	&1-6 $\times$ 10$^{18}$		&15-1000	&$>$10$^{2.5}$	&-	&-&-\\
+C 	&0.9-2 $\times$ 10$^{18}$	&10-30	&10$^{3.5-4.5}$		&$\sim$0.8 -0.95	&$\sim$2-2.5&$\sim$2.3	\\
+A$^{\prime}$  & 2-30 $\times$ 10$^{18}$ 	&20-500	&$>$10$^{2.5}$	&- &-&-\\
+\enddata
+ %\tablenotetext{}{}
+\end{deluxetable}
+
+\begin{figure}[h]
+\centering
+$\begin{array}{c@{\hspace{0.1in}}c}
+\includegraphics[scale=0.8]{ThesisFigures/Radexplots/radexplot_regionA.png} & \includegraphics[scale=0.8]{ThesisFigures/Radexplots/radexplot_regionAdisk.png} \\
+\includegraphics[scale=0.8]{ThesisFigures/Radexplots/radexplot_regionB.png} & \includegraphics[scale=0.8]{ThesisFigures/Radexplots/radexplot_regionC.png} 
+\end{array}$
+\caption[Sample RADEX plots of each region of Arp 299]{Sample RADEX plots of each region of Arp 299: (\textit{top left}) Region A for $N$($^{12}$CO) = 2.1 $\times$ 10$^{18}$ cm $^{-2}$, (\textit{top right}) Region A$^{\prime}$ for $N$($^{12}$CO) = 4 $\times$ 10$^{18}$ cm $^{-2}$, (\textit{bottom left}) Region B for $N$($^{12}$CO) = 2.0 $\times$ 10$^{18}$ cm $^{-2}$ and (\textit{bottom right}) Region C for $N$($^{12}$CO) = 1.3 $\times$ 10$^{18}$ cm $^{-2}$. The thick solid lines denote solutions. }
+\label{radexsolutions}
+\end{figure}
+
+\section{Star Formation Rates and Depletion Times}
+
+The star formation rate is a useful quantity that allows us to measure the amount of gas mass used up each year in order to create new stars. The problem with most star formation tracers is that they require an estimate of the amount of extinction. U/LIRGs are quite dusty and may have A$_{v}$ $\sim$ 1000 mag \citep{2006ApJ...646..872H}. Since extinction is less important towards longer wavelengths, we use the infrared luminosity of each region to determine the star formation rate. \citet{2002ApJ...571..282C} estimated the infrared luminosity of each region in Arp 299 using published  mid-infrared and far-infrared fluxes to create a spectral energy distribution (SED) for each region. The SEDs were modeled with two modified blackbody functions with a spectral index of 1.5. To estimate the infrared luminosities, the SEDs were integrated (see Table 3.7). 
+
+\citet{2000ApJ...532..845A} also have made estimates of the infrared luminosities of each region. Instead of a SED fit, \citet{2000ApJ...532..845A} estimated the fraction of the total infrared luminosity from each region derived from ground-based mid-infrared observations.  From the relative fluxes at 10, 12, 20 and 30 $\mu$m through a 6$\arcsec$ diameter, they estimate that region A is about 50$\%$ of the total infrared luminosity, region B is about 27$\%$ and region C is about 13$\%$. The final 10$\%$ is believed to be associated with H II regions. If Arp 299 has a far-infrared infrared luminosity of 5.5 $\times$ 10$^{11}$ $L_{\odot}$, we use these fractions to estimate the far-infrared luminosity of each region (see Table 3.7). \citet{2000ApJ...532..845A} also made estimates of the dynamical mass and visual extinction of each region. The dynamical mass was estimated using the CO absorption lines in the near-infrared. The dynamical mass values we obtain from our CO observations agree well with \citet{2000ApJ...532..845A}. The visual extinction was estimated using a screen model with H recombination lines \citep{2000ApJ...532..845A}.
+
+\begin{deluxetable}{ccccc}
+\tablecolumns{5}
+\tablewidth{0pt}
+\tablecaption{Published Properties}
+\label{infraredlum}
+\tablehead{\colhead{Region} &\colhead{$M_{dyn}$\tablenotemark{a}} &  \colhead{$L_{IR}$\tablenotemark{c}} & \colhead{$L_{FIR}$\tablenotemark{b}} & \colhead{A$_{v}$\tablenotemark{a}}  \\ \colhead{} &\colhead{($M_{\odot}$)} &\colhead{($L_{\odot}$)} & \colhead{($L_{\odot}$)} &\colhead{(mag)}}
+\startdata
+A 	&5.8 $\times$ 10$^{9}$ 	&1.8 $\times$ 10$^{11}$	& 2.75 $\times$ 10$^{11}$ 	&17	\\
+B 	&$\sim$1 $\times$ 10$^{9}$ 	&9.4 $\times$ 10$^{10}$	& 1.49 $\times$ 10$^{11}$ 	&11 \\
+C 	&$>0.3$ $\times$ 10$^{9}$ 	&4.4 $\times$ 10$^{10}$	& 0.72 $\times$ 10$^{11}$ 	&15		\\
+\enddata
+\tablenotetext{a}{Published in \citet{2000ApJ...532..845A}}
+\tablenotetext{b}{Calculated using the infrared luminosity fraction of \citet{2000ApJ...532..845A} and $L_{FIR}$ = 5.5 $\times$ 10$^{11}$ $L_{\odot}$ for Arp 299}
+ \tablenotetext{c}{Published in \citet{2002ApJ...571..282C}}
+\end{deluxetable}
+
+The molecular gas mass of each region can be calculated using the $^{12}$CO J=1-0 map and the equation
+\begin{equation}\label{lumeqn}
+\frac{L^\prime_{CO}}{\mbox{K km s$^{-1}$ pc$^{2}$}} = 3.2546 \times 10^{7} \left(\frac{S_{CO}}{\mbox{Jy km s$^{-1}$}} \right) \left(\frac{D_{L}}{\mbox{Mpc}}\right)^{2} \left(\frac{\nu_{o}}{\mbox{GHz}}\right)^{-2} (1+z)^{-1}
+\end{equation}
+where $S_{CO}$ is the flux of the CO line in Jy km s$^{-1}$, $D_{L}$ is the luminosity distance in Mpc, $\nu_{o}$ is the rest frequency of the CO line in GHz and z is the redshift \citep{2008ApJS..178..189W}. Since the $^{12}$CO J=1-0 map does not include short spacing and we do not know how much flux is missing, we use the feathered $^{12}$CO J=2-1 map to measure the gas masses of each region. We use an average ratio value of $^{12}$CO$\frac{J=2-1}{J=1-0}$ =1.4 to estimate the gas mass given by
+\begin{equation}\label{massequation}
+M(H_{2}) = 0.57 L^{\prime}_{CO J=2-1}
+\end{equation}
+where $L^{\prime}_{CO J=2-1}$ is given by Equation \ref{lumeqn}. Using the total molecular mass and star formation rates of each region, we can estimate the amount of time it will take for all the gas to be depleted by star formation using
+\begin{equation}
+t_{depl} = \frac{1.36M(H_{2})}{\dot{M}_{SFR}}
+\end{equation}
+where the factor 1.36 is to account for the He gas. The star formation rate can be estimated using the equation from Kennicutt (1998) and the infrared luminosity (8-1000$\mu$m)
+\begin{equation}\label{starformation}
+\dot{M}_{SFR}\mbox{($M_{\odot}$ yr$^{-1}$)}= 4.5 \times 10^{-44} L_{IR}\mbox{(erg s$^{-1}$)}.
+\end{equation}
+Kennicutt (1998) used a Salpeter initial mass function (IMF) to estimate the star formation rate which is seldom used anymore.  \citet{2007ApJ...666..870C} used a double power law IMF with a slope of -1.3 in the range of 0.1-0.5 M$_{\odot}$ and a slope of -2.3 in the range of 0.5-120 M$_{\odot}$ to derive a star formation rate. They found that the star formation rate is 1.59 times lower than the star formation rate determined using the Salpeter IMF. 
+
+In order to minimize any contribution to the infrared luminosity from any AGNs present in Arp 299, we adopt the method by \citet{2010MNRAS.407.2091G}.  Genzel et al. (2010) have taken the far-infrared luminosity of their sources and multiplied by 1.3 to estimate the total infrared (8-1000$\mu$m) luminosity associated with star formation. This method avoids using the mid-infrared luminosity that is more likely to be contaminate by an AGN. The correction factor of 1.3 is an average $L_{IR}$/$L_{FIR}$ in nearby star-forming galaxies \citep{2008A&A...479..703G}. We can simply update Equation \ref{starformation} to
+\begin{equation}
+\dot{M}_{SFR}\mbox{($M_{\odot}$ yr$^{-1}$)}= 1.4 \times 10^{-10} L_{FIR}\mbox{($L_{\odot}$)}.
+\end{equation}
+We use $L_{FIR}$ = 5.5 $\times$ 10$^{11}$ $L_{\odot}$ \citep{2003AJ....126.1607S} for Arp 299 and the fractions of the total luminosity of Alonso-Herrero et al. (2000) to estimate the far-infrared luminosity of each region. Table 3.8 summarizes the derived properties of Arp 299. We discuss the star formation rates and depletion times in Section 4.2. When we compare our gas masses to the dynamical masses, we see that regions A and B have about 20$\%$ gas mass and region C has about 68$\%$. If we were to derive gas masses using the standard Galactic conversion factor, 3.2 $M_{\odot}$ (K km s$^{-1}$ pc$^{2}$)$^{-1}$, our gas masses would be about 4 times higher. That would push the $M(H_{2})$/$M_{dyn}$ ratios to about 80$\%$ for regions A and B and to 280$\%$ for region C. The gas masses derived using the standard Galactic conversion factor are not likely especially for region C because the gas mass cannot be greater than the dynamical mass. As for regions A and B, 80$\%$ gas mass is very unlikely because we know that these regions contain AGNs and super star clusters. 
+
+\begin{deluxetable}{cccccc}
+\tablecolumns{6}
+\tablewidth{0pt}
+\tablecaption{Gas Mass and Depletion Times}
+\label{gasmass}
+\tablehead{\colhead{Region} & \colhead{$\dot{M}_{SFR}$} & \colhead{Flux} & \colhead{L$_{CO}$\tablenotemark{a}} & \colhead{M(H$_{2}$)} & \colhead{t$_{depl}$} \\ \colhead{} & \colhead{($M_{\odot}$ yr$^{-1}$)} & \colhead{(Jy km s$^{-1}$)} &\colhead{(K km s$^{-1}$ pc$^{2}$)}&  \colhead{($M_{\odot}$)} & \colhead{(Myr)}}
+\startdata
+A 	& 38.5	&918 $\pm$ 110	& 1.1 $\times$ 10$^{9}$	&6.2 $\times$ 10$^{8}$ 	& 22	\\
+B	& 20.9	& 392 $\pm$ 35	& 4.6 $\times$ 10$^{8}$	& 2.6 $\times$ 10$^{8}$	&17	\\
+C 	& 10.1	& 505 $\pm$ 28	& 5.9 $\times$ 10$^{8}$	& 3.4 $\times$ 10$^{8}$	& 46  	\\
+A$^\prime$	&  $<$7.7\tablenotemark{b}	& 319 $\pm$ 16	& 3.8 $\times$ 10$^{8}$	& 2.2 $\times$ 10$^{8}$	& $>$25 \\
+Total		&77 &2382 $\pm$ 23	&2.8 $\times$ 10$^{9}$	& 1.6 $\times$ 10$^{9}$	&29 \\
+\enddata
+\tablenotetext{a}{Using D$_{L}$=44 Mpc}
+\tablenotetext{b}{$\dot{M}_{SFR}$ calculated assuming the region is 10$\%$ the total infrared luminosity of Arp 299.}
+\end{deluxetable}
+
+Alonso-Herrero et al. (2000) observed Arp 299 in Pa$\alpha$ which can be used as a star formation tracer. The only problem with this tracer is the estimation of the amount of extinction. We use the extinction values given in Alonso-Herrero et al. (2000) (see Table \ref{infraredlum}) and the Pa$\alpha$ emission from a 5$\arcsec$ aperture to estimate the star formation rates. To correct for extinction we use
+\begin{equation}
+F_{\lambda,0} = F_{\lambda} 10^{0.4A(\lambda)}
+\end{equation}
+where $F_{\lambda,0}$ is the extinction corrected flux, $F_{\lambda}$ is the flux that is observed and $A(\lambda)$ is the magnitude extinction value for that specific wavelength, $\lambda$ which is given to be 0.128$A_{v}$ (Alonso-Herrero et al., 2000) for Pa$\alpha$.
+
+\citet{2006ApJ...650..835A} use the star formation rate using H$\alpha$ published in \citet{1998ARA&A..36..189K} to estimate a star formation rate using the ratio Pa$\alpha$/H$\alpha$ = 8.6 from \citet{1987MNRAS.224..801H} to get 
+\begin{equation}
+\dot{M}_{SFR} = 6.79 \times 10^{-41} L_{Pa\alpha}\mbox{(erg s$^{-1}$)}
+\end{equation}
+Again, we need to correct this estimate by a factor of 1.59 to convert to the double power law IMF. Table 3.9 presents the star formation rated derived from Pa $\alpha$ emission. We see that the star formation rates for region A and B are somewhat lower than what we estimate using the infrared luminosity. This may be due to underestimated extinction values and can be used as lower limits to the star formation rates. The star formation rate for region C is much higher than what we derive using the infrared luminosity. The aperture size may be too large and likely includes flux from region B. 
+
+\begin{deluxetable}{ccccc}
+\tablecolumns{5}
+\tablewidth{0pt}
+\tablecaption{Pa$\alpha$ Properties}
+\label{paschenalpha}
+\tablehead{\colhead{Region} &  \colhead{Flux}\tablenotemark{a} & \colhead{$L_{Pa \alpha}$} & \colhead{$\dot{M}_{SFR}$} &\colhead{$t_{depl}$} \\ \colhead{} & \colhead{(erg cm$^{-2}$ s$^{-1}$)} & \colhead{(erg s$^{-1}$)} &\colhead{($M_{\odot}$ yr$^{-1}$)} &\colhead{(Myr)}  }
+\startdata
+A & 3.7 $\times$ 10$^{-13}$ & 6.4 $\times$ 10$^{41}$ & 27.4 & 23	 \\
+B & 2.3 $\times$ 10$^{-13}$ & 1.9 $\times$ 10$^{41}$  & 8.3 &	 31	\\
+C & 4.4 $\times$ 10$^{-13}$ & 5.9 $\times$ 10$^{41}$ & 25.3 & 13
+\enddata
+\tablenotetext{a}{Flux from a 5$\arcsec$ aperture given in Alonso-Herrero  et al. (2000)}
+\end{deluxetable}
+
+\section{Average Density for Region C}
+
+Since region C has a well constrained radiative transfer solution, we can compare the solution's column density to the average column density within the beam.  Using the feathered $^{12}$CO J=2-1 map, the peak value in region C is 133 Jy/beam km s$^{-1}$ with a beam size of 3.0$\arcsec$ $\times$ 1.8$\arcsec$. Using Equation \ref{lumeqn}, we get $L_{CO}^{\prime}$ = 1.6 $\times$ 10$^{8}$ K km s$^{-1}$ pc$^{2}$ which corresponds to a mass of M$_{H_{2}}$ = 8.95 $\times$ 10$^{7}$ $M_{\odot}$ using equation \ref{massequation}. Using the equation
+\begin{equation}
+N(H_{2}) = \frac{M_{H_{2}}}{m_{H_{2}}}\frac{1}{\mbox{beam area}}
+\end{equation}
+where beam area = 1.133$\theta_{major}$ $\times$ $\theta_{minor}$, we calculate an average H$_{2}$ column density of 2 $\times$ 10$^{22}$ cm$^{-2}$. Using the $^{12}$CO column density obtained from the RADEX solution, we get a $^{12}$CO abundance of N($^{12}$CO)/N(H$_{2}$) = 0.5 - 1.0 $\times$ 10$^{-4}$. This is about  3 - 6 times lower than the abundance ratio of 3 $\times$ 10$^{-4}$ that is typically assumed. We discuss the implications in Section 4.1. 
+
+We can also calculate the average volume density of region C assuming a spherical geometry. The radius of region C is R $\sim$ 420 pc and the molecular gas mass is given in Table 3.8. Using the equation
+\begin{equation}
+<n(H_{2})> = \frac{M_{H_{2}}}{m_{H_{2}}}\frac{3}{4\pi R^{3}}
+\end{equation}
+we derive an average volume density of 22 molecules cm$^{-3}$. Comparing this average value to the RADEX solution $n$(H$_{2}$) suggests that the cloud is diffuse with some fraction being dense, a similar structure to giant molecular clouds in the Galaxy.

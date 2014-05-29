@@ -1,0 +1,155 @@
+\chapter{Introduction}\label{intro}
+
+\section{U/LIRGs}
+
+Ultra/Luminous infrared galaxies (U/LIRGs) are some spectacular objects in the local universe and exhibit extreme star formation. They emit a large portion of their total luminosity at far-infrared wavelengths (LIRGs: L$_{FIR}$ $\sim$ 10$^{11-12}$ $L_{\odot}$; ULIRGs: L$_{FIR}$ $>$ 10$^{12}$ $L_{\odot}$). Early optical studies have shown that a large fraction of U/LIRGs show morphologies that resemble systems that are interacting or merging \citep{1987AJ.....94..831A}. High resolution optical and near-infrared imaging has revealed that a large fraction of U/LIRGs have nuclear separations of 0.3 - 48 kpc \citep{1996AJ....111.1025M}. The mergers are likely the origin of the extreme far-infrared luminosities observed. Other systems that appear to be strongly interacting with similar nuclear separations but their far-infrared luminosities do not classify them as U/LIRGs are also observed (eg. NGC 4038/39). These other merging systems raises the question whether all LIRGs go through a ULIRG phase at some point during their merger. 
+
+U/LIRGs have been observed to contain a large amount of molecular gas with $M$(H$_{2}$) up to about 10$^{10}$ $M_{\odot}$ \citep{1986ApJ...305L..45S}. The molecular gas is seen to be concentrated near the nuclear regions within a radius of 0.5 kpc \citep{1996ARA&A..34..749S}.  Subarcsecond resolution CO observations have revealed rotating disks of molecular gas that has been driven to the nuclei \citep{1998ApJ...507..615D}. Theoretical models have shown that during the collision, the gas loses angular momentum due to dynamical friction which causes the gas to decouple from the stars and flow inwards towards the nuclei \citep{1991ApJ...370L..65B}. The concentrated molecular gas provides fuel for star formation and/or for an active galactic nucleus (AGN). 
+
+\subsection{AGN or Star Formation?}
+
+One of the biggest questions regarding U/LIRGs is what powers the extreme infrared luminosities. There are two possible explanations, an AGN or recently formed massive stars. \citet{1998ApJ...498..579G} tackled this problem by comparing the $ISO$ mid-infrared spectroscopy of a sample of 15 ULIRGs to 30 starburst and AGN template galaxies. The [S III] 18.7$\mu$m/33.5$\mu$m line ratio increases with electron density and is independent of the ionization parameter and the spectral shape of the ultraviolet (UV) radiation field. The extinction corrected [S III] 18.7$\mu$m/33.5$\mu$m line ratio yields a constant electron density ($n_{e}$ $\sim$ 10$^{2-2.5}$ cm$^{-3}$); high to low-excitation ionic lines thus provide a good probe for the hardness (effective temperature) of the ionizing UV radiation field \citep{1998ApJ...498..579G}. \citet{1998ApJ...498..579G} found that seven out of ten galaxies (excluding ULIRGs without line detections) have line ratios ([Ne V]/[Ne II] and [O IV]/[Ne II]) indicating a UV radiation field softer than typical AGN radiation fields and are similar to that of starburst galaxies.  Definitely one ULIRG (Mrk 231) and perhaps a second (Mrk 273) are seen to have a hard UV radiation field caused by an AGN. 
+
+Another indicator of an AGN dominated source is to look at the unidentified emission bands at 3.3, 6.2, 7.7, 8.7 and 11.2 $\mu$m which are probably emitted by polycyclic aromatic hydrocarbons (PAHs) or very small amorphous carbon dust grains that are exposed to a moderately intense UV radiation field \citep{1989ARA&A..27..161P}. \citet{1991MNRAS.248..606R} have demonstrated that the PAH features are faint or absent for AGNs and are strong in HII/starburst galaxies. \citet{1998ApJ...498..579G} find that this trend for PAHs is in good agreement with their sample where the feature at 7.7$\mu$m is strong in dusty environments with a moderately strong UV radiation field, such as a starburst and photodissociaton regions (PDRs). Out of the 15 ULIRGs, 12 have similar strength of the 7.7$\mu$m feature to the starburst templates. Using this information, they determined the amount that the AGN and massive star formation contribute to the total luminosity using a simple mixing model where an AGN has [O IV]/[Ne II] $\sim$ 1 and PAH strength $\sim$ 0.04 and a starburst has [O IV]/[Ne II] $\sim$ 0.02 and PAH strength $\sim$ 3.6. On average, the ULIRGs have a 5$\%$ - 30$\%$ contribution from an AGN with 70$\%$-95$\%$ coming from star formation. The ULIRGs that are likely dominated by AGNs, Mrk 273 and Mrk 231, may have an AGN contribution of 40$\%$ - 80$\%$. 
+
+These results show that ULIRGs on average appear to be composite objects with star formation the dominant source of the total infrared luminosity. \citet{1998ApJ...498..579G} do not find a trend in AGN importance with the stage of the merger. They conclude that at any given stage of the merger, the compression of the circumnuclear gas and the local accretion rate onto the central black hole are what determines whether the star formation or the AGN component dominates the overall energy output. 
+
+
+\begin{figure}[h]
+\centering
+%$\begin{array}{c@{\hspace{0.1in}}c}
+\includegraphics[scale=0.6]{ThesisFigures/agnvssfr.png} 
+%\end{array}$
+\caption[Figure 5 from \citet{1998ApJ...498..579G} showing a new diagnostic diagram]{Figure 5 from \citet{1998ApJ...498..579G} showing a new diagnostic diagram combining the extinction corrected 25.9 $\mu$m [O IV]/12.8$\mu$m [Ne II] line ratio with the relative strength of the 7.7 $\mu$m PAH feature for starbursts (\textit{open triangles}), ULIRGs (\textit{filled circles}), and AGNs (\textit{crossed rectangles}). Downward arrows denote upper limits. ($right$): The solid line denotes a simple linear ``mixing" curve, made by combining various fractions of the total luminosity in an AGN and a starburst.}
+\label{gaohcn}
+\end{figure}
+
+\subsection{$L_{IR}$ vs. $L_{HCN}$}
+
+\citet{1992ApJ...387L..55S} was one of the first to study the dense molecular gas in U/LIRGs. HCN J=1-0 is a good tracer of dense gas since it has a large dipole moment and requires a density of $n$(H$_{2}$) $\geq$ 10$^{4}$ cm$^{-3}$ in order to have a significant excitation. They observed HCN J=1-0 and CO J=1-0 using the IRAM 30m telescope for five U/LIRGs, three interacting systems and two gas rich spiral galaxies as controls. On average they found that the ratio of HCN to CO luminosity was 1/6 for ULIRGS, but only 1/80 for normal spiral galaxies. This suggested that a large fraction of the molecular gas in U/LIRGs is in very dense regions similar to star forming cloud cores. They also find that there exists a tighter correlation between far-infrared  and the HCN luminosities than between the far-infrared and CO luminosities. Since star formation occurs in dense gas regions and the far-infrared luminosity traces star formation, this result strongly suggests that the main source of the extreme far-infrared luminosity is star formation even though an AGN may exist. The most interesting result from \citet{1992ApJ...387L..55S} is that on average the ratio of far-infrared to HCN luminosity is similar in both U/LIRGs and normal spirals suggesting that the star formation rate per mass of dense gas is independent of infrared luminosity or the state of the interaction.
+
+\citet{2004ApJ...606..271G} analyzed the HCN emission from 65 infrared galaxies which included 9 ULIRGs, 22 LIRGs and 34 normal spiral galaxies. With the larger sample size, they also find a tight linear correlation between the far-infrared and HCN luminosities over 3 orders of magnitude (see Figure \ref{gaohcn}). This correlation can be interpreted as the star formation law in terms of dense molecular gas having a power-law index of 1.0. This is further strong evidence that star formation is the power source in U/LIRGs. They also find that the HCN-CO correlation is tighter than the infrared-CO correlation. This indicates that the star formation rate (related to $L_{IR}$) depends on the amount of dense molecular gas present and not on the total molecular gas traced by the CO emission. 
+
+\begin{figure}[h]
+\centering
+$\begin{array}{c@{\hspace{0.1in}}c}
+\includegraphics[scale=0.35]{ThesisFigures/irvshcn.png} & \includegraphics[clip,scale=0.35]{ThesisFigures/irvsco.png}
+\end{array}$
+\caption[Figure 1 from \citet{2004ApJ...606..271G} showing the $L_{IR}$ versus $L_{HCN}$]{Figure 1 from \citet{2004ApJ...606..271G} showing ($left$) the $L_{IR}$ versus $L_{HCN}$ correlation in 65 galaxies and ($right$) the $L_{IR}$ versus $L_{CO}$ correlation for the same sample. }
+\label{gaohcn}
+\end{figure}
+
+\subsection{Local Analogs to High-z SMGs?}
+
+\citet{2009ApJ...699..667M} analyzed $Spitzer$ mid-infrared spectra of a large sample of submillimeter galaxies (SMGs) and compared them to local ULIRGs. They found that 80$\%$ of their sample exhibits PAH features that indicate intense star forming activity just like ULIRGs. Comparing the $S_{7.7\mu m}$/$S_{11.3\mu m}$ PAH flux ratios shows that SMGs have a radiation environment similar to that of local starbursts. The distribution of the optical depth determined from the silicate absorption feature at 9.7 $\mu$m, $\tau_{9.7\mu m}$, was found to be lower than that seen for local ULIRGs suggesting that the mid-infrared regions of SMGs have a lower dust obscuration. The difference in extinction between ULIRGs and SMGs likely arises from the differences in geometry. The far-infared emission in ULIRGs is seen to be confined in a $\sim$ 1-2 kpc regions \citep{2002A&A...391..429C} while SMGs are seen to have star formation occurring on scales $>$ 2 kpc.  Using a composite SMG spectrum, \citet{2009ApJ...699..667M} made an estimate of the AGN contribution from the hot dust continuum at $\lambda$ $\geq$ 10$\mu$m. They find that the maximum AGN contribution is $<$ 32$\%$ to the total infrared luminosity, similar to the value found by Genzel et al. (1998). This suggests that the majority of SMGs are also dominated by intense star formation just like local ULIRGs. The differences suggest that ULIRGs are not exact local analogs of high-z SMGs; however, there are enough similarities, that local ULIRGs are often used as templates for SMGs. 
+
+\section{The Target: Arp 299}
+
+Arp 299 (NGC 3690 +  IC 694, Mrk 171, VV 118, IRAS 11257+5850) is one of the nearest (D = 44 Mpc) examples of a merger system. It has a far-infrared luminosity of L$_{FIR}$ = 5.5 $\times$ 10$^{11}$ $L_{\odot}$ (Sanders et al., 2003), classifying it as a LIRG. This system has been studied in great detail in the X-ray \citep{1999ApJ...517..130H,2003ApJ...594L..31Z}, optical \citep{1990AJ.....99.1470J,1999AJ....118..162H}, infrared \citep{1989ApJ...340..729N, 1999ApJ...527..778S, 2000ApJ...532..845A}, submillimeter \citep{1991ApJ...366L...1S,1997ApJ...475L.107A,1999A&A...346..663C}, and radio \citep{1989ApJ...346..712S, 2004ApJ...611..186N}. In the optical, the two nuclei are still distinguishable. Gehrz et al. (1983) showed that there is also a third region of emission thought be associated with the overlap of the two galaxies. This overlap region was once thought to be associated with a third galaxy \citep{1989A&A...224...31C}; however, the region shows CO linewidths that are small which is not typical of galactic nuclei \citep{1999A&A...346..663C}. High resolution observations show the nuclei are separated by 22$\arcsec$ (4.5 kpc; Sargent et al. 1991)\nocite{1991ApJ...366L...1S}.  In optical images (see Figure \ref{hstlabels}), there is no obvious evidence of tidal tails but \citet{1999AJ....118..162H} found two 180 kpc HI tails as well as a faint optical tail displaced from the HI tails. They infer that the merger started 750 Myr ago and the two nuclei will completely merge in roughly 60 Myr. Evolutionary starburst models have shown that Arp 299 has been going through interaction-induced star formation over a span of about 15 Myr \citep{2000ApJ...532..845A}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[trim=1cm 3cm 1cm 2cm,clip,scale=0.8]{ThesisFigures/HST_labels.png} 
+\caption{$HST$ F814W image of Arp 299 with labels denoting the different regions.}
+\label{hstlabels}
+\end{figure}
+\subsection{X-ray Observations}\\
+\indent Some of the first X-ray observations have shown that Arp 299 is one of the most X-ray luminous starburst galaxy in the local universe with an observed luminosity of 4 $\times$ 10$^{41}$ erg s$^{-1}$ in the 0.1-10.0 keV band \citep{1998MNRAS.301..915Z}. Recent observations of Arp 299 with the $Chandra$ $Observatory$ have detected 18 discrete X-ray sources with luminosities greater than 10$^{39}$ erg s$^{-1}$ (0.5-8.0 keV band) which contributes about 40$\%$ of the total galactic emission in this X-ray band \citep{2003ApJ...594L..31Z}. Of the 18 discrete X-ray sources, three of them have been identified with the three major regions of star formation (IC 694, NGC 3690 and the overlap region). The source that corresponds to IC 694 (region A) is well fitted by a heavily absorbed (N(H) $\sim$ 1.2 $\times$ 20$^{22}$ cm$^{-2}$) power law ($\Gamma$ $\sim$ 1.4) that is consistent with either a population of X-ray binaries or an AGN. \\
+\indent \citet{1999ApJ...517..130H} have studied Arp 299 in X-ray and optical. They found that the X-ray spectrum was consistent with that of other starburst galaxies. The X-ray nebula was found to have a luminosity of $\sim$ 2 $\times$ 10$^{41}$ erg s$^{-1}$ and a mass of $\sim$ 7 $\times$ 10$^{9}$ $M_{\odot}$ which can be explained by a collision of the interstellar medium (ISM) of two galaxies (Heckman et al. 1999). Heckman et al. (1999) suggest another possible origin for the X-ray nebula could be a superwind. The thermal energy content and the dynamical age of the X-ray nebula was found to be consistent with a superwind model and the high mass and X-ray luminosity imply a mass-loaded ($\sim$ 100 $M_{\odot}$) outflow.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.3]{ThesisFigures/zezasxray.jpg} 
+\caption[Full band (0.5- 8.0 keV) X-ray image of Arp 299 from \citet{2003ApJ...594L..31Z}]{Full band (0.5- 8.0 keV) X-ray image of Arp 299 from \citet{2003ApJ...594L..31Z}. Numbers denote the 18 discrete X-ray sources with luminosities greater than 10$^{39}$ erg s$^{-1}$. }
+\label{regionAagn}
+\end{figure}
+
+\subsection{Near/Mid-Infrared Observations}
+
+\textit{Hubble Space Telescope} NICMOS Pa$\alpha$ (see Figure \ref{nicmos}) images have revealed 19 extremely luminous H II regions equivalent to the luminosity of one of the most active star forming regions in the local Universe, 30 Doradus (the Tarantula nebula; Alonso-Herrero et al., 2000)\nocite{2000ApJ...532..845A}. Finding one or even two of these extremely luminous H II regions is rare in normal galaxies but the chances of finding one in an interacting system is greater (Alonso-Herrero et al., 2000).  Along with the luminous H II regions, 21 older star clusters were found that may have been formed from similar H II regions in the past. \citet{2000ApJ...532..845A} has shown that the overlap region formed massive stars very recently within 4 Myr. They suggest that this region will eventually resemble the appearance of dwarf galaxies.
+
+$Spitzer$ integrated mid-infrared spectra of Arp 299 have been shown to be similar to those of local starbursts \citep{2009ApJ...697..660A}. Only region A, associated with the nuclear region of IC 694, has been shown to have a typical mid-infrared spectrum of a ULIRG that is very compact ($<$1 kpc) and has dust enshrouded star formation resulting in a deep silicate feature and moderate equivalent widths of the PAHs (Alonso-Herrero et al., 2009). Region A shows no ``hot bump" in the range of 3-7$\mu$m that is typical of an AGN suggesting that there is no AGN present in region A \citep{2002ApJ...571..282C}. Region B, the nuclear region of NGC 3690, is seen to have this ``hot bump" due to a strong hot-dust component that accounts for 80-90$\%$ of the 6$\mu$m emission (Alonso-Herrero et al., 2009). This indicates that region B harbors a low-luminosity AGN. $Spitzer$ spectral mapping revealed that a large fraction of star formation is occurring in young regions such as the overlap region C and H II regions in the disks of the two galaxies (Alonso-Herrero et al., 2009). 
+
+\begin{figure}[h]
+\centering
+\includegraphics[trim=2cm 5cm 3cm 5cm, clip,scale=0.65]{ThesisFigures/NICMOS_contours_labels.pdf} 
+\caption{NICMOS Pa$\alpha$ image of Arp 299 with SMA $^{12}$CO J=3-2 contours that correspond to 1, 2..., 9 $\times$ 7.3 Jy/beam km s$^{-1}$.}
+\label{nicmos}
+\end{figure}
+
+\subsection{Submillimeter Observations}
+
+Interferometric observations of $^{12}$CO show strong emission from the three major regions found in infrared images (Sargent $\&$ Scoville 1991; Aalto et al., 1997; Casoli et al., 1999)\nocite{1997ApJ...475L.107A} indicating the presence of large amounts of molecular gas. Sargent $\&$ Scoville (1991) estimated a H$_{2}$ mass of 3.9 $\times$ 10$^{9}$ $M_{\odot}$ for IC 694 confined within R $\leq$ 250 pc  and 0.9 $\times$ 10$^{9}$ $M_{\odot}$ for NGC 3690 confined within R $\approx$ 310 pc. These mass values are most likely overestimates because these masses are over 90$\%$ of the dynamical mass (see Section \ref{alphamass}). Casoli et al. (1999) created a position-velocity cut in their $^{12}$CO J=1-0 data cube between region A and B (see Figure \ref{casoli}). This cut reveals that there is a gas flow from region A to B. This flow indicates that the regions are physically connected at an early stage of the merger. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{ThesisFigures/casoli.png} 
+\caption[Position-velocity cut in the $^{12}$CO J=1-0 data cube of Casoli et al. (1999).]{Position-velocity cut in the $^{12}$CO J=1-0 data cube of Casoli et al. (1999). Region A is set at an offset of 0$\arcsec$ and B at -21.5$\arcsec$}
+\label{casoli}
+\end{figure}
+
+\subsection{Radio Observations}
+
+\citet{2010A&A...519L...5P} used the European Very Long Baseline Interferometry Network (EVN) to map IC 694 at 1.7 and 5.0 GHz. Their goal was to characterize the compact sources in the innermost few parsecs region and to detect any recent supernova activity. The EVN observations show that a previously detected source at 5.0 GHz, A1 (see Figure \ref{regionAagn}), has a flat spectrum between 1.7 and 5.0 GHz and is the brightest source at both frequencies. The 1.7 GHz observation shows a diffuse, low-surface brightness emission extending from A1 to another source A5 westwards (see Figure \ref{regionAagn}). This emission displays a clear core-jet structure which leads to the belief that A1 is the location of the long-sought AGN of IC 694. The complex has a morphology, spectral index, radio luminosity and radio-to-soft X-ray luminosity ratio that resembles a low-luminosity AGN. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{ThesisFigures/regionAAGN.png} 
+\caption{EVN observations of IC 694 published in \citet{2010A&A...519L...5P}.  }
+\label{regionAagn}
+\end{figure}
+
+\section{Molecular Gas Tracers}
+
+Molecular gas is the current and future source of star formation. In our Galaxy and nearby galaxies, most of the star formation occurs in massive, dense ($n$(H$_{2}$) $\sim$ 10$^{2-5}$ cm$^{-3}$) and cold ($T$ $\sim$ 10-30 K) giant molecular clouds \citep{2007ARA&A..45..565M}. Studying the physical conditions and distribution of the warmer (T $\sim$ 30 K), dense gas associated with star formation may help in understanding the processes and timescales controlling the star formation in galaxy mergers. The most abundant molecule in galaxies is molecular hydrogen, H$_{2}$. Unfortunately, we cannot detect H$_{2}$ easily because it does not have a permanent dipole moment. However, we can detect the next most abundant molecule, carbon monoxide, CO. CO is a very stable molecule that has a weak dipole moment ($\mu_{e}$ =0.11 Debye; Solomon $\&$ Vanden Bout 2005)\nocite{2005ARA&A..43..677S}. The fundamental transition frequency for CO (J=1-0) of 115.271 GHz is excited by collision with molecular hydrogen even in clouds with low kinetic temperatures tracing gas with temperatures of $\sim$5 K and densities of 100 cm$^{-3}$. This makes CO the best known tracer for molecular gas. However, the ground state rotational transition of CO is sensitive to all H$_{2}$, some of which may not be dense enough to be involved in star formation. The $^{12}$CO J=3-2 transition line ($\nu$ = 345.796 GHz) probes regions with densities of 2.1 $\times$ 10$^{4}$ cm$^{-3}$ and temperatures of 33 K making it a good tracer of the warm, dense gas associated with star formation activity. 
+
+\section{CO Luminosity to H$_{2}$ Mass}\label{alphamass}
+
+The H$_{2}$ mass to CO luminosity relation is given by
+\begin{equation}\label{gasmass}
+M(\mbox{H$_{2}$}) = \alpha L^{\prime}_{CO}
+\end{equation}
+where $M$(H$_{2}$) is the total molecular gas mass in $M_{\odot}$ and $L^{\prime}_{CO}$ is the CO luminosity in K km s$^{-1}$ pc$^{2}$. For our Galaxy, three independent methods result in the same linear relation for the gas mass and the CO luminosity, $\alpha$ = 3.2 $M_{\odot}$ (K km s$^{-1}$ pc$^{2}$)$^{-1}$ (X$_{CO}$ = 2 $\times$ 10$^{20}$ cm$^{-2}$ (K km s$^{-1}$)$^{-1}$; Strong et al. 1988)\nocite{1988A&A...207....1S}. Early studies of U/LIRGs using this conversion factor found that the gas mass was comparable to or even greater than the dynamical mass inferred by the CO line widths \citep{1991ApJ...366L...5S}.  This led to a new model for CO emission from U/LIRGs \citep{1993ApJ...414L..13D, 1998ApJ...507..615D}. Molecular clouds in the Galaxy are thought to be virialized (i.e. self gravitating). However, this may not be true for U/LIRGs but the CO emission may come from a filled intercloud medium, in which the linewidth is determined by the total dynamical mass in the region. They find the quantity $\alpha$$L^{\prime}_{CO}$ actually measures the geometric mean of the total mass and gas mass. This means that this quantity underestimates the total mass and overestimates the gas mass (see Solomon $\&$ Vanden Bout 2005 for a review). Therefore, if CO emission comes from intercloud medium bound by the potential of the galaxy, the constant $\alpha$ has to be modified and is lower than 2.6n$^{1/2}$/T$_{b}$ where $n$ is the gas density and T$_{b}$ is the brightness temperature of the gas. \citet{1986ApJ...309..326D}, were the first to assume that $\alpha$ depends on n$^{1/2}$/T$_{b}$. They suggested that basic uncertainties in density, velocity and geometric structure of extragalactic clouds can lead to mass ambiguities possibly as large as a factor of 3. Even before \citet{1993ApJ...414L..13D} and \citet{1998ApJ...507..615D}, $\alpha$ was thought to differ in starbursts where cloud conditions can vary greatly from clouds in our own Galaxy. \\
+\indent Downes $\&$ Solomon (1998) used kinematic models in which most of the CO emission comes from a warm moderately dense intercloud medium to account for the rotation curves, density distribution, size, turbulent velocity and mass of the molecular rings seen in U/LIRGs. Instead of using the standard conversion factor to determine the gas mass, a radiative transfer model was used and resulted in gas masses of $\sim$ 5 $\times$ 10$^{9}$ $M_{\odot}$. This gas mass is about four times less than the standard method and leads to a ratio of $M_{gas}$/$L^{\prime}_{CO}$ $\approx$ 0.8 $M_{\odot}$ (K km s$^{-1}$ pc$^{2}$)$^{-1}$. This also resulted in a ratio of gas to dynamical mass $M_{gas}$/$M_{dyn}$ $\approx$ 1/6 and a maximum ratio of gas to total surface density $\mu$/$\mu_{tot}$ =1/3. Therefore, in order not to over estimate the gas mass for Arp 299, we adopt the conversion factor $\alpha$ = 0.8$M_{\odot}$ (K km s$^{-1}$ pc$^{2}$)$^{-1}$.
+
+\section{Radiative Transfer}
+
+The radiative transfer equation can be written as
+\begin{equation}\label{radiativetransfer}
+dI_{\nu}ds = j_{\nu} - \alpha_{\nu}I_{\nu}
+\end{equation}
+where $I_{\nu}$ is the specific intensity, $ds$ is a distance and $j_{\nu}$ and $\alpha_{\nu}$ are the local emission and extinction coefficients, respectively (see Rybicki $\&$ Lightman 1979 for a review)\nocite{1979rpa..book.....R}. We can define the source function by  
+\begin{equation}
+S_{\nu} = \frac{j_{\nu}}{\alpha_{\nu}}.
+\end{equation}
+We can rewrite Equation \ref{radiativetransfer} into its integral form and introduce the optical depth, $d\tau_{\nu}$ = $\alpha_{\nu}ds$
+\begin{equation}
+I_{\nu} = I_{\nu}(0)e^{-\tau_{\nu}} +  \int_0^{\tau_{\nu}} S_{\nu}(\tau^{\prime}_{\nu})e^{-(\tau_{\nu} -\tau^{\prime}_{\nu})} \, d\tau^{\prime}_{\nu} 
+\end{equation}
+where $I_{\nu}$ is the emitted radiation from the medium and $I_{\nu}$(0) is the background radiation entering the medium. 
+
+The above equations are valid for continuum radiation or for spectral lines. Assume that giant molecular clouds have large internal velocities that Doppler shifting the emission to a different frequency such that, if it does not get reabsorbed locally, it will not be reabsorbed by another region of the cloud. In this case, solving the radiative transfer equations becomes a local problem and we can express the source function as 
+\begin{equation}
+S_{\nu_{ul}} = \frac{2h\nu_{ul}^{3}}{c^{2}} \left( \frac{g_{u}n_{l}}{g_{l}n_{u}} - 1 \right)^{-1}
+\end{equation}
+where $n_{i}$ is the number density of molecules in the $i^{th}$ energy state and $g_{i}$ is the statistical weight of energy state $i$. The optical depth for a homogenous medium can be expressed as
+\begin{equation}
+\tau = \frac{c^{3}}{8\pi \nu_{ul}^{3}} \frac{A_{ul}N_{mol}}{1.064\Delta V} \left[ x_{l}\frac{g_{u}}{g_{l}} -x_{u}\right]
+\end{equation}
+where $A_{ul}$ is the Einstein coefficient for spontaneous emission, $N_{mol}$ is the molecular column density, $\Delta V$ is the full width half-maximum (FWHM) in velocity units and $x_{i}$ is the fraction population of level $i$. A radiative transfer code solves for the relative populations of the energy states of the molecule which allows for the calculation of the optical depth (van der Tak et al., 2007). The radiative transfer model supplies us with the flux of molecular lines at a certain kinetic temperature ($T_{kin}$), density ($n$(H$_{2}$)) and molecular column density (e.g. $N$($^{12}$CO)). We can use line ratios to eliminate the problem of the unknown constant, the beam filling factor, if we assume that the same regions are emitting the observed radiation in the beam. We can constrain the physical conditions by determining where the line ratios have the same kinetic temperature and density. 
+
+\section{Interferometry vs. Single Dish}
+
+The resolution of a single dish telescope is limited by the size of the dish (resolution $\propto$ $\lambda$/D). The bigger the dish, the better resolution that can be achieved. However, building huge dishes is not very practical and would be very expensive. Instead, we can use our knowledge of light and synthesize a large aperture by using an array of small dishes. Interferometry uses a number of dishes spread apart to create a map that is equivalent to what a large dish would observe. Since the resolution depends on the distance between pairs of dishes, the further the separation, the better the resolution.  This, however, comes at a price. Since we cannot get two dishes to have zero separation between them, we have missing short spacings in the $uv$-plane (see Figure \ref{uvcoverageplane}). The $uv$-plane is the projections of the baselines (i.e. physical separation of a pair of dishes) in the Fourier plane. As the Earth rotates, each pair traces out a curve of data points that fills in the $uv$-plane. The $uv$-plane can be Fourier transformed into the image plane. Since short baselines Fourier transform into large scale features, the missing short spacings indicate that we are missing these large scale features; therefore, we are missing flux. \\
+\indent The CLEAN task, the task that produces the clean image for science analysis, attempts to extrapolate the missing short spacings but for most cases fails to recover them. The best way to recover the missing flux is to observe the source with a single dish telescope. The points on the single dish can be treated as single ``elements" and pairs of elements can give us a baseline; therefore we can Fourier transform the single dish observations into the $uv$-plane. We can then combine the single dish and interferometric observations together to get a complete map. To choose a good single dish observatory to complement the interferometric observatory requires that the single dish diameter be at least double the size of a dish in the interferometric observatory. This is to ensure that we can get an overlap in the $uv$ data in order to calculate an appropriate scaling factor in calibration. An example is the Plateau de Bure (PdB) interferometric observatory which consists of six 15 m dishes. In order to complement the array and to recover the short spacings, the IRAM 30 m single dish observatory is used. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[trim=0cm 0cm 10cm 0cm,clip, scale=0.7]{ThesisFigures/ObservationsFigures/uvcoverageALMA_10h_2.png} 
+\caption[$uv$-plane for a 10 hour observation of a source at Dec=-58$^{\circ}$ simulated using CASA]{$uv$-plane for a 10 hour simulated ALMA observation of a source at Dec=-58$^{\circ}$ using CASA in the extended configuration for the early science phase. The missing coverage in the middle indicates that we are missing large scale structures.}
+\label{uvcoverageplane}
+\end{figure}
+
+\section{The Goal}
+
+Since molecular gas is required for current and future star formation, studying the physical properties and distribution of the warm, dense gas is important in understanding the processes and timescales that control the star formation in galaxy mergers. In this thesis, we re-analyze the Submillimeter Array observations of $^{12}$CO and $^{13}$CO of Arp 299 published in Wilson et al. (2008). We constrain the physical conditions such as temperature and density by combining the molecular-line observations with radiative transfer models obtained using the radiative transfer code RADEX. In Chapter 2, we describe the observations and creation of the line ratio maps.  In Chapter 3, we present our findings from our radiative transfer models for each region and other properties such as gas and dynamical masses from the SMA maps. In Chapter 4 we discuss our findings from Chapter 3. 

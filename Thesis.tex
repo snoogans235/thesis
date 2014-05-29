@@ -1,0 +1,106 @@
+%\documentclass{macthesis}
+\documentclass[twoside]{Styles/macthesis}
+%\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{multirow}
+\usepackage{Styles/natbib}
+\usepackage{chapterbib}
+\usepackage{graphicx}
+\usepackage{Styles/deluxetable}
+%\usepackage{subfigure}
+%\usepackage{lscape}
+%\usepackage{supertabular}
+%\usepackage{appendix}
+\usepackage{longtable}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{subfigure}
+\usepackage{glossary}
+\usepackage{pdfpages}
+%\renewcommand{\topfraction}{0.85}
+%\renewcommand{\textfraction}{0.1}
+
+
+%
+
+%
+\def\hlf  {{\textstyle {1\over2} }}
+\def\fD   {\mathfrak D}
+\def\vD   {v_{\mathfrak D}}
+\def \bY  {\color{blue} Yes}
+%\def\mnras {{MNRAS}}
+%\def\aap {{A\&A}}
+%\def\apj {{ApJ}}
+%\def\apjl {{ApJL}}
+\def \rN  {\color{red} No}
+\def\oii{[O{\sc ii}]}
+\def\ewoii{$W_{\rm \circ}$(\oii)}
+
+% \newif\ifpdf
+% \ifx\pdfoutput\undefined
+%         \pdffalse
+% \else
+%         \pdfoutput=1
+%         \pdftrue
+% \fi
+% \ifpdf
+%         \usepackage[pdftex]{graphicx}
+% %        \usepackage[pdftex]{rotating}
+% \else
+%         \usepackage{rotating}
+%         \usepackage{epsf}
+% 	\usepackage{graphicx}
+% \fi
+% \ifpdf
+%         \pdfpageheight=11in
+%         \pdfpagewidth=8.5in
+%         \pdfinfo{ 
+%                 /Title (Thesis)
+%                 /Subject (Thesis)
+%                 /Author (Iman Author)
+%                 }
+% \fi
+% \usepackage{epsf,graphicx,rotating}
+\usepackage{Styles/mypig}
+%\usepackage{mycite}
+\usepackage{verbatim}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+% draft written across paper (only is ps mode)
+%\usepackage{draftcopy}
+%\draftcopyName{Work in Progress}{105}
+%
+\begin{document}
+
+\include{front}
+%\include{abstract}
+\pagestyle{myheadings}
+\pagenumbering{arabic}
+
+\input{Introduction.tex}
+\input{observations.tex}
+\input{results.tex}
+\input{discussion.tex}
+\input{Conclusions.tex}
+%\input{futurework.tex}
+\appendix
+%\input{Appendix}
+%\input{radex.tex}
+\bibliography{references2}
+\bibliographystyle{Styles/apj}
+%\includepdf[pages={1,2,3,4,5,6,7,8,9}]{Sliwa+2012.pdf}
+\addtocounter{page}{-1}
+\label{finalpage}
+
+\clearpage
+%\vspace*{0.3\textheight}
+%\begin{center}
+%{\Large\bf
+%This page intentionally left blank.
+%
+%}
+%end{center}
+\end{document}
+%\end
+
+

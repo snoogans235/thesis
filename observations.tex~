@@ -1,0 +1,203 @@
+\chapter{Observations/Reduction}\label{observations}
+
+\section{Submillimeter Array}
+
+Arp 299 was observed with the Submillimeter Array (SMA;Ho et al. 2004)\nocite{2004ApJ...616L...1H} on 2006 April 10 for the $^{12}$CO J=3-2 transition line and 2007 March 27 for the CO J=2-1 transition line. The data was first published in \citet{2008ApJS..178..189W}. The correlator was configured to have a spectral resolution of 0.8125 MHz corresponding to roughly 1.1 km s$^{-1}$ for CO J=2-1 and about 0.7 km s$^{-1}$ for CO J=3-2 (Wilson et al., 2008). A bandwidth of 2 GHz was chosen, which covers 24 chunks overlapping slightly in frequency in each of the lower and upper sidebands.  The $^{12}$CO J=2-1 was centered in the upper sideband and the $^{13}$CO J=2-1 was observed simultaneously in the lower sideband 10 GHz away. The $^{12}$CO J=3-2 was observed in the lower sideband and the HCO+ J=4-3 transition line was observed in the upper sideband. We do not make use of the HCO+ J=4-3 since for Arp 299, only half of the line was observed. The SMA was set in the compact array configuration corresponding to unprojected baselines of 16-69m.  The largest scale feature to which our data are sensitive is given by
+\begin{equation}\label{resolution}
+\mbox{Resolution(arcsec)} = 206264.8\frac{\lambda}{D}
+\end{equation}
+where D is the baseline length. Using the shortest unprojected baseline (16m) we get 17$\arcsec$ (3.6 kpc) for CO J=2-1 and 12$\arcsec$ (2.6 kpc) for CO J=3-2. The SMA has a field of view of $\sim$55$\arcsec$ for CO J=2-1 and $\sim$36$\arcsec$ for CO J=3-2. Since Arp 299 has sufficiently extended emission, a small mosaic of two pointings was used (see Figure \ref{hstsmabeams}).  For the CO J=2-1 observations, all eight antennas were used and the total on-source integration time was 6.6 hours and for the CO J=3-2, only seven antennas were used and the total on-source integration time was 5.6 hours. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{ThesisFigures/HSTsma.png} 
+\caption{HST image of Arp 299 with the SMA $^{12}$CO J=3-2 overlapping field of views in the mosaic.}
+\label{hstsmabeams}
+\end{figure}
+
+The initial calibration was done using the MIR software package (refer to Wilson et al., 2008 for more details). After the calibration, the data were exported into MIRIAD \citep{1995ASPC...77..433S} format for further editing and imaging. However, with the release of the new reduction package for the next generation observatories, CASA, we opt to edit and image the data in CASA instead of MIRIAD. The $uv$ data was exported into FITS format and then imported into CASA format. The data was first flagged to remove the first six and last six channels of each of the 24 chunks of the correlator.  The data was also flagged to remove high-amplitude value data points ($>$ 100 for CO J=3-2; $>60$ for CO J=2-1). This removes less than 1$\%$ of the data that may introduce artifacts into our maps. The continuum emission was subtracted in the $uv$-plane using the line-free channels before imaging. This was extremely important for the $^{13}$CO J=2-1 data set because the continuum was up to 70$\%$ of the total emission. 
+
+The data sets were inverted and cleaned using the CASA task $clean$ using a robust weighting scheme in order to achieve a good balance between sensitivity and resolution. Data cubes of 20 km s$^{-1}$ and 50 km s$^{-1}$ velocity resolutions were made for each data set. Each data set was cleaned down to 2 times the rms noise in each velocity channel. The beam (see Figure \ref{psfbeam}) looks sufficiently clean and the emission looks sufficiently compact that cleaning in the inner quarter region of the image produces good results. However, for the $^{12}$CO J=2-1 and J=3-2 data sets clean boxes were added around regions with known emission from Arp 299 in each channel interactively. This was not possible for the $^{13}$CO J=2-1 data set because the emission is weak; therefore the entire inner quarter region was cleaned. The data cubes were corrected for the primary beam pattern which is important for mosaic images. Finally, integrated intensity (moment 0) maps were created using pixels with values greater than 2$\sigma$ and channels that clearly contain emission from Arp 299 (see Figures \ref{12CO21map} - \ref{12co32map}). Spectra of each region of emission are presented in Figure \ref{smaspectrum}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{ThesisFigures/Arp299co32psf.png} 
+\caption{The synthesized dirty beam of the SMA $^{12}$CO J=3-2 observations. }
+\label{psfbeam}
+\end{figure}
+
+\begin{deluxetable}{cccc}
+\tablecolumns{4}
+\tablewidth{0pt}
+\tablecaption{SMA Observations Summary}
+\label{smasum}
+\tablehead{\colhead{CO Transition Line} & \colhead{Flux} & \colhead{Beam} & \colhead{rms}\\ \colhead{} & \colhead{(Jy km s$^{-1}$)} & \colhead{($\arcsec$)} & \colhead{(mJy/beam)\tablenotemark{a}} }
+\startdata
+$^{12}$CO J=1-0\tablenotemark{b}	&377$\pm$ 9	&2.5 $\times$ 2.2	&8.5 	\\
+$^{12}$CO J=2-1	&1870 $\pm$ 29	&3.0 $\times$ 1.8	&16.9	\\
+$^{13}$CO J=2-1	& 40 $\pm$ 2	&3.2 $\times$ 1.8	&10	\\
+$^{12}$CO J=3-2	&2818 $\pm$ 35	&2.2 $\times$ 1.9	&33	\\
+\enddata
+\tablenotetext{a}{rms values for 20 km s$^{-1}$ channel widths; 50 km s$^{-1}$ channel width for $^{13}$CO J=2-1 }
+\tablenotetext{b}{Map obtained from \citet{1997ApJ...475L.107A}; observed with Owens Valley Radio Observatory.}
+\end{deluxetable}
+
+\begin{figure}[h]
+\centering
+ \includegraphics[scale=0.7]{ThesisFigures/Arp299co21.png} 
+\caption[SMA $^{12}$CO J=2-1 integrated intensity map.]{SMA $^{12}$CO J=2-1 integrated intensity map. Contours correspond to -4, -3, -2, -1, 1, 2..., 10, 15, 20, 25, 30, 35, 40, 45, 50 $\times$ 3.4 Jy/beam km s$^{-1}$. Dashed contours indicate negative flux. }
+\label{12CO21map}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{ThesisFigures/Arp29913co21.png} 
+\caption[SMA $^{13}$CO J=2-1 integrated intensity map.]{SMA $^{13}$CO J=2-1 integrated intensity map. Contours correspond to  -2, -1, 1, 2..., 10, 15 $\times$ 2.7 Jy/beam km s$^{-1}$. Dashed contours indicate negative flux.}
+\label{13co21map}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+ \includegraphics[scale=0.7]{ThesisFigures/Arp299co32.png} 
+\caption[SMA $^{12}$CO J=3-2 integrated intensity map.]{SMA $^{12}$CO J=3-2 integrated intensity map. Contours correspond to -6, -5, -4, -3, -2, -1, 1, 2..., 10, 15, 20, 25, 30, 35, 40, 45, 50 $\times$ 7.3 Jy/beam km s$^{-1}$. Dashed contours indicate negative flux.}
+\label{12co32map}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+$\begin{array}{c@{\hspace{0.1in}}c}
+\includegraphics[scale=0.5]{ThesisFigures/CloudSpectra/regionA.pdf} &\includegraphics[scale=0.5]{ThesisFigures/CloudSpectra/regionAprime.pdf} \\
+\includegraphics[scale=0.5]{ThesisFigures/CloudSpectra/regionB.pdf} &\includegraphics[scale=0.5]{ThesisFigures/CloudSpectra/regionC.pdf}
+\end{array}$
+\caption[SMA $^{12}$CO J=3-2 spectra integrated over each region of CO emission]{SMA $^{12}$CO J=3-2 spectra of each region of CO emission: (\textit{top left}) Region A (IC 694), (\textit{top right}) Region A$^{\prime}$ (IC 694 disk), (\textit{bottom left}) Region B (NGC 3690), (\textit{bottom right}) Region C (overlap) }
+\label{smaspectrum}
+\end{figure}
+
+\section{$^{12}$CO J=1-0 Map}
+
+We have obtained the $^{12}$CO J=1-0 data cube published in \citet{1997ApJ...475L.107A} with resolution of 2.5$\arcsec$ $\times$ 2.2$\arcsec$. The data cube was obtained already cleaned and for observation details refer to \citet{1997ApJ...475L.107A}. We created an integrated intensity map with a 2$\sigma$ cutoff (see Figure \ref{12co10map}).  This map will help us add another line ratio in order to better constrain the density and temperature of each region. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{ThesisFigures/Arp299co10.png} 
+\caption[Owens Valley Radio Observatory $^{12}$CO J=1-0 integrated intensity map from \citet{1997ApJ...475L.107A}.]{Owens Valley Radio Observatory $^{12}$CO J=1-0 integrated intensity map from \citet{1997ApJ...475L.107A}. Contours correspond to -3, -2, -1, 1, 2..., 10, 15, 20, 25, 30, 35, 40, 45, 50 $\times$ 1.3 Jy/beam km s$^{-1}$. Dashed contours indicate negative flux.}
+\label{12co10map}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+$\begin{array}{c@{\hspace{0.5in}}c}
+\includegraphics[scale=0.35]{ThesisFigures/Arp299co10.png} & \includegraphics[scale=0.35]{ThesisFigures/Arp299co21.png} \\
+\includegraphics[scale=0.35]{ThesisFigures/Arp29913co21.png} & \includegraphics[scale=0.35]{ThesisFigures/Arp299co32.png} \\
+\end{array}$
+\caption[SMA integrated intensity maps]{SMA integrated intensity maps: (\textit{top left}) $^{12}$CO J=1-0; (\textit{top right}) $^{12}$CO J=2-1; (\textit{bottom left}) $^{13}$CO J=2-1; (\textit{bottom right}) $^{12}$CO J=3-2 }
+\label{allmaps}
+\end{figure}
+
+\section{James Clerk Maxwell Telescope}
+
+Arp 299 was also observed with the James Clerk Maxwell Telescope (JCMT) on 2007 March 31 for $^{12}$CO J=3-2 and 2011 March 09 for $^{12}$CO J=2-1. The JCMT was used to make a 2$\arcmin$ Nyquist-sampled map with the array receiver HARP-B in the CO J=3-2 line resulting in a 15$\arcsec$ beam and to make a basketweave raster map with the RxA receiver in the CO J=2-1 line resulting in a 22$\arcsec$ beam. The raw data was made into a cube that spanned from -400 km s$^{-1}$ to 400 km s$^{-1}$ using the $Starlink$ software \citep{2008ASPC..394..650C} written for JCMT data. The cube was then baseline corrected (i.e. continuum subtracted) using line free channels and assuming a first order baseline. Several of the outer bad pixels were trimmed off and the cube velocity resolution was degraded to 20 km s$^{-1}$ (see Figure \ref{jcmtspectra}).
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{ThesisFigures/ObservationsFigures/JCMTco21_spectrum.pdf} 
+\includegraphics[scale=1]{ThesisFigures/ObservationsFigures/JCMTco32_spectrum.pdf} 
+\caption[JCMT spectra]{JCMT spectra: ($top$): Spectrum at the brightest pixel of the $^{12}$CO J=2-1 map; ($bottom$): Spectrum at the brightest pixel of the $^{12}$CO J=3-2 map}
+\label{jcmtspectra}
+\end{figure}
+
+\section{Morphology}
+
+Our interferometric observations of Arp 299 in $^{12}$CO J=3-2 and $^{13}$CO J=2-1 are the first of its kind. Previous CO interferometric observations include $^{12}$CO J=1-0 \citep{1991ApJ...366L...1S,1997ApJ...475L.107A, 1999A&A...346..663C}, J=2-1 \citep{1999A&A...346..663C} and $^{13}$CO J=1-0 \citep{1997ApJ...475L.107A, 1999A&A...346..663C}.  We detect the three compact regions of emission in $^{12}$CO as in previous observations. To avoid confusion, we adopt the notation of Gehrz et al. (1983), where the source corresponding to IC 694 (eastern source; east is left in our maps) is denoted by A, the source corresponding to NGC 3690 (south west) is denoted by B and the emission corresponding to the overlap region (north west) is denoted by C (see Figure \ref{nicmos}). 
+
+The interesting case is with the $^{13}$CO J=2-1 map. We have good detections for regions A and C but a very weak detection for region B. This is similar to what is seen with the $^{13}$CO J=1-0 maps of \citet{1997ApJ...475L.107A} and \citet{1999A&A...346..663C}. Aalto et al. (1997) has a non detection in the $^{13}$CO map at the peak position for region B found in the $^{12}$CO map while Casoli et al. (1999) has a weak detection. Casoli et al. (1999) argues that the difference between the  Aalto et al. (1997) map and their own can be attributed to different ways of continuum subtraction. Casoli et al. (1999) even obtained a second set of observations for $^{13}$CO J=1-0 with a lower signal to noise ratio (SNR) and they find the same structure as with their map before. We find that changing the weighting scheme implemented during the creation of the image changes the structure seen.  Using a robust weighting (i.e. combination of uniform and natural weighting) that is more uniform (i.e. robust $\leq$0.0) than natural weighting results in a map with a non-detection in region B. This is reasonable since a natural weighting produces the optimal SNR map but poor resolution; therefore we use robust=0.5 whch produces a map with the best compromise between resolution and sensitivity with a detection for region B. 
+
+\citet{1992A&A...264...55C} studied six merger systems that included 5 U/LIRGs and found that the $^{13}$CO lines are much weaker in these systems than in normal spiral galaxies. They suggest that the weak $^{13}$CO emission is not due to peculiar excitation conditions but instead due to an unusually large [$^{12}$CO]/[$^{13}$CO] abundance ratio and offer three scenarios that can lead to this effect. One scenario is the $^{13}$CO molecules are photo-dissociated efficiently by the strong UV radiation field created by the large number of massive stars while the $^{12}$CO molecules are shielded against this field. This scenario is unlikely because the C$^{18}$O molecule is even more easily photo-dissociated than the $^{13}$CO molecule but the $^{13}$CO J= 1-0/C$^{18}$O line ratio is found to be normal (Casoli et al. 1992). Another scenario is where $^{12}$C is replenished in the  ISM and thus in $^{12}$CO by nucleosynthesis in massive stars formed during the starburst. When the massive stars go supernova they enrich the ISM in $^{12}$C while $^{13}$C is synthesized in the envelopes of low mass stars in the red giant phase (Vigroux et al. 1976)\nocite{1976A&A....52....1V} and is not replenished in the ISM by the end of the starburst. The last possible scenario could be that atomic gas infall from the outer regions is converted from the atomic to molecular state. This would add large amounts of $^{13}$CO poor material to the ISM. Casoli et al. (1992) suggest the last two scenarios are most likely to enhance the [$^{12}$CO]/[$^{13}$CO] abundance ratio which could contribute to the weak $^{13}$CO detections. 
+
+
+\section{Short Spacing Flux Correction}
+
+In order to recover the short spacings of the $^{12}$CO SMA maps, we combine them with the low resolution JCMT maps. The simplest way of achieving this is to use a technique called feathering, which combines the two maps starting in the image plane. The JCMT maps are intrinsically in units of the antenna temperature, $T_{A}^{*}$ (K). These units are not very useful for extended sources, so we convert the units to main beam temperature, $T_{mb}$, since the extended emission likely fills the JCMT beam, using
+\begin{equation}\label{antennatomb}
+T_{mb} = \frac{T_{A}^{*}}{\eta_{mb}}
+\end{equation}
+where $\eta_{mb}$ is the main beam efficiency taken from the JCMT website\footnote{http://www.jach.hawaii.edu/JCMT/spectral\_line/Standards/eff\_web.html} ($\eta_{mb}$ = 0.6 for $\nu$ = 345GHz and $\eta_{mb}$ = 0.69 for $\nu$ = 230GHz). Finally the main beam temperature units was converted to Jy/beam to match the SMA units using
+\begin{equation}\label{KtoJybeam}
+\frac{\mathrm{Jy/beam}}{\mathrm{K}} = \frac{2.786 \times 10^{7}}{\pi R_{d}^{2} \times \eta_{mb}}
+\end{equation}
+where $R_{d}$ is the radius of the dish in $cm$. Both maps were binned to the same velocity resolution so that each velocity channel matches in each map. The feathering technique takes both maps, regrids the low resolution image to match the high resolution image, Fourier transforms them to the gridded $uv$-plane, sums up the gridded visibilities and then Fourier transforms the feathered map back into the image plane. See Appendix \ref{miriadtocasa} for a complete script on how to feather two images.  \\
+\indent The feathered images of $^{12}$CO J=2-1 and J=3-2 are presented in Figure \ref{feathered}. Comparing the SMA only maps with the JCMT maps, the $^{12}$CO J=2-1 map was missing about 20$\%$ of the total flux and the $^{12}$CO J=3-2 map was missing about 67$\%$ of the total flux (see Table 2.2). The amount of missing flux for the $^{12}$CO J=3-2 map found in \citet{2008ApJS..178..189W} is less than what we find here because \citet{2008ApJS..178..189W} did not convert $T_{A}^{*}$ to $T_{mb}$, assuming instead that Arp 299 is a point like source in the JCMT beam. We see that the feathering technique has recovered all of the missing flux in the $^{12}$CO J=2-1 map while only recovering 77$\%$ of the missing flux in the $^{12}$CO J=3-2 map. This partial flux recovery in the $^{12}$CO J=3-2 may be due to the feather task having determined a scaling factor between the SMA and JCMT maps that is not correct. Comparing the SMA only integrated maps with the feathered integrated intensity maps, we see that the emission in the $^{12}$CO J=2-1 map is slightly increased around the three regions of emission, while the $^{12}$CO J=3-2 has regions of increased emission to the north east of region A and in between region A and C. From their spectra the increased emission to the north east of region A seem to be artifacts while the increased emission in between region A and C seem real (see Figure \ref{cloudspectra}). A possible explanation for the artifacts we see north east of IC 694 is the primary beam correction. When we corrected for the primary beam, the noise in the map is no longer uniform. If the gain in the outer regions of the map is 0.5 and we divide by the gain, the noise is increased by 2. Since the integrated intensity maps are created using a single cutoff value, the enhanced noise is not masked out. 
+
+\begin{deluxetable}{ccccccc}
+\tablecolumns{7}
+\tablewidth{0pt}
+\tablecaption{SMA versus Feathered Maps}
+\label{smafeather}
+\tablehead{\colhead{} & \multicolumn{3}{c}{Flux (Jy km s$^{-1}$)} & \colhead{} &  \multicolumn{2}{c}{} \\ \cline{2-4}   \\\colhead{Transition} & \colhead{SMA} & \colhead{Feather} &\colhead{JCMT}& \colhead{}  & \colhead{Missing\tablenotemark{a}} &\colhead{Recovered\tablenotemark{b}}  \\ \colhead{($^{12}$CO)} & \colhead{} & \colhead{} &\colhead{} & \colhead{} &\colhead{($\%$)} &\colhead{($\%$)}  }
+\startdata
+J=2-1	&1870 $\pm$ 29		 &2382 $\pm$ 29 	&2324 $\pm$ 430	&&20&100\\
+J=3-2	& 2818 $\pm$ 35		 &6577 $\pm$36  &8574 $\pm$ 600	&&67&77	\\
+\enddata
+\tablenotetext{a}{Missing flux in the SMA only map relative to the JCMT map.}
+\tablenotetext{b}{Recovered flux in the feathered map relative to the JCMT map}
+\end{deluxetable}
+
+\begin{figure}[h]
+\centering
+%$\begin{array}{c@{\hspace{0.5in}}c}
+\includegraphics[trim=1cm 17cm 1cm 3cm, clip,scale=0.85]{ThesisFigures/ObservationsFigures/Arp299co21_feather_mom0.pdf}
+\includegraphics[trim=1cm 17cm 1cm 3cm, clip,scale=0.85]{ThesisFigures/ObservationsFigures/Arp299co32_feather_mom0.pdf}
+%\end{array}$
+\caption[Feathered SMA maps]{Feathered SMA maps: ($top$) $^{12}$CO J=2-1 map with contour levels as in Figure \ref{12CO21map}; ($bottom$) $^{12}$CO J=3-2 map with contour levels as in Figure \ref{12co32map} }
+\label{feathered}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+$\begin{array}{c@{\hspace{0.5in}}c}
+\includegraphics[scale=0.5]{ThesisFigures/CloudSpectra/cloud2.pdf} & \includegraphics[scale=0.5]{ThesisFigures//CloudSpectra/cloud3.pdf}\\
+\includegraphics[scale=0.5]{ThesisFigures//CloudSpectra/cloud4.pdf}& \includegraphics[scale=0.5]{ThesisFigures//CloudSpectra/northeast2.pdf}
+\end{array}$
+\caption[$^{12}$CO J=3-2 spectra of enhanced emission regions after feathering]{$^{12}$CO J=3-2 spectra of enhanced emission regions after feathering: (\textit{top left}) region at RA=11:28:33 Dec=+58d33m51, (\textit{top right}) region at  RA=11:28:32 Dec=+58d33m42, (\textit{bottom left}) region at RA=11:28:32 Dec=+58d33m40 (\textit{bottom right}) region at RA=11:28:34 Dec=+58d33m47 north east of IC 694 shows no obvious line and is likely to be an artifact.}
+\label{cloudspectra}
+\end{figure}
+
+\section{Line Ratio Maps}  
+
+To create line ratio maps, we need CO maps with the same spatial resolution in order to probe regions on the same spatial scales. The resolution to which we can degrade the maps is limited by the $^{12}$CO J=1-0 and the $^{13}$CO J=2-1 maps. Therefore, we degrade the resolution of all of our maps to a compromise value of 3.6$\arcsec$ $\times$ 2.4$\arcsec$ (beam position angle= 66$^\circ$). The resolution of our SMA CO maps is degraded by applying a gaussian taper weighting to the $uv$ data sets. The taper function puts more weight to short baseline data points in order to degrade the resolution. The gaussian taper functions that were applied to each map are presented in Table 2.3. The $^{12}$CO J=1-0 map that we obtained was just a clean data cube; therefore, in order to degrade the resolution we applied a gaussian kernel. 
+
+\begin{deluxetable}{ccc}
+\tablecolumns{3}
+\tablewidth{0pt}
+\tablecaption{Taper Weights}
+\label{gautapertable}
+\tablehead{\colhead{CO Map} & \colhead{Gaussian Taper} & \colhead{Beam PA}  }
+\startdata
+$^{12}$CO J=1-0\tablenotemark{a}	&2.76$\arcsec$ $\times$ 0.587$\arcsec$		&60.81$^\circ$	\\
+$^{12}$CO J=2-1	&1.84$\arcsec$ $\times$ 1.34$\arcsec$		&74.00$^\circ$	\\
+$^{13}$CO J=2-1	&1.28$\arcsec$ $\times$ 1.187$\arcsec$		&25.90$^\circ$	\\
+$^{12}$CO J=3-2	&3.618$\arcsec$ $\times$ 0.95$\arcsec$		&69.80$^\circ$	\\
+\enddata
+ \tablenotetext{a}{Gaussian kernel used to smooth the map.}
+\end{deluxetable}
+
+The integrated intensity maps were created using pixels with values greater than 2$\sigma$ and have units of Jy/beam km s$^{-1}$. We converted the units of the CO maps to K km s$^{-1}$ using the equation  
+\begin{equation}\label{kelvinequation}
+S_{\nu} = \frac{2\nu^{2}kT}{c^{2}}\Omega_{B}
+\end{equation}
+\noindent where $T$ is the brightness temperature corresponding to flux $S_{\nu}$ and $\Omega_{B}$ is the synthesized beam solid angle. Equation \ref{kelvinequation} can be simplified into the equation  
+\begin{equation}\label{kelvineqnsimple}
+(\frac{T}{1 K}) = (\frac{S_{\nu}}{1 \mathrm{Jy/beam}})[13.6(\frac{300 \mathrm{GHz}}{\nu})^{2}(\frac{1\arcsec}{\theta_{major}})(\frac{1\arcsec}{\theta_{minor}})]
+\end{equation}
+where $\theta_{major}$ and $\theta_{minor}$ are the synthesized beam major and minor axes. Finally, we created $^{12}$CO $\frac{J=3-2}{J=2-1}$, $^{12}$CO $\frac{J=2-1}{J=1-0}$ and $\frac{\mathrm{^{12}CO}}{\mathrm{^{13}CO}}$ J=2-1 line ratio maps (see Figures \ref{RatioMaps}) by dividing the appropriate maps with a cutoff at 2$\sigma$ for each map. 
+
+\begin{figure}[h]
+\centering
+$\begin{array}{c@{\hspace{0.5in}}c}
+\includegraphics[scale=0.35]{RatioMaps/12over13.png} & \includegraphics[scale=0.35]{RatioMaps/21over10.png} \\
+\includegraphics[scale=0.35]{RatioMaps/32over21.png} & \includegraphics[scale=0.35]{RatioMaps/feather32over21.png} \\
+\end{array}$
+\caption[Line ratio maps]{Line ratio maps: (\textit{Top Left}) $^{12}$CO/$^{13}$CO; (\textit{Top Right}): 2-1/1-0 ; (\textit{Bottom Left}): SMA only 3-2/2-1; (\textit{Bottom right}): Feathered 3-2/2-1 ratio map}
+\label{RatioMaps}
+\end{figure}
+
