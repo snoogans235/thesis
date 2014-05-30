@@ -1,3 +1,37 @@
-\chapter{Observations/Reduction}\label{observations}
+\chapter{Observations and Data Preparation}\label{observations}
 
-\section{JCMT}
+It might be nice to have one large table with all of the rms values, beams used for convolution, and beam sizes for each of the wavebands observed
+
+\section{SCUBA-2}
+\begin{itemize}
+   \item What is SCUBA-2 and what does it look at and why is it an important/how is it relevant among today's instrumentation
+   \item Discuss the nature of the observations and their reduction, things like weather grade, number of images used.  Technical details.
+   \item maybe include figure of emission window for scuba-2
+\end{itemize}
+
+\subsection{Image Creation}
+\begin{itemize}
+   \item Use SMURF MAKEMAP command and give brief description of overall process.  Include $img_gen.sh$ in an appendix?
+   \item Implement maps in the ast and flt portion of makemap.  Explain what these do for the image overall (should reduce noise and help to flatten background)
+   \item use flt.filtering to remove any large scale features.  Helped with smoothing background noises.
+   \item apply FCF values that are determined from calibrations from Uranus
+   \item 850 gridded to 8sq'' and 450 gridded to 4sq'' pixels.
+   \item for 850$\mu$m needed to remove $CO_{j=3-2}$ emission from continuum band.  Reference the drabek paper and a brief outline of what she did.  QUOTE THE NUMBER USED TO CONVERT UNITS.
+\end{itemize}
+
+\subsection{Image Properties of 450$\mu$m and 850$\mu$m}
+\begin{itemize}
+   \item show calibration data?
+   \item beam shape of 450 and 850.  Discuss fitting methods for both single and double gaussian shapes also give rms values of noise before any convolution.
+   \item show beams in color image w/contour and plot across the middle
+\end{itemize}
+
+\section{Supporting Images}
+
+\begin{itemize}
+  \item Discuss what you need other images for.  Herschel for SED fits.  THINGS, KUNO, and Heracles for dust-to-gas ratio.
+  \item Images needed to be run through makemap as a fake source in order to remove any small scale structure from original images.  I should have several figures showing the amount of flux removed from each of the images.
+  \item Reference the Kingfish Survey, Kuno et al., Heracles survey and THINGS survey for their sources.  <--Leave this as a paragraph on it's own or introduce smaller subsections?
+  
+\end{itemize}
+
