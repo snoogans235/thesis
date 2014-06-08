@@ -2,16 +2,19 @@
 \contentsline {preface}{Descriptive Notes}{ii}
 \contentsline {preface}{\abstractname }{iii}
 \contentsline {preface}{\acknowledgementname }{v}
-\contentsline {preface}{\listfigurename }{vii}
-\contentsline {preface}{\listtablename }{viii}
+\contentsline {preface}{\listfigurename }{viii}
+\contentsline {preface}{\listtablename }{ix}
 \gdef \the@ipfilectr {}
 \contentsline {chapter}{\numberline {1}Hello}{1}
 \contentsline {section}{\numberline {1.1}S'up}{1}
 \contentsline {subsection}{\numberline {1.1.1}yo}{1}
-\contentsline {chapter}{\numberline {2}Observations/Reduction}{2}
-\contentsline {section}{\numberline {2.1}JCMT}{2}
-\contentsline {chapter}{\numberline {3}Results}{3}
-\contentsline {section}{\numberline {3.1}Will they ever get here?}{3}
-\contentsline {chapter}{\numberline {4}Discussion}{4}
-\contentsline {section}{\numberline {4.1}Talk to the hand}{4}
-\contentsline {chapter}{\numberline {5}Conclusions}{5}
+\contentsline {chapter}{\numberline {2}Observations and Data Preparation}{2}
+\contentsline {section}{\numberline {2.1}SCUBA-2}{2}
+\contentsline {subsection}{\numberline {2.1.1}Image Creation}{3}
+\contentsline {subsection}{\numberline {2.1.2}Image Properties of 450$\mu $m and 850$\mu $m}{3}
+\contentsline {section}{\numberline {2.2}Supporting Images}{4}
+\contentsline {chapter}{\numberline {3}Results}{5}
+\contentsline {section}{\numberline {3.1}Will they ever get here?}{5}
+\contentsline {chapter}{\numberline {4}Discussion}{6}
+\contentsline {section}{\numberline {4.1}Talk to the hand}{6}
+\contentsline {chapter}{\numberline {5}Conclusions}{7}
