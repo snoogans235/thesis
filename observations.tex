@@ -1,18 +1,28 @@
+%from chapin2013:  An individual bolometer acts as a thermal absorber which are linked directly to transition edge sensors.  When the sensors detect detect thermal variations they will produce changing currents which result in changing magnetic fields.  The magnetic fields are detected by super conduction quantum interference devices (SQUIDs) prior to the output currents being digitized.  Between the initial SQUID amplification and digitization of the current, the data is resampled from 12KHz to 200Hz.  A chain of ``dark SQUIDs'' is used to detect any non-thermal noise that can arise from the amplification of the signal.  //all unnecessary....
+
+
 \chapter{Observations and Data Preparation}\label{observations}
 
 \section{SCUBA-2} \\
 The Submillimetre Common-User Bolometer Array 2 (SCUBA-2) was designed to decrease the observing time compared its predecessor SCUBA to allow for rapid data acquisition in the submillimetre regime of the electromagnetic spectrum, at the 450$\mu$m and 850$\mu$m bands.  Prior to SCUBA-2, other bolometer camera's such as LABOCA, BOLOCAM and SHARC-II were limited to less than 100 pixels, while the new SCUBA-2 has been able to incorporate over 10,000 pixels in its design and effectively reduce observing time.  Increasing the amount of pixels by a factor of 100 was possible by the advent of new technology such as high precision micromachining, superconducting transition edge sensors, and superconducting quantum interference device amplifiers \citet{holland2013}.
 
-The observations of NGC3627 were taken from the Nearby Galaxies Legacy Survey's (NGLS) initial science images using SCUBA-2 from December 29, 2011  to January 21, 2012, and consist of 24 18`x18` scans taken in grade 3 weather or better (0.08 \< $\tau$ \<0.12).  Out of the 24 scans, 16 were deemed useable.  Whether or not an observation was deemed worthwhile was determined by factors such as the behavior of the image background and whether the image was flagged in observing to be unusable.  An example of a good image background vs a poor image background can be seen in figure \ref{fig_bg}.  
-
-%from chapin2013:  An individual bolometer acts as a thermal absorber which are linked directly to transition edge sensors.  When the sensors detect detect thermal variations they will produce changing currents which result in changing magnetic fields.  The magnetic fields are detected by super conduction quantum interference devices (SQUIDs) prior to the output currents being digitized.  Between the initial SQUID amplification and digitization of the current, the data is resampled from 12KHz to 200Hz.  A chain of ``dark SQUIDs'' is used to detect any non-thermal noise that can arise from the amplification of the signal.  //all unnecessary....
+The observations of NGC3627 were taken from the Nearby Galaxies Legacy Survey's (NGLS) initial science images using SCUBA-2 from December 29, 2011  to January 21, 2012, and consist of 24 18`x18` scans taken in grade 3 weather or better $(0.08 < \tau <0.12)$.  Out of the 24 scans, 16 were deemed useable.  Whether or not an observation was deemed worthwhile was determined by factors such as the behavior of the image background and whether the image was flagged in observing to be unusable.  An example of a good image background vs a poor image background can be seen in figure \ref{fig_bg}.  The observations of NGC3627 were taken using a daisy scanning pattern at 600``/second in order to reduce the white noise of the final data product.
 
 \section{Image Creation}
 
-For any imaging process to be successful, the image needs to have limited white noise.  White noise in the sense of bolometer data arises from thermal variations in the instrument and atmosphere during observations. The random noise can be minimized through scanning methods and during image processing \citet{chapin2013}.  Observations of NGC3627 were taken using a daisy scanning pattern at 600``/second.  The purpose of these scanning methods is to 
+For any imaging process to be successful, the image needs to have limited white noise.  White noise in the sense of bolometer data arises from thermal variations in the instrument and atmosphere during observations. The random noise can be minimized through scanning methods and during image processing \citet{chapin2013}.  We used the SMURF procedure MAKEMAP to generate the final data products.  MAKEMAP will reduce the noise of the observations while maintaining the source's emission by incorporating a combination of principal component analysis and a maximum likelihood analysis \citet{chapin2013}.  Both of these methods have proven useful in reducing bolometer data on their own, but due to the size of raw SCUBA-2 data specific aspects of each method would result in extreme run times or resource intensive.
+
+MAKEMAP broke down the image creation into several steps performed in iteration in order to successfully reduce any background noise \citet{chapin2013}.  The steps used in MAKEMAP were:  COM and GAI which remove any common noise features detected by the SQUIDs, EXT to apply extinction corrections, FLT applied  a high- and low-pass filter to remove any noise features not removed in the COM and GAI filtering, AST which regrids the data and detects sources to be removed from reduction, the final step is NOI which determines the noise in the map after each step has been performed.  A convergence check is then issued and if the check is failed the COM, GAI, EXT, and FLT values are inverted and the process is repeated.
+
+In our production of maps, we altered the AST and FLT sections of the image creation by introducing a mask made from Herschel's 250$\mu$m map shown if figure \ref{ngc3627_mask}.  The purpose of the  to exclude the target from interfering with the noise minimization as well as prohibit any emission from the galaxy to be significantly altered during production.  The filter size of the high-pass filter was also performed and an appropriate value was determined to be 175Hz.  The maps were returned from MAKEMAP in units of pW with a pixel size of 2 square arc seconds.  The data were re-gridded to 4 square arc second and 8 square arc second pixel size for the 450$\mu$m and 850$\mu$m respectively.  Finally, a calibration factors of XXX were applied to the 450$\mu$m and XXX 850$\mu$m to convert the maps into mJy/beam and mJy/square arc second.
 
 %location of fig_bg is: /1/home/newtonjh/scuba2_test/ngc3627/previous/work_dir/scans/thesis_fig
 
+%need to check the scan speed of SCUBA-2
+
+%I should have some filter plot lying around somewhere.  Get it.
+
+%double check that is filter size we used.
 
 --------
 
@@ -25,24 +35,24 @@ It might be nice to have one large table with all of the rms values, beams used 
 %   \item maybe include figure of emission window for scuba-2
 %\end{itemize}
 
-\subsection{Image Creation}
-\begin{itemize}
-   \item Use SMURF MAKEMAP command and give brief description of overall process.  Include $img_gen.sh$ in an appendix?
-   \item Implement maps in the ast and flt portion of makemap.  Explain what these do for the image overall (should reduce noise and help to flatten background)
-   \item use flt.filtering to remove any large scale features.  Helped with smoothing background noises.
-   \item apply FCF values that are determined from calibrations from Uranus
-   \item 850 gridded to 8sq'' and 450 gridded to 4sq'' pixels.
-   \item for 850$\mu$m needed to remove $CO_{j=3-2}$ emission from continuum band.  Reference the drabek paper and a brief outline of what she did.  QUOTE THE NUMBER USED TO CONVERT UNITS.
-\end{itemize}
+%\subsection{Image Creation}
+%\begin{itemize}
+%   \item Use SMURF MAKEMAP command and give brief description of overall process.  Include $img_gen.sh$ in an appendix?
+%   \item Implement maps in the ast and flt portion of makemap.  Explain what these do for the image overall (should reduce noise and help to flatten background)
+%   \item use flt.filtering to remove any large scale features.  Helped with smoothing background noises.
+%   \item apply FCF values that are determined from calibrations from Uranus
+%   \item 850 gridded to 8sq'' and 450 gridded to 4sq'' pixels.
+%   \end{itemize}
 
 \subsection{Image Properties of 450$\mu$m and 850$\mu$m}
 \begin{itemize}
+   \item for 850$\mu$m needed to remove $CO_{j=3-2}$ emission from continuum band.  Reference the drabek paper and a brief outline of what she did.  QUOTE THE NUMBER USED TO CONVERT UNITS. <-- where to include this?
    \item show calibration data?
    \item beam shape of 450 and 850.  Discuss fitting methods for both single and double gaussian shapes also give rms values of noise before any convolution.
    \item show beams in color image w/contour and plot across the middle
 \end{itemize}
 
-\section{Supporting Images}
+\section{Supporting Images / ancillary data}
 
 \begin{itemize}
   \item Discuss what you need other images for.  Herschel for SED fits.  THINGS, KUNO, and Heracles for dust-to-gas ratio.
