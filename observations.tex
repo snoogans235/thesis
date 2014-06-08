@@ -1,9 +1,15 @@
 \chapter{Observations and Data Preparation}\label{observations}
 
 \section{SCUBA-2} \\
-The Submillimetre Common-User Bolometer Array 2 (SCUBA-2) was designed to decrease the observing time of its predecessor SCUBA to allow for rapid data acquisition in the submillimetre regime of the electromagnetic spectrum, in particular at the 450$\mu$m and 850$\mu$m bands.  Prior to SCUBA-2, other bolometer camera's such as LABOCA, BOLOCAM and SHARC-II were limited to less than 100 pixels, whle the new SCUBA-2 has been able to incorporate over 10,000 pixels in its design and effectively reduce observing time.  Increasing the amount of pixels by a factor of 100 was possible by the advent of new technology such as high precision micromaching, superconducting transition edge sensors, and superconducting quantum interference device amplifiers \citet{holland2013}.
+The Submillimetre Common-User Bolometer Array 2 (SCUBA-2) was designed to decrease the observing time compared its predecessor SCUBA to allow for rapid data acquisition in the submillimetre regime of the electromagnetic spectrum, at the 450$\mu$m and 850$\mu$m bands.  Prior to SCUBA-2, other bolometer camera's such as LABOCA, BOLOCAM and SHARC-II were limited to less than 100 pixels, while the new SCUBA-2 has been able to incorporate over 10,000 pixels in its design and effectively reduce observing time.  Increasing the amount of pixels by a factor of 100 was possible by the advent of new technology such as high precision micromachining, superconducting transition edge sensors, and superconducting quantum interference device amplifiers \citet{holland2013}.
 
 The observations of NGC3627 were taken from the Nearby Galaxies Legacy Survey's (NGLS) initial science images using SCUBA-2 from December 29, 2011  to January 21, 2012, and consist of 24 18`x18` scans taken in grade 3 weather or better (0.08 \< $\tau$ \<0.12).  Out of the 24 scans, 16 were deemed useable.  Whether or not an observation was deemed worthwhile was determined by factors such as the behavior of the image background and whether the image was flagged in observing to be unusable.  An example of a good image background vs a poor image background can be seen in figure \ref{fig_bg}.  
+
+%from chapin2013:  An individual bolometer acts as a thermal absorber which are linked directly to transition edge sensors.  When the sensors detect detect thermal variations they will produce changing currents which result in changing magnetic fields.  The magnetic fields are detected by super conduction quantum interference devices (SQUIDs) prior to the output currents being digitized.  Between the initial SQUID amplification and digitization of the current, the data is resampled from 12KHz to 200Hz.  A chain of ``dark SQUIDs'' is used to detect any non-thermal noise that can arise from the amplification of the signal.  //all unnecessary....
+
+\section{Image Creation}
+
+For any imaging process to be successful, the image needs to have limited white noise.  White noise in the sense of bolometer data arises from thermal variations in the instrument and atmosphere during observations. The random noise can be minimized through scanning methods and during image processing \citet{chapin2013}.  Observations of NGC3627 were taken using a daisy scanning pattern at 600``/second.  The purpose of these scanning methods is to 
 
 %location of fig_bg is: /1/home/newtonjh/scuba2_test/ngc3627/previous/work_dir/scans/thesis_fig
 
@@ -12,12 +18,12 @@ The observations of NGC3627 were taken from the Nearby Galaxies Legacy Survey's 
 
 It might be nice to have one large table with all of the rms values, beams used for convolution, and beam sizes for each of the wavebands observed
 
-\section{SCUBA-2}
-\begin{itemize}
-   \item What is SCUBA-2 and what does it look at and why is it an important/how is it relevant among today's instrumentation
-   \item Discuss the nature of the observations and their reduction, things like weather grade, number of images used.  Technical details.
-   \item maybe include figure of emission window for scuba-2
-\end{itemize}
+%\section{SCUBA-2}
+%\begin{itemize}
+%   \item What is SCUBA-2 and what does it look at and why is it an important/how is it relevant among today's instrumentation
+%   \item Discuss the nature of the observations and their reduction, things like weather grade, number of images used.  Technical details.
+%   \item maybe include figure of emission window for scuba-2
+%\end{itemize}
 
 \subsection{Image Creation}
 \begin{itemize}
