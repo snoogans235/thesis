@@ -1,5 +1,40 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{4}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
+  {Tilanus}, {Economou}, \& {Holland}}]{chapin2013}
+{Chapin}, E.~L., {Berry}, D.~S., {Gibb}, A.~G., {Jenness}, T., {Scott}, D.,
+  {Tilanus}, R.~P.~J., {Economou}, F., \& {Holland}, W.~S. 2013, \mnras, 430,
+  2545
+
+\bibitem[{{Dempsey} {et~al.}(2013){Dempsey}, {Friberg}, {Jenness}, {Tilanus},
+  {Thomas}, {Holland}, {Bintley}, {Berry}, {Chapin}, {Chrysostomou}, {Davis},
+  {Gibb}, {Parsons}, \& {Robson}}]{dempsey2013}
+{Dempsey}, J.~T., {Friberg}, P., {Jenness}, T., {Tilanus}, R.~P.~J., {Thomas},
+  H.~S., {Holland}, W.~S., {Bintley}, D., {Berry}, D.~S., {Chapin}, E.~L.,
+  {Chrysostomou}, A., {Davis}, G.~R., {Gibb}, A.~G., {Parsons}, H., \&
+  {Robson}, E.~I. 2013, \mnras, 430, 2534
+
+\bibitem[{{Holland} {et~al.}(2013){Holland}, {Bintley}, {Chapin},
+  {Chrysostomou}, {Davis}, {Dempsey}, {Duncan}, {Fich}, {Friberg}, {Halpern},
+  {Irwin}, {Jenness}, {Kelly}, {MacIntosh}, {Robson}, {Scott}, {Ade},
+  {Atad-Ettedgui}, {Berry}, {Craig}, {Gao}, {Gibb}, {Hilton}, {Hollister},
+  {Kycia}, {Lunney}, {McGregor}, {Montgomery}, {Parkes}, {Tilanus}, {Ullom},
+  {Walther}, {Walton}, {Woodcraft}, {Amiri}, {Atkinson}, {Burger}, {Chuter},
+  {Coulson}, {Doriese}, {Dunare}, {Economou}, {Niemack}, {Parsons},
+  {Reintsema}, {Sibthorpe}, {Smail}, {Sudiwala}, \& {Thomas}}]{holland2013}
+{Holland}, W.~S., {Bintley}, D., {Chapin}, E.~L., {Chrysostomou}, A., {Davis},
+  G.~R., {Dempsey}, J.~T., {Duncan}, W.~D., {Fich}, M., {Friberg}, P.,
+  {Halpern}, M., {Irwin}, K.~D., {Jenness}, T., {Kelly}, B.~D., {MacIntosh},
+  M.~J., {Robson}, E.~I., {Scott}, D., {Ade}, P.~A.~R., {Atad-Ettedgui}, E.,
+  {Berry}, D.~S., {Craig}, S.~C., {Gao}, X., {Gibb}, A.~G., {Hilton}, G.~C.,
+  {Hollister}, M.~I., {Kycia}, J.~B., {Lunney}, D.~W., {McGregor}, H.,
+  {Montgomery}, D., {Parkes}, W., {Tilanus}, R.~P.~J., {Ullom}, J.~N.,
+  {Walther}, C.~A., {Walton}, A.~J., {Woodcraft}, A.~L., {Amiri}, M.,
+  {Atkinson}, D., {Burger}, B., {Chuter}, T., {Coulson}, I.~M., {Doriese},
+  W.~B., {Dunare}, C., {Economou}, F., {Niemack}, M.~D., {Parsons}, H.~A.~L.,
+  {Reintsema}, C.~D., {Sibthorpe}, B., {Smail}, I., {Sudiwala}, R., \&
+  {Thomas}, H.~S. 2013, \mnras, 430, 2513
 
 \bibitem[{{Sandstrom} {et~al.}(2013){Sandstrom}, {Leroy}, {Walter}, {Bolatto},
   {Croxall}, {Draine}, {Wilson}, {Wolfire}, {Calzetti}, {Kennicutt}, {Aniano},
