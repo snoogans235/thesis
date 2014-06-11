@@ -19,15 +19,21 @@ In our production of maps, we altered the AST and FLT sections of the image crea
 The finalized 450$\mu$m image was then regridded down to a 4`` by 4`` pixel grid, and a flux calibration value of 491000 and 4710 were applied to convert from pW to mJy/beam and mJy/sq arcsecond respectively.  The 850$\mu$m maps were regridded to an 8`` by 8`` pixed and used flux calibration values of 537000 and 2340 for mJy/beam and mJy/sq. arcsecond.   For ease of analysis the images were also converted to Jy/pixel by multiplying the mJy/sq arcseond by 0.001/pixel area.  The calibration values were determined from observations of Uranus.   The overall noise in the finalized image scan be seen in table \ref{obs_tab}.
 
 \subsection{Beam Shape of the 450$\mu$m and 850$\mu$m} \\
-The Uranus calibration images were also used in determining the beam shape of the 450$\mu$m and 850$\mu$m observations.  The beam shape of both the 450$\mu$ and 850$\mu$m deviate from a single gaussian due to the second maximum of the airy diffraction pattern in the response function of the telescope, and is best represented by a sum of two gaussians whose amplitude totals to unity \citet{dempsey2013}.  The average beam resolution for the 450$\mu$m and 850$\mu$m are reported in table \ref{obs_tab} and match the values found in \citet{dempsey2013}.  The contribution of the error beam in the 850$\mu$m emission was negligible and allowed for the beam to be approximated by a single gaussian.
+The Uranus calibration images were also used in determining the beam shape of the 450$\mu$m and 850$\mu$m observations.  The beam shape of both the 450$\mu$ and 850$\mu$m deviate from a single gaussian due to the second maximum of the airy diffraction pattern in the response function of the telescope.  This abnormality was best represented by a sum of two gaussians whose amplitude totals to unity \citet{dempsey2013}.  The average beam resolution for the 450$\mu$m and 850$\mu$m are reported in table \ref{obs_tab} and match the values within error found in \citet{dempsey2013}.  The contribution of the error beam in the 850$\mu$m emission was negligible and allowed for the beam to be approximated by a single gaussian however the contribution of the error beam in the 450$\mu$m images was large enough to require special treatment.
 
-In order to accomodate the 450$\mu$m's error compenent, we used a method employed by another survey team using SCUBA-2, the Gould-Belt Survey team.  This method utilized the distributive nature of the Fourier transform to create similiar error components in the beam resolutions we are convolving to and from.  This relationship is shown in equation \ref{eq_GBTmethod} where $X_{desire}$ is the beam width of the resolution we are convolving to, $\alpha$ is the amplitude of the main beam of the 450$\mu$m emission, $\beta$ is the amplitude of the 450$\mu$m error beam, $X_{\alpha}$ and $X_{\beta}$ are the main and error beam of the 450$\mu$m observations, and $X_{\alpha}$ are is the 450$\mu$m beam.
+In order to accomodate the 450$\mu$m's error compenent, we used a method employed by another SCUBA-2 survey team, the Gould-Belt Survey team.  This method utilized the distributive nature of the Fourier transform to create similiar error components in the beam resolutions we were convolving to and from.  This relationship is shown in equation \ref{eq_GBTmethod} where $X_{desire}$ is the beam width of the resolution we are convolving to, $\alpha$ is the amplitude of the main beam of the 450$\mu$m emission, $\beta$ is the amplitude of the 450$\mu$m error beam, $X_{\alpha}$ and $X_{\beta}$ are the main and error beam of the 450$\mu$m observations, and $X_{450$\mu$m}$ is the composition of $X_{\alpha}$ and $X_{\beta}$ beams.
 
 \begin{equation}\label{eq_GBTmethod}
 
-\left(X_{desire} \ast X_{\alpha}\right)*\alpha + \left(X_{desire} \ast X_{\beta}\right)*\beta = X_{450\mu m} \ast X_{desire}
+  \left(X_{desire} \ast X_{\alpha}\right)*\alpha + \left(X_{desire} \ast X_{\beta}\right)*\beta = X_{450\mu m} \ast X_{desire}
 
 \end{equation}
+
+\section{Ancillary Data}
+
+The science goals of this thesis requried data outside of the capabilities of SCUBA-2.  Determining the dust mass reqired computing the spectral energy distribution (SED) for NGC3627.  To successfully fit an SED we needed shorter wavelength data to fully probe the cold component of this galaxy. We used data ranging from 100$\mu$m to 500$\mu$ from the KINGFISH survey \citet{kennicutt2011} to fulfill this need.  Secondly the bandpass of the 850$\mu$m emisison contains the $CO_{j=3-2}$ transmission line and in order to get an approximation on the dust mass this conribution had to be removed.  We used emisison data from the NGLS using HARP instrumentation on the JCMT \citet{wilson2012}.  When a dust mass was obtained, we used $CO_{j=1-0}$ from the Nobeyama 45-m telescope (\citet{kuno2007}), $CO_{j=2-1}$ from HERACLES (\citet{leroy2007}), and $HI$ observations from THINGS (\citet{walter2008}).
+
+Due to the conjoined method approach used in MAKEMAP, small scale/extended structure is removed from the final SCUBA-2 images.  However, in all of our ancillary data the small scale emission was present in the initial maps.  The removal of the extended features from our support data was carried out by converting the images from their native units into pW using the 850$\mu$m flux calibration factor, and the images as a fakesource in the reduction process.  The original scan image was then subtracted from the scan with the fakesource present and the residual image was the ancillary data with its extended structure removed.  The amount of emission lost can be seen in figure \ref{fig_fs_lost}.
 
 %this information would be useful to include into maybe subsection for the 450 and 850 that would include things like calibration to uranus, beam sizes, and then pixel information
 
@@ -41,6 +47,11 @@ In order to accomodate the 450$\mu$m's error compenent, we used a method employe
 %  info for the table:
 
 %maybe include some beam shapes with the calibration data?
+
+%include bandwidth for 450um and 850um!!
+
+%look for plots showing the amount of emission lost due to fakesourcing
+
 %------
 
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{8}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
@@ -36,6 +36,30 @@
   {Reintsema}, C.~D., {Sibthorpe}, B., {Smail}, I., {Sudiwala}, R., \&
   {Thomas}, H.~S. 2013, \mnras, 430, 2513
 
+\bibitem[{{Kennicutt} {et~al.}(2011){Kennicutt}, {Calzetti}, {Aniano},
+  {Appleton}, {Armus}, {Beir{\~a}o}, {Bolatto}, {Brandl}, {Crocker}, {Croxall},
+  {Dale}, {Meyer}, {Draine}, {Engelbracht}, {Galametz}, {Gordon}, {Groves},
+  {Hao}, {Helou}, {Hinz}, {Hunt}, {Johnson}, {Koda}, {Krause}, {Leroy}, {Li},
+  {Meidt}, {Montiel}, {Murphy}, {Rahman}, {Rix}, {Roussel}, {Sandstrom},
+  {Sauvage}, {Schinnerer}, {Skibba}, {Smith}, {Srinivasan}, {Vigroux},
+  {Walter}, {Wilson}, {Wolfire}, \& {Zibetti}}]{kennicutt2011}
+{Kennicutt}, R.~C., {Calzetti}, D., {Aniano}, G., {Appleton}, P., {Armus}, L.,
+  {Beir{\~a}o}, P., {Bolatto}, A.~D., {Brandl}, B., {Crocker}, A., {Croxall},
+  K., {Dale}, D.~A., {Meyer}, J.~D., {Draine}, B.~T., {Engelbracht}, C.~W.,
+  {Galametz}, M., {Gordon}, K.~D., {Groves}, B., {Hao}, C.-N., {Helou}, G.,
+  {Hinz}, J., {Hunt}, L.~K., {Johnson}, B., {Koda}, J., {Krause}, O., {Leroy},
+  A.~K., {Li}, Y., {Meidt}, S., {Montiel}, E., {Murphy}, E.~J., {Rahman}, N.,
+  {Rix}, H.-W., {Roussel}, H., {Sandstrom}, K., {Sauvage}, M., {Schinnerer},
+  E., {Skibba}, R., {Smith}, J.~D.~T., {Srinivasan}, S., {Vigroux}, L.,
+  {Walter}, F., {Wilson}, C.~D., {Wolfire}, M., \& {Zibetti}, S. 2011, \pasp,
+  123, 1347
+
+\bibitem[{{Kuno} {et~al.}(2007){Kuno}, {Sato}, {Nakanishi}, {Hirota}, {Tosaki},
+  {Shioya}, {Sorai}, {Nakai}, {Nishiyama}, \& {Vila-Vilar{\'o}}}]{kuno2007}
+{Kuno}, N., {Sato}, N., {Nakanishi}, H., {Hirota}, A., {Tosaki}, T., {Shioya},
+  Y., {Sorai}, K., {Nakai}, N., {Nishiyama}, K., \& {Vila-Vilar{\'o}}, B. 2007,
+  \pasj, 59, 117
+
 \bibitem[{{Sandstrom} {et~al.}(2013){Sandstrom}, {Leroy}, {Walter}, {Bolatto},
   {Croxall}, {Draine}, {Wilson}, {Wolfire}, {Calzetti}, {Kennicutt}, {Aniano},
   {Donovan Meyer}, {Usero}, {Bigiel}, {Brinks}, {de Blok}, {Crocker}, {Dale},
@@ -54,5 +78,34 @@
   R., {van der Laan}, T., {Appleton}, P., {Armus}, L., {Brandl}, B., {Gordon},
   K., {Hinz}, J., {Krause}, O., {Montiel}, E., {Sauvage}, M., {Schmiedeke}, A.,
   {Smith}, J.~D.~T., \& {Vigroux}, L. 2013, \apj, 777, 5
+
+\bibitem[{{Walter} {et~al.}(2008){Walter}, {Brinks}, {de Blok}, {Bigiel},
+  {Kennicutt}, {Thornley}, \& {Leroy}}]{walter2008}
+{Walter}, F., {Brinks}, E., {de Blok}, W.~J.~G., {Bigiel}, F., {Kennicutt},
+  Jr., R.~C., {Thornley}, M.~D., \& {Leroy}, A. 2008, \aj, 136, 2563
+
+\bibitem[{{Wilson} {et~al.}(2012){Wilson}, {Warren}, {Israel}, {Serjeant},
+  {Attewell}, {Bendo}, {Butner}, {Chanial}, {Clements}, {Golding}, {Heesen},
+  {Irwin}, {Leech}, {Matthews}, {M{\"u}hle}, {Mortier}, {Petitpas},
+  {S{\'a}nchez-Gallego}, {Sinukoff}, {Shorten}, {Tan}, {Tilanus}, {Usero},
+  {Vaccari}, {Wiegert}, {Zhu}, {Alexander}, {Alexander}, {Azimlu}, {Barmby},
+  {Brar}, {Bridge}, {Brinks}, {Brooks}, {Coppin}, {C{\^o}t{\'e}},
+  {C{\^o}t{\'e}}, {Courteau}, {Davies}, {Eales}, {Fich}, {Hudson}, {Hughes},
+  {Ivison}, {Knapen}, {Page}, {Parkin}, {Rigopoulou}, {Rosolowsky}, {Seaquist},
+  {Spekkens}, {Tanvir}, {van der Hulst}, {van der Werf}, {Vlahakis}, {Webb},
+  {Weferling}, \& {White}}]{wilson2012}
+{Wilson}, C.~D., {Warren}, B.~E., {Israel}, F.~P., {Serjeant}, S., {Attewell},
+  D., {Bendo}, G.~J., {Butner}, H.~M., {Chanial}, P., {Clements}, D.~L.,
+  {Golding}, J., {Heesen}, V., {Irwin}, J., {Leech}, J., {Matthews}, H.~E.,
+  {M{\"u}hle}, S., {Mortier}, A.~M.~J., {Petitpas}, G., {S{\'a}nchez-Gallego},
+  J.~R., {Sinukoff}, E., {Shorten}, K., {Tan}, B.~K., {Tilanus}, R.~P.~J.,
+  {Usero}, A., {Vaccari}, M., {Wiegert}, T., {Zhu}, M., {Alexander}, D.~M.,
+  {Alexander}, P., {Azimlu}, M., {Barmby}, P., {Brar}, R., {Bridge}, C.,
+  {Brinks}, E., {Brooks}, S., {Coppin}, K., {C{\^o}t{\'e}}, S., {C{\^o}t{\'e}},
+  P., {Courteau}, S., {Davies}, J., {Eales}, S., {Fich}, M., {Hudson}, M.,
+  {Hughes}, D.~H., {Ivison}, R.~J., {Knapen}, J.~H., {Page}, M., {Parkin},
+  T.~J., {Rigopoulou}, D., {Rosolowsky}, E., {Seaquist}, E.~R., {Spekkens}, K.,
+  {Tanvir}, N., {van der Hulst}, J.~M., {van der Werf}, P., {Vlahakis}, C.,
+  {Webb}, T.~M., {Weferling}, B., \& {White}, G.~J. 2012, \mnras, 424, 3050
 
 \end{thebibliography}
