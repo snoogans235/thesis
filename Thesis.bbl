@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
@@ -14,6 +14,12 @@
   H.~S., {Holland}, W.~S., {Bintley}, D., {Berry}, D.~S., {Chapin}, E.~L.,
   {Chrysostomou}, A., {Davis}, G.~R., {Gibb}, A.~G., {Parsons}, H., \&
   {Robson}, E.~I. 2013, \mnras, 430, 2534
+
+\bibitem[{{Drabek} {et~al.}(2012){Drabek}, {Hatchell}, {Friberg}, {Richer},
+  {Graves}, {Buckle}, {Nutter}, {Johnstone}, \& {Di Francesco}}]{drabek2012}
+{Drabek}, E., {Hatchell}, J., {Friberg}, P., {Richer}, J., {Graves}, S.,
+  {Buckle}, J.~V., {Nutter}, D., {Johnstone}, D., \& {Di Francesco}, J. 2012,
+  \mnras, 426, 23
 
 \bibitem[{{Holland} {et~al.}(2013){Holland}, {Bintley}, {Chapin},
   {Chrysostomou}, {Davis}, {Dempsey}, {Duncan}, {Fich}, {Friberg}, {Halpern},
@@ -59,6 +65,13 @@
 {Kuno}, N., {Sato}, N., {Nakanishi}, H., {Hirota}, A., {Tosaki}, T., {Shioya},
   Y., {Sorai}, K., {Nakai}, N., {Nishiyama}, K., \& {Vila-Vilar{\'o}}, B. 2007,
   \pasj, 59, 117
+
+\bibitem[{{Leroy} {et~al.}(2009){Leroy}, {Walter}, {Bigiel}, {Usero}, {Weiss},
+  {Brinks}, {de Blok}, {Kennicutt}, {Schuster}, {Kramer}, {Wiesemeyer}, \&
+  {Roussel}}]{leroy2009}
+{Leroy}, A.~K., {Walter}, F., {Bigiel}, F., {Usero}, A., {Weiss}, A., {Brinks},
+  E., {de Blok}, W.~J.~G., {Kennicutt}, R.~C., {Schuster}, K.-F., {Kramer}, C.,
+  {Wiesemeyer}, H.~W., \& {Roussel}, H. 2009, \aj, 137, 4670
 
 \bibitem[{{Sandstrom} {et~al.}(2013){Sandstrom}, {Leroy}, {Walter}, {Bolatto},
   {Croxall}, {Draine}, {Wilson}, {Wolfire}, {Calzetti}, {Kennicutt}, {Aniano},
