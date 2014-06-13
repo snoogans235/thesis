@@ -1,0 +1,15 @@
+Observation Section:
+  -maybe expand on calibration to uranus and the 450 and 850 beam
+     sizes
+  -background figure (fig_bg) is /1/homen/newtonjh/scuba2_test_ngc3627
+     /previous/work_dir/scans/thesis_fig
+  -get the scan speed of scuba-2
+  -Use a plot showing what happens when you vary the fiter size
+  -need to get information for obs_tab
+  -show beams and calibration data in one figure
+  -get 450$\mu$m and 850um bandwidth
+  -get plots showing the amount of emission lost in fakesource/include
+     in obs_tab
+  -make images for all of the data
+  -The introduction for some of the surveys might be a bit much.  I'm 
+   sure chris will tell me if it is.

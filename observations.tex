@@ -47,67 +47,12 @@ The Nearby Galaxy Legacy Survey is an HI-selected set of 155 galaxies contained 
 
 Removing the molecular gas contamination from the 850$\mu$m images required passing the data through MAKEMAP in a similar manner as the KINGFISH data.  The only significant difference was converting the $CO_{j=3-2}$ data from $K*km/s$ to pW.  The change of units was done using conversion factor of 0.70 $[K*km/s][mJy/beam]^{-1}$ found by \citet{drabek2012}.  The final image product can be seen in figure \ref{fig_co32}.  We found the average ratio of $CO_{j=3-2}$ to be around 25\% in most of the galaxy while rising as high as 50\% in the nucleus indicative of AGN activity.
 
-\subsection{Nobeyama 45-m $CO_{j=1-0}$}
+\subsection{Nobeyama 45-m}
 
-Determining a dust-to-gas ratio required the need for a molecular tracer.  The most frequently used molecular tracer is $CO_{j=1-0}$ due to it's abundance in the ISM.  The $CO_{j=1-0}$ we used was taken from the Nobeyama 45-m CO Atlas of Nearby Spiral Galaxies and observed to better understand the roll of bars relating to molecular gas \citet{kuno2007}.  Preparation for the $CO_{j=1-0}$ was performed in a similar matter to the previous ancillary data sets, however instead of determining a direct conversion factor the data was scaled down by a factor 0.001.  The scaling factor used was selected so that the input image for the fakesoure would be on the same scale as the 850$\mu$m image it was overwriting, and then re-applied as the flux calibration factor to return the original map into its native unit of $K * (km/s)$.  The beam sizes and rms of the filterd $CO_{j=1-0}$ map are displayed in table \ref{obs_tab}.
+Determining a dust-to-gas ratio required the need for a molecular tracer.  The most frequently used molecular tracer is $CO_{j=1-0}$ due to it's abundance in the ISM.  The $CO_{j=1-0}$ we used was taken from the Nobeyama 45-m CO Atlas of Nearby Spiral Galaxies and observed to better understand the roll of bars relating to molecular gas \citet{kuno2007}.  Preparation for the $CO_{j=1-0}$ was performed in a similar matter to the previous ancillary data sets, however instead of determining a direct conversion factor the data was scaled down by a factor 0.001.  The scaling factor used was selected so that the input image for the fakesoure would be on the same scale as the 850$\mu$m image it was overwriting, and then re-applied as the flux calibration factor to return the original map into its native unit of $K * (km/s)$.  The beam sizes and rms of the filterd $CO_{j=1-0}$ map are displayed in table \ref{obs_tab} and the final image product can be seen in figure \ref{fit_co10}.
 
-\subsection{HERA CO-Line Extragalactic Survey (HERACLES) $CO_{j=2-1}$}
-test
+\subsection{HERA CO-Line Extragalactic Survey (HERACLES)}
+
+The $CO_{j=2-1}$ line was used to determine a ${2-1} / {1-0}$ line ratio which can be used to trace a gradient in $\alpha_{CO}$ and hint towards regions of high star-formation \citet{reuter1996}.  We used the $CO_{j=1-0}$ data from the Nobeyama 45-m telescope (\ref{subsec:Nobeyama 45-m}), and $CO_{j=2-1}$ from the HERA CO-Line Extragalactic Survey (HERACLES).  The HERACLES data was treated in the same manner as the Nobeyama 45-m when filtering was applied.  Since both the $CO_{j=1-0}$ and $CO_{j=2-1}$ are on the same order of magnitude the same scaling factor of 0.001 was applied before and after the filtering.  The final image can be seen in figure \ref{fig_co21} and the image properties can be seen in table \ref{obs_tab}.
+
 \subsection{The HI Nearby Galaxy Survey (THINGS)}
-
-%this information would be useful to include into maybe subsection for the 450 and 850 that would include things like calibration to uranus, beam sizes, and then pixel information
-
-%location of fig_bg is: /1/home/newtonjh/scuba2_test/ngc3627/previous/work_dir/scans/thesis_fig
-
-%need to check the scan speed of SCUBA-2
-
-%I should have some filter plot lying around somewhere.  Get it.
-
-%build obs_tab to have the beamsizes and rms values for each of the observations post makemap and then used for SED processing along with the corresponding convolving beams(?).
-%  info for the table:
-
-%maybe include some beam shapes with the calibration data?
-
-%include bandwidth for 450um and 850um!!
-
-%look for plots showing the amount of emission lost due to fakesourcing
-
-%make a table that shows how much emission was removed through processing.
-
-%need full images of all the fs data.
-%------
-
-
-%\section{SCUBA-2}
-%\begin{itemize}
-%   \item What is SCUBA-2 and what does it look at and why is it an important/how is it relevant among today's instrumentation
-%   \item Discuss the nature of the observations and their reduction, things like weather grade, number of images used.  Technical details.
-%   \item maybe include figure of emission window for scuba-2
-%\end{itemize}
-
-%\subsection{Image Creation}
-%\begin{itemize}
-%   \item Use SMURF MAKEMAP command and give brief description of overall process.  Include $img_gen.sh$ in an appendix?
-%   \item Implement maps in the ast and flt portion of makemap.  Explain what these do for the image overall (should reduce noise and help to flatten background)
-%   \item use flt.filtering to remove any large scale features.  Helped with smoothing background noises.
-%   \item apply FCF values that are determined from calibrations from Uranus
-%   \item 850 gridded to 8sq'' and 450 gridded to 4sq'' pixels.
-%   \end{itemize}
-
-%\subsection{Image Properties of 450$\mu$m and 850$\mu$m}
-%\begin{itemize}
-%   \item for 850$\mu$m needed to remove $CO_{j=3-2}$ emission from continuum band.  Reference the drabek paper and a brief outline of what she did.  QUOTE THE NUMBER USED TO CONVERT UNITS. <-- where to include this?
-%   \item show calibration data?
-%   \item beam shape of 450 and 850.  Discuss fitting methods for both single and double gaussian shapes also give rms values of noise before any convolution.
-%   \item show beams in color image w/contour and plot across the middle
-%\end{itemize}
-
-%\section{Supporting Images / ancillary data}
-
-%\begin{itemize}
-%  \item Discuss what you need other images for.  Herschel for SED fits.  THINGS, KUNO, and Heracles for dust-to-gas ratio.
-%  \item Images needed to be run through makemap as a fake source in order to remove any small scale structure from original images.  I should have several figures showing the amount of flux removed from each of the images.
-%  \item Reference the Kingfish Survey, Kuno et al., Heracles survey and THINGS survey for their sources.  <--Leave this as a paragraph on it's own or introduce smaller subsections?
-  
-%\end{itemize}
-

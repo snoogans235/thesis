@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
@@ -72,6 +72,11 @@
 {Leroy}, A.~K., {Walter}, F., {Bigiel}, F., {Usero}, A., {Weiss}, A., {Brinks},
   E., {de Blok}, W.~J.~G., {Kennicutt}, R.~C., {Schuster}, K.-F., {Kramer}, C.,
   {Wiesemeyer}, H.~W., \& {Roussel}, H. 2009, \aj, 137, 4670
+
+\bibitem[{{Reuter} {et~al.}(1996){Reuter}, {Sievers}, {Pohl}, {Lesch}, \&
+  {Wielebinski}}]{reuter1996}
+{Reuter}, H.-P., {Sievers}, A.~W., {Pohl}, M., {Lesch}, H., \& {Wielebinski},
+  R. 1996, \aap, 306, 721
 
 \bibitem[{{Sandstrom} {et~al.}(2013){Sandstrom}, {Leroy}, {Walter}, {Bolatto},
   {Croxall}, {Draine}, {Wilson}, {Wolfire}, {Calzetti}, {Kennicutt}, {Aniano},
