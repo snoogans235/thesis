@@ -13,3 +13,4 @@ Observation Section:
   -make images for all of the data
 
   -need a mask plot
+  -adjust tables to show units under RMS
