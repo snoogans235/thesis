@@ -16,6 +16,13 @@ In our production of maps, we used the basic conifguration file dimmconfig\_brig
 
 The finalized 450$\mu$m image was then re-gridded down to a 4`` by 4`` pixel grid, and a flux calibration value of 491000 and 4710 were applied to convert from pW to mJy/beam and mJy/square arcsecond respectively.  The 850$\mu$m maps were re-gridded to an 8`` by 8`` pixel size and used flux calibration values of 537000 and 2340 for mJy/beam and mJy/square arcsecond .   For an easier analysis, the images were also converted to Jy/pixel by multiplying the mJy/square arcsecond by 0.001/pixel area.  Both the 450$\mu$m and 850$\mu$m are shown in figures \ref{fig:450} and \ref{fig:850}.  The calibration values were determined from observations of Uranus.   The overall noise in the finalized image scan be seen in table \ref{tab:obs_scuba2}.
 
+\begin{figure}
+  \centering
+  \label{fig:450}
+  \includegraphics[scale=0.5,angle=270]{obs_imgs/450_um.jpeg}
+  \caption[NGC3627 450$\mu$m Observations]{450$\mu$m observation produced at the end of the image production.}
+\end{figure}
+
 \begin{deluxetable}{cccccc}
 %  \tabletypesize{\footnotesize}
   \tablecolumns{6}
@@ -77,7 +84,7 @@ We were interested in fitting the cold component of NGC3627's SED, hence we omit
 
 The Nearby Galaxy Legacy Survey is an HI-selected set of 155 galaxies contained in the annulus of $2Mpc\leq r \leq25Mpc$ using the instrumentation aboard the JCMT \citet{wilson2012}.  The NGLS contains data observed in several wavelengths that include the 450$\mu$m and 850$\mu$m data used for this thesis.  As mentioned previously, the bandpass for SCUBA-2's 850$\mu$m emission contains the $CO_{j=3-2}$ line which is contained in the NGLS data set.  We used the zeroth moment $CO_{j=3-2}$ maps from the NGLS to determine the percentage of $CO_{j=3-2}$ emission present in the 850$\mu$ band as well as removing it for an accurate SED analysis.  
 
-Removing the molecular gas contamination from the 850$\mu$m images required passing the data through MAKEMAP in a similar manner as the KINGFISH data.  The only significant difference was converting the $CO_{j=3-2}$ data from $K*km/s$ to pW.  The change of units was done using conversion factor of 0.70 $[K*km/s][mJy/beam]^{-1}$ found by \citet{drabek2012} for the task of converting HARP data to SCUBA-2 data.  The final image product can be seen in figure \ref{fig_co32}.  We found the average ratio of $CO_{j=3-2}$ to be around 25\% in most of the galaxy while rising as high as 50\% in the nucleus indicative of AGN activity.  The amount of flux removed and the filtered image's rms can be found in table \ref{tab:obs_NGLS}. "WILL NEED TO DOUBLE CHECK
+Removing the molecular gas contamination from the 850$\mu$m images required passing the data through MAKEMAP in a similar manner as the KINGFISH data.  The only significant difference was converting the $CO_{j=3-2}$ data from $K*km/s$ to pW.  The change of units was done using conversion factor of 0.70 $[K*km/s][mJy/beam]^{-1}$ found by \citet{drabek2012} for the task of converting HARP data to SCUBA-2 data.  The final image product can be seen in figure \ref{fig_co32}.  We found the average ratio of $CO_{j=3-2}$ to 850$\mu$m to be around 29\% with some regions dropping to less than 6\%.  The amount of flux removed and the filtered image's rms can be found in table \ref{tab:obs_NGLS}.
 
 \begin{deluxetable}{cccc}
   \tablecolumns{4}
