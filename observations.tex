@@ -21,30 +21,13 @@ The finalized 450$\mu$m image was then re-gridded down to a 4`` by 4`` pixel gri
   \tablecolumns{6}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 SCUBA-2 Observations\label{tab:obs_scuba2}}
-  \tablehead{\colhead{Observation} &
-             \multicolumn{4}{c}{Beam Properties} &
-             \colhead{RMS}}
+  \tablehead{\colhead{Observation} & \multicolumn{4}{c}{Beam Properties} & \colhead{RMS} \\
+& $\alpha$ & $\theta_{\alpha}$ & $\beta$ & $\theta_{\beta}$ & \it{[Jy / Pixel]}}
   \startdata
-    $\lambda$ & $\alpha$ & $\theta_{\alpha}$ & $\beta$ & $\theta_{\theta}$ & \it{[Jy/Pixel]}\\ 
     450$\mu$m & 0.854 & 7.48$\arcsec$ & 0.146 & 23.1$\arcsec$ & 3.42e-3  \\
     850$\mu$m & 0.962 & 12.8$\arcsec$  & 0.038 & 44.5$\arcsec$ &  4.76e-4 \\
    \enddata
 \end{deluxetable}
-
-%    \sidehead{\bf{KINGFISH}}
-
-%    \sidehead{\bf{Nobeyama 45-m CO Atlas of Nearby Spiral Galaxies}}
-%    Line & \multicolumn{4}{ c }{$\theta$} & \it{K km/s} & \\
-
-%    \sidehead{\bf{HERACLES}}
-%    Line & \multicolumn{4}{ c }{$\theta$} & \it{K km/s} & \\
- 
-%    \sidehead{\bf{NGLS}}
-
-%    \sidehead{\bf{THINGS}}
-    
-%  \enddata
-%  \tablecomments{Properties of the images used in our analysis.  The 450$\mu$m and 850$\mu$m were calculated using Uranus and a calibrator source.  The beam sizes for each observation were found in \citet{kennicutt2011} for the KINGFISH data, \citet{kuno2007} for the $CO_{j=1-0}$ data, \citet{leroy2009} for the $CO_{j=2-1}$ data, \citet{wilson2012} for the $CO_{j=3-2}$ data, and \citet{walter2008} for the HI data.  The rms values are shown for the images after being passed through MAKEMAP.  The final column represents the amount of extended emission present in the original data set that MAKEMAP removed.}
 
 \subsection{Beam Shape of the 450$\mu$m and 850$\mu$m} \\
 The Uranus calibration images were also used in determining the shape of the beam for the 450$\mu$m and 850$\mu$m observations.  The beam shape of both the 450$\mu$ and 850$\mu$m deviate from a single gaussian due to the second maximum of the airy diffraction pattern in the response function of the telescope.  This abnormality was best represented by a sum of two gaussians whose amplitude totals to unity \citet{dempsey2013}.  The average beam resolution for the 450$\mu$m and 850$\mu$m are reported in table \ref{tab:obs_scuba2} and match the values within error found in \citet{dempsey2013}.  The calibration images and beams can be seen in figures \ref{fig:calib450} and \ref{fig:calib850}.  The contribution of the error beam in the 850$\mu$m emission was negligible and allowed for the beam to be approximated by a single gaussian however the contribution of the error beam in the 450$\mu$m images was large enough to require special treatment.
@@ -76,12 +59,9 @@ We were interested in fitting the cold component of NGC3627's SED, hence we omit
   \tablecolumns{4}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 KINGFISH Observations\label{tab:obs_kfish}}
-  \tablehead{\colhead{Observation} &
-             \colhead{Beam Properties } &
-             \colhead{RMS} &
-             \colhead{Percentage of Emission Removed} }
+  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
+ & $\theta_{beam}$ & \it{[Jy/Pixel]}}
   \startdata
-    $\lambda$ & $\theta$ & \it{[Jy/pixel]}& \\ 
     100$\mu$m & 6.8$\arcsec$ & 2.24e-3 & 16.7\% \\
     160$\mu$m & 11.6$\arcsec$ & 3.95e-3 & 18.8\% \\
     250$\mu$m & 18.0$\arcsec$ & 2.47e-3 & 19.9\% \\
@@ -103,13 +83,10 @@ Removing the molecular gas contamination from the 850$\mu$m images required pass
   \tablecolumns{4}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 NGLS Observations\label{tab:obs_NGLS}}
-  \tablehead{\colhead{Observation} &
-             \colhead{Beam Properties } &
-             \colhead{RMS} &
-             \colhead{Percentage of Emission Removed} }
+  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
+ & $\theta_{beam}$ & \it{[Jy/Pixel]}}
   \startdata
-    Line & $\theta$ & \it{[K km/s]} & \\ 
-    $CO_{j=3-2}$ & 14.5$\arcsec$ & & \\
+    $CO_{j=3-2}$ & 14.5$\arcsec$ & 1.28e-5& 29.8\% \\
   \enddata
 \end{deluxetable}
 
@@ -125,12 +102,9 @@ Preparation for the $CO_{j=1-0}$ was performed in a similar matter to the previo
   \tablecolumns{4}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 Nobeyama 45-m Observations\label{tab:obs_n45}}
-  \tablehead{\colhead{Observation} &
-             \colhead{Beam Properties } &
-             \colhead{RMS} &
-             \colhead{Percentage of Emission Removed} }
+  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\ 
+  & $\theta_{beam}$ & \it{[K km/s]}}
   \startdata
-    Line & $\theta$ & \it{[K km/s]} & \\ 
     $CO_{j=1-0}$ & 15.0$\arcsec$ & 0.681 & 25.8\% \\
   \enddata
 \end{deluxetable}
@@ -148,12 +122,9 @@ The HERACLES data was treated in the same manner as the Nobeyama 45-m when filte
   \tablecolumns{4}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 HERACLES Observations\label{tab:obs_heracles}}
-  \tablehead{\colhead{Observation} &
-             \colhead{Beam Properties } &
-             \colhead{RMS} &
-             \colhead{Percentage of Emission Removed} }
+  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
+  & $\theta_{beam}$ & \it{[K km/s]}}
   \startdata
-    Line & $\theta$ & \it{[K km/s]} & \\ 
     $CO_{j=2-1}$ & 13.0$\arcsec$ & 0.305 & 7.8\% \\
   \enddata
 \end{deluxetable}
@@ -171,13 +142,10 @@ The preparation of the HI data was similar to the $CO$ filtering in the sense we
   \tablecolumns{6}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 THINGS Observations\label{tab:obs_things}}
-  \tablehead{\colhead{Observation} &
-             \multicolumn{3}{c}{Beam Properties} &
-             \colhead{RMS} &
-             \colhead{Percentage of Emission Removed} }
+  \tablehead{\colhead{Observation} & \multicolumn{3}{c}{Beam Properties} & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
+   & $\theta_{maj}$ & $\theta_{min}$ & $\theta_{PA}$ & \it{[$M_{\odot} / pc^2$]}}
   \startdata
-    Line & $\theta_{maj}$ & $\theta_{min}$ & $\theta_{PA}$ & \it{[$M_{\odot} / pc^2$]} \\
-    HI & 10.6$\arcsec$ & 8.85$\arcsec$ & -49$^\circ$ & 0.760 & 39.6\% \\  
+    HI & 10.6$\arcsec$ & 8.85$\arcsec$ & -48.0$^\circ$ & 0.760 & 39.6\% \\  
   \enddata
 \end{deluxetable}
 
