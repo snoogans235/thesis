@@ -1,5 +1,10 @@
+\makeatletter
+\let\my@xfloat\@xfloat
+\makeatother
+
 %\documentclass{macthesis}
 \documentclass[twoside]{Styles/macthesis}
+\listfiles
 %\usepackage{xspace}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -70,6 +75,18 @@
 %\usepackage{draftcopy}
 %\draftcopyName{Work in Progress}{105}
 %
+
+%johnny newtron's xfloat hack via latex-community.org
+
+\makeatletter
+\def\@xfloat#1[#2]{
+    \my@xfloat#1[#2]%
+    \def\baselinestretch{1}%
+    \@normalsize \normalsize
+}
+\makeatother  
+
+
 \begin{document}
 
 \include{front}
