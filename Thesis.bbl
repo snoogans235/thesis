@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
@@ -59,6 +59,17 @@
   E., {Skibba}, R., {Smith}, J.~D.~T., {Srinivasan}, S., {Vigroux}, L.,
   {Walter}, F., {Wilson}, C.~D., {Wolfire}, M., \& {Zibetti}, S. 2011, \pasp,
   123, 1347
+
+\bibitem[{{Kennicutt} {et~al.}(2003){Kennicutt}, {Armus}, {Bendo}, {Calzetti},
+  {Dale}, {Draine}, {Engelbracht}, {Gordon}, {Grauer}, {Helou}, {Hollenbach},
+  {Jarrett}, {Kewley}, {Leitherer}, {Li}, {Malhotra}, {Regan}, {Rieke},
+  {Rieke}, {Roussel}, {Smith}, {Thornley}, \& {Walter}}]{kennicutt2003}
+{Kennicutt}, Jr., R.~C., {Armus}, L., {Bendo}, G., {Calzetti}, D., {Dale},
+  D.~A., {Draine}, B.~T., {Engelbracht}, C.~W., {Gordon}, K.~D., {Grauer},
+  A.~D., {Helou}, G., {Hollenbach}, D.~J., {Jarrett}, T.~H., {Kewley}, L.~J.,
+  {Leitherer}, C., {Li}, A., {Malhotra}, S., {Regan}, M.~W., {Rieke}, G.~H.,
+  {Rieke}, M.~J., {Roussel}, H., {Smith}, J.-D.~T., {Thornley}, M.~D., \&
+  {Walter}, F. 2003, \pasp, 115, 928
 
 \bibitem[{{Kuno} {et~al.}(2007){Kuno}, {Sato}, {Nakanishi}, {Hirota}, {Tosaki},
   {Shioya}, {Sorai}, {Nakai}, {Nishiyama}, \& {Vila-Vilar{\'o}}}]{kuno2007}
