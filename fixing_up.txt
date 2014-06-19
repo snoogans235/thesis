@@ -1,16 +1,3 @@
 Observation Section:
-  -maybe expand on calibration to uranus and the 450 and 850 beam
-     sizes
-  -background figure (fig_bg) is /1/homen/newtonjh/scuba2_test_ngc3627
-     /previous/work_dir/scans/thesis_fig <-not going to include this
-
-  -Use a plot showing what happens when you vary the fiter size
-  -need to get information for obs_tab
-  -show beams and calibration data in one figure
-
-  -get plots showing the amount of emission lost in fakesource/include
-     in obs_tab
-  -make images for all of the data
-
-  -need a mask plot
-  -adjust tables to show units under RMS
+  -450 filter contours: 0, 0.02, 0.05, 0.08, 0.1
+  -850 filter contours: 0, 0.002, 0.005, 0.008

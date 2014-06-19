@@ -17,12 +17,33 @@ MAKEMAP breaks down the image creation into several steps performed in iteration
   b_i(t) = f \left[ e_i(t)*a_i(t) + g_i*n_c(t)+n_f(t)+n_r(t)\right]
 \end{equation}
 
-The steps used in MAKEMAP are:  COM and GAI which estimate a common mode signal and from the fitting averaging time-series of each bolometer observation, EXT to apply the measured extinction corrections, FLT to apply a high- and low-pass filters to remove any noise features not removed in the COM and GAI filtering, AST which regrids the data and detects sources to be removed from reduction.  The final step is NOI which determines the noise in the gridded map after each step has been performed and is calculated by isolating the white noise component in equation \ref{eq:sc2_raw}.  A convergence check is then issued based on the magnitude of change in each pixel from the previous map and the current version.  If the check failed the COM, GAI, EXT, and FLT values are recalculated using the AST information obtained from the previous iteration and the process is repeated until the convergene values are met or the number of iterations reaches its maximum value \citep{chapin2013}.
+The steps used in MAKEMAP are:  COM and GAI which estimate a common mode signal and from the fitting averaging time-series of each bolometer observation, EXT to apply the measured extinction corrections, FLT to apply a high- and low-pass filters to remove any noise features not removed in the COM and GAI filtering, AST which regrids the data and detects sources to be removed from reduction.  The final step is NOI which determines the noise in the gridded map after each step has been performed and is calculated by isolating the white noise component in equation \ref{eq:sc2_raw}.  A convergence check is then issued based on the magnitude of change in each pixel from the previous map and the current version.  If the check failed the COM, GAI, EXT, and FLT values are recalculated using the AST information obtained from the previous iteration, and the process is repeated until the convergene values are met or the maximum number of iterations have been carried out \citep{chapin2013}.
 
 %MAKEMAP breaks down the image creation into several steps performed in iteration in order to successfully reduce any background noise \citep{chapin2013}.  The steps used in MAKEMAP are:  COM and GAI which remove any common noise features detected by the SQUIDs, EXT to apply extinction corrections, FLT to apply a high- and low-pass filters to remove any noise features not removed in the COM and GAI filtering, AST which regrids the data and detects sources to be removed from reduction.  The final step is NOI which determines the noise in the gridded map after each step has been performed.  A convergence check is then issued and if the check failed the COM, GAI, EXT, and FLT values are inverted and the process is repeated with the inverted values \citep{chapin2013}.
-In our production of maps, we used the conifguration file dimmconfig\_bright\_compact.lis and altered the AST and FLT sections of the image creation by introducing a mask made from Herschel's 250$\mu$m map.  The purpose of the map was to exclude the target from interfering with the noise minimization as well as prohibit any emission from the galaxy to be significantly altered during image production.  The filter size of the high-pass filter was also modified, and an appropriate value was determined to be 175$\arcsec$.  The maps were returned from MAKEMAP in units of pW with a pixel size of 2$\arcsec$ by 2$\arcsec$ for both the 450$\mu$m and 850$\mu$m.
+In our production of maps, we used the configuration file dimmconfig\_bright\_compact.lis and altered the AST and FLT sections of the image creation by introducing a mask made from Herschel's 250$\mu$m map.  The purpose of the mask was to exclude the target from interfering with the noise minimization as well as prohibit any emission from the galaxy to be significantly altered during image production.  The filter size of the high-pass filter was also modified, and an appropriate value was determined to be 175$\arcsec$.  We determined an appropriate high-pass filter size by running a large range of filters from 100$\arcsec$ to 300$\arcsec$ and inspecting the total recovered flux of NGC3627.  A plot of the returned flux values can be seen in figure \ref{fig:filt_lines}.  An good filter would not show any significant decrease flux compared to the 350$\mu$m or 500$\mu$m.  This requirement removes any filters greater than 200$\arcsec$.  Given the flux was nearly unchaning with filters less than 200$\arcsec$, we determiend an appropriate filter size by examining the structure that was returned in particular how well the spiral arms were effected for the 850$\mu$m, and how well the disk was preserved in the 450$\mu$m.  The spatial effect of the filters can be seen in figure \ref{fig:450_flt} for the 450$\mu$m and figure \ref{fig:850_flt} for the 850$\mu$m.  The maps were returned from MAKEMAP in units of pW with a pixel size of 2$\arcsec$ by 2$\arcsec$ for both the 450$\mu$m and 850$\mu$m.
 
-The finalized 450$\mu$m image was then re-gridded down to a 4$\arcsec$ by 4$\arcsec$ pixel grid, and a flux calibration value of 491000 and 4710 were applied to convert from pW to mJy/beam and mJy/square arcsecond respectively.  The 850$\mu$m maps were re-gridded to an 8$\arcsec$ by 8$\arcsec$ pixel size and used flux calibration values of 537000 and 2340 for mJy/beam and mJy/square arcsecond.  The 4$\arcsec$  and 8$\arcsec$ pixels corresponed to a 10kpc and 20kpc size scale for our target, NGC3627.  To simplify the analysis, the images were also converted to Jy/pixel by multiplying the mJy/square arcsecond by 0.001/pixel area.  Both the 450$\mu$m and 850$\mu$m are shown in figures \ref{fig_450} and \ref{fig_850}.  The calibration values were determined from calibrator sources, and for our observations the source was Uranus.   The overall noise in the finalized image scan be seen in table \ref{tab_obs_scuba2}.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.65]{obs_imgs/flux_line.jpeg}
+  \caption[Flux Values vs  High-Pass Filter Sizes]{Returned flux values for NGC3627 with varying high-pass filter sizes.}
+  \label{fig:filt_lines}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{obs_imgs/450_comparison_4.jpeg}
+  \caption[450$\mu$m High-Pass Filter Images]{Four 450$\mu$m maps of NGC3627 using varying high-pass filter sizes.  The contours shown are for 0.0, 0.02, 0.05, 0.08 and 0.1 Jy/pixel for each image.}
+  \label{fig:450_flt}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{obs_imgs/850_comparison_4.jpeg}
+  \caption[850$\mu$m High-Pass Filter Images]{Four 850$\mu$m maps of NGC3627 using varying high-pass filter sizes.  The contours shown are for 0.0, 0.002, 0.005, and 0.008 Jy/pixel for each image.}
+  \label{fig:850_flt}
+\end{figure}
+
+The finalized 450$\mu$m image was then re-gridded down to a 4$\arcsec$ by 4$\arcsec$ pixel grid, and flux calibration values of 491000 and 4710 were applied to convert from pW to mJy/beam and mJy/square arcsecond respectively.  The 850$\mu$m maps were re-gridded to an 8$\arcsec$ by 8$\arcsec$ pixel size and used flux calibration values of 537000 and 2340 for mJy/beam and mJy/square arcsecond.  The 4$\arcsec$  and 8$\arcsec$ pixels corresponed to a 180pc and 360pc size scale for our target, NGC3627.  To simplify the analysis, the images are also converted to Jy/pixel.  The 450$\mu$m and 850$\mu$m are shown in figures \ref{fig_450} and \ref{fig_850}.  The calibration values are determined from our calibrator source, Uranus.  The overall noise in the final image can be seen in table \ref{tab_obs_scuba2}.
 
 \begin{figure}
   \centering
@@ -39,20 +60,20 @@ The finalized 450$\mu$m image was then re-gridded down to a 4$\arcsec$ by 4$\arc
 \end{figure}
 
 \begin{deluxetable}{cccccc}
-%  \tabletypesize{\footnotesize}
+  \tabletypesize{\footnotesize}
   \tablecolumns{6}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 SCUBA-2 Observations\label{tab_obs_scuba2}}
   \tablehead{\colhead{Observation} & \multicolumn{4}{c}{Beam Properties} & \colhead{RMS} \\
-& $\alpha$ & $\theta_{\alpha}$ & $\beta$ & $\theta_{\beta}$ & \it{[Jy / Pixel]}}
+& $\alpha$ & $\theta_{\alpha}$ & $\beta$ & $\theta_{\beta}$ & \it{[mJy / Pixel]}}
   \startdata
-    450$\mu$m & 0.854 & 7.48$\arcsec$ & 0.146 & 23.1$\arcsec$ & 3.42e-3  \\
-    850$\mu$m & 0.962 & 12.8$\arcsec$  & 0.038 & 44.5$\arcsec$ &  4.76e-4 \\
+    450$\mu$m & 0.854 $\pm$ 0.002 & 7.48$\arcsec$ $\pm$ 0.03$\arcsec$ & 0.146 $\pm$ 0.003 & 23.1$\arcsec$ $\pm$ 0.2$\arcsec$ & 3.42  \\
+    850$\mu$m & 0.9624 $\pm$ 0.0002 & 12.8$\arcsec$ $\pm$ 0.004$\arcsec$ & 0.0376 $\pm$ 0.0002 & 44.5$\arcsec$ $\pm$ 0.09$\arcsec$ &  0.476 \\
    \enddata
 \end{deluxetable}
 
-\subsection{Beam Shape of the 450$\mu$m and 850$\mu$m} \\
-The Uranus calibration images were also used in determining the shape of the beam for the 450$\mu$m and 850$\mu$m observations.  The beam shape of both the 450$\mu$m and 850$\mu$m deviate from a single gaussian due to the second maximum of the airy diffraction pattern in the response function of the telescope.  This abnormality was best represented by a sum of two gaussians whose amplitude totals to unity \citep{dempsey2013}.  The average beam resolution for the 450$\mu$m and 850$\mu$m are reported in table \ref{tab_obs_scuba2} and match the values within error found in \citep{dempsey2013}.  The calibration images and beams can be seen in figure \ref{fig_calib}.  The contribution of the error beam in the 850$\mu$m emission was negligible and allowed for the beam to be approximated by a single gaussian however the contribution of the error beam in the 450$\mu$m images was large enough to require special treatment.
+\subsection{Beam Shape of the 450$\mu$m and 850$\mu$m Data} \\
+The Uranus calibration images were also used in determining the shape of the beam for the 450$\mu$m and 850$\mu$m observations.  The beam shape of both the 450$\mu$m and 850$\mu$m maps deviates from a single gaussian due to the second maximum of the airy diffraction pattern in the response function of the telescope and minor imperfections in the mirror of the JCMT due to boundaries of the panel \citet{dempsey2013}.  This abnormality was best represented by a sum of two gaussians whose amplitude totals to unity \citep{dempsey2013}.  The average beam resolution for the 450$\mu$m and 850$\mu$m are reported in table \ref{tab_obs_scuba2} and match the values within uncertainty found in \citep{dempsey2013}.  The calibration images and beams can be seen in figure \ref{fig_calib}.  The contribution of the error beam in the 850$\mu$m emission is negligible and allows the beam to be approximated by a single gaussian.  However, the contribution of the error beam in the 450$\mu$m images was large enough to require special treatment in order to properly match beams for analysis.
 
 \begin{figure}
   \label{fig_calib}
