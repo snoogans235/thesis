@@ -233,7 +233,13 @@ To determine the gas to dust ratio we had to determine the total amount of gas p
   \enddata
 \end{deluxetable}
 
-\section{Data Agreement}
+\section{Making the Data Agree}
+
+Because the the large scale removal of structure from MAKEMAP, the range of resolutions, and differing beam shapes, we took several steps we have taken several steps to maximize the compability of the data.  In order to account for the varying beam resolutions, we use a gaussain convolution //.  However, this only works when the beams are well approximated by a gaussian which is not the case for the 450$\mu$m beam.  The largest difference in Ability of Herschell to observe submm unimpeded by atmo and the configuration setup of THIGNs allows for a bit of extended structure to arise in NGC3627.
+
+\subsection{Accounting for the 450$\mu$ Error Beam}
+
+\subsection{Extended Structure Removal via MAKEMAP}
 
 %adjusting the beam sizes to make the 450 beam work
 In order to accommodate the 450$\mu$m map's error beam, we used a method employed by another SCUBA-2 survey, the Gould-Belt Survey team.  This method used the distributive nature of the Fourier transform to create similar error components in the beam resolutions we were convolving to and from.  This relationship is shown in equation \ref{eq_GBSmethod} where $X_{desire}$ is the beam width of the resolution we are convolving to, $\alpha$ is the amplitude of the main beam of the 450$\mu$m emission, $\beta$ is the amplitude of the 450$\mu$m error beam, $X_{\alpha}$ and $X_{\beta}$ are the main and error beam of the 450$\mu$m observations, and $X_{450\mu m}$ is the composition of $X_{\alpha}$ and $X_{\beta}$ beams.
