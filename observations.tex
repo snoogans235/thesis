@@ -233,26 +233,26 @@ To determine the gas to dust ratio we had to determine the total amount of gas p
   \enddata
 \end{deluxetable}
 
-\section{Making the Data Agree}
+\section{Data Preparation for Analysis}
 
-Initially the data do not agree on several levels.  The differences range from the filtering of the large scale structure from MAKEMAP, the range of resolutions, and differing beam shapes.   We have taken several steps to maximize the compatibility of the data some are simpler than other.  In order to account for the varying beam resolutions, we use a gaussian convolution to increase the resolution of our maps to the largest beam size in our dataset, 36$\arcsec$.  However, this only works when the beams are well approximated by a gaussian which is not the case for the 450$\mu$m beam.  The steps taken to match the resolution of the 450$\mu$m beam with the rest of the data set is given in $\S$ \ref{450_fix_sec}.  We can implement a feature in MAKEMAP that allows us to add fake sources into the data during production.  The fake source implementation allows us to remove the same amount of large scale structure from our ancillary data as was removed from the SCUBA-2 data.  The steps taken to prepare that ancillary data are described in $\S$ \ref{fakesource_sec}
+Initially the data do not agree on several levels.  The differences consist of the presence of the large scale structure in some but not all of our maps, different resolutions, and accounting for the beam shape of the 450$\mu$m.  We have taken several steps to correct these disagreements and maximize the compatibility of the data.  In order to account for the varying beam resolutions, we use a gaussian convolution to increase the resolution of our maps to the largest beam size in our dataset, 36$\arcsec$, using equation \ref{eq:gaus_kern} to decide on an appropriate beam size such that $\sigma_{desire}$ is the desired beam width, $\sigma_{max}$ is the beam size we are convolving to, and $\sigma_{given}$ is the beams size we are convolving from.
 
-The largest difference in Ability of Herschell to observe submm unimpeded by atmo and the configuration setup of THIGNs allows for a bit of extended structure to arise in NGC3627.
+\begin{equation}\label{eq:gaus_kern}
+  \sigma_{desire} = \sqrt{\sigma_{max}^2 - \sigma_{given}^2}
+\end{equation}
 
-\subsection{Accounting for the 450$\mu$ Error Beam}\label{450_fix_sec}
+However, this only works when the beams are well approximated by a gaussian which is not the case for the 450$\mu$m beam.  The steps taken to match the resolution of the 450$\mu$m beam with the rest of the data set is given in $\S$ \ref{450_fix_sec}.  Removing any large scale structure from our ancillary data is implemented using a feature in MAKEMAP that allows us to add fake sources into the data during production.  The fake source implementation allows us to remove the same amount of large scale structure from our ancillary data as was removed from the SCUBA-2 data.  The steps taken to prepare the ancillary data are described in $S$\ref{fakesource_sec}.
 
-\begin{itemize}
-  \item{we are not trying to reduce the 450 down to a single gaussian, instead we are trying to incorporate an error beam in the rest of the data}
-  \item{incorporating the error beam involve taking advantage of the distributive nature of Fourier transforms, and will add a convolved error beam to the rest of our data}
-  \item{give in equation form}
-  \item{be sure to cite Gould belt consortium}
-\end{itemize}
-Taking the 450$\mu$m error beam into consideration is different than normal beam convolution in the sense that we are not changing just the lower resolution map--every map is being convolved.  We have to take these steps because convolving a double gaussian beam with a single gaussian kernel will not sufficiently remove the error component of our beam.\\
+%The largest difference in Ability of Herschell to observe submm unimpeded by atmo and the configuration setup of THIGNs allows for a bit of extended structure to arise in NGC3627.
 
-In order to accommodate the 450$\mu$m map's error beam, we used a method employed by another SCUBA-2 survey, the Gould-Belt Survey team.  This method used the distributive nature of the Fourier transform to create similar error components in the beam resolutions we were convolving to and from.  This relationship is shown in equation \ref{eq_GBSmethod} where $X_{desire}$ is the beam width of the resolution we are convolving to, $\alpha$ is the amplitude of the main beam of the 450$\mu$m emission, $\beta$ is the amplitude of the 450$\mu$m error beam, $X_{\alpha}$ and $X_{\beta}$ are the main and error beam of the 450$\mu$m observations, and $X_{450\mu m}$ is the composition of $X_{\alpha}$ and $X_{\beta}$ beams.
+\subsection{Accounting for the 450$\mu$m Error Beam}\label{450_fix_sec}
+
+Taking the 450$\mu$m error beam into consideration is different than normal beam convolution in the sense that we are not convolving the higher resolution map to the lowest resolution.  Instead we are adding in an error beams similar to the 450$\mu$m observations to all of our observations.  We have to take these steps because convolving a double gaussian beam with a single gaussian kernel will not sufficiently remove the error component of our beam resulting in a poor approximation to the wings of our beam shape.
+
+In order to accommodate the 450$\mu$m map's error beam, we used a method employed by another SCUBA-2 survey, the Gould-Belt Survey team.  This method used the distributive nature of the Fourier transform to create similar error components in the beam resolutions we were convolving to and from.  Carrying out this convolution involved breaking the 450$\mu$m beam into it's two components, $\sigma_{\alpha}$ and $\sigma_{\beta}$ to represent the main beam and error beam.  The lowest resolution beam shape, $\sigma_{max}$ is convolved with the two components and the resulting beams are added together.  This process produces an equivalent two component beam as the 450$\mu$m beam conolved with $\sigma_{max}$.  This relationship is shown in equation \ref{eq_GBSmethod} where $X_{max}$ is the beam width of the our lowest resolution, $X_{\alpha}$ and $X_{\beta}$ are the main and error beam of the 450$\mu$m observations, and $X_{450\mu m}$ is the double gaussian beam shape of the 450$\mu$m observations.
 
 \begin{equation} \label{eq_GBSmethod}
-  \left(X_{desire} \ast X_{\alpha}\right)*\alpha + \left(X_{desire} \ast X_{\beta}\right)*\beta = X_{450\mu m} \ast X_{desire}
+  X_{max} \ast X_{\alpha} + X_{max} \ast X_{\beta} = \left(X_{\alpha} + X_{\beta}\right) \ast X_{max} = X_{450\mu m} \ast X_{max}
 \end{equation}
 
 \subsection{Extended Structure Removal via MAKEMAP}\label{fakesource_sec}
