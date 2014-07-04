@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{22}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
@@ -33,6 +33,9 @@
 
 \bibitem[{{Field} \& {Saslaw}(1965)}]{field1965}
 {Field}, G.~B. \& {Saslaw}, W.~C. 1965, \apj, 142, 568
+
+\bibitem[{{Gould} \& {Salpeter}(1963)}]{gould1963}
+{Gould}, R.~J. \& {Salpeter}, E.~E. 1963, \apj, 138, 393
 
 \bibitem[{{Holland} {et~al.}(2013){Holland}, {Bintley}, {Chapin},
   {Chrysostomou}, {Davis}, {Dempsey}, {Duncan}, {Fich}, {Friberg}, {Halpern},
@@ -89,6 +92,9 @@
 
 \bibitem[{{Kim} \& {Ostriker}(2001)}]{kim2001}
 {Kim}, W.-T. \& {Ostriker}, E.~C. 2001, \apj, 559, 70
+
+\bibitem[{{Krumholz}(2014)}]{krumholz2014}
+{Krumholz}, M.~R. 2014, ArXiv e-prints
 
 \bibitem[{{Kuno} {et~al.}(2007){Kuno}, {Sato}, {Nakanishi}, {Hirota}, {Tosaki},
   {Shioya}, {Sorai}, {Nakai}, {Nishiyama}, \& {Vila-Vilar{\'o}}}]{kuno2007}
