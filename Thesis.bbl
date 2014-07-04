@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{20}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
@@ -15,11 +15,24 @@
   {Chrysostomou}, A., {Davis}, G.~R., {Gibb}, A.~G., {Parsons}, H., \&
   {Robson}, E.~I. 2013, \mnras, 430, 2534
 
+\bibitem[{{Dobbs} {et~al.}(2013){Dobbs}, {Krumholz}, {Ballesteros-Paredes},
+  {Bolatto}, {Fukui}, {Heyer}, {Mac Low}, {Ostriker}, \&
+  {V{\'a}zquez-Semadeni}}]{dobbs2013}
+{Dobbs}, C.~L., {Krumholz}, M.~R., {Ballesteros-Paredes}, J., {Bolatto}, A.~D.,
+  {Fukui}, Y., {Heyer}, M., {Mac Low}, M.-M., {Ostriker}, E.~C., \&
+  {V{\'a}zquez-Semadeni}, E. 2013, ArXiv e-prints
+
 \bibitem[{{Drabek} {et~al.}(2012){Drabek}, {Hatchell}, {Friberg}, {Richer},
   {Graves}, {Buckle}, {Nutter}, {Johnstone}, \& {Di Francesco}}]{drabek2012}
 {Drabek}, E., {Hatchell}, J., {Friberg}, P., {Richer}, J., {Graves}, S.,
   {Buckle}, J.~V., {Nutter}, D., {Johnstone}, D., \& {Di Francesco}, J. 2012,
   \mnras, 426, 23
+
+\bibitem[{{Elmegreen}(1987)}]{elmegreen1987}
+{Elmegreen}, B.~G. 1987, \apj, 312, 626
+
+\bibitem[{{Field} \& {Saslaw}(1965)}]{field1965}
+{Field}, G.~B. \& {Saslaw}, W.~C. 1965, \apj, 142, 568
 
 \bibitem[{{Holland} {et~al.}(2013){Holland}, {Bintley}, {Chapin},
   {Chrysostomou}, {Davis}, {Dempsey}, {Duncan}, {Fich}, {Friberg}, {Halpern},
@@ -74,11 +87,17 @@
   {Rieke}, M.~J., {Roussel}, H., {Smith}, J.-D.~T., {Thornley}, M.~D., \&
   {Walter}, F. 2003, \pasp, 115, 928
 
+\bibitem[{{Kim} \& {Ostriker}(2001)}]{kim2001}
+{Kim}, W.-T. \& {Ostriker}, E.~C. 2001, \apj, 559, 70
+
 \bibitem[{{Kuno} {et~al.}(2007){Kuno}, {Sato}, {Nakanishi}, {Hirota}, {Tosaki},
   {Shioya}, {Sorai}, {Nakai}, {Nishiyama}, \& {Vila-Vilar{\'o}}}]{kuno2007}
 {Kuno}, N., {Sato}, N., {Nakanishi}, H., {Hirota}, A., {Tosaki}, T., {Shioya},
   Y., {Sorai}, K., {Nakai}, N., {Nishiyama}, K., \& {Vila-Vilar{\'o}}, B. 2007,
   \pasj, 59, 117
+
+\bibitem[{{Kwan}(1979)}]{kwan1979}
+{Kwan}, J. 1979, \apj, 229, 567
 
 \bibitem[{{Leroy} {et~al.}(2009){Leroy}, {Walter}, {Bigiel}, {Usero}, {Weiss},
   {Brinks}, {de Blok}, {Kennicutt}, {Schuster}, {Kramer}, {Wiesemeyer}, \&
@@ -86,6 +105,12 @@
 {Leroy}, A.~K., {Walter}, F., {Bigiel}, F., {Usero}, A., {Weiss}, A., {Brinks},
   E., {de Blok}, W.~J.~G., {Kennicutt}, R.~C., {Schuster}, K.-F., {Kramer}, C.,
   {Wiesemeyer}, H.~W., \& {Roussel}, H. 2009, \aj, 137, 4670
+
+\bibitem[{{McKee} \& {Ostriker}(2007)}]{mckee2007}
+{McKee}, C.~F. \& {Ostriker}, E.~C. 2007, \araa, 45, 565
+
+\bibitem[{{Parker}(1966)}]{parker1966}
+{Parker}, E.~N. 1966, \apj, 145, 811
 
 \bibitem[{{Reuter} {et~al.}(1996){Reuter}, {Sievers}, {Pohl}, {Lesch}, \&
   {Wielebinski}}]{reuter1996}
