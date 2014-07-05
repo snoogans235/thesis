@@ -1,5 +1,9 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{26}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
+  {Norman}}]{abel1997}
+{Abel}, T., {Anninos}, P., {Zhang}, Y., \& {Norman}, M.~L. 1997, \na, 2, 181
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
   {Tilanus}, {Economou}, \& {Holland}}]{chapin2013}
@@ -33,6 +37,9 @@
 
 \bibitem[{{Field} \& {Saslaw}(1965)}]{field1965}
 {Field}, G.~B. \& {Saslaw}, W.~C. 1965, \apj, 142, 568
+
+\bibitem[{{Glover}(2003)}]{glover2003}
+{Glover}, S.~C.~O. 2003, \apj, 584, 331
 
 \bibitem[{{Gould} \& {Salpeter}(1963)}]{gould1963}
 {Gould}, R.~J. \& {Salpeter}, E.~E. 1963, \apj, 138, 393
@@ -115,6 +122,9 @@
 \bibitem[{{McKee} \& {Ostriker}(2007)}]{mckee2007}
 {McKee}, C.~F. \& {Ostriker}, E.~C. 2007, \araa, 45, 565
 
+\bibitem[{{Palla} {et~al.}(1983){Palla}, {Salpeter}, \& {Stahler}}]{palla1983}
+{Palla}, F., {Salpeter}, E.~E., \& {Stahler}, S.~W. 1983, \apj, 271, 632
+
 \bibitem[{{Parker}(1966)}]{parker1966}
 {Parker}, E.~N. 1966, \apj, 145, 811
 
@@ -170,5 +180,10 @@
   T.~J., {Rigopoulou}, D., {Rosolowsky}, E., {Seaquist}, E.~R., {Spekkens}, K.,
   {Tanvir}, N., {van der Hulst}, J.~M., {van der Werf}, P., {Vlahakis}, C.,
   {Webb}, T.~M., {Weferling}, B., \& {White}, G.~J. 2012, \mnras, 424, 3050
+
+\bibitem[{{Wolfire} {et~al.}(2003){Wolfire}, {McKee}, {Hollenbach}, \&
+  {Tielens}}]{wolfire2003}
+{Wolfire}, M.~G., {McKee}, C.~F., {Hollenbach}, D., \& {Tielens}, A.~G.~G.~M.
+  2003, \apj, 587, 278
 
 \end{thebibliography}

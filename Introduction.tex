@@ -1,22 +1,46 @@
 \chapter{Introduction}\label{intro}
 
-\section{The Physical Conditions of Star Formation}
+\section{The Physical Conditions of Star Formation} %need to change this since it deals with formation of H2
 
 %it might be a good idea to put the physical values of gmc's in here
 Star formation is one of the fundamental processes in astrophysics that effect not just stellar and planetary formation but also dictate behavior in galaxy formation and evolution \citep{kennicutt2012}.  The study of star formation itself can be broken into several areas such as: the processes that trigger collapse and how the collapse behaves, dictating how and what type of stars can form from a given region or cloud, or how the inflow of new material can alter current star forming environments.  These different sub-branches of star formation are conviently sorted into a hierarchal schemes that range from Mpc scales seen in gas accretion from the intergalactic medium, to small scale effects on the order $R_\odot$ or AU \citep{kennicutt2012}.
 
-After the intergalactic gas has accreted into a host galaxy, it will eventually condense and begin to form a giant molecular cloud (GMC).  The formation of molecular clouds has divided between two camps; either a ``bottom-up'' or ``top-down'' formation \citep{mckee2007}.  The bottom-up scenario consists of small clouds of cold HI coagulating to form a GMC \citep{field1965, kwan1979}.  The major issue with this scenario are the time scales required to form a cloud typical of what we observer would take around $10^8$ years which is longer than the expected GMC lifetime \citep{mckee2007}.  
+After the intergalactic gas has accreted into a host galaxy, it will eventually condense and begin to form a giant molecular cloud (GMC).  The formation of molecular clouds has divided between two camps; either a ``bottom-up'' or ``top-down'' formation \citep{mckee2007}.  The bottom-up scenario consists of small clouds of cold HI coagulating to eventually form a GMC \citep{field1965, kwan1979}.  The major concern with the bottom-up scenario is the time scales required to form a cloud typical of what we observe.  The time scale required would take around $10^8$ years which is longer than the expected GMC lifetime \citep{mckee2007}.  
 
-The alternative formation scenario, top-down, postulates the GMC formation comes from instabilities in diffuse ISM causing the clouds to collapse from their surrounding medium \citep{mckee2007}.  Two main instabilities are thought to be responsible for the collapse are a parker instability, which involves distortion of magnetic fields in the mid plane of the galaxy, and at these distortions gas will begin to accumulate \citep{parker1966, dobbs2013}.  The second form of instability come in the style of a more complex Jeans instability which is determined further by the amount of rotational shear present \citep{mckee2007}.  If a strong rotational shear is present, such as in the inter arm region of a spiral galaxy, then a process known as swing amplification will occur \citep{mckee2007}.  If no rotational shear is present, such as the inner regions of a galaxy or spiral arms, then the collapse can be attributed to a magneto-Jeans instability \citep{elmegreen1987,kim2001}.
+The alternative formation scenario, top-down, postulates the GMC formation comes from instabilities in diffuse ISM causing the clouds to collapse from their surrounding medium \citep{mckee2007}.  Two main instabilities are thought to be responsible for the collapse.  The first type of instability is the parker instability, which involves distortion of magnetic fields in the mid plane of the galaxy, and at these distortions gas will begin to accumulate \citep{parker1966, dobbs2013}.  The second instability responsible for collapse comes in the style of a more complex Jeans instability which is determined further by the amount of rotational shear present \citep{mckee2007}.  If a strong rotational shear is present, such as in the inter arm region of a spiral galaxy, then a process known as swing amplification will occur \citep{mckee2007}.  If no rotational shear is present, such as the inner regions of a galaxy or spiral arms, then the collapse can be attributed to a magneto-Jeans instability \citep{elmegreen1987,kim2001}.
 
-During the collapse or coagulation of the GMC, inside the cloud molecular hydrogen is being formed.  The formation of molecular hydrogen can be summarized using either the two bodied reaction, three bodied reaction, or surface formation \citep{krumholz2014}.  The two bodied is the simplest reaction using two hydrogen atoms to molecular hydrogen, equation \ref{eq:2bod}.
+During the collapse or coagulation of a GMC, molecular hydrogen is being formed inside of the cloud.  The formation of molecular hydrogen can be summarized using either the two bodied reaction, three bodied reaction, formation using free a electron or proton, or surface formation \citep{krumholz2014}.  The two bodied formation scenario is the simplest reaction using two hydrogen atoms to molecular hydrogen, reaction \ref{eq:2bod}.
 
 \begin{equation}\label{eq:2bod}
   \ce{H + H -> H_2}
 \end{equation}
 
-However the combination of hydrogen atoms in the ground state produces a forbidden photon \citep{gould1963}.  If one of the hydrogen atoms is excited, the transition can occur, but the amount of excited hydrogen atoms in the temperature ranges typical of the cold and warm phases of the ISM are expected to be nearly nonexistent \citep{krumholz2014}.
+However the two bodied formation is not the major mechanism in the formation of H$_2$ due to the requirement of a forbidden photon that arises from the combination of hydrogen atoms in the ground state \citep{gould1963}.  If one of the hydrogen atoms is excited, the transition can occur, but the amount of excited hydrogen atoms in the temperature ranges typical of the cold and warm phases of the ISM are expected to be nearly nonexistent \citep{krumholz2014}.
 
+The second formation scenario listed, the three bodied formation, involves three hydrogen atoms coming together to form molecular hydrogen with a spare hydrogen atom shown in reaction \ref{eq:3bod}.
+
+\begin{equation}\label{eq:3bod}
+  \ce{3H -> H_2 + H}
+\end{equation}
+
+The three bodied formation scenario however is not expected to be the dominant form of H$_2$ formation due to the required density of $10^8$ cm$^-3$ \citep{palla1983,abel1997}, while the normal density of a GMC is on the order of 300 cm$^-3$ \citep{krumholz2014}.
+
+An alternative to the two or three bodied reactions uses either an electron or proton to ionize the hydrogen forming either H$^-$ or H$_2^+$ \citep{krumholz2014}.  The chemical reaction involving an electron is shown in reaction \ref{eq:eform} and reaction utilizing a proton is shown in reaction \ref{eq:eform}
+\begin{equation}\label{eq:eform}
+  \begin{split}
+    \ce{H + \it{e} -> H^- + \it{h\nu}} \\
+    \ce{H^- + \it{e} -> H_2 + \it{e}}
+  \end{split}
+\end{equation}
+
+\begin{equation}\label{eq:pform}
+  \begin{split}
+    \ce{H + H^+ -> H^+_2 + \it{h\nu}} \\
+    \ce{H^+_2 + H -> H_2 + H^+}
+  \end{split}
+\end{equation}
+
+The main limitation of the free electron/proton formation mechanism is an undersupply of free electrons and protons.  Typical Milky Way conditions show that in regions $>$1 cm$^-3$ have free electron and proton densities $<$10$^-4$ cm$-3$ \citep{wolfire2003}.  Secondly, the H$^-$ ion in reaction \ref{eq:eform} is more likely to interact with a stray photon rather than an electron resulting in ion to return to the atomic state \citep{glover2003}.  While we observe singly ionized hydrogen regions, HII regions, only a small fraction of the region will successfully produce molecular hydrogen.
 
 %Try to use the word obnubliates!
 
