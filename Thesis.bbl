@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -43,6 +43,10 @@
 
 \bibitem[{{Gould} \& {Salpeter}(1963)}]{gould1963}
 {Gould}, R.~J. \& {Salpeter}, E.~E. 1963, \apj, 138, 393
+
+\bibitem[{{Herbst} {et~al.}(2005){Herbst}, {Chang}, \& {Cuppen}}]{herbst2005}
+{Herbst}, E., {Chang}, Q., \& {Cuppen}, H.~M. 2005, Journal of Physics
+  Conference Series, 6, 18
 
 \bibitem[{{Holland} {et~al.}(2013){Holland}, {Bintley}, {Chapin},
   {Chrysostomou}, {Davis}, {Dempsey}, {Duncan}, {Fich}, {Friberg}, {Halpern},
@@ -127,6 +131,10 @@
 
 \bibitem[{{Parker}(1966)}]{parker1966}
 {Parker}, E.~N. 1966, \apj, 145, 811
+
+\bibitem[{{Pirronello} {et~al.}(1997){Pirronello}, {Liu}, {Shen}, \&
+  {Vidali}}]{pirronello1997}
+{Pirronello}, V., {Liu}, C., {Shen}, L., \& {Vidali}, G. 1997, \apjl, 475, L69
 
 \bibitem[{{Reuter} {et~al.}(1996){Reuter}, {Sievers}, {Pohl}, {Lesch}, \&
   {Wielebinski}}]{reuter1996}
