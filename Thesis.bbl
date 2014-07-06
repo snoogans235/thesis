@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{31}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -44,6 +44,11 @@
 \bibitem[{{Gould} \& {Salpeter}(1963)}]{gould1963}
 {Gould}, R.~J. \& {Salpeter}, E.~E. 1963, \apj, 138, 393
 
+\bibitem[{{Gry} {et~al.}(2002){Gry}, {Boulanger}, {Nehm{\'e}}, {Pineau des
+  For{\^e}ts}, {Habart}, \& {Falgarone}}]{gry2002}
+{Gry}, C., {Boulanger}, F., {Nehm{\'e}}, C., {Pineau des For{\^e}ts}, G.,
+  {Habart}, E., \& {Falgarone}, E. 2002, \aap, 391, 675
+
 \bibitem[{{Herbst} {et~al.}(2005){Herbst}, {Chang}, \& {Cuppen}}]{herbst2005}
 {Herbst}, E., {Chang}, Q., \& {Cuppen}, H.~M. 2005, Journal of Physics
   Conference Series, 6, 18
@@ -68,6 +73,9 @@
   W.~B., {Dunare}, C., {Economou}, F., {Niemack}, M.~D., {Parsons}, H.~A.~L.,
   {Reintsema}, C.~D., {Sibthorpe}, B., {Smail}, I., {Sudiwala}, R., \&
   {Thomas}, H.~S. 2013, \mnras, 430, 2513
+
+\bibitem[{{Jura}(1975)}]{jura1975}
+{Jura}, M. 1975, \apj, 197, 575
 
 \bibitem[{{Kennicutt} {et~al.}(2011){Kennicutt}, {Calzetti}, {Aniano},
   {Appleton}, {Armus}, {Beir{\~a}o}, {Bolatto}, {Brandl}, {Crocker}, {Croxall},
@@ -193,5 +201,10 @@
   {Tielens}}]{wolfire2003}
 {Wolfire}, M.~G., {McKee}, C.~F., {Hollenbach}, D., \& {Tielens}, A.~G.~G.~M.
   2003, \apj, 587, 278
+
+\bibitem[{{Wolfire} {et~al.}(2008){Wolfire}, {Tielens}, {Hollenbach}, \&
+  {Kaufman}}]{wolfire2008}
+{Wolfire}, M.~G., {Tielens}, A.~G.~G.~M., {Hollenbach}, D., \& {Kaufman}, M.~J.
+  2008, \apj, 680, 384
 
 \end{thebibliography}

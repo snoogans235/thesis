@@ -44,7 +44,17 @@ The main limitation of the free electron/proton formation mechanism is an unders
 
 While the free electron/proton formation method is suspected to be the primary H$_2$ catalyst in the early universe \citep{herbst2005}, at low redshifts the formation of molecular hydrogen on the surface of dust grains is the dominant mechanism of formation \citep{krumholz2014}.  The surface formation of molecular hydrogen will occur when a hydrogen atom strikes a dust grain and successfully sticks to the grain.  The hydrogen then will then interact with another hydrogen atom to form H$_2$ and be ejected off of the dust particle after the reaction has occurred \citep{pirronello1997}.  The same process occurs on the dust grain as the two bodied formation, but  the dust grain will act as a medium to absorb the energy that would create the forbidden photon \citep{krumholz2014}.
 
+With a dominant mechanism for molecular hydrogen formation, a reaction rate can be defined based on the cross section of the grain,$\Sigma_{gr}$, a striking probability dependent on the temperature of the observed dust, S(T), the probability of molecular hydrogen forming on the grain, $\upepsilon_{H_2}$, density of hydrogen nucleon, n$_H$, and the density of free hydrogen in the GMC, n$_H{_0}$ \citep{krumholz2014}.  Scaling this with the integrated collisional probability of a Maxwellian gas, a reaction rate is derived and shown in equation \ref{eq:reac_rate} where k is the Boltzmann constant, T is the temperature, and m$_H$ is the mass of the hydrogen atom.
 
+\begin{equation}\label{eq:reac_rate}
+  \frac{dn_{H_2}}{dt} = \frac{1}{2}\left(\frac{8k_bT}{\pi m_H}\right)^\frac{1}{2}\Sigma_{gr}S\left(T\right)\upepsilon_{H_2}n_{H}n_{H_0}
+\end{equation}
+
+Equation \ref{eq:reac_rate} is often simplified to equation \ref{eq:reac_rate_sm} by introducing a variable known as the formation rate, $\mathcal{R}_{gr}$ that is onstrained using the column densities CI, CII, HI, H$_2$, and has been found to be 3x10$^{-17}$cm$^3$s$^{-1}$ for the Milky Way \citep{jura1975, gry2002, wolfire2008}.
+
+\begin{equation}\label{eq:reac_rate_sm}
+  \frac{dn_{H_2}}{dt} = \mathcal{R}_{gr}n_H n_{H_0}
+\end{equation}
 
 %Try to use the word obnubliates!
 
