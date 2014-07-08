@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{32}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -31,6 +31,9 @@
 {Drabek}, E., {Hatchell}, J., {Friberg}, P., {Richer}, J., {Graves}, S.,
   {Buckle}, J.~V., {Nutter}, D., {Johnstone}, D., \& {Di Francesco}, J. 2012,
   \mnras, 426, 23
+
+\bibitem[{{Draine}(2011)}]{draine2011}
+{Draine}, B.~T. 2011, {Physics of the Interstellar and Intergalactic Medium}
 
 \bibitem[{{Elmegreen}(1987)}]{elmegreen1987}
 {Elmegreen}, B.~G. 1987, \apj, 312, 626
