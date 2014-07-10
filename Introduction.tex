@@ -59,13 +59,18 @@ Equation \ref{eq:reac_rate} is often simplified to equation \ref{eq:reac_rate_sm
 When the molecular hydrogen has formed, it is still susceptible to photodisasociation from far ultra-violet (FUV) photons.  The energy required in a single photon to break the bonds of molecular hydrogen is 14.5 eV which conveniently is also enough energy to excite atomic hydrogen, so photodisasociation using a single photon is highly unlikely \citep{krumholz2014}.  However, a photon with an energy of 11-13.6 eV will not be able to excite atomic hydrogen, but will be able to excite the molecular hydrogen to its first and second excitation levels, the Lyman and Werner bands respectively.  The excited H$_2$ will eventually settle via photon emission to it's ground state with a finite probability of returning to two hydrogen atoms rather than maintaing it's molecular state \citep{krumholz2014}.
 
 A disassociation rate, $\zeta_{diss}$, can be obtained by scaling the excitation rate, $\zeta_{exc}$, by the fraction of excited hydrogen molecules that will settle to an atomic ground state \citep{krumholz2014}.  The excitation rate for the Milky Way is found by summing each of the possible excitations.  In the Milky Way's diffuse ISM, the interstellar radiation field is 6-9x10$^-14$ erg cm$^-3$ over the range of 6-13.6 eV resulting in $\zeta_{exc} \approx 3\times10^-10$s$^{-1}$ \citep{draine2011}.  The expected fraction of H$_2$ to disassociate is between 0.11 and 0.13 resulting in $\zeta_{diss}\approx4\times10^{-11}$s$^{-1}$\citep{draine2011}.
-Equating the formation and disassociation rates then solving for a molecular hydrogen vs atomic hydrogen ratio (equation \ref{eq:fd_eq1}), we can see as expected that in the diffuse medium atomic hydrogen is far more abundant.
+Equating the formation and disassociation rates then solving for a molecular hydrogen vs atomic hydrogen ratio is shown in equation \ref{eq:fd_eq1} \citep{krumholz2014}.  From equation \ref{eq:fd_eq1} we can see, in the diffuse medium, atomic hydrogen is far more abundant which is of no surprise.
 
 \begin{equation}\label{eq:fd_eq1}
-
+  \begin{split}
+    \frac{n_{H_2}}{n_H} & = \frac{\mathcal{R}n_{H_0}}{\zeta_{diss}} \\
+                        & = 8\times10^{-6}\left(\frac{4\times10^{-11}s^{-1}}{\zeta_{diss}}\right)\left(\frac{n_{H_0}}{10cm^{-3}}\right)
+  \end{split}
 \end{equation}
 
-However, as the density of the gas increase so the optical depth and a process known as shielding occurs.  
+However, as the density of the gas increases via collapse or coagulation, the optical depth will also increase limiting the amount of FUV photons to penetrate deeply into the cloud; a process known as shielding \citep{draine2011}.  This shielding will aid in the decrease of $\zeta_{diss}$ which will increase the value in equation \ref{eq:fd_eq1}.  The increase in molecular to atomic hydrogen ratio signifies the accumulation of molecular gas reservoirs.  The molecular gas build up will eventually lead to further collapse within the cloud that will eventual y lead to forming stars.  It is this stage of molecular gas development in star formation that we are examining in this thesis.
+
+\section{Determining H$_2$ Abundance}
 
 %Try to use the word obnubliates!
 
