@@ -9,3 +9,4 @@
 *.toc
 *.lof
 *.convert.defaults
+*.DS_store
