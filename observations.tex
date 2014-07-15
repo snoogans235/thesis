@@ -8,55 +8,55 @@ The observations of NGC3627 were taken from the Nearby Galaxies Legacy Survey's 
 
 \section{Image Creation and Properties}
 
-For any imaging process to have be successful, the image need to have limited white noise \citep{chapin2013}.  White noise in the sense of our bolometer observations arise from thermal variations in the instrument and atmosphere during data acquisition. The random noise is minimized through scanning methods and during image processing \citep{chapin2013}.  To create the final SCUBA-2 data products we use the Submillimetre User Reduction Facility (SMURF) procedure MAKEMAP.  This procedure reduces the noise of the observations while maintaining the source's emission by incorporating a combination of principal component analysis and a maximum likelihood analysis \citep{chapin2013}.  Both of these methods have proven useful in reducing bolometer data on their own, but due to the size of raw SCUBA-2 data, either method on its own would result in extreme run times or the process becoming resource intensive \citep{chapin2013}.
+For any imaging process to have be successful, the final image needs to have a limited white noise \citep{chapin2013}.  White noise in the sense of our bolometer observations arise from thermal variations in the instrument and atmosphere during data acquisition. The random noise is minimized through scanning methods and during image processing \citep{chapin2013}.  To create the final SCUBA-2 data products, we use the Submillimetre User Reduction Facility (SMURF) procedure MAKEMAP.  This procedure reduces the noise of the observations while maintaining the source's emission by incorporating a combination of principal component analysis and a maximum likelihood analysis \citep{chapin2013}.  Both of these methods have proven useful in reducing bolometer data on their own, but due to the size of raw SCUBA-2 data, either method on its own would result in extreme run times or the process becoming resource intensive \citep{chapin2013}.
 
 
-MAKEMAP breaks down the image creation into several steps performed in iteration in order to successfully reduce any background noise \citep{chapin2013}.  The raw data is approximated by equation \ref{eq:sc2_raw} such that $b_i(t)$ is the i$^{th}$ bolometer output at time t, f is a scaling factor determined from flat field calibrations, $e_i(t)$ is the extinction at time t for the i$^{th}$ bolometer, $a_i(t)$ is the astronomical signal for i$^{th}$ bolometer at time t, noise from the product of the common mode and gain, $g_i*n_c(t)$, low-frequency noise $n_f(t)$ and random noise $n_r(t)$\citep{chapin2013}.
+MAKEMAP breaks down the image creation into several steps performed in iteration in order to successfully reduce any background noise \citep{chapin2013}.  The raw data is approximated by equation \ref{eq:sc2_raw} such that $b_i(t)$ is the i$^{th}$ bolometer output at time t, $f$ is a scaling factor determined from flat field calibrations, $e_i(t)$ is the extinction at time t for the i$^{th}$ bolometer, $a_i(t)$ is the astronomical signal for i$^{th}$ bolometer at time t,  $g_i*n_c(t)$ is the noise due to the product of the common mode and gain, the low-frequency noise, $n_f(t)$ and the random noise $n_r(t)$ \citep{chapin2013}.
 
 \begin{equation}\label{eq:sc2_raw}
   b_i(t) = f \left[ e_i(t)*a_i(t) + g_i*n_c(t)+n_f(t)+n_r(t)\right]
 \end{equation}
 
-The steps used in MAKEMAP are:  COM and GAI which estimate a common mode signal and from the fitting averaging time-series of each bolometer observation, EXT to apply the measured extinction corrections, FLT to apply a high- and low-pass filters to remove any noise features not removed in the COM and GAI filtering, AST which regrids the data and detects sources to be removed from reduction.  The final step is NOI which determines the noise in the gridded map after each step has been performed and is calculated by isolating the white noise component in equation \ref{eq:sc2_raw}.  A convergence check is then issued based on the magnitude of change in each pixel from the previous map and the current version.  If the check failed the COM, GAI, EXT, and FLT values are recalculated using the AST information obtained from the previous iteration, and the process is repeated until the convergene values are met or the maximum number of iterations have been carried out \citep{chapin2013}.
+The steps used in MAKEMAP are designed so they can estimate each noise component of the bolometer signal.  The COM and GAI steps estimate a common mode signal by fitting the average time-series of each bolometer observation.  The next step is EXT, and used to apply the measured extinction corrections.  Following EXT is FLT to apply a high- and low-pass filters to remove any noise features not removed in the COM and GAI filtering.  After the high- and low-pass filters, the AST step is performed.  AST converts the data from a time series and detects sources to be removed from reduction.  The sources removed during this portion of MAKEMAP are intended to astronomical in nature.  The final step is NOI which determines the noise in the gridded map after each step has been performed and is calculated by isolating the white noise component in equation \ref{eq:sc2_raw}.  A convergence check is then issued based on the magnitude of change in each pixel from the previous map and the current version.  If the check failed the COM, GAI, EXT, and FLT values are recalculated using the AST information obtained from the previous iteration, and the process is repeated until the convergence values are met or the maximum number of iterations have been carried out \citep{chapin2013}.
 
 %MAKEMAP breaks down the image creation into several steps performed in iteration in order to successfully reduce any background noise \citep{chapin2013}.  The steps used in MAKEMAP are:  COM and GAI which remove any common noise features detected by the SQUIDs, EXT to apply extinction corrections, FLT to apply a high- and low-pass filters to remove any noise features not removed in the COM and GAI filtering, AST which regrids the data and detects sources to be removed from reduction.  The final step is NOI which determines the noise in the gridded map after each step has been performed.  A convergence check is then issued and if the check failed the COM, GAI, EXT, and FLT values are inverted and the process is repeated with the inverted values \citep{chapin2013}.
-In our production of maps, we used the configuration file dimmconfig\_bright\_compact.lis and altered the AST and FLT sections of the image creation by introducing a mask made from Herschel's 250$\mu$m map.  The purpose of the mask was to exclude the target from interfering with the noise minimization as well as prohibit any emission from the galaxy to be significantly altered during image production.  The filter size of the high-pass filter was also modified, and an appropriate value was determined to be 175$\arcsec$.  We determined an appropriate high-pass filter size by running a large range of filters from 100$\arcsec$ to 300$\arcsec$ and inspecting the total recovered flux of NGC3627.  A plot of the returned flux values can be seen in figure \ref{fig:filt_lines}.  An good filter would not show any significant decrease flux compared to the 350$\mu$m or 500$\mu$m.  This requirement removes any filters greater than 200$\arcsec$.  Given the flux was nearly unchaning with filters less than 200$\arcsec$, we determiend an appropriate filter size by examining the structure that was returned in particular how well the spiral arms were effected for the 850$\mu$m, and how well the disk was preserved in the 450$\mu$m.  The spatial effect of the filters can be seen in figure \ref{fig:450_flt} for the 450$\mu$m and figure \ref{fig:850_flt} for the 850$\mu$m.  The maps were returned from MAKEMAP in units of pW with a pixel size of 2$\arcsec$ by 2$\arcsec$ for both the 450$\mu$m and 850$\mu$m.
+In our production of maps, we used the configuration file dimmconfig\_bright\_compact.lis and altered the AST and FLT sections of the image creation by introducing a mask made from Herschel's 250$\mu$m map.  The purpose of the mask was to exclude the target from interfering with the noise minimization as well as prohibit any emission from the galaxy to be significantly altered during image production.  The filter size of the high-pass filter was also modified, and an appropriate value was determined to be 175$\arcsec$.  We determined an appropriate high-pass filter size by running a large range of filters from 100$\arcsec$ to 300$\arcsec$ and inspecting the total recovered flux of NGC3627.  A plot of the returned flux values can be seen in figure \ref{filt_lines}.  An good filter would not show any significant decrease in flux compared to the 350$\mu$m or 500$\mu$m.  This requirement removes any filters greater than 200$\arcsec$.  Given the flux was nearly constant with filters less than 200$\arcsec$, we  an appropriate filter size by examining the structure that was returned in particular how well the spiral arms were effected for the 850$\mu$m, and how well the disk was preserved in the 450$\mu$m.  The spatial effect of the filters can be seen in figure \ref{450_flt} for the 450$\mu$m and figure \ref{850_flt} for the 850$\mu$m.  The maps were returned from MAKEMAP in units of pW with a pixel size of 2$\arcsec$ by 2$\arcsec$ for both the 450$\mu$m and 850$\mu$m.
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.65]{obs_imgs/flux_line.jpeg}
-  \label{fig:filt_lines}
   \caption[Flux Values vs  High-Pass Filter Sizes]{Returned flux values for NGC3627 with varying high-pass filter sizes.}
+  \label{filt_lines}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{obs_imgs/450_comparison_4.jpeg}
-  \label{fig:450_flt}
   \caption[450$\mu$m High-Pass Filter Images]{Four 450$\mu$m maps of NGC3627 using varying high-pass filter sizes.  The contours shown are for 0.0, 0.02, 0.05, 0.08 and 0.1 Jy/pixel for each image.}
+    \label{450_flt}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{obs_imgs/850_comparison_4.jpeg}
-  \label{fig:850_flt}
   \caption[850$\mu$m High-Pass Filter Images]{Four 850$\mu$m maps of NGC3627 using varying high-pass filter sizes.  The contours shown are for 0.0, 0.002, 0.005, and 0.008 Jy/pixel for each image.}
+    \label{850_flt}
 \end{figure}
 
-The finalized 450$\mu$m image was then re-gridded down to a 4$\arcsec$ by 4$\arcsec$ pixel grid, and flux calibration values of 491000 and 4710 were applied to convert from pW to mJy/beam and mJy/square arcsecond respectively.  The 850$\mu$m maps were re-gridded to an 8$\arcsec$ by 8$\arcsec$ pixel size and used flux calibration values of 537000 and 2340 for mJy/beam and mJy/square arcsecond.  The 4$\arcsec$  and 8$\arcsec$ pixels corresponed to a 180pc and 360pc size scale for our target, NGC3627.  To simplify the analysis, the images are also converted to Jy/pixel.  The 450$\mu$m and 850$\mu$m are shown in figures \ref{fig_450} and \ref{fig_850}.  The calibration values are determined from our calibrator source, Uranus.  The overall noise in the final image can be seen in table \ref{tab_obs_scuba2}.
+The finalized 450$\mu$m image was then re-gridded down to a 4$\arcsec$ by 4$\arcsec$ pixel grid, and flux calibration values of 491000 and 4710 were applied to convert from pW to mJy/beam and mJy/square arcsecond respectively.  The 850$\mu$m maps were re-gridded to an 8$\arcsec$ by 8$\arcsec$ pixel size and used flux calibration values of 537000 and 2340 for mJy/beam and mJy/square arcsecond.  The 4$\arcsec$ and 8$\arcsec$ pixels corresponded to a 180pc and 360pc size scale for our target, NGC3627.  To simplify the analysis, the images are also converted to Jy/pixel.  The 450$\mu$m and 850$\mu$m are shown in figures \ref{fig_450} and \ref{fig_850}.  The calibration values are determined from our calibrator source, Uranus.  The overall noise in the final image can be seen in table \ref{tab_obs_scuba2}.
 
 \begin{figure}
   \centering
-  \label{fig_450}
   \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/450_um.eps}
   \caption[NGC3627 450$\mu$m Observations]{450$\mu$m observation produced at the end of the image production with 20\%, 40\%, 60\%, and 80\% contours.}
+    \label{fig_450}
 \end{figure}
 
 \begin{figure}
   \centering
-  \label{fig_850}
   \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/850_um.eps}
   \caption[NGC3627 850$\mu$m Observations]{850$\mu$m observation produced at the end of the image production with 20\%, 40\%, 60\%, and 80\% contours.}
+    \label{fig_850}
 \end{figure}
 
 \begin{deluxetable}{cccccc}
@@ -73,58 +73,58 @@ The finalized 450$\mu$m image was then re-gridded down to a 4$\arcsec$ by 4$\arc
 \end{deluxetable}
 
 \subsection{Beam Shape of the 450$\mu$m and 850$\mu$m Data} \\
-The Uranus calibration images were also used in determining the shape of the beam for the 450$\mu$m and 850$\mu$m observations.  The beam shape of both the 450$\mu$m and 850$\mu$m maps deviates from a single gaussian due to the second maximum of the airy diffraction pattern in the response function of the telescope and minor imperfections in the mirror of the JCMT due to boundaries of the panel \citet{dempsey2013}.  This abnormality was best represented by a sum of two gaussians whose amplitude totals to unity \citep{dempsey2013}.  The average beam resolution for the 450$\mu$m and 850$\mu$m are reported in table \ref{tab_obs_scuba2} and match the values within uncertainty found in \citep{dempsey2013}.  The calibration images and beams can be seen in figure \ref{fig_calib}.  The contribution of the error beam in the 850$\mu$m emission is negligible and allows the beam to be approximated by a single gaussian.  However, the contribution of the error beam in the 450$\mu$m images was large enough to require special treatment in order to properly match beams for analysis.
+The Uranus calibration images were also used in determining the shape of the beam for the 450$\mu$m and 850$\mu$m observations.  The beam shape of both the 450$\mu$m and 850$\mu$m maps deviates from a single gaussian due to the second maximum of the airy diffraction pattern in the response function of the telescope and minor imperfections in the mirror of the JCMT due to boundaries of the panels \citet{dempsey2013}.  This abnormality was best represented by a sum of two gaussians whose amplitude totals to unity \citep{dempsey2013}.  The average beam resolution for the 450$\mu$m and 850$\mu$m are reported in table \ref{tab_obs_scuba2} and match the values within uncertainty found in \citep{dempsey2013}.  The calibration images, fitted beams, and the residual of the fits can be seen in figure \ref{fig_calib}.  The contribution of the error beam in the 850$\mu$m emission is negligible, and allows the beam to be approximated by a single gaussian.  However, the contribution of the error beam in the 450$\mu$m images was large enough to require special treatment in order to properly match the beams for analysis.
 
 \begin{figure}
-  \label{fig_calib}
   \centering
   \includegraphics[width=1.\textwidth, trim={0 5cm 0 0}]{obs_imgs/calib_beams.eps}
   \caption[SCUBA-2 Calibration and Beams]{The top row shows the Uranus images taken on January, 5th 2012 for the 450$\mu$m on the left and the 850$\mu$m on the right.  The bottom row shows the fitted beams for the 450$\mu$m on the right and 850$\mu$m on the left using the double gaussian beam shape. The contours in the image are from 10\% to 90\% in intervals of 10\%.}
+    \label{fig_calib}
 \end{figure}
 
 \section{Ancillary Data}
 
-The science goals of this thesis required data outside the capabilities of SCUBA-2.  For instance, accurately determining the dust mass involved fitting the spectral energy distribution (SED) for NGC3627.  To successfully fit an SED, we needed shorter wavelength data to fully probe the cold component of this galaxy. We used data ranging from 100$\mu$m to 500$\mu$m from the KINGFISH survey (\citep{kennicutt2011}) to gain a large enough wavelength range for fitting the cold component.  Secondly, the bandpass of the 850$\mu$m emisison contains the CO j=3-2 transmission line.  In order to get a valid approximation on the dust mass, this contribution had to be removed.  We used emission data from the NGLS using HARP instrumentation on the JCMT \citep{wilson2012}.  When a dust mass was obtained, we used CO j=1-0 from the Nobeyama 45-m telescope (\citep{kuno2007}), CO j=2-1 from HERACLES (\citep{leroy2009}), and $HI$ observations from THINGS (\citep{walter2008}) to determine an reasonable molecular hydrogen mass to calculate a dust-to-gas ratio.
+The science goals of this thesis required data outside the capabilities of SCUBA-2.  For instance, accurately determining the dust mass involved fitting the spectral energy distribution (SED) for NGC3627.  To successfully fit an SED, we needed shorter wavelength data to fully probe the cold component of this galaxy. We used data ranging from 100$\mu$m to 500$\mu$m from the KINGFISH survey \citep{kennicutt2011} to gain a large enough wavelength range for fitting the cold component.  Secondly, the bandpass of the 850$\mu$m emisison contains the CO j=3-2 transmission line.  In order to get a valid approximation on the dust mass, this contribution had to be removed.  We used emission data from the NGLS using HARP instrumentation on the JCMT \citep{wilson2012} to fulfill this role.  When a dust mass was obtained, we used CO j=1-0 from the Nobeyama 45-m telescope (\citep{kuno2007}), CO j=2-1 from HERACLES (\citep{leroy2009}), and $HI$ observations from THINGS (\citep{walter2008}) to determine an reasonable molecular hydrogen mass to calculate a dust-to-gas ratio.
 
 \subsection{Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGFISH)}
 
 %sings paper not showing up
 
-The Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGSFISH) was designed to be a follow up to the Spitzer Infrared Nearby Galaxies Survey (SINGS) \citep{kennicutt2003} with observations of the warm and cold component of dust emission using the increased resolution from Herschel \citep{kennicutt2011}.  The main science goals of the KINGFISH survey were to better understand the star formation processes that were shielded by dust, resolved studies of heating and cooling of the interstellar medium (ISM), and to build an inventory of how cold dust emission relates to other dust components in the ISM \citep{kennicutt2011}.  The survey consisted of studying 61 nearby galaxies (d$<$30Mpc) that cover a range of environments each observed at 70$\mu$m, 100$\mu$m, 160$\mu$m, 250$\mu$m, 350$\mu$m, and 500$\mu$m.  Our analyis focuses on fitting the cold component of NGC3627's SED, so we omitted the 70$\mu$m emission from the fitting, and processed the data through MAKEMAP as described in $\S$ \ref{data_agree}.  The rms and beam size after the large scale structure has been removed can be seen in table \ref{tab_obs_kfish}, while the preconvolved maps are shown in figures \ref{fig_100} to \ref{fig_500}.
+The Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGSFISH) was designed to be a follow up to the Spitzer Infrared Nearby Galaxies Survey (SINGS) \citep{kennicutt2003} with observations of the warm and cold component of dust emission using the increased resolution from Herschel \citep{kennicutt2011}.  The main science goals of the KINGFISH survey were to better understand the star formation processes that were shielded by dust, resolved studies of heating and cooling of the interstellar medium (ISM), and to build an inventory of how cold dust emission relates to other dust components in the ISM \citep{kennicutt2011}.  The survey consisted of studying 61 nearby galaxies (d$<$30Mpc) that cover a range of environments.  Each target was observed at 70$\mu$m, 100$\mu$m, 160$\mu$m, 250$\mu$m, 350$\mu$m, and 500$\mu$m.  Our analyis focuses on fitting the cold component of NGC3627's SED, so we omitted the 70$\mu$m emission from the fitting, and processed the data through MAKEMAP as described in $\S$ \ref{data_agree}.  The rms and beam size after the large scale structure has been removed can be seen in table \ref{tab_obs_kfish}, while the preconvolved maps are shown in figures \ref{fig_100} to \ref{fig_500}.
 
 \begin{figure}
   \centering
-  \label{fig_100}
   \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/100_um.eps}
   \caption[NGC3627 100$\mu$m Observations]{Residual of the MAKEMAP filtering of 100$\mu$m observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_100}
 \end{figure}
 
 \begin{figure}
   \centering
-  \label{fig_160}
   \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/160_um.eps}
   \caption[NGC3627 160$\mu$m Observations]{Residual of the MAKEMAP filtering of 160$\mu$m observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_160}
 \end{figure}
 
 \begin{figure}
   \centering
-  \label{fig_250}
   \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/250_um.eps}
   \caption[NGC3627 250$\mu$m Observations]{Residual of the MAKEMAP filtering of 250$\mu$m observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_250}
 \end{figure}
 
 \begin{figure}
   \centering
-  \label{fig_350}
   \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/350_um.eps}
   \caption[NGC3627 350$\mu$m Observations]{Residual of the MAKEMAP filtering of the 350$\mu$m observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_350}
 \end{figure}
 
 \begin{figure}
   \centering
-  \label{fig_500}
   \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/500_um.eps}
   \caption[NGC3627 500$\mu$m Observations]{Residual of the MAKEMAP filtering of the 500$\mu$m observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_500}
 \end{figure}
 
 \begin{deluxetable}{cccc}
@@ -133,13 +133,13 @@ The Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGSF
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 KINGFISH Observations\label{tab_obs_kfish}}
   \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
- & $\theta_{beam}$ & \it{[Jy/Pixel]}}
+ & $\theta_{beam}$ & \it{[mJy/Pixel]}}
   \startdata
-    100$\mu$m & 6.8$\arcsec$ & 2.24e-3 & 16.7\% \\
-    160$\mu$m & 11.6$\arcsec$ & 3.95e-3 & 18.8\% \\
-    250$\mu$m & 18.0$\arcsec$ & 2.47e-3 & 19.9\% \\
-    350$\mu$m & 24.9$\arcsec$ & 1.08e-3 & 21.8\% \\
-    500$\mu$m & 36.0$\arcsec$ & 3.87e-4 & 27.7\% \\
+    100$\mu$m & 6.8$\arcsec$ & 2.24 & 16.7\% \\
+    160$\mu$m & 11.6$\arcsec$ & 3.95 & 18.8\% \\
+    250$\mu$m & 18.0$\arcsec$ & 2.47 & 19.9\% \\
+    350$\mu$m & 24.9$\arcsec$ & 1.08 & 21.8\% \\
+    500$\mu$m & 36.0$\arcsec$ & 0.387 & 27.7\% \\
   \enddata
 \end{deluxetable}
 
@@ -149,9 +149,9 @@ The Nearby Galaxy Legacy Survey is an HI-selected set of 155 galaxies contained 
 
 \begin{figure}
   \centering
-  \label{fig_co32}
   \includegraphics[width=1.\textwidth, angle=270]{obs_imgs/CO32.eps}
   \caption[NGC3627 CO j=3-2 Observations]{Residual of the MAKEMAP filtering of CO j=3-2 observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_co32}
 \end{figure}
 
 \begin{deluxetable}{cccc}
@@ -159,9 +159,9 @@ The Nearby Galaxy Legacy Survey is an HI-selected set of 155 galaxies contained 
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 NGLS Observations\label{tab_obs_NGLS}}
   \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
- & $\theta_{beam}$ & \it{[Jy/Pixel]}}
+ & $\theta_{beam}$ & \it{[mJy/Pixel]}}
   \startdata
-    CO j=3-2 & 14.5$\arcsec$ & 1.28e-5& 29.8\% \\
+    CO j=3-2 & 14.5$\arcsec$ & 1.28e-2& 29.8\% \\
   \enddata
 \end{deluxetable}
 
@@ -169,13 +169,13 @@ The Nearby Galaxy Legacy Survey is an HI-selected set of 155 galaxies contained 
 
 \subsection{Nobeyama 45-m}\label{nob_sec}
 
-Determining a dust-to-gas ratio required the need for a molecular tracer to estimate the amount of molecular hydrogen present.  The most frequently used tracer is CO j=1-0 due to its abundance in the ISM.  The CO j=1-0 we used was taken from the Nobeyama 45-m CO Atlas of Nearby Spiral Galaxies observed to better understand the role of bars relating to molecular gas \citep{kuno2007}.  The Nobeyama 45-m CO Atlas consists of galaxies with morphologies ranging from Sa to Scd, located less that 25Mpc from the Milky Way, inclination values greater that $79^{\circ}$, 100$\mu$m flux greater than 10Jy, and spiral structure that has not be comprimised through interactions.  Any galaxies that met this criteria were then observed with the Nobeyama 45-m telescope \citep{kuno2007}  The beam sizes and rms of the filterd CO j=1-0 map are displayed in table \ref{tab_obs_n45} and the final image product can be seen in figure \ref{fig_co10}.
+Determining a dust-to-gas ratio required the need for a molecular tracer to estimate the amount of molecular hydrogen present.  The most frequently used tracer is CO j=1-0 due to its abundance in the ISM.  The CO j=1-0 we used was taken from the Nobeyama 45-m CO Atlas of Nearby Spiral Galaxies observed to better understand the role of bars relating to molecular gas \citep{kuno2007}.  The Nobeyama 45-m CO Atlas consists of galaxies with morphologies ranging from Sa to Scd, located less than 25Mpc from the Milky Way, inclination values greater that $79^{\circ}$, 100$\mu$m flux greater than 10Jy, and spiral structure that has not be comprimised through interactions.  Any galaxies that met this criteria were then observed with the Nobeyama 45-m telescope \citep{kuno2007}.  The beam sizes and rms of the filterd CO j=1-0 map are displayed in table \ref{tab_obs_n45} and the final image product can be seen in figure \ref{fig_co10}.
 
 \begin{figure}
   \centering
-  \label{fig_co10}
   \includegraphics[width=1.\textwidth, angle=270]{obs_imgs/CO10.eps}
   \caption[NGC3627 CO j=1-0 Observations]{Residual of the MAKEMAP filtering of CO j=1-0 observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_co10}
 \end{figure}
 
 \begin{deluxetable}{cccc}
@@ -191,13 +191,14 @@ Determining a dust-to-gas ratio required the need for a molecular tracer to esti
 
 \subsection{Hetrodyne Reciever Array CO-Line Extragalactic Survey (HERACLES)}
 
-The CO j=2-1 line was used to determine a ${2-1} / {1-0}$ line ratio which can be used to trace a gradient in $\alpha_{CO}$ and hint towards regions of high star-formation \citep{reuter1996}.  We used the CO j=1-0 data from the Nobeyama 45-m telescope ($\S$ \ref{nob_sec}), and CO j=2-1 from the Hetrodyne Reciever Array CO-Line Extragalactic Survey (HERACLES) using the IRAM 30-m telescope.  The main goal of HERACLES was to quantify the relationship between atomic and molecular gas and star formation using a large sample of galaxies (\citep{leroy2009}).  The sample of galaxies chosen were targets contained in THINGS that were within observing limits of the IRAM 30-m telescope.  The final image can be seen in figure \ref{fig_co21} and the image properties can be seen in table \ref{tab_obs_heracles}.
+The CO j=2-1 line was used to determine a CO ${2-1} / {1-0}$ line ratio which can be used to trace a gradient in $\alpha_{CO}$ and hint towards regions of high star-formation \citep{reuter1996}.  We used the CO j=1-0 data from the Nobeyama 45-m telescope ($\S$ \ref{nob_sec}), and CO j=2-1 from the Hetrodyne Reciever Array CO-Line Extragalactic Survey (HERACLES) using the IRAM 30-m telescope.  The main goal of HERACLES was to quantify the relationship between atomic and molecular gas and star formation using a large sample of galaxies \citep{leroy2009}.  The sample of galaxies chosen were targets contained in THINGS that were within observing limits of the IRAM 30-m telescope.  The final image can be seen in figure \ref{fig_co21} and the image properties can be seen in table \ref{tab_obs_heracles}.
 
 \begin{figure}
   \centering
-  \label{fig_co21}
+
   \includegraphics[width=1.\textwidth, angle=270]{obs_imgs/CO21.eps}
-  \caption[NGC3627 CO j=2-1 Observations]{Residual of the MAKEMAP filtering of CO j=2-1 observations.}
+  \caption[NGC3627 CO j=2-1 Observations]{Residual of the MAKEMAP filtering of CO j=2-1 observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_co21}
 \end{figure}
 
 \begin{deluxetable}{cccc}
@@ -213,13 +214,13 @@ The CO j=2-1 line was used to determine a ${2-1} / {1-0}$ line ratio which can b
 
 \subsection{The HI Nearby Galaxy Survey (THINGS)}
 
-To determine the gas to dust ratio we had to determine the total amount of gas present which required both atomic and molecular hydrogen.  We approximated the amount of molecular hydrogen present by using CO j=1-0, and measured the amount of atomic hydrogen (HI) present.  The source of our atomic hydrogen came from The HI Nearby Galaxy Survey (THINGS) designed to observe HI emission in nearby galaxies with the extreme spatial resolution of the Very Large Array (VLA).  Targets in THINGS included many of the SINGS targets with the exception of known HI poor sources (E/S0 type galaxies), dynamicaly complex systems (edge-on spirals), and large extended galaxies found in the local group \citep{walter2008}.  The resolution and rms of the filtered image are shown in table \ref{tab_obs_things}.  The final data product is shown in figure \ref{fig_HI}.
+To determine the gas to dust ratio we had to determine the total amount of gas present which dominated by both atomic and molecular hydrogen.  We approximated the amount of molecular hydrogen by using CO j=1-0, and measured the amount of atomic hydrogen (HI) present.  The source of our atomic hydrogen came from The HI Nearby Galaxy Survey (THINGS) designed to observe HI emission in nearby galaxies with the extreme spatial resolution of the Very Large Array (VLA).  Targets in THINGS included many of the SINGS targets with the exception of known HI poor sources (E/S0 type galaxies), dynamicaly complex systems (edge-on spirals), and large extended galaxies found in the local group \citep{walter2008}.  The resolution and rms of the filtered image are shown in table \ref{tab_obs_things}.  The final data product is shown in figure \ref{fig_HI}.
 
 \begin{figure}
   \centering
-  \label{fig_HI}
   \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/HI.eps}
-  \caption[NGC3627 HI Observations]{Residual of the MAKEMAP filtering of HI observations.}
+  \caption[NGC3627 HI Observations]{Residual of the MAKEMAP filtering of HI observations with 20\%, 40\%, 60\%, and 80\% contours.}
+  \label{fig_HI}
 \end{figure}
 
 \begin{deluxetable}{cccccc}
@@ -233,26 +234,29 @@ To determine the gas to dust ratio we had to determine the total amount of gas p
   \enddata
 \end{deluxetable}
 
-\section{Data Preparation for Analysis}
+\section{Data Preparation for Analysis}\label{data_agree}
 
-Initially the data do not agree on several levels.  The differences consist of the presence of the large scale structure in some but not all of our maps, different resolutions, and accounting for the beam shape of the 450$\mu$m.  We have taken several steps to correct these disagreements and maximize the compatibility of the data.  In order to account for the varying beam resolutions, we use a gaussian convolution to increase the resolution of our maps to the largest beam size in our dataset, 36$\arcsec$, using equation \ref{eq:gaus_kern} to decide on an appropriate beam size such that $\sigma_{desire}$ is the desired beam width, $\sigma_{max}$ is the beam size we are convolving to, and $\sigma_{given}$ is the beams size we are convolving from.
+Initially the data does not agree on several levels.  The differences consist of the presence of the large scale/extended structure, different resolutions including the beam shape of the 450$\mu$m.  We have taken several steps to correct these disagreements and maximize the compatibility of the data.  In order to account for the varying beam resolutions, we use a gaussian convolution to increase the resolution of our maps to the largest beam size in our dataset, 36$\arcsec$, using equation \ref{eq:gaus_kern} to decide on an appropriate beam size such that $\sigma_{desire}$ is the desired beam width, $\sigma_{max}$ is the beam size we are convolving to, and $\sigma_{given}$ is the beam size we are convolving from.
 
 \begin{equation}\label{eq:gaus_kern}
   \sigma_{desire} = \sqrt{\sigma_{max}^2 - \sigma_{given}^2}
 \end{equation}
 
-However, this only works when the beams are well approximated by a gaussian which is not the case for the 450$\mu$m beam.  The steps taken to match the resolution of the 450$\mu$m beam with the rest of the data set is given in $\S$ \ref{450_fix_sec}.  Removing any large scale structure from our ancillary data is implemented using a feature in MAKEMAP that allows us to add fake sources into the data during production.  The fake source implementation allows us to remove the same amount of large scale structure from our ancillary data as was removed from the SCUBA-2 data.  The steps taken to prepare the ancillary data are described in $\S$\ref{fakesource_sec}.
+However, this only works when the beams are well approximated by a gaussian which is not the case for the 450$\mu$m beam.  The steps taken to match the resolution of the 450$\mu$m beam with the rest of the data set is given in $\S$ \ref{450_fix_sec}.  Removing any large scale structure from our ancillary data is implemented using a feature in built into MAKEMAP that allows us to add fake sources into the data during production.  The fake source implementation allows us to remove the same amount of large scale structure from our ancillary data as was removed from the SCUBA-2 data.  The steps taken to prepare the ancillary data are described in $\S$\ref{fakesource_sec}.
 
 %The largest difference in Ability of Herschell to observe submm unimpeded by atmo and the configuration setup of THIGNs allows for a bit of extended structure to arise in NGC3627.
 
 \subsection{Accounting for the 450$\mu$m Error Beam}\label{450_fix_sec}
 
-Taking the 450$\mu$m error beam into consideration is different than normal beam convolution in the sense that we are not convolving the higher resolution map to the lowest resolution.  Instead we are adding in an error beams similar to the 450$\mu$m observations to all of our observations.  We have to take these steps because convolving a double gaussian beam with a single gaussian kernel will not sufficiently remove the error component of our beam resulting in a poor approximation to the wings of our beam shape.
+Taking the 450$\mu$m error beam into consideration is different than a normal beam convolution in the sense that we are not convolving the higher resolution map to the lowest resolution.  Instead we are adding in an error beam similar to the error beam found in the 450$\mu$m observations.  We have to take these steps because convolving a double gaussian beam with a single gaussian kernel will not sufficiently remove the error component of our beam resulting in a poor approximation to the wings of our beam shape.
 
-In order to accommodate the 450$\mu$m map's error beam, we used a method employed by another SCUBA-2 survey, the Gould-Belt Survey team.  This method used the distributive nature of the Fourier transform to create similar error components in the beam resolutions we were convolving to and from.  Carrying out this convolution involved breaking the 450$\mu$m beam into it's two components, $\sigma_{\alpha}$ and $\sigma_{\beta}$ to represent the main beam and error beam.  The lowest resolution beam shape, $\sigma_{max}$ is convolved with the two components and the resulting beams are added together.  This process produces an equivalent two component beam as the 450$\mu$m beam conolved with $\sigma_{max}$.  This relationship is shown in equation \ref{eq_GBSmethod} where $X_{max}$ is the beam width of the our lowest resolution, $X_{\alpha}$ and $X_{\beta}$ are the main and error beam of the 450$\mu$m observations, and $X_{450\mu m}$ is the double gaussian beam shape of the 450$\mu$m observations.
+In order to accommodate the 450$\mu$m map's error beam, we used a method employed by another SCUBA-2 survey, the Gould-Belt Survey team.  This method used the distributive nature of the Fourier transform to create similar error components in the beams we were convolving to and from.  Carrying out this convolution involved breaking the 450$\mu$m beam into it's two components, $X_{\alpha}$ and $X_{\beta}$ to represent the main beam and error beam.  The poorest resolution beam, $X_{max}$, is convolved with the two components $X_\alpha$ and $X_\beta$ and the resulting beams are added together.  This process produces an equivalent two component beam as the 450$\mu$m beam convolved with $X_{max}$.  This relationship is shown in equation \ref{eq_GBSmethod}.  Where $X_{max}$ is the poorest resolution beam, $X_{\alpha}$ and $X_{\beta}$ are the main and error beam of the 450$\mu$m observations, and $X_{450\mu m}$ is the double gaussian beam shape of the 450$\mu$m observations.
 
 \begin{equation} \label{eq_GBSmethod}
-  X_{max} \ast X_{\alpha} + X_{max} \ast X_{\beta} = \left(X_{\alpha} + X_{\beta}\right) \ast X_{max} = X_{450\mu m} \ast X_{max}
+  \begin{split}
+    X_{max} \ast X_{\alpha} + X_{max} \ast X_{\beta} & = \left(X_{\alpha} + X_{\beta}\right) \ast X_{max} \\
+     & = X_{450\mu m} \ast X_{max}
+   \end{split}
 \end{equation}
 
 \subsection{Extended Structure Removal via MAKEMAP}\label{fakesource_sec}
@@ -260,10 +264,41 @@ In order to accommodate the 450$\mu$m map's error beam, we used a method employe
 %adjusting the beam sizes to make the 450 beam work
 
 %from the ancillary data set -- describes the fakesource stuff
-Due to the combination of methods used in MAKEMAP, large scale/extended structure is removed from the final SCUBA-2 images.  However, in all of our ancillary data the large scale emission was present in the initial maps.  The removal of the extended features from our support data was carried out by passing the data through MAKEMAP using a special function called fakesource.  Implementing fakesource allows us to pass an image though processing and have it added into the image being processed.  We use the 850$\mu$m map as our base image for the fakesource process.  The output image then consists of the added data map and the 850$\mu$m map, and the ancillary data was then isolated by subtracting the 850$\mu$m image from the fakesource image.  
+Due to the combination of methods used in MAKEMAP, large scale/extended structure is removed from the final SCUBA-2 images.  However, in all of our ancillary data the large scale emission was present in the initial maps.  The removal of the extended features from our support data was carried out by passing the data through MAKEMAP using a special function called fakemap.  Implementing fakemap allows us to pass an image though processing and have it added into the image being processed.  We use the 850$\mu$m map as our base image for the filtering process and add the ancillary data to the image.  The output image then consists of the sum of the ancillary data and the 850$\mu$m map.  The ancillary data was then isolated by subtracting the 850$\mu$m image from the fakemap image.  
 
-Preparing the data to be implemented consisted either converting the images from their native units into pW using the 850$\mu$m flux calibration factor and scaled down to match the observed signal or by just applying a scaling factor.  Which method is used is based on the desired units of the final map, and can be separated by what results the data is used to obtain.
+Preparing the data to be implemented consisted either converting the images from their native units into pW using the 850$\mu$m flux calibration factor and scaled down to match the observed signal or by just applying a scaling factor.  Which method is used is based on the desired units of the final map, and can be separated by what purpose the data had in our analysis.
 
-The data used in the SED fitting (KINGFISH and NGLS) were scaled to pW so they could have as similar a reduction and calibration process as the SCUBA-2 maps.   The KINGFISH data has the appopriate calibration factor applied to convert from either MJy/sr to pW in the case of the 250$\mu$m, 350$\mu$m, and 500$\mu$m or Jy/pixel to pW for the 100$\mu$m and 160$\mu$m.  Converting the CO j=3-2 involved applying a scaling constant of 0.70 [mJy/beam][K km/s]$^{-1}$ \citep{drabek2012} prior to applying the 850$\mu$m calibration factor to convert to pW.  After the data has been converted to pW, the image used as a fakesource is then scaled down to the same order of magnitude as the base image.  After the fakesource image has been processed and extracted, the maps are calibrated using the same values as the 850$\mu$ map and scaled to an 8$\arcsec$ by 8$\arcsec$ grid.  The amount of extended flux lost in the KINGFISH and NGLS is shown in tables \ref{tab_obs_kfish} and \ref{tab_obs_NGLS}.
+The data used in the SED fitting (KINGFISH and NGLS) were scaled to pW so they could have as similar a reduction and calibration process as the SCUBA-2 maps.   The KINGFISH data is regridded to a 2$\arcsec$ by 2$\arcsec$ pixel size and has the appropriate calibration factor applied to convert from either MJy/sr to pW in the case of the 250$\mu$m, 350$\mu$m, and 500$\mu$m or from Jy/pixel to pW for the 100$\mu$m and 160$\mu$m.  Converting the CO j=3-2 involved applying a scaling constant of 0.70 [mJy/beam][K km/s]$^{-1}$ \citep{drabek2012} prior to applying the 850$\mu$m calibration factor to convert to pW.  After the data has been converted to pW, the image used as a fakemap is then scaled down to the same order of magnitude as the base image.  After the fakemap image has been processed and extracted, the maps are calibrated using the same values as the 850$\mu$m map and scaled to an 8$\arcsec$ by 8$\arcsec$ grid.  The amount of extended flux lost in the KINGFISH and NGLS is shown in tables \ref{tab_obs_kfish} and \ref{tab_obs_NGLS}.  This process is shown in figure \ref{fig_100_transform} from the original Herschel 100$\mu$m map, to the final image used in SED fitting convolved to the 500$\mu$m beam resolution, 36.0$\arcsec$.
+
+ \begin{figure}
+\centering
+\begin{subfigure}[t]{.48\textwidth}
+  \centering
+  \includegraphics[width=1.\linewidth, angle=270]{obs_imgs/100um_original.eps}
+  \caption{Herschel 100$\mu$m image of NGC3627.}
+\end{subfigure}%
+\quad
+\begin{subfigure}[t]{.48\textwidth}
+  \centering
+  \includegraphics[width=1.\linewidth, angle=270]{obs_imgs/100um_align_2as.eps}
+  \caption{Herschel 100$\mu$m image converted to pW and rescaled to a 2$\arcsec$ by 2$\arcsec$ pixel grid.}
+\end{subfigure}%
+
+\begin{subfigure}[t]{.45\textwidth}
+  \centering
+  \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/100_um.eps}
+  \caption{100$\mu$m map of NGC3627 after large scale structure has been removed on an 8$\arcsec$ by 8$\arcsec$ grid.}
+\end{subfigure}%
+\quad
+\begin{subfigure}[t]{0.45\textwidth}
+  \centering
+  \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/100um_conv.eps}
+  \caption{100$\mu$m map with extended structure removed and convolved to final resolution of 36.0$\arcsec$.}
+\end{subfigure}
+
+\caption{The 100$\mu$m image from the beginning of processing to the end of processing.  All of the contours shown are 20\%, 40\%, 60\%, and 80\%.}
+\label{fig_100_transform}
+\end{figure}
+  
 
 The rest of the ancillary data is used in calculating a dust to gas ratio, and follows nearly the same process as the SED data filtering.  The major difference is the CO j=1-0, CO j=2-1 and HI maps need to remain in their original units of K km/s and M$_\odot$/pc$^2$.  This necessity simplified the process by only requiring a scaling factor of 0.001 to be applied to the original maps.  After the data is scaled, it is filtered using the fakesource option in MAKEMAP with the 850$\mu$m observation as the base image.  The atomic and molecular gas maps were then isolated in the same fashion as the KINGFISH and NGLS, however they were rescaled back to their original values and fit to an 8$\arcsec$ by 8$\arcsec$ grid.  The amount of emission lost is shown in tables \ref{tab_obs_n45}, \ref{tab_obs_heracles}, and \ref{tab_obs_things}.
