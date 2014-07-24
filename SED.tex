@@ -1,0 +1,14 @@
+\chapter{Spectral Energy Distribution Analysis}
+
+\section{SED Fitting Method}
+
+In order to determine a dust mass, we use the IDL package MPFIT \citep{markwardt2009} which utilizes the Levenberg-Marquardt algorithm.  The Levenberg-Marquardt algorithm is will use a combination of two minimization techniques (the steepest descent method and the Newton-Raphson Method) to determine the parameter combination that will lead to a minimum in the $\chi^2$ space \citep{burden2001}.  The algorithm begins by implementing the steepest descent method in order to traverse the $\chi^2$ space in the direction of the steepest gradient.  As the set of solutions approaches a minimum, it will use the Newton-Raphson method to locate best set of parameters by finding where the derivative at that point is closest to zero \citep{gavin2013}.  This method is susceptible to converging to a local minimum rather than converging to the global minimum.  This is remedied by selecting reasonable initial conditions.  The initial conditions we used were 20K for the temperature, a dust emissivity index of 2, and a mass determined by equation \ref{eq:mass} using the flux from the 250$\mu$m emission and our initial temperature and dust emissivity values.  
+
+\begin{equation}\label{eq:mass}
+  \begin{split}
+    M & = \frac{D^2 \: I_{250}}{\kappa_{\nu,0} \:  B_{250}\left(20\right)} \left(\frac{\nu}{\nu_0} \right)^{-\left(2+3\right)} \\
+      & = 2.24 \times 10^5 \: I_{250} \; M_\odot
+  \end{split}
+\end{equation}
+
+\section{Variations in Fitting}

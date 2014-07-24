@@ -1,9 +1,12 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{35}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
   {Norman}}]{abel1997}
 {Abel}, T., {Anninos}, P., {Zhang}, Y., \& {Norman}, M.~L. 1997, \na, 2, 181
+
+\bibitem[{{Burden} \& {Faires}(2001)}]{burden2001}
+{Burden}, R.~L. \& {Faires}, J.~D. 2001, {Numerical analysis}
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
   {Tilanus}, {Economou}, \& {Holland}}]{chapin2013}
@@ -40,6 +43,11 @@
 
 \bibitem[{{Field} \& {Saslaw}(1965)}]{field1965}
 {Field}, G.~B. \& {Saslaw}, W.~C. 1965, \apj, 142, 568
+
+\bibitem[{{Gavin}(2013)}]{gavin2013}
+{Gavin}, H.~P. 2013, {The Levenberg-Marquardt method for nonlinear least
+  squares curve-fitting problems}, Tech. rep., Department of Civil and
+  Environmental Engineering, Duke University
 
 \bibitem[{{Glover}(2003)}]{glover2003}
 {Glover}, S.~C.~O. 2003, \apj, 584, 331
@@ -133,6 +141,11 @@
 {Leroy}, A.~K., {Walter}, F., {Bigiel}, F., {Usero}, A., {Weiss}, A., {Brinks},
   E., {de Blok}, W.~J.~G., {Kennicutt}, R.~C., {Schuster}, K.-F., {Kramer}, C.,
   {Wiesemeyer}, H.~W., \& {Roussel}, H. 2009, \aj, 137, 4670
+
+\bibitem[{{Markwardt}(2009)}]{markwardt2009}
+{Markwardt}, C.~B. 2009, in Astronomical Society of the Pacific Conference
+  Series, Vol. 411, Astronomical Data Analysis Software and Systems XVIII, ed.
+  D.~A. {Bohlender}, D.~{Durand}, \& P.~{Dowler}, 251
 
 \bibitem[{{McKee} \& {Ostriker}(2007)}]{mckee2007}
 {McKee}, C.~F. \& {Ostriker}, E.~C. 2007, \araa, 45, 565
