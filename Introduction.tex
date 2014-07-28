@@ -1,12 +1,16 @@
 \chapter{Introduction}\label{intro}
 
-\section{The Physical Conditions of Star Formation} %need to change this since it deals with formation of H2
+\section{The Physical Processes of Star Formation} %need to change this since it deals with formation of H2
 
 Star formation is one of the fundamental processes in astrophysics that effects not just stellar and planetary formation but also dictates the behavior in galaxy formation and evolution \citep{kennicutt2012}.  The study of star formation itself can be broken into several areas such as: the processes that trigger collapse and how the collapse behaves, dictating how and what type of stars can form from a given region or cloud, or how the inflow of new material can alter current star forming environments.  These different sub-branches of star formation are conviently sorted into a hierarchal schemes that range from Mpc scales seen in gas accretion from the intergalactic medium, to properties of accretion disks on the a scales to the order $R_\odot$ or AU\citep{kennicutt2012}.  In this body of work we focus on the physical properties of the dust and abundance of gasses in the giant molecular cloud (GMC) phase of star formation prior to stellar collapse or fragmentation.
+
+\subsection{GMC Formation}
 
 After the intergalactic gas has accreted into a host galaxy, it will eventually condense and begin to form a GMC \citep{kennicutt2012}.  The condensation of this gas leads to the formation of molecular clouds.  The dominant process of GMC formation has divided between two camps; either a ``bottom-up'' or ``top-down'' formation scenario\citep{mckee2007}.  The bottom-up scenario consists of small clouds of cold HI coagulating to eventually form a GMC \citep{field1965, kwan1979}.  The major concern with the bottom-up scenario is if we include heating mechanisms in the cloud, coagulation will cease before the observed masses are reached \citep{mckee2007}.  In fact, the time scales required to form a cloud typical of what we observe, would take around $10^8$ years to accumulate a minimum of 10$^5$M$_\odot$, which is much greater than the expected GMC lifetime \citep{mckee2007}.  %try to find typical gmc lifetime 
 
 The alternative formation scenario, top-down, postulates the GMC formation comes from instabilities in diffuse ISM causing the clouds to collapse from their surrounding medium \citep{mckee2007}.  Two main instabilities are thought to be responsible for the collapse.  The first type of instability is a Parker instability, which involves distortion of magnetic fields lines in the mid plane of the galaxy, and at these distortions gas will begin to accumulate \citep{parker1966, dobbs2013}.  The second instability responsible for collapse comes in the style of a more complex Jeans instability which is determined further by the amount of rotational shear present \citep{mckee2007}.  If a strong rotational shear is present, such as in the inter arm region of a spiral galaxy, then a process known as swing amplification will occur \citep{mckee2007}.  If no rotational shear is present, such as the inner regions of a galaxy or spiral arms, then the collapse can be attributed to a magneto-Jeans instability \citep{elmegreen1987,kim2001}.
+
+\subsection{Molecular Hydrogen Formation}
 
 Regardless of either collapse or coagulation, molecular hydrogen is being formed inside of the cloud.  The formation of molecular hydrogen can be summarized using either the two bodied reaction, three bodied reaction, formation using free a electron or proton, or surface formation \citep{krumholz2014}.  The two bodied formation scenario is the simplest reaction using two hydrogen atoms to produce molecular hydrogen, reaction \ref{eq:2bod}.
 
@@ -57,6 +61,8 @@ Equation \ref{eq:reac_rate} is often simplified to equation \ref{eq:reac_rate_sm
   \frac{dn_{H_2}}{dt} = \mathcal{R}_{gr}n_H n_{H_0}
 \end{equation}
 
+\subsection{Dissasociation of Moleuclar Hydrogen}
+
 When the molecular hydrogen has formed, it is still susceptible to photodissasociation from far ultra-violet (FUV) photons.  The energy required for a single photon to break the bonds of molecular hydrogen is 14.5 eV \citep{krumholz2014}.  Conveniently, this is also enough energy to excite atomic hydrogen, so photodissasociation using a single photon is highly unlikely due to the abundance of HI in the ISM \citep{krumholz2014}.  However, a photon with an energy of 11-13.6 eV will not be able to excite atomic hydrogen, but will be able to excite the molecular hydrogen to its first and second excitation levels, the Lyman and Werner bands respectively.  The excited H$_2$ will eventually settle via photon emission to it's ground state with a finite probability of returning to two hydrogen atoms rather than maintaing it's molecular state \citep{krumholz2014}.
 
 %need a little more in this use the draine 2011 book
@@ -75,32 +81,7 @@ However, as the density of the gas increases via collapse or coagulation, the op
 
 \section{Determining H$_2$ Abundance}
 
+%Was thinking something like:
+%As shown in the above section, molecular hydrogen will be the dominant molecule in GMCS, so determining the quantity of H2 present is important for learning more about the star formation present.  Observing H2 however is not as easy as it sounds.  We know from \ref{sec_diss} that if the hydrogen is emitting a photon there is a finite chance that what we are seeing is H2 being debased into HI as well as leaving it to be too hot.  Secondly if we want to observe cold H2 via rotation, we cannot because of the lack of a dipole moment.  In order to really understand how much H2 is present we use tracers that we know will be present if H2 is present and then based on the amount of tracers we can make a determination of how much H2 is present.  This determiniation is done using a value known as the conversion factor , X_CO or \alpha_CO
+
 %Try to use the word obnubliates!
-
-
-%\begin{itemize}
-%  \item Components necessary in star formation and maybe look at how differing levels have an effect?
-%    \begin{itemize}
-%      \item This would be good to look at the physical conditions in molecular clouds.  Introduce the idea of how it is hard to observe H2 and we can use other tracers to see it.  The Evans paper is pretty good with this.
-%      \item It might be good to talk about the processes in star formation and then look at what phases we 
-%    \end{itemize}
-
-%  \item Dust to gas ratio
-%    \begin{itemize}
-%      \item What the DGR can tell us about the sfr environment / it's importance this would include things like what different values can tell us
-%      \item Components and how to calculate it.  Go into the need for $\alpha_{co}$
-%      \item Leroy minimization technique and it's history and then new applications (sandstrom paper).
-%    \end{itemize}
-
-%  \item Spectral Energy Distribution of Dust
-%    \begin{itemize}
-%      \item What SED's can tell us and their comonents.  I believe Draine has a pretty kick ass paper on this.
-%      \item Go into cold component and derive the modified black body.  This would be a good time to go over what $\kappa$ and $\beta$ are.
-%      \item Some properties of cold dust emission pretty much talk about the 850 excess and go over the galametz paper that chris sent.
-%    \end{itemize}
-
-%  \item NGC3627 on a whole
-%    \begin{itemize}
-%      \item go into previous studies  There is the reuters paper, all of the kingfish stuff, accuarate distances with Ia SNe.  Look for information regarding the nucleus and an slight AGN.  Tidal tails with HI in leo triplet.
-%    \end{itemize}
-%\end{itemize}
