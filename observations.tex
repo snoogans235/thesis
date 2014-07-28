@@ -128,7 +128,7 @@ The Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGSF
 \end{figure}
 
 \begin{deluxetable}{cccc}
-%  \tabletypesize{\footnotesize}
+%  \table{\footnotesize}
   \tablecolumns{4}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 KINGFISH Observations\label{tab_obs_kfish}}
@@ -270,34 +270,33 @@ Preparing the data to be implemented consisted either converting the images from
 
 The data used in the SED fitting (KINGFISH and NGLS) were scaled to pW so they could have as similar a reduction and calibration process as the SCUBA-2 maps.   The KINGFISH data is regridded to a 2$\arcsec$ by 2$\arcsec$ pixel size and has the appropriate calibration factor applied to convert from either MJy/sr to pW in the case of the 250$\mu$m, 350$\mu$m, and 500$\mu$m or from Jy/pixel to pW for the 100$\mu$m and 160$\mu$m.  Converting the CO j=3-2 involved applying a scaling constant of 0.70 [mJy/beam][K km/s]$^{-1}$ \citep{drabek2012} prior to applying the 850$\mu$m calibration factor to convert to pW.  After the data has been converted to pW, the image used as a fakemap is then scaled down to the same order of magnitude as the base image.  After the fakemap image has been processed and extracted, the maps are calibrated using the same values as the 850$\mu$m map and scaled to an 8$\arcsec$ by 8$\arcsec$ grid.  The amount of extended flux lost in the KINGFISH and NGLS is shown in tables \ref{tab_obs_kfish} and \ref{tab_obs_NGLS}.  This process is shown in figure \ref{fig_100_transform} from the original Herschel 100$\mu$m map, to the final image used in SED fitting convolved to the 500$\mu$m beam resolution, 36.0$\arcsec$.
 
- \begin{figure}
-\centering
-\begin{subfigure}[t]{.48\textwidth}
+\begin{figure}
   \centering
-  \includegraphics[width=1.\linewidth, angle=270]{obs_imgs/100um_original.eps}
-  \caption{Herschel 100$\mu$m image of NGC3627.}
-\end{subfigure}%
-\quad
-\begin{subfigure}[t]{.48\textwidth}
-  \centering
-  \includegraphics[width=1.\linewidth, angle=270]{obs_imgs/100um_align_2as.eps}
-  \caption{Herschel 100$\mu$m image converted to pW and rescaled to a 2$\arcsec$ by 2$\arcsec$ pixel grid.}
-\end{subfigure}%
+  \begin{subfigure}[t]{.48\textwidth}
+    \centering
+    \includegraphics[width=1.\linewidth, angle=270]{obs_imgs/100um_original.eps}
+    \caption{Herschel 100$\mu$m image of NGC3627.}
+  \end{subfigure}%
+  \quad
+  \begin{subfigure}[t]{.48\textwidth}
+    \centering
+    \includegraphics[width=1.\linewidth, angle=270]{obs_imgs/100um_align_2as.eps}
+    \caption{Herschel 100$\mu$m image converted to pW and rescaled to a 2$\arcsec$ by 2$\arcsec$ pixel grid.}
+  \end{subfigure}%
 
-\begin{subfigure}[t]{.45\textwidth}
-  \centering
-  \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/100_um.eps}
-  \caption{100$\mu$m map of NGC3627 after large scale structure has been removed on an 8$\arcsec$ by 8$\arcsec$ grid.}
-\end{subfigure}%
-\quad
-\begin{subfigure}[t]{0.45\textwidth}
-  \centering
-  \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/100um_conv.eps}
-  \caption{100$\mu$m map with extended structure removed and convolved to final resolution of 36.0$\arcsec$.}
-\end{subfigure}
-
-\caption{The 100$\mu$m image from the beginning of processing to the end of processing.  All of the contours shown are 20\%, 40\%, 60\%, and 80\%.}
-\label{fig_100_transform}
+  \begin{subfigure}[t]{.45\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/100_um.eps}
+    \caption{100$\mu$m map of NGC3627 after large scale structure has been removed on an 8$\arcsec$ by 8$\arcsec$ grid.}
+  \end{subfigure}%
+  \quad
+  \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth,angle=270]{obs_imgs/100um_conv.eps}
+    \caption[100$\mu$m Filtering Steps]{100$\mu$m map with extended structure removed and convolved to final resolution of 36.0$\arcsec$.}
+  \end{subfigure}
+  \caption[100$\mu$m Filtering Steps]{The 100$\mu$m image from the beginning of processing to the end of processing.  All of the contours shown are 20\%, 40\%, 60\%, and 80\%.}
+  \label{fig_100_transform}
 \end{figure}
   
 
