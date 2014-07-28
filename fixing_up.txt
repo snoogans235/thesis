@@ -10,3 +10,4 @@ SED section:
 	-fig:param_fits — the big 3x3 figure
 	-tab:beta_1, tab:beta_2, tab:beta_f
   - find a source citing 2 as an average value for beta
+  - get the planck paper with the opacity values and li and draine papers
