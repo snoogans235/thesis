@@ -2,13 +2,61 @@
 
 \section{SED Fitting Method}
 
-In order to determine a dust mass, we use the IDL package MPFIT \citep{markwardt2009} which utilizes the Levenberg-Marquardt algorithm.  The Levenberg-Marquardt algorithm is will use a combination of two minimization techniques (the steepest descent method and the Newton-Raphson Method) to determine the parameter combination that will lead to a minimum in the $\chi^2$ space \citep{burden2001}.  The algorithm begins by implementing the steepest descent method in order to traverse the $\chi^2$ space in the direction of the steepest gradient.  As the set of solutions approaches a minimum, it will use the Newton-Raphson method to locate best set of parameters by finding where the derivative at that point is closest to zero \citep{gavin2013}.  This method is susceptible to converging to a local minimum rather than converging to the global minimum.  This is remedied by selecting reasonable initial conditions.  The initial conditions we used were 20K for the temperature, a dust emissivity index of 2, and a mass determined by equation \ref{eq:mass} using the flux from the 250$\mu$m emission and our initial temperature and dust emissivity values.  
+In order to determine a dust mass, we use the IDL package MPFIT \citep{markwardt2009} which utilizes the Levenberg-Marquardt algorithm.  The Levenberg-Marquardt algorithm is will use a combination of two minimization techniques (the steepest descent method and the Newton-Raphson Method) to determine the parameter combination that will lead to a minimum in the $\chi^2$ space \citep{burden2001}.  The algorithm begins by implementing the steepest descent method in order to traverse the $\chi^2$ space in the direction of the steepest gradient.  As the set of solutions approaches a minimum, it will use the Newton-Raphson method to locate best set of parameters by finding where the derivative at that point is closest to zero \citep{gavin2013}.  
+
+In order for MPFIT to provide the most accurate fit, we establish a reasonable error for each of our data points, and determine a realistic set of starting points for the fitting.  The variance for our SCUBA-2 data is determined by equation \ref{eq:sc2noi} such that $\sigma_{obs}$ is the noise determined by MAKEMAP, $\sigma_{rms,sky}$ is the RMS of the sky, and $\sigma_{calib}$ is the calibration uncertainties where the scaling factor is shown in table \ref{tab:calib_fac}.
+
+\begin{equation}\label{eq:sc2noi}
+  \sigma^2 = \sigma_{obs}^2 + \sigma_{rms,sky}^2 + \sigma_{calib}^2
+\end{equation}
+
+\begin{deluxetable}{cc}
+%  \tabletypesize{\footnotesize}
+  \tablecolumns{2}
+  \tablewidth{0pt}
+  \tablecaption{Calibration Factors for SCUBA-2 and KINGFISH Observations}
+  \label{tab:calib_fac}
+  \tablehead{\colhead{Observation} & \colhead{Scaling Factor}}
+    \startdata
+      100$\mu$m & 0.03 \\
+      160$\mu$m & 0.05 \\
+      250$\mu$m & 0.07 \\
+      350$\mu$m & 0.07 \\
+      450$\mu$m & 0.12 \\
+      500$\mu$m & 0.07 \\
+      850$\mu$m & 0.08 \\
+    \enddata
+\end{deluxetable} 
+
+The variance for the KINGFISH data are determined in a similar fashion shown in equation \ref{eq:kinnoi}, however the observation error is excluded since the reported variance in the filtered images are reflective of the fake source image used and not of the KINGFISH data set.
+
+\begin{equation}\label{eq:kinnoi}
+  \sigma^2 = \sigma_{rms,sky}^2 + \sigma_{calib}^2
+\end{equation}
+
+The nature of the Levinberg-Marquardt method leaves the solution vulnerable to converge at a local minimum rather than converging at the global minimum.  This is remedied by selecting reasonable initial conditions.  The initial conditions we used were 20K for the temperature, a dust emissivity index of 2, and a mass determined by equation \ref{eq:mass} using the flux from the 250$\mu$m emission and our initial temperature and dust emissivity values.  
 
 \begin{equation}\label{eq:mass}
   \begin{split}
     M & = \frac{D^2 \: I_{250}}{\kappa_{\nu,0} \:  B_{250}\left(20\right)} \left(\frac{\nu}{\nu_0} \right)^{-\left(2+3\right)} \\
-      & = 2.24 \times 10^5 \: I_{250} \; M_\odot
+      & = 2.24 \times 10^5 \: I_{250} \; \left[M_\odot\right]
   \end{split}
 \end{equation}
 
-\section{Variations in Fitting}
+\section{Fitting the Spectral Energy Distribution}
+
+The fitting procedure was carried out in two different ways on a modified blackbody equation, equation \ref{eq:mod_sed}. 
+
+\begin{equation}\label{eq:mod_sed}
+  S_\nu\left(T\right) = \frac{M\:\kappa_{\nu,0}}{D^2}\left(\frac{\nu}{\nu_0}\right)^{\beta+3} B_\nu\left(T\right)
+\end{equation}
+
+One of the two methods is fitting an SED to each individual pixel in order to generate a set of parameter maps, and the second is by totaling the flux of each of the selected regions shown in figure \ref{fig:regions} to maximize the signal to noise ratio in order to generate a more precise set of parameters.  For both of the fitting methods the mass, $M$, and temperature, $T$, are set as free parameters, but the treatment of the dust emissivity index, $\beta$, required special treatment for each of the methods.  
+
+\subsection{Pixel SED Fits}
+
+In order to generate a parameter map of NGC3627, each individual pixel has it's own SED determined from the available wavelengths described in the observations chapter.  The treatment of the dust emissivity index is performed by fixing it at $\beta=1$ and $\beta=2$ and allowing it to vary as a free parameter.  The resulting parameter maps of the fits are shown in figure \ref{fig:param_fits}. The numerical values for each regions given in figure \ref{fig:regions} are show in tables \ref{tab:beta_1}, \ref{tab:beta_2}, \ref{tab:beta_f}.
+
+%write up showing the behavior of the fits use this to segue into showing the unreliability of the 450um.  Check dates around may 5th for plots.
+
+\subsection{Total Region Flux SED Fits}
