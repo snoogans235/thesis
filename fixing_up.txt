@@ -7,7 +7,6 @@ SED section:
   - make a region map for kvis.  Should already be a figure on plumeria, but for consistency it would be best to try and do this in kvis.
   - Needed figures:
 	-fig:regions — the figure showing the user defined regions of ngc3627
-	-fig:param_fits — the big 3x3 figure
 	-tab:beta_1, tab:beta_2, tab:beta_f
   - find a source citing 2 as an average value for beta
-  - get the planck paper with the opacity values and li and draine papers
+  - get the planck 25 2011 paper with the opacity values and li and draine papers 2001 paper
