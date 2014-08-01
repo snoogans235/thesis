@@ -14,8 +14,7 @@ In order for MPFIT to provide the most accurate fit, we establish a reasonable e
 %  \tabletypesize{\footnotesize}
   \tablecolumns{2}
   \tablewidth{0pt}
-  \tablecaption{Calibration Factors for SCUBA-2 and KINGFISH Observations}
-  \label{tab:calib_fac}
+  \tablecaption{Calibration Factors for SCUBA-2 and KINGFISH Observations\label{tab:calib_fac}}
   \tablehead{\colhead{Observation} & \colhead{Scaling Factor}}
     \startdata
       100$\mu$m & 0.03 \\
@@ -67,7 +66,7 @@ In order to generate a parameter map of NGC3627, each individual pixel has it's 
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
   \tablewidth{0pt}
-  \tablecaption{Best Fit Parameters for Planck Model}\label{tab:beta_1}
+  \tablecaption{Best Fit Parameters for Planck Model\label{tab:beta_1}}
   \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[10^5M_\odot\right]$ & $\left[M_\odot pc^{-2}\right]$ &[K]}
   \startdata
     1 & 1.8 & 47  $\pm$ 22  & 0.09 $\pm$ 0.04 & 26   $\pm$ 2   \\
@@ -82,7 +81,7 @@ In order to generate a parameter map of NGC3627, each individual pixel has it's 
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
   \tablewidth{0pt}
-  \tablecaption{Best Fit Parameters for Li and Draine Model}\label{tab:beta_2}
+  \tablecaption{Best Fit Parameters for Li and Draine Model\label{tab:beta_2}}
   \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[10^5M_\odot\right]$ & $\left[M_\odot pc^{-2}\right]$ &[K]}
   \startdata
     1 & 2.0 & 219 $\pm$ 103 & 0.4  $\pm$ 0.2  & 24   $\pm$ 2   \\
@@ -97,7 +96,7 @@ In order to generate a parameter map of NGC3627, each individual pixel has it's 
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
   \tablewidth{0pt}
-  \tablecaption{Best Fit Parameters for $\beta$ As A Free Parameter}\label{tab:beta_f}
+  \tablecaption{Best Fit Parameters for $\beta$ As A Free Parameter\label{tab:beta_f}}
   \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[M_\odot\right]$ & $\left[M_\odot pc^{-2}\right]$ &[K]}
   \startdata
     1 & 2.2  $\pm$ 0.2  & 73 $\pm$ 35 & 0.14 $\pm$ 0.06 & 22   $\pm$ 1   \\
@@ -132,7 +131,7 @@ The wellness of each fit is shown figures \ref{fig:w1_4}, \ref{fig:w2_4}, \ref{f
   \label{fig:wf_4}
 \end{figure}
 
-Using these plots, it is clear that the SED is over estimating the 450$\mu$m flux despite the care taken while accounting for the odd beamshape of the 450$\mu$m data.  In order to avoid any errors in our final parameter maps, we substitue the 450$\mu$m emission with KINGFISH 500$\mu$m emission.  The quality of fit maps using the 500$\mu$m emission are shown in figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5} for the Planck model, Li and Draine model and the emissivity as a free parameter respectively.  To assign a numerical quantity to the figures \ref{fig:wellness_1} through \ref{fig:wellness_f}, the least squares distance was calculed for each point to the 1 to 1 line and are shown in table \ref{tab:lsq}
+Using these plots, it is clear that the SED is over estimating the 450$\mu$m flux despite the care taken while accounting for the odd beamshape of the 450$\mu$m data.  In order to avoid any errors in our final parameter maps, we substitue the 450$\mu$m emission with KINGFISH 500$\mu$m emission.  The quality of fit maps using the 500$\mu$m emission are shown in figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5} for the Planck model, Li and Draine model and the emissivity as a free parameter respectively.  To assign a numerical quantity to the figures \ref{fig:wellness_1} through \ref{fig:wellness_f}, the least squares distance was calculated for each point to the 1 to 1 line and are shown in table \ref{tab:lsq}
 
 \begin{figure}
   \centering
@@ -155,12 +154,27 @@ Using these plots, it is clear that the SED is over estimating the 450$\mu$m flu
   \label{fig:wf_5}
 \end{figure}
 
+\begin{deluxetable}{cccc}
+  \tablecolumns{4}
+  \tablewidth{0pt}
+  \tablecaption{Total Distance to 1 to 1 Line\label{tab:lsq}}
+  \tablehead{\colhead{Observation} & \colhead{Planck Model} & \colhead{Li and Draine Model} & \colhead{Variable Emissivity Index} }
+  \startdata
+    100$\mu$m & 0.000   & 0.01245 & 01277   \\
+    160$\mu$m & 15.55   & 8.979   & 2.159   \\
+    250$\mu$m & 5.808   & 3.072   & 0.4465  \\ 
+    350$\mu$m & 0.8045  & 0.3541  & 0.1161  \\
+    500$\mu$m & 0.02825 & 0.05218 & 0.09528 \\
+    Total     & 23.01   & 12.58   & 3.131   \\
+  \enddata
+\end{deluxetable}
+
 \subsection{Total Region Flux SED Fits}
 
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
   \tablewidth{0pt}
-  \tablecaption{Best Fit Parameters for Planck Opacity}\label{tab:beta_1_r}
+  \tablecaption{Best Fit Parameters for Planck Opacity\label{tab:beta_1_r}}
   \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[10^5M_\odot\right]$ & $\left[M_\odot pc^{-2}\right]$ &[K]}
   \startdata
     1 & 2.20 $\pm$ 0.03 & 70   $\pm$ 6   & 0.14  $\pm$ 0.01  & 22.8 $\pm$ 0.5 \\
