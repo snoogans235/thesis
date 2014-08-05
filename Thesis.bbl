@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -142,6 +142,9 @@
   E., {de Blok}, W.~J.~G., {Kennicutt}, R.~C., {Schuster}, K.-F., {Kramer}, C.,
   {Wiesemeyer}, H.~W., \& {Roussel}, H. 2009, \aj, 137, 4670
 
+\bibitem[{{Li} \& {Draine}(2001)}]{li2001}
+{Li}, A. \& {Draine}, B.~T. 2001, \apj, 554, 778
+
 \bibitem[{{Markwardt}(2009)}]{markwardt2009}
 {Markwardt}, C.~B. 2009, in Astronomical Society of the Pacific Conference
   Series, Vol. 411, Astronomical Data Analysis Software and Systems XVIII, ed.
@@ -160,29 +163,93 @@
   {Vidali}}]{pirronello1997}
 {Pirronello}, V., {Liu}, C., {Shen}, L., \& {Vidali}, G. 1997, \apjl, 475, L69
 
+\bibitem[{{Planck Collaboration} {et~al.}(2011){Planck Collaboration},
+  {Abergel}, {Ade}, {Aghanim}, {Arnaud}, {Ashdown}, {Aumont}, {Baccigalupi},
+  {Balbi}, {Banday}, {Barreiro}, {Bartlett}, {Battaner}, {Benabed},
+  {Beno{\^i}t}, {Bernard}, {Bersanelli}, {Bhatia}, {Bock}, {Bonaldi}, {Bond},
+  {Borrill}, {Bouchet}, {Boulanger}, {Bucher}, {Burigana}, {Cabella},
+  {Cardoso}, {Catalano}, {Cay{\'o}n}, {Challinor}, {Chamballu}, {Chiang},
+  {Chiang}, {Christensen}, {Clements}, {Colombi}, {Couchot}, {Coulais},
+  {Crill}, {Cuttaia}, {Danese}, {Davies}, {Davis}, {de Bernardis}, {de
+  Gasperis}, {de Rosa}, {de Zotti}, {Delabrouille}, {Delouis}, {D{\'e}sert},
+  {Dickinson}, {Dobashi}, {Donzelli}, {Dor{\'e}}, {D{\"o}rl}, {Douspis},
+  {Dupac}, {Efstathiou}, {En{\ss}lin}, {Eriksen}, {Finelli}, {Forni},
+  {Frailis}, {Franceschi}, {Galeotta}, {Ganga}, {Giard}, {Giardino},
+  {Giraud-H{\'e}raud}, {Gonz{\'a}lez-Nuevo}, {G{\'o}rski}, {Gratton},
+  {Gregorio}, {Gruppuso}, {Guillet}, {Hansen}, {Harrison},
+  {Henrot-Versill{\'e}}, {Herranz}, {Hildebrandt}, {Hivon}, {Hobson}, {Holmes},
+  {Hovest}, {Hoyland}, {Huffenberger}, {Jaffe}, {Jones}, {Jones}, {Juvela},
+  {Keih{\"a}nen}, {Keskitalo}, {Kisner}, {Kneissl}, {Knox}, {Kurki-Suonio},
+  {Lagache}, {Lamarre}, {Lasenby}, {Laureijs}, {Lawrence}, {Leach}, {Leonardi},
+  {Leroy}, {Linden-V{\o}rnle}, {L{\'o}pez-Caniego}, {Lubin},
+  {Mac{\'{\i}}as-P{\'e}rez}, {MacTavish}, {Maffei}, {Mandolesi}, {Mann},
+  {Maris}, {Marshall}, {Martin}, {Mart{\'{\i}}nez-Gonz{\'a}lez}, {Masi},
+  {Matarrese}, {Matthai}, {Mazzotta}, {McGehee}, {Meinhold}, {Melchiorri},
+  {Mendes}, {Mennella}, {Mitra}, {Miville-Desch{\^e}nes}, {Moneti}, {Montier},
+  {Morgante}, {Mortlock}, {Munshi}, {Murphy}, {Naselsky}, {Natoli},
+  {Netterfield}, {N{\o}rgaard-Nielsen}, {Noviello}, {Novikov}, {Novikov},
+  {Osborne}, {Pajot}, {Paladini}, {Pasian}, {Patanchon}, {Perdereau},
+  {Perotto}, {Perrotta}, {Piacentini}, {Piat}, {Plaszczynski}, {Pointecouteau},
+  {Polenta}, {Ponthieu}, {Poutanen}, {Pr{\'e}zeau}, {Prunet}, {Puget}, {Reach},
+  {Rebolo}, {Reinecke}, {Renault}, {Ricciardi}, {Riller}, {Ristorcelli},
+  {Rocha}, {Rosset}, {Rubi{\~n}o-Mart{\'{\i}}n}, {Rusholme}, {Sandri},
+  {Santos}, {Savini}, {Scott}, {Seiffert}, {Shellard}, {Smoot}, {Starck},
+  {Stivoli}, {Stolyarov}, {Sudiwala}, {Sygnet}, {Tauber}, {Terenzi},
+  {Toffolatti}, {Tomasi}, {Torre}, {Tristram}, {Tuovinen}, {Umana},
+  {Valenziano}, {Verstraete}, {Vielva}, {Villa}, {Vittorio}, {Wade}, {Wandelt},
+  {Yvon}, {Zacchei}, \& {Zonca}}]{planckxxv2011}
+{Planck Collaboration}, {Abergel}, A., {Ade}, P.~A.~R., {Aghanim}, N.,
+  {Arnaud}, M., {Ashdown}, M., {Aumont}, J., {Baccigalupi}, C., {Balbi}, A.,
+  {Banday}, A.~J., {Barreiro}, R.~B., {Bartlett}, J.~G., {Battaner}, E.,
+  {Benabed}, K., {Beno{\^i}t}, A., {Bernard}, J.-P., {Bersanelli}, M.,
+  {Bhatia}, R., {Bock}, J.~J., {Bonaldi}, A., {Bond}, J.~R., {Borrill}, J.,
+  {Bouchet}, F.~R., {Boulanger}, F., {Bucher}, M., {Burigana}, C., {Cabella},
+  P., {Cardoso}, J.-F., {Catalano}, A., {Cay{\'o}n}, L., {Challinor}, A.,
+  {Chamballu}, A., {Chiang}, L.-Y., {Chiang}, C., {Christensen}, P.~R.,
+  {Clements}, D.~L., {Colombi}, S., {Couchot}, F., {Coulais}, A., {Crill},
+  B.~P., {Cuttaia}, F., {Danese}, L., {Davies}, R.~D., {Davis}, R.~J., {de
+  Bernardis}, P., {de Gasperis}, G., {de Rosa}, A., {de Zotti}, G.,
+  {Delabrouille}, J., {Delouis}, J.-M., {D{\'e}sert}, F.-X., {Dickinson}, C.,
+  {Dobashi}, K., {Donzelli}, S., {Dor{\'e}}, O., {D{\"o}rl}, U., {Douspis}, M.,
+  {Dupac}, X., {Efstathiou}, G., {En{\ss}lin}, T.~A., {Eriksen}, H.~K.,
+  {Finelli}, F., {Forni}, O., {Frailis}, M., {Franceschi}, E., {Galeotta}, S.,
+  {Ganga}, K., {Giard}, M., {Giardino}, G., {Giraud-H{\'e}raud}, Y.,
+  {Gonz{\'a}lez-Nuevo}, J., {G{\'o}rski}, K.~M., {Gratton}, S., {Gregorio}, A.,
+  {Gruppuso}, A., {Guillet}, V., {Hansen}, F.~K., {Harrison}, D.,
+  {Henrot-Versill{\'e}}, S., {Herranz}, D., {Hildebrandt}, S.~R., {Hivon}, E.,
+  {Hobson}, M., {Holmes}, W.~A., {Hovest}, W., {Hoyland}, R.~J.,
+  {Huffenberger}, K.~M., {Jaffe}, A.~H., {Jones}, A., {Jones}, W.~C., {Juvela},
+  M., {Keih{\"a}nen}, E., {Keskitalo}, R., {Kisner}, T.~S., {Kneissl}, R.,
+  {Knox}, L., {Kurki-Suonio}, H., {Lagache}, G., {Lamarre}, J.-M., {Lasenby},
+  A., {Laureijs}, R.~J., {Lawrence}, C.~R., {Leach}, S., {Leonardi}, R.,
+  {Leroy}, C., {Linden-V{\o}rnle}, M., {L{\'o}pez-Caniego}, M., {Lubin}, P.~M.,
+  {Mac{\'{\i}}as-P{\'e}rez}, J.~F., {MacTavish}, C.~J., {Maffei}, B.,
+  {Mandolesi}, N., {Mann}, R., {Maris}, M., {Marshall}, D.~J., {Martin}, P.,
+  {Mart{\'{\i}}nez-Gonz{\'a}lez}, E., {Masi}, S., {Matarrese}, S., {Matthai},
+  F., {Mazzotta}, P., {McGehee}, P., {Meinhold}, P.~R., {Melchiorri}, A.,
+  {Mendes}, L., {Mennella}, A., {Mitra}, S., {Miville-Desch{\^e}nes}, M.-A.,
+  {Moneti}, A., {Montier}, L., {Morgante}, G., {Mortlock}, D., {Munshi}, D.,
+  {Murphy}, A., {Naselsky}, P., {Natoli}, P., {Netterfield}, C.~B.,
+  {N{\o}rgaard-Nielsen}, H.~U., {Noviello}, F., {Novikov}, D., {Novikov}, I.,
+  {Osborne}, S., {Pajot}, F., {Paladini}, R., {Pasian}, F., {Patanchon}, G.,
+  {Perdereau}, O., {Perotto}, L., {Perrotta}, F., {Piacentini}, F., {Piat}, M.,
+  {Plaszczynski}, S., {Pointecouteau}, E., {Polenta}, G., {Ponthieu}, N.,
+  {Poutanen}, T., {Pr{\'e}zeau}, G., {Prunet}, S., {Puget}, J.-L., {Reach},
+  W.~T., {Rebolo}, R., {Reinecke}, M., {Renault}, C., {Ricciardi}, S.,
+  {Riller}, T., {Ristorcelli}, I., {Rocha}, G., {Rosset}, C.,
+  {Rubi{\~n}o-Mart{\'{\i}}n}, J.~A., {Rusholme}, B., {Sandri}, M., {Santos},
+  D., {Savini}, G., {Scott}, D., {Seiffert}, M.~D., {Shellard}, P., {Smoot},
+  G.~F., {Starck}, J.-L., {Stivoli}, F., {Stolyarov}, V., {Sudiwala}, R.,
+  {Sygnet}, J.-F., {Tauber}, J.~A., {Terenzi}, L., {Toffolatti}, L., {Tomasi},
+  M., {Torre}, J.-P., {Tristram}, M., {Tuovinen}, J., {Umana}, G.,
+  {Valenziano}, L., {Verstraete}, L., {Vielva}, P., {Villa}, F., {Vittorio},
+  N., {Wade}, L.~A., {Wandelt}, B.~D., {Yvon}, D., {Zacchei}, A., \& {Zonca},
+  A. 2011, \aap, 536, A25
+
 \bibitem[{{Reuter} {et~al.}(1996){Reuter}, {Sievers}, {Pohl}, {Lesch}, \&
   {Wielebinski}}]{reuter1996}
 {Reuter}, H.-P., {Sievers}, A.~W., {Pohl}, M., {Lesch}, H., \& {Wielebinski},
   R. 1996, \aap, 306, 721
-
-\bibitem[{{Sandstrom} {et~al.}(2013){Sandstrom}, {Leroy}, {Walter}, {Bolatto},
-  {Croxall}, {Draine}, {Wilson}, {Wolfire}, {Calzetti}, {Kennicutt}, {Aniano},
-  {Donovan Meyer}, {Usero}, {Bigiel}, {Brinks}, {de Blok}, {Crocker}, {Dale},
-  {Engelbracht}, {Galametz}, {Groves}, {Hunt}, {Koda}, {Kreckel}, {Linz},
-  {Meidt}, {Pellegrini}, {Rix}, {Roussel}, {Schinnerer}, {Schruba}, {Schuster},
-  {Skibba}, {van der Laan}, {Appleton}, {Armus}, {Brandl}, {Gordon}, {Hinz},
-  {Krause}, {Montiel}, {Sauvage}, {Schmiedeke}, {Smith}, \&
-  {Vigroux}}]{sandstrom2013}
-{Sandstrom}, K.~M., {Leroy}, A.~K., {Walter}, F., {Bolatto}, A.~D., {Croxall},
-  K.~V., {Draine}, B.~T., {Wilson}, C.~D., {Wolfire}, M., {Calzetti}, D.,
-  {Kennicutt}, R.~C., {Aniano}, G., {Donovan Meyer}, J., {Usero}, A., {Bigiel},
-  F., {Brinks}, E., {de Blok}, W.~J.~G., {Crocker}, A., {Dale}, D.,
-  {Engelbracht}, C.~W., {Galametz}, M., {Groves}, B., {Hunt}, L.~K., {Koda},
-  J., {Kreckel}, K., {Linz}, H., {Meidt}, S., {Pellegrini}, E., {Rix}, H.-W.,
-  {Roussel}, H., {Schinnerer}, E., {Schruba}, A., {Schuster}, K.-F., {Skibba},
-  R., {van der Laan}, T., {Appleton}, P., {Armus}, L., {Brandl}, B., {Gordon},
-  K., {Hinz}, J., {Krause}, O., {Montiel}, E., {Sauvage}, M., {Schmiedeke}, A.,
-  {Smith}, J.~D.~T., \& {Vigroux}, L. 2013, \apj, 777, 5
 
 \bibitem[{{Walter} {et~al.}(2008){Walter}, {Brinks}, {de Blok}, {Bigiel},
   {Kennicutt}, {Thornley}, \& {Leroy}}]{walter2008}
