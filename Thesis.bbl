@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -43,6 +43,16 @@
 
 \bibitem[{{Field} \& {Saslaw}(1965)}]{field1965}
 {Field}, G.~B. \& {Saslaw}, W.~C. 1965, \apj, 142, 568
+
+\bibitem[{{Galametz} {et~al.}(2012){Galametz}, {Kennicutt}, {Albrecht},
+  {Aniano}, {Armus}, {Bertoldi}, {Calzetti}, {Crocker}, {Croxall}, {Dale},
+  {Donovan Meyer}, {Draine}, {Engelbracht}, {Hinz}, {Roussel}, {Skibba},
+  {Tabatabaei}, {Walter}, {Weiss}, {Wilson}, \& {Wolfire}}]{galametz2012}
+{Galametz}, M., {Kennicutt}, R.~C., {Albrecht}, M., {Aniano}, G., {Armus}, L.,
+  {Bertoldi}, F., {Calzetti}, D., {Crocker}, A.~F., {Croxall}, K.~V., {Dale},
+  D.~A., {Donovan Meyer}, J., {Draine}, B.~T., {Engelbracht}, C.~W., {Hinz},
+  J.~L., {Roussel}, H., {Skibba}, R.~A., {Tabatabaei}, F.~S., {Walter}, F.,
+  {Weiss}, A., {Wilson}, C.~D., \& {Wolfire}, M.~G. 2012, \mnras, 425, 763
 
 \bibitem[{{Gavin}(2013)}]{gavin2013}
 {Gavin}, H.~P. 2013, {The Levenberg-Marquardt method for nonlinear least
