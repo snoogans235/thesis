@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{41}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -13,6 +13,24 @@
 {Chapin}, E.~L., {Berry}, D.~S., {Gibb}, A.~G., {Jenness}, T., {Scott}, D.,
   {Tilanus}, R.~P.~J., {Economou}, F., \& {Holland}, W.~S. 2013, \mnras, 430,
   2545
+
+\bibitem[{{Dale} {et~al.}(2012){Dale}, {Aniano}, {Engelbracht}, {Hinz},
+  {Krause}, {Montiel}, {Roussel}, {Appleton}, {Armus}, {Beir{\~a}o}, {Bolatto},
+  {Brandl}, {Calzetti}, {Crocker}, {Croxall}, {Draine}, {Galametz}, {Gordon},
+  {Groves}, {Hao}, {Helou}, {Hunt}, {Johnson}, {Kennicutt}, {Koda}, {Leroy},
+  {Li}, {Meidt}, {Miller}, {Murphy}, {Rahman}, {Rix}, {Sandstrom}, {Sauvage},
+  {Schinnerer}, {Skibba}, {Smith}, {Tabatabaei}, {Walter}, {Wilson}, {Wolfire},
+  \& {Zibetti}}]{dale2012}
+{Dale}, D.~A., {Aniano}, G., {Engelbracht}, C.~W., {Hinz}, J.~L., {Krause}, O.,
+  {Montiel}, E.~J., {Roussel}, H., {Appleton}, P.~N., {Armus}, L.,
+  {Beir{\~a}o}, P., {Bolatto}, A.~D., {Brandl}, B.~R., {Calzetti}, D.,
+  {Crocker}, A.~F., {Croxall}, K.~V., {Draine}, B.~T., {Galametz}, M.,
+  {Gordon}, K.~D., {Groves}, B.~A., {Hao}, C.-N., {Helou}, G., {Hunt}, L.~K.,
+  {Johnson}, B.~D., {Kennicutt}, R.~C., {Koda}, J., {Leroy}, A.~K., {Li}, Y.,
+  {Meidt}, S.~E., {Miller}, A.~E., {Murphy}, E.~J., {Rahman}, N., {Rix}, H.-W.,
+  {Sandstrom}, K.~M., {Sauvage}, M., {Schinnerer}, E., {Skibba}, R.~A.,
+  {Smith}, J.-D.~T., {Tabatabaei}, F.~S., {Walter}, F., {Wilson}, C.~D.,
+  {Wolfire}, M.~G., \& {Zibetti}, S. 2012, \apj, 745, 95
 
 \bibitem[{{Dempsey} {et~al.}(2013){Dempsey}, {Friberg}, {Jenness}, {Tilanus},
   {Thomas}, {Holland}, {Bintley}, {Berry}, {Chapin}, {Chrysostomou}, {Davis},
@@ -43,6 +61,16 @@
 
 \bibitem[{{Field} \& {Saslaw}(1965)}]{field1965}
 {Field}, G.~B. \& {Saslaw}, W.~C. 1965, \apj, 142, 568
+
+\bibitem[{{Galametz} {et~al.}(2014){Galametz}, {Albrecht}, {Kennicutt},
+  {Aniano}, {Bertoldi}, {Calzetti}, {Croxall}, {Dale}, {Draine}, {Engelbracht},
+  {Gordon}, {Hinz}, {Hunt}, {Kirkpatrick}, {Murphy}, {Roussel}, {Skibba},
+  {Walter}, {Weiss}, \& {Wilson}}]{galametz2014}
+{Galametz}, M., {Albrecht}, M., {Kennicutt}, R., {Aniano}, G., {Bertoldi}, F.,
+  {Calzetti}, D., {Croxall}, K.~V., {Dale}, D., {Draine}, B., {Engelbracht},
+  C., {Gordon}, K., {Hinz}, J., {Hunt}, L.~K., {Kirkpatrick}, A., {Murphy}, E.,
+  {Roussel}, H., {Skibba}, R.~A., {Walter}, F., {Weiss}, A., \& {Wilson}, C.~D.
+  2014, \mnras, 439, 2542
 
 \bibitem[{{Galametz} {et~al.}(2012){Galametz}, {Kennicutt}, {Albrecht},
   {Aniano}, {Armus}, {Bertoldi}, {Calzetti}, {Crocker}, {Croxall}, {Dale},
@@ -155,6 +183,17 @@
 \bibitem[{{Li} \& {Draine}(2001)}]{li2001}
 {Li}, A. \& {Draine}, B.~T. 2001, \apj, 554, 778
 
+\bibitem[{{Madden} {et~al.}(2011){Madden}, {Galametz}, {Cormier},
+  {Lebouteiller}, {Galliano}, {Hony}, {R{\'e}my}, {Sauvage}, {Contursi},
+  {Sturm}, {Poglitsch}, {Pohlen}, {Smith}, {Bendo}, \&
+  {O'Halloran}}]{madden2011}
+{Madden}, S.~C., {Galametz}, M., {Cormier}, D., {Lebouteiller}, V., {Galliano},
+  F., {Hony}, S., {R{\'e}my}, A., {Sauvage}, M., {Contursi}, A., {Sturm}, E.,
+  {Poglitsch}, A., {Pohlen}, M., {Smith}, M.~W.~L., {Bendo}, G., \&
+  {O'Halloran}, B. 2011, in EAS Publications Series, Vol.~52, EAS Publications
+  Series, ed. M.~{R{\"o}llig}, R.~{Simon}, V.~{Ossenkopf}, \& J.~{Stutzki},
+  95--101
+
 \bibitem[{{Markwardt}(2009)}]{markwardt2009}
 {Markwardt}, C.~B. 2009, in Astronomical Society of the Pacific Conference
   Series, Vol. 411, Astronomical Data Analysis Software and Systems XVIII, ed.
@@ -162,6 +201,11 @@
 
 \bibitem[{{McKee} \& {Ostriker}(2007)}]{mckee2007}
 {McKee}, C.~F. \& {Ostriker}, E.~C. 2007, \araa, 45, 565
+
+\bibitem[{{Moustakas} {et~al.}(2010){Moustakas}, {Kennicutt}, {Tremonti},
+  {Dale}, {Smith}, \& {Calzetti}}]{moustakas2010}
+{Moustakas}, J., {Kennicutt}, Jr., R.~C., {Tremonti}, C.~A., {Dale}, D.~A.,
+  {Smith}, J.-D.~T., \& {Calzetti}, D. 2010, \apjs, 190, 233
 
 \bibitem[{{Palla} {et~al.}(1983){Palla}, {Salpeter}, \& {Stahler}}]{palla1983}
 {Palla}, F., {Salpeter}, E.~E., \& {Stahler}, S.~W. 1983, \apj, 271, 632
