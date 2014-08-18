@@ -1,9 +1,16 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{43}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
   {Norman}}]{abel1997}
 {Abel}, T., {Anninos}, P., {Zhang}, Y., \& {Norman}, M.~L. 1997, \na, 2, 181
+
+\bibitem[{{Barrett}(1964)}]{barrett1964}
+{Barrett}, A.~H. 1964, \nat, 202, 475
+
+\bibitem[{{Bolatto} {et~al.}(2013){Bolatto}, {Wolfire}, \&
+  {Leroy}}]{bolatto2013}
+{Bolatto}, A.~D., {Wolfire}, M., \& {Leroy}, A.~K. 2013, \araa, 51, 207
 
 \bibitem[{{Burden} \& {Faires}(2001)}]{burden2001}
 {Burden}, R.~L. \& {Faires}, J.~D. 2001, {Numerical analysis}
