@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{44}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -311,6 +311,25 @@
   {Wielebinski}}]{reuter1996}
 {Reuter}, H.-P., {Sievers}, A.~W., {Pohl}, M., {Lesch}, H., \& {Wielebinski},
   R. 1996, \aap, 306, 721
+
+\bibitem[{{Sandstrom} {et~al.}(2013){Sandstrom}, {Leroy}, {Walter}, {Bolatto},
+  {Croxall}, {Draine}, {Wilson}, {Wolfire}, {Calzetti}, {Kennicutt}, {Aniano},
+  {Donovan Meyer}, {Usero}, {Bigiel}, {Brinks}, {de Blok}, {Crocker}, {Dale},
+  {Engelbracht}, {Galametz}, {Groves}, {Hunt}, {Koda}, {Kreckel}, {Linz},
+  {Meidt}, {Pellegrini}, {Rix}, {Roussel}, {Schinnerer}, {Schruba}, {Schuster},
+  {Skibba}, {van der Laan}, {Appleton}, {Armus}, {Brandl}, {Gordon}, {Hinz},
+  {Krause}, {Montiel}, {Sauvage}, {Schmiedeke}, {Smith}, \&
+  {Vigroux}}]{sandstrom2013}
+{Sandstrom}, K.~M., {Leroy}, A.~K., {Walter}, F., {Bolatto}, A.~D., {Croxall},
+  K.~V., {Draine}, B.~T., {Wilson}, C.~D., {Wolfire}, M., {Calzetti}, D.,
+  {Kennicutt}, R.~C., {Aniano}, G., {Donovan Meyer}, J., {Usero}, A., {Bigiel},
+  F., {Brinks}, E., {de Blok}, W.~J.~G., {Crocker}, A., {Dale}, D.,
+  {Engelbracht}, C.~W., {Galametz}, M., {Groves}, B., {Hunt}, L.~K., {Koda},
+  J., {Kreckel}, K., {Linz}, H., {Meidt}, S., {Pellegrini}, E., {Rix}, H.-W.,
+  {Roussel}, H., {Schinnerer}, E., {Schruba}, A., {Schuster}, K.-F., {Skibba},
+  R., {van der Laan}, T., {Appleton}, P., {Armus}, L., {Brandl}, B., {Gordon},
+  K., {Hinz}, J., {Krause}, O., {Montiel}, E., {Sauvage}, M., {Schmiedeke}, A.,
+  {Smith}, J.~D.~T., \& {Vigroux}, L. 2013, \apj, 777, 5
 
 \bibitem[{{Walter} {et~al.}(2008){Walter}, {Brinks}, {de Blok}, {Bigiel},
   {Kennicutt}, {Thornley}, \& {Leroy}}]{walter2008}
