@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{49}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -11,6 +11,11 @@
 \bibitem[{{Bolatto} {et~al.}(2013){Bolatto}, {Wolfire}, \&
   {Leroy}}]{bolatto2013}
 {Bolatto}, A.~D., {Wolfire}, M., \& {Leroy}, A.~K. 2013, \araa, 51, 207
+
+\bibitem[{{Boulanger} {et~al.}(1996){Boulanger}, {Abergel}, {Bernard},
+  {Burton}, {Desert}, {Hartmann}, {Lagache}, \& {Puget}}]{boulanger1996}
+{Boulanger}, F., {Abergel}, A., {Bernard}, J.-P., {Burton}, W.~B., {Desert},
+  F.-X., {Hartmann}, D., {Lagache}, G., \& {Puget}, J.-L. 1996, \aap, 312, 256
 
 \bibitem[{{Burden} \& {Faires}(2001)}]{burden2001}
 {Burden}, R.~L. \& {Faires}, J.~D. 2001, {Numerical analysis}
@@ -62,6 +67,16 @@
 
 \bibitem[{{Draine}(2011)}]{draine2011}
 {Draine}, B.~T. 2011, {Physics of the Interstellar and Intergalactic Medium}
+
+\bibitem[{{Draine} {et~al.}(2007){Draine}, {Dale}, {Bendo}, {Gordon}, {Smith},
+  {Armus}, {Engelbracht}, {Helou}, {Kennicutt}, {Li}, {Roussel}, {Walter},
+  {Calzetti}, {Moustakas}, {Murphy}, {Rieke}, {Bot}, {Hollenbach}, {Sheth}, \&
+  {Teplitz}}]{draine2007}
+{Draine}, B.~T., {Dale}, D.~A., {Bendo}, G., {Gordon}, K.~D., {Smith},
+  J.~D.~T., {Armus}, L., {Engelbracht}, C.~W., {Helou}, G., {Kennicutt}, Jr.,
+  R.~C., {Li}, A., {Roussel}, H., {Walter}, F., {Calzetti}, D., {Moustakas},
+  J., {Murphy}, E.~J., {Rieke}, G.~H., {Bot}, C., {Hollenbach}, D.~J., {Sheth},
+  K., \& {Teplitz}, H.~I. 2007, \apj, 663, 866
 
 \bibitem[{{Elmegreen}(1987)}]{elmegreen1987}
 {Elmegreen}, B.~G. 1987, \apj, 312, 626
@@ -130,6 +145,10 @@
   {Reintsema}, C.~D., {Sibthorpe}, B., {Smail}, I., {Sudiwala}, R., \&
   {Thomas}, H.~S. 2013, \mnras, 430, 2513
 
+\bibitem[{{Israel} {et~al.}(1996){Israel}, {Bontekoe}, \&
+  {Kester}}]{israel1997}
+{Israel}, F.~P., {Bontekoe}, T.~R., \& {Kester}, D.~J.~M. 1996, \aap, 308, 723
+
 \bibitem[{{Jura}(1975)}]{jura1975}
 {Jura}, M. 1975, \apj, 197, 575
 
@@ -180,6 +199,13 @@
 \bibitem[{{Kwan}(1979)}]{kwan1979}
 {Kwan}, J. 1979, \apj, 229, 567
 
+\bibitem[{{Leroy} {et~al.}(2011){Leroy}, {Bolatto}, {Gordon}, {Sandstrom},
+  {Gratier}, {Rosolowsky}, {Engelbracht}, {Mizuno}, {Corbelli}, {Fukui}, \&
+  {Kawamura}}]{leroy2011}
+{Leroy}, A.~K., {Bolatto}, A., {Gordon}, K., {Sandstrom}, K., {Gratier}, P.,
+  {Rosolowsky}, E., {Engelbracht}, C.~W., {Mizuno}, N., {Corbelli}, E.,
+  {Fukui}, Y., \& {Kawamura}, A. 2011, \apj, 737, 12
+
 \bibitem[{{Leroy} {et~al.}(2009){Leroy}, {Walter}, {Bigiel}, {Usero}, {Weiss},
   {Brinks}, {de Blok}, {Kennicutt}, {Schuster}, {Kramer}, {Wiesemeyer}, \&
   {Roussel}}]{leroy2009}
@@ -200,6 +226,11 @@
   {O'Halloran}, B. 2011, in EAS Publications Series, Vol.~52, EAS Publications
   Series, ed. M.~{R{\"o}llig}, R.~{Simon}, V.~{Ossenkopf}, \& J.~{Stutzki},
   95--101
+
+\bibitem[{{Madden} {et~al.}(1997){Madden}, {Poglitsch}, {Geis}, {Stacey}, \&
+  {Townes}}]{madden1997}
+{Madden}, S.~C., {Poglitsch}, A., {Geis}, N., {Stacey}, G.~J., \& {Townes},
+  C.~H. 1997, \apj, 483, 200
 
 \bibitem[{{Markwardt}(2009)}]{markwardt2009}
 {Markwardt}, C.~B. 2009, in Astronomical Society of the Pacific Conference
