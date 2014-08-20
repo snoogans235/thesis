@@ -1,9 +1,16 @@
-\begin{thebibliography}{49}
+\begin{thebibliography}{52}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
   {Norman}}]{abel1997}
 {Abel}, T., {Anninos}, P., {Zhang}, Y., \& {Norman}, M.~L. 1997, \na, 2, 181
+
+\bibitem[{{Abergel} {et~al.}(2013){Abergel}, {Ade}, {Aghanim}, {Alves},
+  {Aniano}, {Armitage-Caplan}, {Arnaud}, {Ashdown}, {Atrio-Barandela},
+  {Aumont}, \& et~al.}]{planckXI2013}
+{Abergel}, A., {Ade}, P.~A.~R., {Aghanim}, N., {Alves}, M.~I.~R., {Aniano}, G.,
+  {Armitage-Caplan}, C., {Arnaud}, M., {Ashdown}, M., {Atrio-Barandela}, F.,
+  {Aumont}, J., \& et~al. 2013, ArXiv e-prints
 
 \bibitem[{{Barrett}(1964)}]{barrett1964}
 {Barrett}, A.~H. 1964, \nat, 202, 475
@@ -123,6 +130,9 @@
 \bibitem[{{Herbst} {et~al.}(2005){Herbst}, {Chang}, \& {Cuppen}}]{herbst2005}
 {Herbst}, E., {Chang}, Q., \& {Cuppen}, H.~M. 2005, Journal of Physics
   Conference Series, 6, 18
+
+\bibitem[{{Hildebrand}(1983)}]{hildebrand1983}
+{Hildebrand}, R.~H. 1983, \qjras, 24, 267
 
 \bibitem[{{Holland} {et~al.}(2013){Holland}, {Bintley}, {Chapin},
   {Chrysostomou}, {Davis}, {Dempsey}, {Duncan}, {Fich}, {Friberg}, {Halpern},
@@ -361,6 +371,11 @@
   R., {van der Laan}, T., {Appleton}, P., {Armus}, L., {Brandl}, B., {Gordon},
   K., {Hinz}, J., {Krause}, O., {Montiel}, E., {Sauvage}, M., {Schmiedeke}, A.,
   {Smith}, J.~D.~T., \& {Vigroux}, L. 2013, \apj, 777, 5
+
+\bibitem[{{Walcher} {et~al.}(2011){Walcher}, {Groves}, {Budav{\'a}ri}, \&
+  {Dale}}]{walcher2011}
+{Walcher}, J., {Groves}, B., {Budav{\'a}ri}, T., \& {Dale}, D. 2011, \apss,
+  331, 1
 
 \bibitem[{{Walter} {et~al.}(2008){Walter}, {Brinks}, {de Blok}, {Bigiel},
   {Kennicutt}, {Thornley}, \& {Leroy}}]{walter2008}

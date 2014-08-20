@@ -106,4 +106,36 @@ Where $\Sigma_{dust}$, $\Sigma_{H_2}$, and $\Sigma_{HI}$ are the respective surf
 
 Determining a conversion factor in this manner, provides the capability to trace the CO faint regions of target unlike the previous methods \citep{israel1997}.  Despite this advantage over the other two methods, using equation \ref{eq:aco_dgr} leaves any gas not associated with atomic hydrogen to be left as H$_2$ increasing the conversion factor and overall amount of molecular hydrogen \citep{bolatto2013}.  Another caution of this method rests with the assumption of a constant dust-to-gas ratio \citep{bolatto2013}.  Issues such as the dependence with metallicity  \citep{draine2007} can render this assumption null if not treated properly.  Nevertheless, given the agreement of conversion factors between this method and other methods used, suggests that any added bit of gas, incorrectly assumed to be H$_2$, and local fluctuations in metallicity of the target galaxy have very little effect on the final results, \citep{bolatto2013}.
 
+\section{Determining Dust Mass}
 
+Approximating a conversion factor using dust emission requires the knowledge of the amount of dust present in our system to determine a dust-to-gas ratio.  Given that a significant portion of the dust mass lies within the cold phase we can calculate a dust mass using a modified blackbody fit over the cold portion of the dust's spectral energy distribution (SED) \citep{galametz2012}.  A slight modification needs to be introduced to our blackbody resulting in what is known as a greybody or modified blackbody (MBB).  The modification is necessary given that the dust does not absorb and re-emit the all of the light incident on its surface (cite someone here).  If we assume an optically thin medium with a blackbody, B$_\nu$(T), the specific intensity, I$_\nu$, of the MBB will be proportional to the optical depth of the material, $\tau_\nu$, and the blackbody shown in equation \ref{eq:mbb_basic} \citep{planckXI2013}.
+
+\begin{equation}\label{eq:mbb_basic}
+  I_\nu = \tau_\nu B_\nu\left(T\right)
+\end{equation}
+
+The optical depth can be further expanded to incorporate the dust mass, M$_{dust}$, in equation \ref{eq:mbb_optd} \citep{planckXI2013}.
+
+\begin{equation}\label{eq:mbb_optd}
+  \tau_\nu = \kappa_\nu M_{dust}
+\end{equation}
+
+The dust emissivity cross-section per unit mass is represented by $\kappa_\nu$ and is often referred to as the opacity.  It is important to note that the opacity will reflect the chemical makeup and grain structure of the dust, but will not indicate the grain size \citep{planckXI2013}.  The opacity will vary depending on the observed wavelength and has been best fit using a power law \citep{hildebrand1983}.  Values for $\kappa_\nu$ have been determined to represent several models representing different dust scenarios \citep{li2001,planckxxv20011}. Incorporating the opacity into a MBB, involves introducing a reference frequency, $\nu_0$, with its own reference opacity, $\kappa_{\nu,0}$, which is scaled by the dust emissivity index, $\beta$, shown in equation \ref{eq:mbb_specI}.
+
+\begin{equation}\label{eq:mbb_specI}
+  I_\nu = M_{dust} \kappa_\nu \left(\frac{\nu}{\nu_0}\right)^\beta B_\nu\left(T\right)
+\end{equation}
+
+The emissivity index has commonly been fit between ranges of 1.0 to 2.0  suggested from laboratory experiments \citep{walcher2011}.  With the influx of Herschel data, filling in the sub-millimeter portion of the SED between 100$\mu$m and 500$\mu$m have allowed for the emissivity index to be fit based on observations and have shown a range from 1 to 2.5 \citep{galametz2012}.  Moving from equation \ref{eq:mbb_specI}, we can divide our values by the square distance, D, of our source to convert from specific intensity to flux.  The final form of the MBB is shown in equation \ref{eq:mbb_fin}.
+
+\begin{equation}\label{eq:mbb_fin}
+  S_\nu=\frac{M_{dust}\kappa_\nu}{D^2}\left(\frac{\nu}{\nu_0}\right)^\beta B_\nu\left(T\right)
+\end{equation}
+
+The dust mass can be solved from equation \ref{eq:mbb_fin} by either fitting for the mass as well as temperature, and possibly the emissivity index, or by isolating the mass shown in equation \ref{eq:mbb_mass} and using using the best parameter values to calculate a mass.
+
+\begin{equation}\label{eq:mbb_mass}
+  M_{dust} = \frac{S_\nu D^2}{\kappa_\nu B_\nu\left(T\right)}\left(\frac{\nu}{\nu_0}\right)^{-\beta}
+\end{equation}
+
+\section{NGC3627}
