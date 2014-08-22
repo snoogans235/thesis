@@ -108,7 +108,7 @@ Determining a conversion factor in this manner, provides the capability to trace
 
 \section{Determining Dust Mass}
 
-Approximating a conversion factor using dust emission requires the knowledge of the amount of dust present in our system to determine a gas-to-dust ratio.  Given that a significant portion of the dust mass lies within the cold phase we can calculate a dust mass using a modified blackbody fit over the cold portion of the dust's spectral energy distribution (SED) \citep{galametz2012}.  A slight modification needs to be introduced to our blackbody resulting in what is known as a greybody or modified blackbody (MBB).  The modification is necessary given that the dust does not absorb and re-emit the all of the light incident on its surface (cite someone here).  If we assume an optically thin medium with a blackbody, B$_\nu$(T), the specific intensity, I$_\nu$, of the MBB will be proportional to the optical depth of the material, $\tau_\nu$, and the blackbody shown in equation \ref{eq:mbb_basic} \citep{planckXI2013}.
+Approximating a conversion factor using dust emission requires the knowledge of the amount of dust present in our system to determine a gas-to-dust ratio.  Given that a significant portion of the dust mass lies within the cold phase we can calculate a dust mass using a modified blackbody fit over the cold portion of the dust's spectral energy distribution (SED) \citep{galametz2012}.  A slight modification needs to be introduced to our blackbody resulting in what is known as a greybody or modified blackbody (MBB).  The modification is necessary given that the dust does not absorb and re-emit all of the light incident on its surface.  If we assume an optically thin medium with a blackbody, B$_\nu$(T), the specific intensity, I$_\nu$, of the MBB will be proportional to the optical depth of the material, $\tau_\nu$, and the blackbody shown in equation \ref{eq:mbb_basic} \citep{planckXI2013}.
 
 \begin{equation}\label{eq:mbb_basic}
   I_\nu = \tau_\nu B_\nu\left(T\right)
@@ -120,14 +120,14 @@ The optical depth can be further expanded to incorporate the dust mass, M$_{dust
   \tau_\nu = \kappa_\nu M_{dust}
 \end{equation}
 
-The dust emissivity cross-section per unit mass is represented by $\kappa_\nu$ and is often referred to as the opacity.  It is important to note that the opacity will reflect the chemical makeup and grain structure of the dust, but will not indicate the grain size \citep{planckXI2013}.  The opacity will vary depending on the observed wavelength and has been best fit using a power law \citep{hildebrand1983}.  Values for $\kappa_\nu$ have been determined to represent several models of varying dust compositions \citep{li2001,planckxxv20011}. Incorporating the opacity into a MBB, involves introducing a reference frequency, $\nu_0$, with its own reference opacity, $\kappa_{\nu,0}$, which is scaled by the dust emissivity index, $\beta$, shown in equation \ref{eq:mbb_kapp}.
+The dust emissivity cross-section per unit mass is represented by $\kappa_\nu$ and is often referred to as the opacity.  It is important to note that the opacity will reflect the chemical makeup and grain structure of the dust, but will not indicate the grain size \citep{planckXI2013}.  The behavior of the opacity has been best recreated using a power law such that opacity will show a dependence with the frequency of the observed emission \citep{hildebrand1983}.  The opacity is typically written in terms of a reference frequency, $\nu_0$, a reference opacity based on the reference frequency, $\kappa_{\nu,0}$, and the dust emissivity index, $\beta$, shown in equation \ref{eq:mbb_kapp}.
 
 \begin{equation}\label{eq:mbb_kapp}
   \kappa_\nu = \kappa_{\nu,0}\left(\frac{\nu}{\nu_0}\right)^\beta \end{equation}
 
-The emissivity index has commonly been fit between ranges of 1.0 to 2.0  suggested from laboratory experiments \citep{walcher2011}.  With the influx of Herschel data, filling in the sub-millimeter portion of the SED between 100$\mu$m and 500$\mu$m have allowed for the emissivity index to be fit based on observations and have shown a range from 1 to 2.5 \citep{galametz2012}.  
+Values for $\kappa_\nu$ have been determined to represent several models of varying dust compositions \citep{li2001,planckxxv2011}.  The emissivity index has commonly been fit between ranges of 1.0 to 2.0  suggested from laboratory experiments \citep{walcher2011}.  With the influx of Herschel data the ability to fill in the sub-millimeter portion of the SED between 100$\mu$m and 500$\mu$m has allowed for the emissivity index to be fit based on observations and have shown a range from 1 to 2.5 \citep{galametz2012}.  It should be noted that the lower limit of $\beta$=1 is a hard cutoff due to limits determined by the Kramers-Kronig relationship \citep{li2005}.
 
-If we substitute equation \ref{eq:mbb_kapp} into equation \ref{eq:mbb_optd} and then into our original equation for the specific intensity of our MBB, equation \ref{eq:mbb_basic}, we arrive at the formula for the specific intensity of a greybody shown in equation \ref{eq:mbb_specI}.
+With the opacity well defined, substituting equation \ref{eq:mbb_kapp} into equation \ref{eq:mbb_optd} and then into the original equation for the specific intensity of our MBB, equation \ref{eq:mbb_basic} the formula for the specific intensity of a greybody shown in equation \ref{eq:mbb_specI}.
 
 \begin{equation}\label{eq:mbb_specI}
   I_\nu=M_{dust}\kappa_{\nu,0}\left(\frac{\nu}{\nu_0}\right)^\beta B_\nu\left(T\right)
@@ -139,10 +139,12 @@ Moving from equation \ref{eq:mbb_specI}, we can divide our values by the square 
   S_\nu=\frac{M_{dust}\kappa_\nu}{D^2}\left(\frac{\nu}{\nu_0}\right)^\beta B_\nu\left(T\right)
 \end{equation}
 
-The dust mass can be solved from equation \ref{eq:mbb_fin} by either fitting for the mass, temperature, and possibly the emissivity index, or by isolating the mass shown in equation \ref{eq:mbb_mass} and using using the best parameter values to calculate a mass.  MENTION DEGENERACY!!!
+The dust mass can be solved from equation \ref{eq:mbb_fin} by either fitting the mass, temperature, and possibly the emissivity index, or by isolating the mass shown in equation \ref{eq:mbb_mass} and using using the best parameter values to calculate a mass.  The main concern with fitting both the temperature and dust emissivity index is the strong anti-correlation between the two parameters \citep{galametz2012,tabatabaei2014}.  A common method to help break the degeneracy is to fix emissivity index to a reasonable value based upon the opacity model \citep{tabatabaei2014}.
 
 \begin{equation}\label{eq:mbb_mass}
   M_{dust} = \frac{S_\nu D^2}{\kappa_\nu B_\nu\left(T\right)}\left(\frac{\nu}{\nu_0}\right)^{-\beta}
 \end{equation}
 
-\section{NGC3627}
+\section{NGC 3627}
+
+NGC 3627 is the most prominent member of the interacting trio galaxies called the Leo triplet (NGC 3623, NGC 3627,  and NGC2628).  The interaction between NGC 3627 and NGC 3628 has been well documented via HI emission in the form of a large HI debris tail extending from NGC 3628 in the direction of NGC 3627 \citep{rots1978,haynes1979}.  The interaction between these galaxies has resulted in a high star formation activity, making NGC 3627 a prime candidate to study the current star forming conditions.  The morphology of NGC 3627 is that of an SABb with an inclination of 60$\degree$ \citep{reuter1996}.  Furthermore, the strong spiral arm features are unique to this galaxy in the fact that speculation exits they are not contained within the plain of the galaxy, which has been supported by magnetic field lines \citep{soida2001} and CO emission \citep{dumke2011}.  

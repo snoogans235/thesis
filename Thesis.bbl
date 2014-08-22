@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{58}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -85,6 +85,14 @@
   J., {Murphy}, E.~J., {Rieke}, G.~H., {Bot}, C., {Hollenbach}, D.~J., {Sheth},
   K., \& {Teplitz}, H.~I. 2007, \apj, 663, 866
 
+\bibitem[{{Dumke} {et~al.}(2011){Dumke}, {Krause}, {Beck}, {Soida}, {Urbanik},
+  \& {Wielebinski}}]{dumke2011}
+{Dumke}, M., {Krause}, M., {Beck}, R., {Soida}, M., {Urbanik}, M., \&
+  {Wielebinski}, R. 2011, in Astronomical Society of the Pacific Conference
+  Series, Vol. 446, Galaxy Evolution: Infrared to Millimeter Wavelength
+  Perspective, ed. W.~{Wang}, J.~{Lu}, Z.~{Luo}, Z.~{Yang}, H.~{Hua}, \&
+  Z.~{Chen}, 111
+
 \bibitem[{{Elmegreen}(1987)}]{elmegreen1987}
 {Elmegreen}, B.~G. 1987, \apj, 312, 626
 
@@ -126,6 +134,10 @@
   For{\^e}ts}, {Habart}, \& {Falgarone}}]{gry2002}
 {Gry}, C., {Boulanger}, F., {Nehm{\'e}}, C., {Pineau des For{\^e}ts}, G.,
   {Habart}, E., \& {Falgarone}, E. 2002, \aap, 391, 675
+
+\bibitem[{{Haynes} {et~al.}(1979){Haynes}, {Giovanelli}, \&
+  {Roberts}}]{haynes1979}
+{Haynes}, M.~P., {Giovanelli}, R., \& {Roberts}, M.~S. 1979, \apj, 229, 83
 
 \bibitem[{{Herbst} {et~al.}(2005){Herbst}, {Chang}, \& {Cuppen}}]{herbst2005}
 {Herbst}, E., {Chang}, Q., \& {Cuppen}, H.~M. 2005, Journal of Physics
@@ -222,6 +234,11 @@
 {Leroy}, A.~K., {Walter}, F., {Bigiel}, F., {Usero}, A., {Weiss}, A., {Brinks},
   E., {de Blok}, W.~J.~G., {Kennicutt}, R.~C., {Schuster}, K.-F., {Kramer}, C.,
   {Wiesemeyer}, H.~W., \& {Roussel}, H. 2009, \aj, 137, 4670
+
+\bibitem[{{Li}(2005)}]{li2005}
+{Li}, A. 2005, in American Institute of Physics Conference Series, Vol. 761,
+  The Spectral Energy Distributions of Gas-Rich Galaxies: Confronting Models
+  with Data, ed. C.~C. {Popescu} \& R.~J. {Tuffs}, 123--133
 
 \bibitem[{{Li} \& {Draine}(2001)}]{li2001}
 {Li}, A. \& {Draine}, B.~T. 2001, \apj, 554, 778
@@ -353,6 +370,9 @@
 {Reuter}, H.-P., {Sievers}, A.~W., {Pohl}, M., {Lesch}, H., \& {Wielebinski},
   R. 1996, \aap, 306, 721
 
+\bibitem[{{Rots}(1978)}]{rots1978}
+{Rots}, A.~H. 1978, \aj, 83, 219
+
 \bibitem[{{Sandstrom} {et~al.}(2013){Sandstrom}, {Leroy}, {Walter}, {Bolatto},
   {Croxall}, {Draine}, {Wilson}, {Wolfire}, {Calzetti}, {Kennicutt}, {Aniano},
   {Donovan Meyer}, {Usero}, {Bigiel}, {Brinks}, {de Blok}, {Crocker}, {Dale},
@@ -371,6 +391,20 @@
   R., {van der Laan}, T., {Appleton}, P., {Armus}, L., {Brandl}, B., {Gordon},
   K., {Hinz}, J., {Krause}, O., {Montiel}, E., {Sauvage}, M., {Schmiedeke}, A.,
   {Smith}, J.~D.~T., \& {Vigroux}, L. 2013, \apj, 777, 5
+
+\bibitem[{{Soida} {et~al.}(2001){Soida}, {Urbanik}, {Beck}, {Wielebinski}, \&
+  {Balkowski}}]{soida2001}
+{Soida}, M., {Urbanik}, M., {Beck}, R., {Wielebinski}, R., \& {Balkowski}, C.
+  2001, \aap, 378, 40
+
+\bibitem[{{Tabatabaei} {et~al.}(2014){Tabatabaei}, {Braine}, {Xilouris},
+  {Kramer}, {Boquien}, {Combes}, {Henkel}, {Relano}, {Verley}, {Gratier},
+  {Israel}, {Wiedner}, {R{\"o}llig}, {Schuster}, \& {van der
+  Werf}}]{tabatabaei2014}
+{Tabatabaei}, F.~S., {Braine}, J., {Xilouris}, E.~M., {Kramer}, C., {Boquien},
+  M., {Combes}, F., {Henkel}, C., {Relano}, M., {Verley}, S., {Gratier}, P.,
+  {Israel}, F., {Wiedner}, M.~C., {R{\"o}llig}, M., {Schuster}, K.~F., \& {van
+  der Werf}, P. 2014, \aap, 561, A95
 
 \bibitem[{{Walcher} {et~al.}(2011){Walcher}, {Groves}, {Budav{\'a}ri}, \&
   {Dale}}]{walcher2011}
