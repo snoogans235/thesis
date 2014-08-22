@@ -1,4 +1,4 @@
-\begin{thebibliography}{58}
+\begin{thebibliography}{60}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -415,6 +415,22 @@
   {Kennicutt}, {Thornley}, \& {Leroy}}]{walter2008}
 {Walter}, F., {Brinks}, E., {de Blok}, W.~J.~G., {Bigiel}, F., {Kennicutt},
   Jr., R.~C., {Thornley}, M.~D., \& {Leroy}, A. 2008, \aj, 136, 2563
+
+\bibitem[{{Warren} {et~al.}(2010){Warren}, {Wilson}, {Israel}, {Serjeant},
+  {Bendo}, {Brinks}, {Clements}, {Irwin}, {Knapen}, {Leech}, {Matthews},
+  {M{\"u}hle}, {Mortimer}, {Petitpas}, {Sinukoff}, {Spekkens}, {Tan},
+  {Tilanus}, {Usero}, {van der Werf}, {Vlahakis}, {Wiegert}, \&
+  {Zhu}}]{warren2010}
+{Warren}, B.~E., {Wilson}, C.~D., {Israel}, F.~P., {Serjeant}, S., {Bendo},
+  G.~J., {Brinks}, E., {Clements}, D.~L., {Irwin}, J.~A., {Knapen}, J.~H.,
+  {Leech}, J., {Matthews}, H.~E., {M{\"u}hle}, S., {Mortimer}, A.~M.~J.,
+  {Petitpas}, G., {Sinukoff}, E., {Spekkens}, K., {Tan}, B.~K., {Tilanus},
+  R.~P.~J., {Usero}, A., {van der Werf}, P.~P., {Vlahakis}, C., {Wiegert}, T.,
+  \& {Zhu}, M. 2010, \apj, 714, 571
+
+\bibitem[{{Watanabe} {et~al.}(2011){Watanabe}, {Sorai}, {Kuno}, \&
+  {Habe}}]{watanabe2011}
+{Watanabe}, Y., {Sorai}, K., {Kuno}, N., \& {Habe}, A. 2011, \mnras, 411, 1409
 
 \bibitem[{{Wilson} {et~al.}(2012){Wilson}, {Warren}, {Israel}, {Serjeant},
   {Attewell}, {Bendo}, {Butner}, {Chanial}, {Clements}, {Golding}, {Heesen},
