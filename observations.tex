@@ -6,7 +6,7 @@ The Submillimetre Common-User Bolometer Array 2 (SCUBA-2) was designed to decrea
 
 The observations of NGC3627 were taken from the Nearby Galaxies Legacy Survey's (NGLS) initial science images using SCUBA-2 from December 29, 2011  to January 21, 2012, and consist of 24 18$\arcmin$ by 18$\arcmin$ scans taken in grade 3 weather or better $(0.08 < \tau <0.12)$ with observations centered at 450$\mu$m and 850$\mu$m emission with a 32$\mu$m and 85$\mu$m bandpass respectively.  16 of the 24 scans were deemed useable, and whether or not an observation was deemed worthwhile was determined by factors such as the behavior of the image background or whether the image was flagged during observing to be unusable.  The observations of NGC3627 were taken using a daisy scanning pattern  to help remove any random noise by introducing crossing points.  The scanning speed of the JCMT was 150$\arcsec$/second in order to negate any drifting effects seen from the instrument or sky \citep{chapin2013}.
 
-\section{Image Creation and Properties}
+\section{Image Creation and Properties}\label{sc2_imgs}
 
 For any imaging process to be successful, the final image needs to have a limited white noise \citep{chapin2013}.  White noise in the sense of our bolometer observations arises from thermal variations in the instrument and atmosphere during data acquisition. The random noise is minimized through scanning methods and during image processing \citep{chapin2013}.  To create the final SCUBA-2 data products, we use the Submillimetre User Reduction Facility (SMURF) procedure MAKEMAP.  This procedure reduces the noise of the observations while maintaining the source's emission by incorporating a combination of principal component analysis and a maximum likelihood analysis \citep{chapin2013}.  Both of these methods have proven useful in reducing bolometer data on their own, but due to the size of raw SCUBA-2 data, either method on its own would result in extreme run times or the process becoming resource intensive \citep{chapin2013}.
 
@@ -81,7 +81,7 @@ The Uranus calibration images were used to determine the shape of the beam for t
     \label{fig_calib}
 \end{figure}
 
-\section{Ancillary Data}
+\section{Ancillary Data}\label{ancillary}
 
 The scientific goals of this thesis required data outside the capabilities of SCUBA-2.  For instance, accurately determining the dust mass involved fitting the spectral energy distribution (SED) for NGC3627.  To successfully fit an SED, we needed shorter wavelength data to fully probe the cold component of this galaxy. We used data ranging from 100$\mu$m to 500$\mu$m from the KINGFISH survey \citep{kennicutt2011} to gain a large enough wavelength range for fitting the cold component.  Secondly, the bandpass of the 850$\mu$m emission contains the CO J=3-2 transmission line.  In order to get a valid measurement of the dust mass, this contribution had to be removed.  We used emission data from the NGLS using the HARP instrument on the JCMT \citep{wilson2012} to fulfill this role.  When a dust mass was obtained, we used CO J=1-0 from the Nobeyama 45-m telescope \citep{kuno2007}, CO J=2-1 from HERACLES \citep{leroy2009}, and $HI$ observations from THINGS \citep{walter2008} to determine a reasonable molecular hydrogen mass to calculate a dust-to-gas ratio.
 
