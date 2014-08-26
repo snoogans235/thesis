@@ -59,19 +59,30 @@ The fitting procedure was carried out in two different ways on a modified blackb
 
 \subsection{Pixel SED Fits}
 
-In order to generate a parameter map of NGC3627, each individual pixel has its own SED determined from the available wavelengths described in the observations chapter.  Initially, we exclude the 500$\mu$m emission, and in later fits, we substitute the 450$\mu$m emission with 500$\mu$m emission.  The treatment of the dust emissivity index is performed by fixing it at $\beta=1.8$ for the Planck opacity model such that the opacity is $\kappa_{300\mu m,0}=1.0$ m$^2$ kg$^{-1}$ \citep{planckxxv2011} and $\beta=2.0$ for the Li and Draine opacity model where the opacity is $\kappa_{300\mu m,0}=0.2665$ m$^2$ kg$^{-1}$ \citep{li2001}.  A third fit is performed where the emissivity index is allowed to vary as a free parameter.  While the emissivity index is allowed to vary, the opacity being used is the Planck model in order to generate a minimum mass estimate of the two opacity values.  Using either an opacity of 1.0 m$^2$ kg$^{-1}$ or 0.2665 m$^2$ kg$^{-1}$ will not effect the shape of the SED, only the its normalizing value.  In the case of our fits, it is the mass that acts as the normalizing constant, so increasing or decreasing the opacity will yield the opposite effect in the mass.  The inverse proportionality can be seen in equation \ref{eq:mass}.  The resulting parameter maps of the fits are shown in figure \ref{fig:param_fits}. The numerical values from fitting each model are shown in tables \ref{tab:beta_1}, \ref{tab:beta_2}, and \ref{tab:beta_f} where each region corresponds to the regions labeled in figure \ref{fig:regions}.
+In order to generate a parameter map of NGC3627, each individual pixel has its own SED determined from the available wavelengths described in the observations chapter.  The fits are performed over 100$\mu$m, 160$\mu$m, 250$\mu$m, 350$\mu$m, 450$\mu$m or 500$\mu$m, and 850$\mu$m observations.  Initially, we excluded the 500$\mu$m emission in order to increase the resolution of our final maps, but an over abundance of emission in the 450$\mu$m provided unreliable results so we exchanged the 450$\mu$m emission with 500$\mu$m emission.  The treatment of the dust emissivity index is performed by fixing it at $\beta=1.8$ for the Planck opacity model such that the opacity is $\kappa_{300\mu m,0}=1.0$ m$^2$ kg$^{-1}$ \citep{planckxxv2011} and $\beta=2.0$ for the Li and Draine opacity model where the opacity is $\kappa_{300\mu m,0}=0.2665$ m$^2$ kg$^{-1}$ \citep{li2001}.  A third fit is performed where the emissivity index is allowed to vary as a free parameter.  While the emissivity index is allowed to vary, the opacity being used is the Planck model in order to generate a minimum mass estimate of the two opacity values.  Using either an opacity of 1.0 m$^2$ kg$^{-1}$ or 0.2665 m$^2$ kg$^{-1}$ will not effect the shape of the SED, only its normalizing value.  In the case of our fits, it is the mass that acts as the normalizing constant, so increasing or decreasing the opacity will yield the opposite effect in the mass.  The inverse proportionality can be seen in equation \ref{eq:mass}.  
+
+The quality of the fit using the 450$\mu$m observations for the Lie and Draine model of $\beta$=2 and $\kappa_{\nu,300}$=0.2665 is shown in figure \ref{fig:w2_4}.  The quality of the fit is determined by how well the expected flux from the SED fitting matches the observed flux.  If the fits are able to recreate the observed emission, then all of the points will lie on the line $y=x$ shown in the plots as a black line.  If the SED is underestimating the flux, the points will appear below the 1 to 1 line, and an over estimation from the SED will result in points above the line.  
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1.\textwidth]{sed_imgs/flux_compare_2_4.eps}
+  \caption[Li and Draine Model SED Fit Quality Using 450$\mu$m Data]{Quality of the SED fits to the Li and Draine model using the 450$\mu$m emission.  The regions shown are the regions in figure \ref{fig:regions}.}
+  \label{fig:w2_4}
+\end{figure}
+
+Using figure \ref{fig:w2_4}, the fitting procedure is able to handle the 100$\mu$m, 250$\mu$m, and 850$\mu$m with some slight under estimation in the 160$\mu$m and over  estimation in the 350$\mu$m.  The most compelling piece of information in figure \ref{fig:w2_4} is the SED's inability to recreate the observed 450$\mu$m flux despite the care taken while accounting for the odd beam shape of the 450$\mu$m data.  The discrepancy between the observed and fitted fluxes was not a result of a poor fit, but rather an intrinsic error in the 450$\mu$m observations.  The over abundance of flux present in SCUBA-2 450$\mu$m data was determined to be an issue with the data rather than a signature of a physical process by extrapolating an expected value from the 350$\mu$m and 500$\mu$m KINGFISH data assuming the decrease in intensity was linear.  In order to avoid any errors in our final parameter maps, we substitute the 450$\mu$m emission with KINGFISH 500$\mu$m emission.  The quality of fitted SEDs using the 500$\mu$m emission are shown in figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5} for the Planck model, Li and Draine model and the emissivity as a free parameter respectively.  To assign a numerical quantity to the quality of the fit the vertical distance was calculated for each point to the 1 to 1 line and then summed.  The summed distances are shown in table \ref{tab:lsq} and suggest the best fit comes from allowing the emissivity index to vary.  The resulting parameter maps of the fits using the 500$\mu$m observatoins are shown in figure \ref{fig:param_fits}. The numerical values from fitting each model are shown in tables \ref{tab:beta_1}, \ref{tab:beta_2}, and \ref{tab:beta_f} where each region corresponds to the regions labeled in figure \ref{fig:regions}.
 
 \begin{figure}
   \centering
   \includegraphics[width=1.\textwidth]{sed_imgs/parameter_full.eps}
-  \caption[SED Parameter Maps]{Returned value for the SED fits with the Planck model in the left column, the Li and Draine model  in the middle column, and $\beta$ as a free variable in the right column.  The top row shows the temperature with contours from 1.5K to 28.5K in 1.5K increments.  The second row show the returned masses with contours from 1.9M$_\odot$ to 13.3M$_\odot$ in 1.9M$_\odot$ increments.  The Li and Draine mass fits have been divided by three to better show the features.  Th bottom row shows the returned dust emissivity index values with contours from 1.8 to 2.8 with 0.2 increments.}
+  \caption[SED Parameter Maps]{Returned value for the SED fits using the 500$\mu$m observations with the Planck model in the left column, the Li and Draine model in the middle column, and $\beta$ as a free variable in the right column.  The top row shows the temperature with contours from 1.5K to 28.5K in 1.5K increments.  The second row show the returned masses with contours from 1.9M$_\odot$ to 13.3M$_\odot$ in 1.9M$_\odot$ increments.  The Li and Draine mass fits have been divided by three to better show the features.  The bottom row shows the returned dust emissivity index values with contours from 1.8 to 2.8 with 0.2 increments.}
   \label{fig:param_fits}
 \end{figure}
 
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
   \tablewidth{0pt}
-  \tablecaption{Best Fit Parameters for Planck Model\label{tab:beta_1}}
+  \tablecaption{Best Fit Parameters for Planck Model Using 500$\mu$m Emission for Pixel Fits\label{tab:beta_1}}
   \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[10^5M_\odot\right]$ & $\left[M_\odot pc^{-2}\right]$ &[K]}
   \startdata
     1 & 1.8 & 47  $\pm$ 22  & 0.09 $\pm$ 0.04 & 26   $\pm$ 2   \\
@@ -86,7 +97,7 @@ In order to generate a parameter map of NGC3627, each individual pixel has its o
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
   \tablewidth{0pt}
-  \tablecaption{Best Fit Parameters for Li and Draine Model\label{tab:beta_2}}
+  \tablecaption{Best Fit Parameters for Li and Draine Model Using 500$\mu$m Emission for Pixel Fits\label{tab:beta_2}}
   \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[10^5M_\odot\right]$ & $\left[M_\odot pc^{-2}\right]$ &[K]}
   \startdata
     1 & 2.0 & 219 $\pm$ 103 & 0.4  $\pm$ 0.2  & 24   $\pm$ 2   \\
@@ -101,8 +112,8 @@ In order to generate a parameter map of NGC3627, each individual pixel has its o
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
   \tablewidth{0pt}
-  \tablecaption{Best Fit Parameters for $\beta$ As A Free Parameter\label{tab:beta_f}}
-  \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[M_\odot\right]$ & $\left[10^5M_\odot pc^{-2}\right]$ &[K]}
+  \tablecaption{Best Fit Parameters for $\beta$ As A Free Parameter Using 500$\mu$m Emission for Pixel Fits\label{tab:beta_f}}
+  \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[10^5M_\odot\right]$ & $\left[10^5M_\odot pc^{-2}\right]$ &[K]}
   \startdata
     1 & 2.2  $\pm$ 0.2  & 73 $\pm$ 35 & 0.14 $\pm$ 0.06 & 22   $\pm$ 1   \\
     2 & 2.3  $\pm$ 0.2  & 19 $\pm$ 6  & 0.18 $\pm$ 0.05 & 22   $\pm$ 2   \\
@@ -112,31 +123,6 @@ In order to generate a parameter map of NGC3627, each individual pixel has its o
     6 & 2.1  $\pm$ 0.1  & 5  $\pm$ 1  & 0.09 $\pm$ 0.02 & 23.0 $\pm$ 0.9 \\
   \enddata
 \end{deluxetable}
-
-The wellness of each fit is shown figures \ref{fig:w1_4}, \ref{fig:w2_4}, and \ref{fig:wf_4} for the Plank model, Li and Draine model, and beta as a free parameter respectively.  The quality of the fit is determined by how well the expected flux from the SED fitting matches the observed flux.  If the fits are able to recreate the observed emission, then all of the points will lie on the line $y=x$ shown in the plots as a black line.  If the SED is underestimating the flux, the points will appear below the 1 to 1 line, and an over estimation from the SED will result in points above the line.  
-
-\begin{figure}
-  \centering
-  \includegraphics[width=1.\textwidth]{sed_imgs/flux_compare_1_4.eps}
-  \caption[Planck Model SED Fit Quality Using 450$\mu$m Data]{Quality of the SED fits to the Planck model using the 450$\mu$m emission.  The regions shown are the regions in figure \ref{fig:regions}.}
-  \label{fig:w1_4}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=1.\textwidth]{sed_imgs/flux_compare_2_4.eps}
-  \caption[Li and Draine Model SED Fit Quality Using 450$\mu$m Data]{Quality of the SED fits to the Li and Draine model using the 450$\mu$m emission.  The regions shown are the regions in figure \ref{fig:regions}.}
-  \label{fig:w2_4}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=1.\textwidth]{sed_imgs/flux_compare_free_4.eps}
-  \caption[Emissivity as a Free Parameter SED Fit Quality Using 450$\mu$m Data]{Quality of the SED fits with the dust emissivity index as a free parameter using the 450$\mu$m emission.  The regions shown are the regions in figure \ref{fig:regions}.}
-  \label{fig:wf_4}
-\end{figure}
-
-Using these plots, it is clear that the SED is over estimating the 450$\mu$m flux despite the care taken while accounting for the odd beam shape of the 450$\mu$m data.  This overestimation was not a result of a poor fit, but rather a calibration error in the 450$\mu$m observations.  The intrinsic error to the SCUBA-2 450$\mu$m data was determined by extrapolating an expected value from the 350$\mu$m and 500$\mu$m KINGFISH data assuming the decrease in intensity was linear.  In order to avoid any errors in our final parameter maps, we substitute the 450$\mu$m emission with KINGFISH 500$\mu$m emission.  The quality of fit maps using the 500$\mu$m emission are shown in figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5} for the Planck model, Li and Draine model and the emissivity as a free parameter respectively.  To assign a numerical quantity to the vertical distance was calculated for each point to the 1 to 1 line and then summed.  The summed distances are shown in table \ref{tab:lsq} and suggest the best fit comes from allowing the emissivity index to vary.
 
 \begin{figure}
   \centering
@@ -148,7 +134,7 @@ Using these plots, it is clear that the SED is over estimating the 450$\mu$m flu
 \begin{figure}
   \centering
   \includegraphics[width=1.\textwidth]{sed_imgs/flux_compare_2_5.eps}
-  \caption[Li and Draine Model SED Fit Quality Using 500$\mu$m Data]{Quality of the SED fits using the Planck model with the 500$\mu$m emission.  The regions shown are the regions in figure \ref{fig:regions}.}
+  \caption[Li and Draine Model SED Fit Quality Using 500$\mu$m Data]{Quality of the SED fits using the Li and Draine model with the 500$\mu$m emission.  The regions shown are the regions in figure \ref{fig:regions}.}
   \label{fig:w2_5}
 \end{figure}
 
@@ -165,18 +151,19 @@ Using these plots, it is clear that the SED is over estimating the 450$\mu$m flu
   \tablecaption{Total Distance to 1 to 1 Line\label{tab:lsq}}
   \tablehead{\colhead{Observation} & \colhead{Planck Model} & \colhead{Li and Draine Model} & \colhead{Variable Emissivity Index} }
   \startdata
-    100$\mu$m & 0.000   & 0.01245 & 01277   \\
-    160$\mu$m & 15.55   & 8.979   & 2.159   \\
-    250$\mu$m & 5.808   & 3.072   & 0.4465  \\ 
-    350$\mu$m & 0.8045  & 0.3541  & 0.1161  \\
-    500$\mu$m & 0.02825 & 0.05218 & 0.09528 \\
-    Total     & 23.01   & 12.58   & 3.131   \\
+    100$\mu$m & 0.000    & 0.01245 & 0.1277  \\
+    160$\mu$m & 15.55    & 8.979   & 2.159   \\
+    250$\mu$m & 5.808    & 3.071   & 0.4465  \\ 
+    350$\mu$m & 0.8045   & 0.3541  & 0.1161  \\
+    500$\mu$m & 0.08192  & 0.1147  & 0.1866  \\
+    850$\mu$m & 0.02825  & 0.05218 & 0.09528 \\
+    Total     & 22.23    & 12.583  & 3.131   \\
   \enddata
 \end{deluxetable}
 
 \subsection{Total Region Flux SED Fits}
 
-The second method used to determine the dust mass, was to fit the SED to the flux of each region in figure \ref{fig:regions}.  Performing the fit in this manner is beneficial because it increases the signal to noise of the region and produces a more precise set of parameters.  Initially, this style of fit was carried in the same fashion as the individual pixel fits  by fixing the emissivity index to 1.8 and 2.0, and allowing the emissivity index to vary.   However, given the greater range of mass values for the region fits, a single valued initial condition for the mass would produce a set of parameters that did not converge to the absolute minimum.  The dependence of the initial mass and the converged parameter with a variable emissivity index are shown in figure \ref{fig:init_mass_bf}.  Similarly, if we fix the emissivity index, the dependence on the initial mass is nonexistent until the Levinberg-Marquardt method is unable to converge to an appropriate fit, figure \ref{fig:init_mass_b1}.
+The second method used to determine the dust mass, was to fit the SED to the flux of each region in figure \ref{fig:regions}.  Performing the fit in this manner is beneficial because it increases the signal to noise of the region and produces a more precise set of parameters.  Initially, fitting the total flux of each region was carried out in the same fashion as the individual pixel fits by fixing the emissivity index to 1.8 and 2.0, and allowing the emissivity index to vary.  This method ran into issues when determining an initial mass to use in the fitting.  If we used the same procedure as we did for the pixel fitting, equation \ref{eq:mass}, our initial masses would either converge on a local minimum or to not be able to produce a useable fit.  This was in  due to the Levinberg-Marquardt method not being able to efficiently step through the parameter space to find a useable minimum, or the method would converge to a local minimum instead of a global minimum.  The behavior of the fitted parameters with respect to the initial mass is shown in figures \ref{fig:init_mass_bf} for a variable emissivity index.  In order to prevent any false convergences, we establish a range of emissivity index values from 1.6 to 2.9 with increments of 0.05 and found the best fit mass and temperature for each of these indicies.  This method ended up being significantly more robust than allowing the emissivity index to vary.  The reltaionship between the initial mass and the fitted parameters with a fixed emissivity is shown in figure \ref{fig:init_mass_b1}, and shows the results are independent of the initial mass up to a cutoff point where the Levinberg-Marquardt method is unable to produce reliable fits.  Determining the best emissivity index was decided by which value returned the lowest reduced $\chi^2$ value.  The reduced $\chi^2$ and emissivity index plots are shown in figure \ref{fig:beta_reg_sel} for each of the regions of NGC3627, where the minimum value is marked by red line.  The best fit results using this method are shown in table \ref{tab:region_vals} using the opacity suggested by the Planck model.
 
 \begin{figure}
   \centering
@@ -192,8 +179,6 @@ The second method used to determine the dust mass, was to fit the SED to the flu
   \label{fig:init_mass_b1}
 \end{figure}
 
-Since we can't let emissivity index vary freely, an alternative method to determine it's value needs to be implemented.  The emissivity index was determined by fixing it over a range of 1.6 to 2.9 with a spacing of 0.05.  The best emissivity index is determined by which value returns the lowest reduced $\chi^2$.  Plots showing the behavior of the $\chi^2$ values with each emissivity index value are shown in figure \ref{fig:beta_reg_sel} where the best value selected is represented by the red line. The results of each region using the fixed emissivity indices are shown in table \ref{tab:region_vals}, and their resulting SED's are shown in figure \ref{fig:SED_region}.
-
 \begin{figure}
   \centering
   \includegraphics[width=1.\textwidth]{sed_imgs/beta_vals.eps}
@@ -204,8 +189,8 @@ Since we can't let emissivity index vary freely, an alternative method to determ
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
   \tablewidth{0pt}
-  \tablecaption{Best Fit Parameters for Planck Opacity\label{tab:region_vals}}
-  \tablehead{\colhead{Region} & \colhead{Average $\beta$} & \colhead{ Total Mass} & \colhead{Surface Density} & \colhead{Average Temperature} \\ & &  $\left[10^5M_\odot\right]$ & $\left[M_\odot pc^{-2}\right]$ &[K]}
+  \tablecaption{Best Fit Parameters for Planck Opacity Using Region Fluxes\label{tab:region_vals}}
+  \tablehead{\colhead{Region} & \colhead{$\beta$} & \colhead{Mass} & \colhead{Surface Density} & \colhead{Temperature} \\ & &  $\left[10^5M_\odot\right]$ & $\left[M_\odot pc^{-2}\right]$ &[K]}
   \startdata
     1 & 2.20 $\pm$ 0.03 & 70   $\pm$ 6   & 0.14  $\pm$ 0.01  & 22.8 $\pm$ 0.5 \\
     2 & 2.30 $\pm$ 0.03 & 19   $\pm$ 1   & 0.18  $\pm$ 0.01  & 22.5 $\pm$ 0.3 \\
@@ -257,8 +242,6 @@ Since we can't let emissivity index vary freely, an alternative method to determ
   \label{fig:SED_region}
 \end{figure}
   
-  
-  
 \section{Discussion}
 \subsection{Reliability of Individual Pixel Fits}
 
@@ -288,3 +271,19 @@ The major difference between our work on NGC3627 and the work done in \cite{gala
 \end{deluxetable}
 
 The absence of a significant change in the returned parameters is indicative of a lack of any excess submillimeter emission suggestive of an abundance of a very cold (T $\lesssim$ 10K) dust component \citep{dale2012}.  This excess in emission is typically seen in low-metalicity systems such as dwarf galaxies \citep{madden2011}, but has also been seen in NGC3627 \citep{galametz2014}.  While our results show no excess of emission at 850$\mu$m (evident in figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5}), we should not expect to see any submillimeter excess given the log(O/H) + 12 is either 8.34 or 8.99 depending on the calibration values used \citep{moustakas2010}.
+
+
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=1.\textwidth]{sed_imgs/flux_compare_1_4.eps}
+%  \caption[Planck Model SED Fit Quality Using 450$\mu$m Data]{Quality of the SED fits to the Planck model using the 450$\mu$m emission.  The regions shown are the regions in figure \ref{fig:regions}.}
+%  \label{fig:w1_4}
+%\end{figure}
+
+
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=1.\textwidth]{sed_imgs/flux_compare_free_4.eps}
+%  \caption[Emissivity as a Free Parameter SED Fit Quality Using 450$\mu$m Data]{Quality of the SED fits with the dust emissivity index as a free parameter using the 450$\mu$m emission.  The regions shown are the regions in figure \ref{fig:regions}.}
+%  \label{fig:wf_4}
+%\end{figure}
