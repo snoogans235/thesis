@@ -201,11 +201,12 @@ The second method used to determine the dust mass, was to fit the SED to the flu
   \enddata
 \end{deluxetable}
 
+%it might be better to make this one figure with multiple SED's on it
 \begin{figure}
   \centering
   \begin{subfigure}[t]{.48\textwidth}
     \centering
-    \includegraphics[width=1.\linewidth]{sed_imgs/region_1beta_22_SED_fit.eps}
+    \includegraphics[width=1.\linewidth]{sed_imgs/region_1beta_20_SED_fit.eps}
     \caption{Region 1 SED}
   \end{subfigure}
   \quad
@@ -245,15 +246,15 @@ The second method used to determine the dust mass, was to fit the SED to the flu
 \section{Discussion}
 \subsection{Reliability of Individual Pixel Fits}
 
-The issue on whether or not the individual pixel fits are reliable is raised after seeing a strong dependence with the initial mass of the region SED fits shown in figure \ref{fig:init_mass_bf}.  Since any dependence on the initial mass has been removed in the global region fits, an agreement between the total pixel mass and the region fits would suggest that the initial mass used in the pixel fitting is an appropriate value.  This is further strengthened by the smaller mass range of pixel fits.  The smaller range allows the fitting method to hone into a smaller area of the $\chi^2$ space avoiding any possible local minima to converge on.
+The issue of whether or not the individual pixel fits are reliable is raised after seeing a strong dependence with the initial mass of the region SED fits shown in figure \ref{fig:init_mass_bf}.  Since any dependence on the initial mass has been removed in the global region fits, an agreement between the total pixel mass and the region fits would suggest that the initial mass used in the pixel fitting is an appropriate value.  This is further strengthened by the smaller mass range of pixel fits.  The smaller range allows the fitting method to hone into a smaller area of the $\chi^2$ space avoiding any possible local minima to converge on.
 
 \subsection{Comparison with Previous Work}
 
-We can check the validity of our results by comparing them to previous SED fits using the KINGFISH data \citep{galametz2012}.  The best fit parameters from their fitting was T=20.2K$\pm$4K and $\beta$=2.3$\pm$0.2 which agree within error to our results of T=22K$\pm$1K and $\beta$=2.2$\pm$0.2 for a variable emissivity index.  To test agreement with our mass we need to take into account several factors.  The first being a lessened flux from the extended structure removal, and the second is the selection of the opacity value.  Their reported mass for a variable emissivity index reported by \cite{galametz2012} was 782$^{+80}_{-66}\times$10$^5$M$_\odot$ for the sum of pixels in the parameter maps.  We can scale the mass values by finding the ratio $\kappa_{Galametz}$ over $\kappa_{Ours}$ which comes out to be 0.342.  If we then scale by the amount of flux removed in the extended structure removal, we can scale the mass to 175$^{+19}_{-17}\times$10$^5$M$_\odot$ which is above our maximum value of 108$\times$10$^5$M$_\odot$.  This discrepancy can likely be attributed to how the total mass was found in each method.  For our method we use the mass returned from fitting, and in \cite{galametz2012} they use equation \ref{eq:mass} using the 500$\mu$m emission to determine a dust mass.
+We can check the validity of our results by comparing them to previous SED fits using the KINGFISH data \citep{galametz2012}.  The best fit parameters from their fitting were T=20.2K$\pm$4K and $\beta$=2.3$\pm$0.2 which agree within error to our results of T=22K$\pm$1K and $\beta$=2.2$\pm$0.2 for a variable emissivity index.  To test agreement with our mass we need to take into account several factors.  The first is a lessened flux from the extended structure removal, and the second is the selection of the opacity value.  Their reported mass for a variable emissivity index reported by \cite{galametz2012} was 782$^{+80}_{-66}\times$10$^5$M$_\odot$ for the sum of pixels in the parameter maps.  We can scale the mass values by finding the ratio $\kappa_{Galametz}$ over $\kappa_{Ours}$ which comes out to be 0.342.  If we then scale by 0.28 (the amount of flux removed in the extended structure removal from Table \ref{tab_obs_kfish}), we can scale the mass to 175$^{+19}_{-17}\times$10$^5$M$_\odot$ which is above our maximum value of 73$\pm$35$\times$10$^5$M$_\odot$.  The discrepancy can be attributed to their selection of using the 500$\mu$m flux in the calculation of the cold dust mass maps.  If the SED was underestimating the flux at 500$\mu$m, then using that flux value to calculate a mass would increase the amount present, and in the case of NGC3627, the 500$\mu$m was the poorest with an approximate residual of 0.05 dex corresponding to around 1 Jy which allows for around a 10$\times$10$^5$ M$_\odot$ fluctuation.  
 
 \subsection{Effects of 850$\mu$m Emission}
 
-The major difference between our work on NGC3627 and the work done in \cite{galametz2012} is the presence of the 850$\mu$m data point.  In our analysis the presence of the 850$\mu$m has shown little effect on the returned parameters.  The returned values for a variable emissivity index are shown in table \ref{tab:no_850}.  
+The major difference between our work on NGC3627 and the work done in \cite{galametz2012} is the presence of the 850$\mu$m data point.  In our analysis the presence of the 850$\mu$m has shown to have little effect on the returned parameters.  The returned values for a variable emissivity index are shown in table \ref{tab:no_850}.  
 
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
@@ -270,7 +271,7 @@ The major difference between our work on NGC3627 and the work done in \cite{gala
   \enddata
 \end{deluxetable}
 
-The absence of a significant change in the returned parameters is indicative of a lack of any excess submillimeter emission suggestive of an abundance of a very cold (T $\lesssim$ 10K) dust component \citep{dale2012}.  This excess in emission is typically seen in low-metalicity systems such as dwarf galaxies \citep{madden2011}, but has also been seen in NGC3627 \citep{galametz2014}.  While our results show no excess of emission at 850$\mu$m (evident in figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5}), we should not expect to see any submillimeter excess given the log(O/H) + 12 is either 8.34 or 8.99 depending on the calibration values used \citep{moustakas2010}.
+The absence of a significant change in the returned parameters is indicative of a lack of any excess submillimeter emission suggestive of an abundance of a very cold (T $\lesssim$ 10K) dust component \citep{dale2012}.  This excess in emission is typically seen in low-metallicity systems such as dwarf galaxies \citep{madden2011}, but has also been seen in NGC3627 \citep{galametz2014}.  While our results show no excess of emission at 850$\mu$m (evident in figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5}), we should not expect to see any submillimeter excess given the log(O/H) + 12 is either 8.34 or 8.99 depending on the calibration values used \citep{moustakas2010}.
 
 
 %\begin{figure}
