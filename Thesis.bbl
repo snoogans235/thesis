@@ -1,4 +1,4 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{61}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -364,6 +364,18 @@
   {Valenziano}, L., {Verstraete}, L., {Vielva}, P., {Villa}, F., {Vittorio},
   N., {Wade}, L.~A., {Wandelt}, B.~D., {Yvon}, D., {Zacchei}, A., \& {Zonca},
   A. 2011, \aap, 536, A25
+
+\bibitem[{{R{\'e}my-Ruyer} {et~al.}(2013){R{\'e}my-Ruyer}, {Madden},
+  {Galliano}, {Hony}, {Sauvage}, {Bendo}, {Roussel}, {Pohlen}, {Smith},
+  {Galametz}, {Cormier}, {Lebouteiller}, {Wu}, {Baes}, {Barlow}, {Boquien},
+  {Boselli}, {Ciesla}, {De Looze}, {Karczewski}, {Panuzzo}, {Spinoglio},
+  {Vaccari}, \& {Wilson}}]{remy2013}
+{R{\'e}my-Ruyer}, A., {Madden}, S.~C., {Galliano}, F., {Hony}, S., {Sauvage},
+  M., {Bendo}, G.~J., {Roussel}, H., {Pohlen}, M., {Smith}, M.~W.~L.,
+  {Galametz}, M., {Cormier}, D., {Lebouteiller}, V., {Wu}, R., {Baes}, M.,
+  {Barlow}, M.~J., {Boquien}, M., {Boselli}, A., {Ciesla}, L., {De Looze}, I.,
+  {Karczewski}, O.~{\L}., {Panuzzo}, P., {Spinoglio}, L., {Vaccari}, M., \&
+  {Wilson}, C.~D. 2013, \aap, 557, A95
 
 \bibitem[{{Reuter} {et~al.}(1996){Reuter}, {Sievers}, {Pohl}, {Lesch}, \&
   {Wielebinski}}]{reuter1996}
