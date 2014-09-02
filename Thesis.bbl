@@ -1,4 +1,4 @@
-\begin{thebibliography}{61}
+\begin{thebibliography}{66}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -26,6 +26,18 @@
 
 \bibitem[{{Burden} \& {Faires}(2001)}]{burden2001}
 {Burden}, R.~L. \& {Faires}, J.~D. 2001, {Numerical analysis}
+
+\bibitem[{{Calzetti} {et~al.}(2010){Calzetti}, {Wu}, {Hong}, {Kennicutt},
+  {Lee}, {Dale}, {Engelbracht}, {van Zee}, {Draine}, {Hao}, {Gordon},
+  {Moustakas}, {Murphy}, {Regan}, {Begum}, {Block}, {Dalcanton}, {Funes}, {Gil
+  de Paz}, {Johnson}, {Sakai}, {Skillman}, {Walter}, {Weisz}, {Williams}, \&
+  {Wu}}]{calzetti2010}
+{Calzetti}, D., {Wu}, S.-Y., {Hong}, S., {Kennicutt}, R.~C., {Lee}, J.~C.,
+  {Dale}, D.~A., {Engelbracht}, C.~W., {van Zee}, L., {Draine}, B.~T., {Hao},
+  C.-N., {Gordon}, K.~D., {Moustakas}, J., {Murphy}, E.~J., {Regan}, M.,
+  {Begum}, A., {Block}, M., {Dalcanton}, J., {Funes}, J., {Gil de Paz}, A.,
+  {Johnson}, B., {Sakai}, S., {Skillman}, E., {Walter}, F., {Weisz}, D.,
+  {Williams}, B., \& {Wu}, Y. 2010, \apj, 714, 1256
 
 \bibitem[{{Chapin} {et~al.}(2013){Chapin}, {Berry}, {Gibb}, {Jenness}, {Scott},
   {Tilanus}, {Economou}, \& {Holland}}]{chapin2013}
@@ -98,6 +110,14 @@
 
 \bibitem[{{Field} \& {Saslaw}(1965)}]{field1965}
 {Field}, G.~B. \& {Saslaw}, W.~C. 1965, \apj, 142, 568
+
+\bibitem[{{Freedman} {et~al.}(2001){Freedman}, {Madore}, {Gibson}, {Ferrarese},
+  {Kelson}, {Sakai}, {Mould}, {Kennicutt}, {Ford}, {Graham}, {Huchra},
+  {Hughes}, {Illingworth}, {Macri}, \& {Stetson}}]{freedman2001}
+{Freedman}, W.~L., {Madore}, B.~F., {Gibson}, B.~K., {Ferrarese}, L., {Kelson},
+  D.~D., {Sakai}, S., {Mould}, J.~R., {Kennicutt}, Jr., R.~C., {Ford}, H.~C.,
+  {Graham}, J.~A., {Huchra}, J.~P., {Hughes}, S.~M.~G., {Illingworth}, G.~D.,
+  {Macri}, L.~M., \& {Stetson}, P.~B. 2001, \apj, 553, 47
 
 \bibitem[{{Galametz} {et~al.}(2014){Galametz}, {Albrecht}, {Kennicutt},
   {Aniano}, {Bertoldi}, {Calzetti}, {Croxall}, {Dale}, {Draine}, {Engelbracht},
@@ -382,8 +402,19 @@
 {Reuter}, H.-P., {Sievers}, A.~W., {Pohl}, M., {Lesch}, H., \& {Wielebinski},
   R. 1996, \aap, 306, 721
 
+\bibitem[{{Rosenberg} {et~al.}(2014){Rosenberg}, {Kazandjian}, {van der Werf},
+  {Israel}, {Meijerink}, {Wei{\ss}}, {Requena-Torres}, \&
+  {G{\"u}sten}}]{rosenberg2014}
+{Rosenberg}, M.~J.~F., {Kazandjian}, M.~V., {van der Werf}, P.~P., {Israel},
+  F.~P., {Meijerink}, R., {Wei{\ss}}, A., {Requena-Torres}, M.~A., \&
+  {G{\"u}sten}, R. 2014, \aap, 564, A126
+
 \bibitem[{{Rots}(1978)}]{rots1978}
 {Rots}, A.~H. 1978, \aj, 83, 219
+
+\bibitem[{{Rybicki} \& {Lightman}(1986)}]{rybicki1986}
+{Rybicki}, G.~B. \& {Lightman}, A.~P. 1986, {Radiative Processes in
+  Astrophysics}
 
 \bibitem[{{Sandstrom} {et~al.}(2013){Sandstrom}, {Leroy}, {Walter}, {Bolatto},
   {Croxall}, {Draine}, {Wilson}, {Wolfire}, {Calzetti}, {Kennicutt}, {Aniano},
@@ -403,6 +434,20 @@
   R., {van der Laan}, T., {Appleton}, P., {Armus}, L., {Brandl}, B., {Gordon},
   K., {Hinz}, J., {Krause}, O., {Montiel}, E., {Sauvage}, M., {Schmiedeke}, A.,
   {Smith}, J.~D.~T., \& {Vigroux}, L. 2013, \apj, 777, 5
+
+\bibitem[{{Skibba} {et~al.}(2011){Skibba}, {Engelbracht}, {Dale}, {Hinz},
+  {Zibetti}, {Crocker}, {Groves}, {Hunt}, {Johnson}, {Meidt}, {Murphy},
+  {Appleton}, {Armus}, {Bolatto}, {Brandl}, {Calzetti}, {Croxall}, {Galametz},
+  {Gordon}, {Kennicutt}, {Koda}, {Krause}, {Montiel}, {Rix}, {Roussel},
+  {Sandstrom}, {Sauvage}, {Schinnerer}, {Smith}, {Walter}, {Wilson}, \&
+  {Wolfire}}]{skibba2011}
+{Skibba}, R.~A., {Engelbracht}, C.~W., {Dale}, D., {Hinz}, J., {Zibetti}, S.,
+  {Crocker}, A., {Groves}, B., {Hunt}, L., {Johnson}, B.~D., {Meidt}, S.,
+  {Murphy}, E., {Appleton}, P., {Armus}, L., {Bolatto}, A., {Brandl}, B.,
+  {Calzetti}, D., {Croxall}, K., {Galametz}, M., {Gordon}, K.~D., {Kennicutt},
+  R.~C., {Koda}, J., {Krause}, O., {Montiel}, E., {Rix}, H.-W., {Roussel}, H.,
+  {Sandstrom}, K., {Sauvage}, M., {Schinnerer}, E., {Smith}, J.~D., {Walter},
+  F., {Wilson}, C.~D., \& {Wolfire}, M. 2011, \apj, 738, 89
 
 \bibitem[{{Soida} {et~al.}(2001){Soida}, {Urbanik}, {Beck}, {Wielebinski}, \&
   {Balkowski}}]{soida2001}
