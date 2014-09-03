@@ -1,0 +1,154 @@
+\chapter{Dust-to-Gas Ratio and $\alpha_{CO}$}
+
+\section{Minimizing Scatter Dust-to-Gas Ratio}
+
+In order to determine the amount of molecular hydrogen present, we have chosen to use the dust based method to determine a conversion factor.  In our analysis we have used the conversion factor $\alpha_{CO}$ which will return the amount of molecular hydrogen present in terms of its surface density.  Calculating the amour of molecular hydrogen present with this method involves reducing the scatter of the dust to gas ratio of each pixel.  The dust-to-gas ratio is calculated using
+
+\begin{equation}\label{dgr}
+  \delta_{DGR} = \frac{\Sigma_{dust}}{I_{CO}*\alpha_{CO} + \Sigma_{HI}}
+\end{equation}
+
+where $\delta_{DGR}$ is the ratio of the surface densities of the dust and gas present in the system, $\Sigma_{dust}$ is the surface density of the dust in M$_\odot$ pc$^{-2}$, $I_{CO}$ is the CO intensity in K km s$^{-1}$, $\alpha_{CO}$ is the conversion factor in units of M$_\odot$ pc$^{-2}$ (K km s$^{-1}$)$^{-1}$, and $\Sigma_{HI}$ is the surface density of the atomic hydrogen.  The scatter of the dust-to-gas ratio is determined by finding the standard deviation of the pixels assuming a Gaussian distribution.  
+
+The ideal configuration was determined using the dust surface densities found in Chapter \ref{sed} for the Planck and Li and Draine models.  The $\alpha_{CO}$ was handled by assigning it a single value over the range of 0.01 to 100 M$_\odot$ pc$^{-2}$ (K km s$^{-1}$)$^{-1}$, and the best approximated $\alpha_{CO}$ was determined by the lowest resulting dust-to-gas scatter in the pixels of each region in Figure \ref{fig:regions}.  A 7$^{th}$ region was added that is the galaxy without the nucleus due to the lack of HI emission in the nucleus of NGC3627.  The surface density of molecular hydrogen is then determined by scaling the CO intensity by the calculated conversion factor, and the dust-to-gas ratio is then found by dividing the dust surface density by the sum of the HI and H$_2$ surface densities.  The results using Planck model with the CO J=1-0 line are shown in Figure \ref{fig:dgr_co10} where the right panel shows the ratio of H$_2$ to HI against the value of the dust-to-gas ratio in each pixel where the solid red line indicates the mean value for the dust-to-gas ratio and the dotted lines show the variance associated with the configuration.  The left panels of Figure \ref{fig:dgr_co10} show the trend of $\alpha_{CO}$ and the scatter in the dust-to-gas ratio.  The numerical values of the dust-to-gas ratio, $\alpha_{CO}$, and H$_2$ surface density using both the Planck and Li and Draine dust masses are shown in Table \ref{tab:dgr_10t}.  The error on the dust to gas ratio  in Table \ref{tab:dgr_10t} is the same as the minimum scatter found.
+
+\begin{figure}\label{fig:dgr_co10}
+  \begin{subfigure}[t]{1\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_1_aco_output_10.eps}
+    \caption{Region 1}
+  \end{subfigure}
+
+  \begin{subfigure}[t]{1\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_2_aco_output_10.eps}
+    \caption{Region 2}
+  \end{subfigure}
+   \caption[Dust-to-Gas Ratio Determination Plots for CO J=1-0]{Plots of the dust-to-gas ratio vs the H$_2$ to HI surface densities using the calculated $\alpha_{CO}$ and the scatter in the dust-to-gas ratio against the $\alpha_{CO}$ values used.  Each were calculated using the CO J=1-0 line.}
+   \label{fig:dgr_co10}
+\end{figure}
+
+\begin{figure}  
+  \ContinuedFloat
+  \begin{subfigure}[t]{1\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_3_aco_output_10.eps}
+    \caption{Region 3}
+  \end{subfigure}
+
+  \begin{subfigure}[t]{1\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_4_aco_output_10.eps}
+    \caption{Region 4}
+  \end{subfigure}
+   \caption[Dust-to-Gas Ratio Determination Plots for CO J=1-0]{Plots of the dust-to-gas ratio vs the H$_2$ to HI surface densities using the calculated $\alpha_{CO}$ and the scatter in the dust-to-gas ratio against the $\alpha_{CO}$ values used.  Each were calculated using the CO J=1-0 line.}
+   \label{fig:dgr_co10}
+\end{figure}
+
+\begin{figure}
+  \ContinuedFloat
+  \begin{subfigure}[t]{1\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_5_aco_output_10.eps}
+    \caption{Region 5}
+  \end{subfigure}
+
+  \begin{subfigure}[t]{1\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_6_aco_output_10.eps}
+    \caption{Region 6}
+  \end{subfigure}
+   \caption[Dust-to-Gas Ratio Determination Plots for CO J=1-0]{Plots of the dust-to-gas ratio vs the H$_2$ to HI surface densities using the calculated $\alpha_{CO}$ and the scatter in the dust-to-gas ratio against the $\alpha_{CO}$ values used.  Each were calculated using the CO J=1-0 line.}
+   \label{fig:dgr_co10}
+\end{figure}
+
+\begin{figure}
+  \ContinuedFloat
+  \begin{subfigure}[t]{1\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_output_10.eps}
+    \caption{Region 1 Without the Nucleus}
+  \end{subfigure}
+  \caption[Dust-to-Gas Ratio Determination Plots for CO J=1-0]{Plots of the dust-to-gas ratio vs the H$_2$ to HI surface densities using the calculated $\alpha_{CO}$ and the scatter in the dust-to-gas ratio against the $\alpha_{CO}$ values used.  Each were calculated using the CO J=1-0 line.}
+   \label{fig:dgr_co10}
+\end{figure}
+
+\begin{deluxetable}{rccc}
+  \tabletypesize{\footnotesize}
+  \tablecolumns{4}
+  \tablewidth{0pt}
+  \tablecaption{Dust-to-gas ratio, $\alpha_{CO}$, and H$_2$ Surface Density using CO J=1-0 Tracer\label{tab:dgr_10t}}
+  \tablehead{
+    \colhead{Opacity Model} &
+    \colhead{Dust-to-Gas Ratio} &
+    \colhead{$\alpha_{CO}$} &
+    \colhead{Average $\Sigma_{H_2}$ per Pixel} \\
+    &
+    &
+    [M$_\odot$ pc$^{-2}$ (K km s$^{-1}$)$^{-1}$] &
+    [M$_\odot$ pc$^{-2}$] }
+  \startdata
+    \sidehead{Region 1}
+      Planck &        0.017 $\pm$ 0.004 & 0.21 $\pm$ 0.05 & 4 $\pm$ 2 \\
+      Li and Draine & 0.07  $\pm$ 0.02  & 0.21 $\pm$ 0.05 & 4 $\pm$ 2 \\
+    \sidehead{Region 2}
+      Planck &        0.012 $\pm$ 0.002 & 0.31 $\pm$ 0.05 & 8 $\pm$ 2 \\
+      Li and Draine & 0.05  $\pm$ 0.01  & 0.31 $\pm$ 0.05 & 8 $\pm$ 3 \\
+    \sidehead{Region 3}
+      Planck &        0.025 $\pm$ 0.003 & 0.11 $\pm$ 0.05 & 4.1 $\pm$ 0.9\\
+      Li and Draine & 0.11  $\pm$ 0.01  & 0.11 $\pm$ 0.05 & 4.1 $\pm$ 0.9\\
+    \sidehead{Region 4}
+      Planck &        0.028 $\pm$ 0.004 & 0.11 $\pm$ 0.05 & 3 $\pm$ 1 \\
+      Li and Draine & 0.12  $\pm$ 0.02  & 0.11 $\pm$ 0.05 & 3 $\pm$ 1 \\
+    \sidehead{Region 5}
+      Planck &        0.023 $\pm$ 0.004 & 0.11 $\pm$ 0.05 & 1.5 $\pm$ 0.7\\
+      Li and Draine & 0.10  $\pm$ 0.02  & 0.11 $\pm$ 0.05 & 1.5 $\pm$ 0.7\\
+    \sidehead{Region 6}
+      Planck &        0.009 $\pm$ 0.001 & 0.61 $\pm$ 0.05 & 6 $\pm$ 1 \\
+      Li and Draine & 0.040 $\pm$ 0.006 & 0.61 $\pm$ 0.05 & 6 $\pm$ 1 \\
+    \sidehead{No Nucleus}
+      Planck &        0.018 $\pm$ 0.004 & 0.21 $\pm$ 0.05 & 4 $\pm$ 2 \\
+      Li and Draine & 0.08  $\pm$ 0.02  & 0.21 $\pm$ 0.05 & 4 $\pm$ 2 \\
+  \enddata
+\end{deluxetable}
+
+While CO J=1-0 is the standard molecular tracer of H$_2$ \citep{bolatto2013}, the observations are not always available.  In the situation without CO J=1-0 data an alternative excitation state of CO is used.  This was done by \cite{sandstrom2013} using the CO J=2-1 transition, and by \cite{warren2010} using the CO J=3-2 transition, where the observations were scaled to the expected intensity of the CO J=1-0 using a line ratio.  We have found the line ratio of the 2-1/1-0 to be 0.39 for the galaxy on a whole, and can examine the effects of using this technique to approximate the CO J=1-0 transition in this method.  The results for the dust-to-gas ratio, $\alpha_{CO}$, and H$_2$ surface density are shown in Table \ref{tab:dgr_21}.
+
+\begin{deluxetable}{rccc}
+  \tabletypesize{\footnotesize}
+  \tablecolumns{4}
+  \tablewidth{0pt}
+  \tablecaption{Dust-to-gas ratio, $\alpha_{CO}$, and H$_2$ Surface Density using CO J=2-1 Tracer\label{tab:dgr_21}}
+  \tablehead{
+    \colhead{Opacity Model} &
+    \colhead{Dust-to-Gas Ratio} &
+    \colhead{$\alpha_{CO}$} &
+    \colhead{Average $\Sigma_{H_2}$ per Pixel} \\
+    &
+    &
+    [M$_\odot$ pc$^{-2}$ (K km s$^{-1}$)$^{-1}$] &
+    [M$_\odot$ pc$^{-2}$] }
+  \startdata
+    \sidehead{Region 1}
+      Planck &        0.058 $\pm$ 0.009 & 0.31 $\pm$ 0.05 & 6  $\pm$ 4 \\
+      Li and Draine & 0.017 $\pm$ 0.003 & 0.21 $\pm$ 0.05 & 4  $\pm$ 2 \\
+    \sidehead{Region 2}
+      Planck &        0.056 $\pm$ 0.003 & 0.31 $\pm$ 0.05 & 8  $\pm$ 3 \\
+      Li and Draine & 0.013 $\pm$ 0.001 & 0.31 $\pm$ 0.05 & 8  $\pm$ 3 \\
+    \sidehead{Region 3}
+      Planck &        0.13  $\pm$ 0.01  & 0.11 $\pm$ 0.05 & 4  $\pm$ 1 \\
+      Li and Draine & 0.029 $\pm$ 0.003 & 0.11 $\pm$ 0.05 & 4  $\pm$ 1 \\
+    \sidehead{Region 4}
+      Planck &        0.045 $\pm$ 0.009 & 0.31 $\pm$ 0.05 & 12 $\pm$ 4 \\
+      Li and Draine & 0.010 $\pm$ 0.001 & 0.41 $\pm$ 0.05 & 12 $\pm$ 4 \\
+    \sidehead{Region 5}
+      Planck &        0.049 $\pm$ 0.007 & 0.41 $\pm$ 0.05 & 5 $\pm$ 2\\
+      Li and Draine & 0.014 $\pm$ 0.002 & 0.31 $\pm$ 0.05 & 4 $\pm$ 1\\
+    \sidehead{Region 6}
+      Planck &        0.043 $\pm$ 0.003 & 0.51 $\pm$ 0.05 & 5 $\pm$ 2 \\
+      Li and Draine & 0.011 $\pm$ 0.001 & 0.41 $\pm$ 0.05 & 4 $\pm$ 1 \\
+    \sidehead{No Nucleus}
+      Planck &        0.043 $\pm$ 0.003 & 0.31 $\pm$ 0.05 & 6 $\pm$ 3 \\
+      Li and Draine & 0.013 $\pm$ 0.002  & 0.31 $\pm$ 0.05 & 6 $\pm$ 3 \\
+  \enddata
+\end{deluxetable}
