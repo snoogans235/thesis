@@ -1,4 +1,4 @@
-\begin{thebibliography}{66}
+\begin{thebibliography}{69}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -77,6 +77,9 @@
 {Dobbs}, C.~L., {Krumholz}, M.~R., {Ballesteros-Paredes}, J., {Bolatto}, A.~D.,
   {Fukui}, Y., {Heyer}, M., {Mac Low}, M.-M., {Ostriker}, E.~C., \&
   {V{\'a}zquez-Semadeni}, E. 2013, ArXiv e-prints
+
+\bibitem[{{Downes} \& {Solomon}(1998)}]{downes1998}
+{Downes}, D. \& {Solomon}, P.~M. 1998, \apj, 507, 615
 
 \bibitem[{{Drabek} {et~al.}(2012){Drabek}, {Hatchell}, {Friberg}, {Richer},
   {Graves}, {Buckle}, {Nutter}, {Johnstone}, \& {Di Francesco}}]{drabek2012}
@@ -449,6 +452,19 @@
   {Sandstrom}, K., {Sauvage}, M., {Schinnerer}, E., {Smith}, J.~D., {Walter},
   F., {Wilson}, C.~D., \& {Wolfire}, M. 2011, \apj, 738, 89
 
+\bibitem[{{Smith} {et~al.}(2012){Smith}, {Gomez}, {Eales}, {Ciesla}, {Boselli},
+  {Cortese}, {Bendo}, {Baes}, {Bianchi}, {Clemens}, {Clements}, {Cooray},
+  {Davies}, {de Looze}, {di Serego Alighieri}, {Fritz}, {Gavazzi}, {Gear},
+  {Madden}, {Mentuch}, {Panuzzo}, {Pohlen}, {Spinoglio}, {Verstappen},
+  {Vlahakis}, {Wilson}, \& {Xilouris}}]{smith2012}
+{Smith}, M.~W.~L., {Gomez}, H.~L., {Eales}, S.~A., {Ciesla}, L., {Boselli}, A.,
+  {Cortese}, L., {Bendo}, G.~J., {Baes}, M., {Bianchi}, S., {Clemens}, M.,
+  {Clements}, D.~L., {Cooray}, A.~R., {Davies}, J.~I., {de Looze}, I., {di
+  Serego Alighieri}, S., {Fritz}, J., {Gavazzi}, G., {Gear}, W.~K., {Madden},
+  S., {Mentuch}, E., {Panuzzo}, P., {Pohlen}, M., {Spinoglio}, L.,
+  {Verstappen}, J., {Vlahakis}, C., {Wilson}, C.~D., \& {Xilouris}, E.~M. 2012,
+  \apj, 748, 123
+
 \bibitem[{{Soida} {et~al.}(2001){Soida}, {Urbanik}, {Beck}, {Wielebinski}, \&
   {Balkowski}}]{soida2001}
 {Soida}, M., {Urbanik}, M., {Beck}, R., {Wielebinski}, R., \& {Balkowski}, C.
@@ -488,6 +504,9 @@
 \bibitem[{{Watanabe} {et~al.}(2011){Watanabe}, {Sorai}, {Kuno}, \&
   {Habe}}]{watanabe2011}
 {Watanabe}, Y., {Sorai}, K., {Kuno}, N., \& {Habe}, A. 2011, \mnras, 411, 1409
+
+\bibitem[{{Wilson} \& {Scoville}(1990)}]{wilson1990}
+{Wilson}, C.~D. \& {Scoville}, N. 1990, \apj, 363, 435
 
 \bibitem[{{Wilson} {et~al.}(2012){Wilson}, {Warren}, {Israel}, {Serjeant},
   {Attewell}, {Bendo}, {Butner}, {Chanial}, {Clements}, {Golding}, {Heesen},
