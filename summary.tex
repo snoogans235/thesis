@@ -1,0 +1,33 @@
+\chapter{Summary}
+
+We have shown two new continuum maps of NGC3627 in 450$\mu$m and 850$\mu$m from SCUBA-2, and analyzed them with the goal of determining a dust-to-gas mass ratio, a suitable conversion factor, and the amount of molecular hydrogen present in the galaxy as a whole and 5 individual regions picked based upon the morphological features of the galaxy.  In order to produce our results we utilized data from the KINGFISH survey \citep{kennicutt2011} and NGLS \citep{wilson2012} to calculate a dust mass using SED fitting on a pixel by pixel scale and a total of the flux.  The dust-to-gas ratio, $\alpha_{CO}$, and molecular gas surface density was determined using a minimization of the dust-to-gas scatter in the galaxy using dat, Nobeyama 45-m CO J=1-0 survey \citep{kuno2007}, HERACLES \citep{reuter1996}, and THINGS \citep{walter2008}.  The important results from our analysis are as follows:
+
+\begin{enumerate}
+
+\item{We have created high quality images of NGC3627 using the Starlink program MAKEMAP by incorporating masks in the AST and FLT portions of MAKEMAP and adding a high-pass filter of 175$\arcsec$ to in the FLT portion of MAKEMAP in order to reduce the noise in the final image products.}
+
+\item{Using results from the KINGFISH survey \citep{kennicutt2011}, we were able to show an excess emission was present in the 450$\mu$m observations that was most likely due to calibration issue rather than a physical process in the ISM of NGC3627.}
+
+\item{The results of the SED analysis were tested using two competing dust models calculated by the Planck observation group \citep{planckxxv2011}, Li and Draine \citep{li2001}, and the third model was tested using the opacity values from the Planck model with an emissivity index that was allowed to vary over 5 regions of NGC3627 and the galaxy as a whole.  The results are shown in Tables \ref{tab:beta_1}, \ref{tab:beta_2}, \ref{tab:beta_f}, and \ref{tab:region_vals}.  The calculated temperatures for the entire galaxy are 23$\pm$2 K, 24$\pm$2 K, 22$\pm$1 K, and 22$\pm$2 K for the Planck model, Li and Draine model, free emissivity index, and regional flux, respectively.  The calculated masses using the Planck opacity are 52$\pm$23 M$_\odot$, 73$\pm$31 M$_\odot$, and 75$\pm$28 M$_\odot$ for the Planck model, free emissivity index and regional flux, respectively.  The mass returned for the Li and Draine model is 230$\pm$103 M$_\odot$.  When the emissivity index was allowed to vary the returned values were 2.2$\pm$0.2 and 2.3$\pm$0.3 for the pixel by pixel fits and regional flux, respectively.  The results from the fitting agreed with previous fittings by \cite{galametz2012}.}
+
+\item{There was no observed excess of emission at 850$\mu$m in our fits, which contradict the results of \cite{galametz2014} using 870$\mu$m emission from LABOCA.  The difference in results can be attributed to their handling of the molecular contribution and whether the reduction process of the 870$\mu$m emission preserves extended features.}
+
+\item{Varying dust models used in determining the dust-to-gas ratio showed that the Li and Draine model yielded higher dust-to-gas ratios than the Planck model.  This is due to the Li and Draine model having a higher dust surface density.}
+
+\item{Using either the CO J=1-0 or scaling the CO J=2-1 using a 2-1/1-0 ratio will not effect the dust-to-gas ratio, but will change the conversion factor.  Using the scaled CO J=2-1 emission will provide higher conversation factors because the CO J=1-0 emission will trace more diffuse gas \citep{wilson1990} where atomic hydrogen will be more dominant than its molecular counterpart.}
+
+\item{The gas data with the extended emission removed yielded $\alpha_{CO}$ values typical of U/LIRGs.  This was due to the significant portion of the HI emission that is made up of extended emission.  When using unfiltered gas data, we recovered conversion factors within the vicinity of \cite{sandstrom2013}.  The dust-to-gas ratios however were much smaller than the reported values of \cite{sandstrom2013}.  The lower gas-to-dust ratios is attributed to a larger dust mass that contains not only the cold component we used, but their analysis also include the warm component and PAH contribution.}
+
+\end{enumerate}
+
+Future on the NGC3627 and SCUBA-2 data would include:
+
+\begin{enumerate}
+
+\item{Investing the excess of emission at the 450$\mu$m to determine its source.  If the unphysical excess 450$\mu$m could be found, the resolution of this analysis could be reduced and higher quality SED fitting could take place.}
+
+\item{Implementing a MCMC method to determine an $\alpha_{CO}$ values for each pixel would help to decrease the overall scatter of the dust-to-gas ratio and provide dust-to-gas ratio, $\alpha_{CO}$, and H$_2$ surface density maps to go with the SED fitting maps.  These maps could be used to determine correlations in $\alpha_{CO}$ with parameters returned from the SED fitting.}
+
+\item{Implementing this analysis on other targets in the NGLS catalogue would allow for a large scale  statistical survey over the properties of the dust in the local Universe.}
+
+\end{enumerate}
