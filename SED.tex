@@ -238,7 +238,25 @@ The issue of whether or not the individual pixel fits are reliable for a variabl
 
 \subsection{Comparison with Previous Work}
 
-We can check the validity of our results by comparing them to previous SED fits using the KINGFISH data \citep{galametz2012}.  The best fit parameters from their fitting were T=20.2K$\pm$4K and $\beta$=2.3$\pm$0.2 which agree within error to our results of T=22K$\pm$1K and $\beta$=2.2$\pm$0.2 for a variable emissivity index.  To test agreement with our mass we need to take into account several differences in the two analyses. The differences consist of a lessened flux from the extended structure removal, the opacity values used, and which wavelength was used to calculate the mass.  The easiest approach to check whether our masses agree is to use the parameters found by \cite{galametz2012} with our reduced flux.  In order to lessen the amount of free parameters we can use the Li and Draine model to calcuate a mass.  Using our flux with their fits we get a mass of 276$\pm$59$\times$10$^{5}$ M$_\odot$ which agrees with the our mass of 230$\pm$103$\times$10$^5$ M$_\odot$.
+We can check the validity of our results by comparing them to previous SED fits using the KINGFISH data \citep{galametz2012}.  The best fit parameters from their fitting were T=20.2K$\pm$1.4K and $\beta$=2.3$\pm$0.2 which agree within error to our results of T=22K$\pm$1K and $\beta$=2.2$\pm$0.2 for a variable emissivity index.  The mass reported by \cite{galametz2012} was 7.82$^{+0.80}_{-0.66}\times$10$^7$ M$_\odot$ using the opacity model from Li and Draine, and our reported mass for the region fits was 7.0$\pm$0.5$\times$10$^6$ M$_\odot$ using the Planck opacity.  To test agreement with our mass we need to take into account several differences in the two analyses. The differences consist of a lower flux from the extended structure removal in our data set, the opacity values used, which wavelength was used to calculate the mass, and finally how an increase or decrease in the temperature or emissivity index can effect the mass.  If we start with our equation for the mass, equation \ref{eq:mass}, we can scale our results with the ratio of opacities 
+
+\begin{equation}\label{eq:op_rat}
+  \frac{\kappa_{PL}}{\kappa_{LD}} = \frac{1.000}{0.2665} = 3.752
+\end{equation}
+
+\noindent to convert our regional fit mass from the Planck model to the Li and Draine model.  Secondly, we can take into account the different temperatures by taking the ratio of the blackbodies to get
+
+\begin{equation}\label{eq:bb_rat}
+  \frac{B_{Galametz}\left(T\right)}{B_{Ours}\left(T\right)} = \frac{exp\left(h\nu_{Galametz} / T_{Galametz}\right) - 1}{exp\left(h\nu_{Ours} / T_{Ours}\right) - 1} = 2.533.
+\end{equation}
+
+\noindent Similarily, we can determine how the change in emissivity index will alter mass using 
+
+\begin{equation}\label{eq:beta_rat}
+  \left(\frac{\nu_{Galametz}\,\nu_{0,Ours}}{\nu_{Ours}\,\nu_{0,Galametz}}\right)^{\beta_{Ours}-\beta_{Galametz}} = 0.9162.
+\end{equation}
+
+\noindent We can then multiply our mass with the results of equations \ref{eq:op_rat}, \ref{eq:bb_rat}, \ref{eq:beta_rat}, and include the amount of flux lost from the extended emission removal at 250$\mu$m (Table \ref{tab_obs_kfish}), our mass increases to 7.31$\pm$0.52$\times$10$^7$ M$_\odot$ which agrees with error to what \cite{galametz2012} found.
 
 \subsection{Effects of 850$\mu$m Emission}
 
