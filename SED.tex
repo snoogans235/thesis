@@ -238,29 +238,19 @@ The issue of whether or not the individual pixel fits are reliable for a variabl
 
 \subsection{Comparison with Previous Work}
 
-We can check the validity of our results by comparing them to previous SED fits using the KINGFISH data \citep{galametz2012}.  The best fit parameters from their fitting were T=20.2K$\pm$1.4K and $\beta$=2.3$\pm$0.2 which agree within error to our results of T=22K$\pm$1K and $\beta$=2.2$\pm$0.2 for a variable emissivity index.  The mass reported by \cite{galametz2012} was 7.82$^{+0.80}_{-0.66}\times$10$^7$ M$_\odot$ using the opacity model from Li and Draine, and our reported mass for the region fits was 7.0$\pm$0.5$\times$10$^6$ M$_\odot$ using the Planck opacity.  To test agreement with our mass we need to take into account several differences in the two analyses. The differences consist of a lower flux from the extended structure removal in our data set, the opacity values used, which wavelength was used to calculate the mass, and finally how an increase or decrease in the temperature or emissivity index can effect the mass.  If we start with our equation for the mass, equation \ref{eq:mass}, we can scale our results with the ratio of opacities 
+We can check the validity of our results by comparing them to previous SED fits using the KINGFISH data \citep{galametz2012}.  The best fit parameters from their fitting were T=20.2K$\pm$1.4K and $\beta$=2.3$\pm$0.2 which agree within the uncertainties with our results of T=22K$\pm$1K and $\beta$=2.2$\pm$0.2 for a variable emissivity index.  The mass reported by \cite{galametz2012} was 7.82$^{+0.80}_{-0.66}\times$10$^7$ M$_\odot$ using the opacity model from Li and Draine, and our reported mass for the region fits was 7.0$\pm$0.5$\times$10$^6$ M$_\odot$ using the Planck opacity.  To check the agreement between our mass and that of \cite{galametz2012} we need to take into account several differences in the two analyses. The differences consist of a lower flux from the extended structure removal in our data set, the opacity values used, which wavelength was used to calculate the mass, and finally how an increase or decrease in the temperature or emissivity index can affect the mass.  
 
-\begin{equation}\label{eq:op_rat}
-  \frac{\kappa_{PL}}{\kappa_{LD}} = \frac{1.000}{0.2665} = 3.752
+If we use the equation for mass given in \cite{parkin2012} for Centaurus A, we can extract the distance from the constant to get 
+
+\begin{equation}\label{eq:mass_test}
+  M=364\,D^{2}_{Mpc}S_{250\mu m}\left(exp(57.58 / T) - 1\right)
 \end{equation}
 
-\noindent to convert our regional fit mass from the Planck model to the Li and Draine model.  Secondly, we can take into account the different temperatures by taking the ratio of the blackbodies to get
-
-\begin{equation}\label{eq:bb_rat}
-  \frac{B_{Galametz}\left(T\right)}{B_{Ours}\left(T\right)} = \frac{exp\left(h\nu_{Galametz} / T_{Galametz}\right) - 1}{exp\left(h\nu_{Ours} / T_{Ours}\right) - 1} = 2.533.
-\end{equation}
-
-\noindent Similarily, we can determine how the change in emissivity index will alter mass using 
-
-\begin{equation}\label{eq:beta_rat}
-  \left(\frac{\nu_{Galametz}\,\nu_{0,Ours}}{\nu_{Ours}\,\nu_{0,Galametz}}\right)^{\beta_{Ours}-\beta_{Galametz}} = 0.9162.
-\end{equation}
-
-\noindent We can then multiply our mass with the results of equations \ref{eq:op_rat}, \ref{eq:bb_rat}, \ref{eq:beta_rat}, and include the amount of flux lost from the extended emission removal at 250$\mu$m (Table \ref{tab_obs_kfish}), our mass increases to 7.31$\pm$0.52$\times$10$^7$ M$_\odot$ which agrees with error to what \cite{galametz2012} found.
+\noindent to act as an unbiased litmus for the quality of our fits based on only the temperature and observed flux at 250$\mu$m.  If we compare the results from the global fits of \cite{galametz2012} and our regional flux, we get a mass of 2.29$\times$10$^{7}$ M$_\odot$ with our temperature fit of 22 K and S$_{250\mu m}$=56 Jy from sum of the 250$\mu$m pixels used to generate the maps shown Figure \ref{fig:param_fits}.  Using a the temperature of 20 K and S$_{250\mu m}$ = 96.7 Jy from \cite{galametz2012} give a mass of 5.22$\times$10$^7$ M$_\odot$.  The disagreement in the masses can be attributed to the difference in temperatures, however this will only decrease the mass calculated using the values from \cite{galametz2012} by 25\% which is still higher than our mass.  The lower mass can also be attributed to our lower fluxes which are due to the extended emission removal and any calibration differences between the two data sets as well as any corrections that were applied in \cite{galametz2012} to calculate their flux.  The difference in fluxes will decrease the mass using the information from \cite{galametz2012} by another 42\%, bringing the two masses into agreement.
 
 \subsection{Effects of 850$\mu$m Emission}
 
-The major difference between our work on NGC3627 and the work done in \cite{galametz2012} is the presence of the 850$\mu$m data point.  We tested the effect of the 850$\mu$m data by excluding it from our fits.  The returned values for a variable emissivity index are shown in table \ref{tab:no_850}.  The presence of the 850$\mu$m has little effect on the returned parameters.  
+The major difference between our work on NGC3627 and the work done in \cite{galametz2012} is the presence of the 850$\mu$m data point.  We tested the effect of the 850$\mu$m data by excluding it from our fits.  The returned values for a variable emissivity index are shown in Table \ref{tab:no_850}.  The presence of the 850$\mu$m has little effect on the returned parameters.  
 
 \begin{deluxetable}{ccccc}
   \tablecolumns{5}
@@ -277,7 +267,7 @@ The major difference between our work on NGC3627 and the work done in \cite{gala
   \enddata
 \end{deluxetable}
 
-The absence of a significant change in the returned parameters indicates of a lack of any excess submillimeter emission , which can be indicative of an abundance of a very cold (T $\lesssim$ 10K) dust component \citep{dale2012}.  This excess in emission is typically seen in low-metallicity systems such as dwarf galaxies \citep{madden2011}.  The dwarf galaxies showing an excess typically have a metallicity of log(O/H) + 12 $\lesssim$ 8.3 \citep{remy2013}. An 870$\mu$m excess has also been seen in NGC3627 \citep{galametz2014}, but our results show no excess of emission at 850$\mu$m (evident in Figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5}).  The discrepancy between our results and those of \cite{galametz2014} may be attributed to their treatment of the removal of the CO J=3-2 emission from their data and possibly to how their 870$\mu$m data were processed.  If their image processing method does not remove extended emission unlike to SCUBA-2, then submillimeter excess might be attributed to diffuse emission regions that are absent in our analysis.  However, we would not expect to see any submillimeter excess given that log(O/H) + 12 = 8.99 for NGC3627 \citep{moustakas2010}, well above the estimated threshold where the 850$\mu$m excesses are typically found.
+The absence of a significant change in the returned parameters indicates a lack of any excess submillimeter emission, which can be indicative of an abundance of a very cold (T $\lesssim$ 10K) dust component \citep{dale2012}.  This excess in emission is typically seen in low-metallicity systems such as dwarf galaxies \citep{madden2011}.  The dwarf galaxies showing an excess typically have a metallicity of log(O/H) + 12 $\lesssim$ 8.3 \citep{remy2013}. An 870$\mu$m excess has also been seen in NGC3627 \citep{galametz2014}, but our results show no excess of emission at 850$\mu$m (evident in Figures \ref{fig:w1_5}, \ref{fig:w2_5}, and \ref{fig:wf_5}).  The discrepancy between our results and those of \cite{galametz2014} may be attributed to their treatment of the removal of the CO J=3-2 emission from their data and possibly to how their 870$\mu$m data were processed.  If their image processing method does not remove extended emission (unlike SCUBA-2), then submillimeter excess might be attributed to diffuse emission regions that are absent in our analysis.  However, we would not expect to see any submillimeter excess given that log(O/H) + 12 = 8.99 for NGC3627 \citep{moustakas2010}, well above the estimated threshold where the 850$\mu$m excesses are typically found.
 
 
 %\begin{figure}
