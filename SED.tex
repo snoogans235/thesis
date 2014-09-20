@@ -67,7 +67,50 @@ The fitting procedure was carried out in two different ways on a modified blackb
 
 \subsection{Pixel SED Fits}
 
-In order to generate a parameter map of NGC3627, each individual pixel has its own SED determined from the available wavelengths described in the observations chapter.  The fits are performed over 100$\mu$m, 160$\mu$m, 250$\mu$m, 350$\mu$m, 450$\mu$m or 500$\mu$m, and 850$\mu$m observations.  Initially, we excluded the 500$\mu$m emission in order to increase the resolution of our final maps, but an over abundance of emission in the 450$\mu$m map provided unreliable results, so we exchanged the 450$\mu$m emission with 500$\mu$m emission.  The treatment of the dust emissivity index is performed by fixing it at $\beta=1.8$ for the Planck opacity model where the opacity is $\kappa_{300\mu m,0}=1.0$ m$^2$ kg$^{-1}$ \citep{planckxxv2011} and $\beta=2.0$ for the Li and Draine opacity model where the opacity is $\kappa_{300\mu m,0}=0.2665$ m$^2$ kg$^{-1}$ \citep{li2001}.  A third fit is performed where the emissivity index is allowed to vary as a free parameter.  While the emissivity index is allowed to vary, the opacity being used is the Planck model.  Using either an opacity of 1.0 m$^2$ kg$^{-1}$ or 0.2665 m$^2$ kg$^{-1}$ will not affect the shape of the SED, only its normalizing value.  In the case of our fits, it is the mass that acts as the normalizing value, so increasing or decreasing the opacity will yield the opposite effect in the mass.  The inverse proportionality can be seen in equation \ref{eq:mass}.  
+In order to generate a parameter map of NGC3627, each individual pixel has its own SED determined from the available wavelengths described in the observations chapter.  The fits are performed over 100$\mu$m, 160$\mu$m, 250$\mu$m, 350$\mu$m, 450$\mu$m or 500$\mu$m, and 850$\mu$m observations.  Initially, we excluded the 500$\mu$m emission in order to increase the resolution of our final maps, but an over abundance of emission in the 450$\mu$m map provided unreliable results, so we exchanged the 450$\mu$m emission with 500$\mu$m emission.  The maps used in the SED fitting is shown in Figure \ref{fig:images} where each image has been convolved to the resolution of the 500$\mu$m observations and a 5$\sigma$ cut has been applied.  The treatment of the dust emissivity index is performed by fixing it at $\beta=1.8$ for the Planck opacity model where the opacity is $\kappa_{300\mu m,0}=1.0$ m$^2$ kg$^{-1}$ \citep{planckxxv2011} and $\beta=2.0$ for the Li and Draine opacity model where the opacity is $\kappa_{300\mu m,0}=0.2665$ m$^2$ kg$^{-1}$ \citep{li2001}.  A third fit is performed where the emissivity index is allowed to vary as a free parameter.  While the emissivity index is allowed to vary, the opacity being used is the Planck model.  Using either an opacity of 1.0 m$^2$ kg$^{-1}$ or 0.2665 m$^2$ kg$^{-1}$ will not affect the shape of the SED, only its normalizing value.  In the case of our fits, it is the mass that acts as the normalizing value, so increasing or decreasing the opacity will yield the opposite effect in the mass.  The inverse proportionality can be seen in equation \ref{eq:mass}.  
+
+\begin{figure}
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.\linewidth, angle=270]{sed_imgs/100_sed.eps}
+%    \caption{100$\mu$m Observations}
+  \end{subfigure}
+  \quad
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.\linewidth, angle=270]{sed_imgs/160_sed.eps}
+%    \caption{160$\mu$m Observations}
+  \end{subfigure}
+  
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.\linewidth, angle=270]{sed_imgs/250_sed.eps}
+%    \caption{250$\mu$m Observation}
+  \end{subfigure}
+  \quad
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.\linewidth, angle=270]{sed_imgs/350_sed.eps}
+%    \caption{350$\mu$m Observation}
+  \end{subfigure}
+  
+  \caption[NGC3627 Observations Used in SED Fitting]{Observation of NGC3627 used for SED fitting.  Each of the images is on a 8$\arcsec$ by 8$\arcsec$ grid and has been convolved to 36.0$\arcsec$ with a 5$\sigma$ cut applied.  The contours for each image are 20\%, 40\%, 60\%, and 80\%.} 
+  \label{fig:images}
+\end{figure}  
+
+\begin{figure}
+  \ContinuedFloat 
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth,angle=270]{sed_imgs/500_sed.eps}
+  \end{subfigure}
+  \quad
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=1.\textwidth,angle=270]{sed_imgs/850_sed.eps}
+  \end{subfigure}
+  \caption{(continued)}
+\end{figure}
 
 The quality of the fit using the 450$\mu$m observations for the Li and Draine model of $\beta$=2 and $\kappa_{\nu,300}$=0.2665 is shown in Figure \ref{fig:w2_4}.  The quality of the fit is determined by how well the expected flux from the SED fitting matches the observed flux.  If the fits are able to recreate the observed emission, then all of the points will lie on the line $y=x$ shown in the plots as a black line.  If the SED is underestimating the flux, the points will appear below the 1 to 1 line, and an over estimation from the SED will result in points above the line.  
 
@@ -238,7 +281,7 @@ The issue of whether or not the individual pixel fits are reliable for a variabl
 
 \subsection{Comparison with Previous Work}
 
-We can check the validity of our results by comparing them to previous SED fits using the KINGFISH data \citep{galametz2012}.  The best fit parameters from their fitting were T=20.2K$\pm$1.4K and $\beta$=2.3$\pm$0.2 which agree within the uncertainties with our results of T=22K$\pm$1K and $\beta$=2.2$\pm$0.2 for a variable emissivity index.  The mass reported by \cite{galametz2012} was 7.82$^{+0.80}_{-0.66}\times$10$^7$ M$_\odot$ using the opacity model from Li and Draine, and our reported mass for the region fits was 7.0$\pm$0.5$\times$10$^6$ M$_\odot$ using the Planck opacity.  To check the agreement between our mass and that of \cite{galametz2012} we need to take into account several differences in the two analyses. The differences consist of a lower flux from the extended structure removal in our data set, the opacity values used, which wavelength was used to calculate the mass, and finally how an increase or decrease in the temperature or emissivity index can affect the mass.  
+We can check the validity of our results by comparing them to previous SED fits using the KINGFISH data \citep{galametz2012}.  Their best fit parameters from were T=20.2K$\pm$1.4K and $\beta$=2.3$\pm$0.2 which agree within the uncertainties with our results of T=22K$\pm$1K and $\beta$=2.2$\pm$0.2 for a variable emissivity index.  However, the mass reported by \cite{galametz2012} was 7.82$^{+0.80}_{-0.66}\times$10$^7$ M$_\odot$ using the opacity model from Li and Draine, and our reported mass for the region fits was 7.0$\pm$0.5$\times$10$^6$ M$_\odot$ using the Planck opacity.  To check the agreement between our mass and that of \cite{galametz2012} we need to take into account several differences in the two analyses. The differences consist of a lower flux from the extended structure removal in our data set, the opacity values used, which wavelength was used to calculate the mass, and finally how an increase or decrease in the temperature or emissivity index can affect the mass.  
 
 If we use the equation for mass given in \cite{parkin2012} for Centaurus A, we can extract the distance from the constant to get 
 
@@ -246,7 +289,7 @@ If we use the equation for mass given in \cite{parkin2012} for Centaurus A, we c
   M=364\,D^{2}_{Mpc}S_{250\mu m}\left(exp(57.58 / T) - 1\right)
 \end{equation}
 
-\noindent to act as an unbiased litmus for the quality of our fits based on only the temperature and observed flux at 250$\mu$m.  If we compare the results from the global fits of \cite{galametz2012} and our regional flux, we get a mass of 2.29$\times$10$^{7}$ M$_\odot$ with our temperature fit of 22 K and S$_{250\mu m}$=56 Jy from sum of the 250$\mu$m pixels used to generate the maps shown Figure \ref{fig:param_fits}.  Using a the temperature of 20 K and S$_{250\mu m}$ = 96.7 Jy from \cite{galametz2012} give a mass of 5.22$\times$10$^7$ M$_\odot$.  The disagreement in the masses can be attributed to the difference in temperatures, however this will only decrease the mass calculated using the values from \cite{galametz2012} by 25\% which is still higher than our mass.  The lower mass can also be attributed to our lower fluxes which are due to the extended emission removal and any calibration differences between the two data sets as well as any corrections that were applied in \cite{galametz2012} to calculate their flux.  The difference in fluxes will decrease the mass using the information from \cite{galametz2012} by another 42\%, bringing the two masses into agreement.
+\noindent tWe use equation \ref{eq:mass_test} for a simple comparison of our fit with that of \cite{galametz2012} based on only the temperature and observed flux at 250$\mu$m.  With our regional flux, we get a mass of 2.29$\times$10$^{7}$ M$_\odot$ using our temperature of 22 K and S$_{250\mu m}$=56 Jy from the sum of the 250$\mu$m pixels used to generate the maps shown in Figure \ref{fig:param_fits}.  Using the temperature of 20 K and S$_{250\mu m}$ = 96.7 Jy from \cite{galametz2012} gives a mass of 5.22$\times$10$^7$ M$_\odot$.  The disagreement in the masses can be partly attributed to the difference in temperatures; however, this will only decrease the mass calculated using the values from \cite{galametz2012} by 25\% which still leaves their mass higher than our mass.  The lower mass can also be attributed to our lower fluxes which are due to the extended emission removal and any calibration differences between the two data sets as well as any corrections that were applied in \cite{galametz2012} to calculate their flux.  The difference in fluxes will decrease the mass using the information from \cite{galametz2012} by another 42\%, bringing the two masses into agreement.
 
 \subsection{Effects of 850$\mu$m Emission}
 
