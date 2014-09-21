@@ -19,7 +19,14 @@ MAKEMAP breaks down the image creation into several steps performed in iteration
 
 \noindent such that $b_i(t)$ is the i$^{th}$ bolometer output at time t, $f$ is a scaling factor determined from flat field calibrations, $e_i(t)$ is the extinction at time t for the i$^{th}$ bolometer, $a_i(t)$ is the astronomical signal for i$^{th}$ bolometer at time t,  $g_i*n_c(t)$ is the noise due to the product of the common mode and gain,  $n_f(t)$ is the low-frequency noise, and  $n_r(t)$ is the random noise from the atmosphere or thermal variations in the equipment \citep{chapin2013}.
 
-The steps used in MAKEMAP are designed so they can estimate each noise component of the bolometer signal.  The COM and GAI steps estimate a common mode signal by fitting the average time-series of each bolometer observation.  The next step is EXT, which is used to apply the measured extinction corrections.  Following EXT is FLT to apply high- and low-pass filters to remove any noise features not removed in the COM and GAI filtering.  After the high- and low-pass filters, the AST step is performed.  AST converts the data from a time series to an image and detects sources to be removed from reduction.  The sources removed during this portion of MAKEMAP are intended to be astronomical in nature.  The final step is NOI which determines the noise in the gridded map after each step has been performed and is calculated by isolating the white noise component in equation \ref{eq:sc2_raw}.  A convergence check is then done based on the magnitude of change in each pixel from the previous map and the current version.  If the check fails, the COM, GAI, EXT, and FLT values are recalculated using the AST information obtained from the previous iteration, and the process is repeated until the convergence values are met or the maximum number of iterations has been carried out \citep{chapin2013}.  Creating the data was done locally using scripts to implement MAKEMAP.
+The steps used in MAKEMAP are designed so they can estimate each noise component of the bolometer signal.  The COM and GAI steps estimate a common mode signal by fitting the average time-series of each bolometer observation.  The next step is EXT, which is used to apply the measured extinction corrections.  Following EXT is FLT to apply high- and low-pass filters to remove any noise features not removed in the COM and GAI filtering.  After the high- and low-pass filters, the AST step is performed.  AST converts the data from a time series to an image and detects sources to be removed from reduction.  The sources removed during this portion of MAKEMAP are intended to be astronomical in nature.  The final step is NOI which determines the noise in the gridded map after each step has been performed and is calculated by isolating the white noise component in equation \ref{eq:sc2_raw}.  A convergence check is then done based on the magnitude of change in each pixel from the previous map and the current version.  If the check fails, the COM, GAI, EXT, and FLT values are recalculated using the AST information obtained from the previous iteration, and the process is repeated until the convergence values are met or the maximum number of iterations has been carried out \citep{chapin2013}.  A diagram of the steps is shown in Figure \ref{fig:flow} inspired by the flowchart in \cite{chapin2013}.  Creating the data was done locally using scripts to implement MAKEMAP.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{obs_imgs/makemap_flow.jpg}
+  \caption[Iterative Steps Used In MAKEMAP]{The iterative steps taken to create SCUBA-2 data using MAKEMAP.  Inspired by the diagram in \cite{chapin2013}.}
+  \label{fig:flow}
+\end{figure}
 
 In our production of maps, we used the configuration file dimmconfig\_bright \_compact.lis and altered the AST and FLT sections of the image creation by introducing a mask made from Herschel's 250$\mu$m map.  The purpose of the mask was to exclude the target from interfering with the noise minimization as well as to keep any emission from the galaxy from being significantly altered during image production.  The filter size of the high-pass filter was also modified, and an appropriate value was determined to be 175$\arcsec$.  We determined an appropriate high-pass filter size by running a large range of filters from 100$\arcsec$ to 300$\arcsec$ and inspecting the total recovered flux of NGC3627.  A plot of the returned flux values can be seen in Figure \ref{filt_lines}.  A good filter would not show any significant decrease in flux compared to the 350$\mu$m or 500$\mu$m fluxes.  This requirement removes any filters greater than 200$\arcsec$.  Given the flux was nearly constant with filters less than 200$\arcsec$, we chose an appropriate filter size by examining the structure that was returned, in particular how well the spiral arms were recovered for the 850$\mu$m image, and how well the disk was preserved in the 450$\mu$m image.  The spatial effect of the filters can be seen in Figure \ref{450_flt} for 450$\mu$m and Figure \ref{850_flt} for 850$\mu$m.  The maps were returned from MAKEMAP in units of pW with a pixel size of 2$\arcsec$ by 2$\arcsec$ for both the 450$\mu$m and 850$\mu$m.
 
@@ -144,7 +151,7 @@ The Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGSF
 
 \subsection{Nearby Galaxies Legacy Survey (NGLS)}
 
-The Nearby Galaxies Legacy Survey is an HI-selected set of 155 galaxies contained with distances between 2 and 25 Mpc observed using the instrumentation on the JCMT \citep{wilson2012}.  The NGLS consists of multiwavelenght data that include the 450$\mu$m and 850$\mu$m data used for this thesis.  As mentioned previously, the bandpass for SCUBA-2's 850$\mu$m emission contains the CO J=3-2 line which is contained in the NGLS data set.  We used the zeroth moment CO J=3-2 maps from the NGLS to determine the percentage of CO J=3-2 emission present in the 850$\mu$m band as well as removing it for an accurate SED analysis.  The rms and resolution of the CO J=3-2 emission are shown in Table \ref{tab_obs_NGLS} for 8$\arcsec$ by 8 $\arcsec$ pixels, and the scan prior to convolution is shown in Figure \ref{fig_co32}.
+The Nearby Galaxies Legacy Survey is an HI-selected set of 155 galaxies contained with distances between 2 and 25 Mpc observed using the instrumentation on the JCMT \citep{wilson2012}.  The NGLS consists of multiwavelenght data that include the 450$\mu$m and 850$\mu$m data used for this thesis.  As mentioned previously, the bandpass for SCUBA-2's 850$\mu$m emission contains the CO J=3-2 line which is contained in the NGLS data set.  We used the zeroth moment CO J=3-2 maps from the NGLS to determine the percentage of CO J=3-2 emission present in the 850$\mu$m band as well as removing it for an accurate SED analysis.  The rms and resolution of the CO J=3-2 emission are shown in Table \ref{tab_obs_gas} for 8$\arcsec$ by 8 $\arcsec$ pixels, and the scan prior to convolution is shown in Figure \ref{fig_co32}.
 
 \begin{figure}
   \centering
@@ -156,11 +163,14 @@ The Nearby Galaxies Legacy Survey is an HI-selected set of 155 galaxies containe
 \begin{deluxetable}{cccc}
   \tablecolumns{4}
   \tablewidth{0pt}
-  \tablecaption{Properties of NGC3627 NGLS Observations\label{tab_obs_NGLS}}
+  \tablecaption{Properties of NGC3627 Gas Observations\label{tab_obs_gas}}
   \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
- & $\theta_{beam}$ & \it{[mJy/Pixel]}}
+ & $\theta_{beam}$ & }
   \startdata
-    CO J=3-2 & 14.5$\arcsec$ & 1.28e-2& 29.8\% \\
+    CO J=1-0 & 15.0$\arcsec$ & 0.681 [K km s$^{-1}$]& 20\% \\
+    CO J=2-1 & 13.0$\arcsec$ & 0.305 [K km s$^{-1}$]& 7\% \\    
+    CO J=3-2 & 14.5$\arcsec$ & 1.28e-2 [mJy pixel$^{-1}$]& 29.8\% \\
+    HI & 10.6$\arcsec$ $\times$ 8.85$\arcsec$ & 0.760 [M$_\odot$ pc$^{-2}$]& $>$99\% \\
   \enddata
 \end{deluxetable}
 
@@ -168,7 +178,7 @@ The Nearby Galaxies Legacy Survey is an HI-selected set of 155 galaxies containe
 
 \subsection{Nobeyama 45-m}\label{nob_sec}
 
-Determining a dust-to-gas ratio requires a molecular tracer to estimate the amount of molecular hydrogen present.  The most frequently used tracer is CO J=1-0 due to its abundance in the ISM.  The CO J=1-0 data were obtained from the Nobeyama 45-m CO Atlas of Nearby Spiral Galaxies \citep{kuno2007}.  The Nobeyama 45-m CO Atlas consists of galaxies with morphologies ranging from Sa to Scd, located less than 25Mpc from the Milky Way, inclination values less than $79^{\circ}$, 100$\mu$m flux greater than 10Jy, and spiral structure that has not been compromised through interactions.  Any galaxies that met these criteria were then observed with the Nobeyama 45-m telescope \citep{kuno2007}.  The beam sizes and rms of the filtered CO J=1-0 map are displayed in Table \ref{tab_obs_n45} for 8$\arcsec$ by 8$\arcsec$ pixels, and the final image product can be seen in Figure \ref{fig_co10}.
+Determining a dust-to-gas ratio requires a molecular tracer to estimate the amount of molecular hydrogen present.  The most frequently used tracer is CO J=1-0 due to its abundance in the ISM.  The CO J=1-0 data were obtained from the Nobeyama 45-m CO Atlas of Nearby Spiral Galaxies \citep{kuno2007}.  The Nobeyama 45-m CO Atlas consists of galaxies with morphologies ranging from Sa to Scd, located less than 25Mpc from the Milky Way, inclination values less than $79^{\circ}$, 100$\mu$m flux greater than 10Jy, and spiral structure that has not been compromised through interactions.  Any galaxies that met these criteria were then observed with the Nobeyama 45-m telescope \citep{kuno2007}.  The beam sizes and rms of the filtered CO J=1-0 map are displayed in Table \ref{tab_obs_gas} for 8$\arcsec$ by 8$\arcsec$ pixels, and the final image product can be seen in Figure \ref{fig_co10}.
 
 \begin{figure}
   \centering
@@ -177,20 +187,20 @@ Determining a dust-to-gas ratio requires a molecular tracer to estimate the amou
   \label{fig_co10}
 \end{figure}
 
-\begin{deluxetable}{cccc}
-  \tablecolumns{4}
-  \tablewidth{0pt}
-  \tablecaption{Properties of NGC3627 Nobeyama 45-m Observations\label{tab_obs_n45}}
-  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\ 
-  & $\theta_{beam}$ & \it{[K km/s]}}
-  \startdata
-    CO J=1-0 & 15.0$\arcsec$ & 0.681 & 20\% \\
-  \enddata
-\end{deluxetable}
+%\begin{deluxetable}{cccc}
+%  \tablecolumns{4}
+%  \tablewidth{0pt}
+%  \tablecaption{Properties of NGC3627 Nobeyama 45-m Observations\label{tab_obs_n45}}
+%  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & %\colhead{Percentage of Emission Removed} \\ 
+%  & $\theta_{beam}$ & \it{[K km/s]}}
+%  \startdata
+%    CO J=1-0 & 15.0$\arcsec$ & 0.681 & 20\% \\
+%  \enddata
+%\end{deluxetable}
 
 \subsection{Hetrodyne Receiver Array CO-Line Extragalactic Survey (HERACLES)}
 
-The CO J=2-1 line was used to determine a CO ${2-1} / {1-0}$ line ratio which can be used to trace a gradient in $\alpha_{CO}$ and hint towards regions of high star formation \citep{reuter1996}.  We used the CO J=1-0 data from the Nobeyama 45-m telescope ($\S$ \ref{nob_sec}), and CO J=2-1 from the Hetrodyne Reciever Array CO-Line Extragalactic Survey (HERACLES) using the IRAM 30-m telescope.  The main goal of HERACLES was to quantify the relationship between atomic and molecular gas and star formation using a large sample of galaxies \citep{leroy2009}.  The galaxies chosen were targets contained in THINGS that were within the observing limits of the IRAM 30-m telescope.  The final CO J=2-1 image can be seen in Figure \ref{fig_co21} and the image properties can be seen in Table \ref{tab_obs_heracles} with 8$\arcsec$ by 8$\arcsec$ pixels.
+The CO J=2-1 line was used to determine a CO ${2-1} / {1-0}$ line ratio which can be used to trace a gradient in $\alpha_{CO}$ and hint towards regions of high star formation \citep{reuter1996}.  We used the CO J=1-0 data from the Nobeyama 45-m telescope ($\S$ \ref{nob_sec}), and CO J=2-1 from the Hetrodyne Reciever Array CO-Line Extragalactic Survey (HERACLES) using the IRAM 30-m telescope.  The main goal of HERACLES was to quantify the relationship between atomic and molecular gas and star formation using a large sample of galaxies \citep{leroy2009}.  The galaxies chosen were targets contained in THINGS that were within the observing limits of the IRAM 30-m telescope.  The final CO J=2-1 image can be seen in Figure \ref{fig_co21} and the image properties can be seen in Table \ref{tab_obs_gas} with 8$\arcsec$ by 8$\arcsec$ pixels.
 
 \begin{figure}
   \centering
@@ -200,26 +210,26 @@ The CO J=2-1 line was used to determine a CO ${2-1} / {1-0}$ line ratio which ca
   \label{fig_co21}
 \end{figure}
 
-\begin{deluxetable}{cccc}
-  \tablecolumns{4}
-  \tablewidth{0pt}
-  \tablecaption{Properties of NGC3627 HERACLES Observations\label{tab_obs_heracles}}
-  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
-  & $\theta_{beam}$ & \it{[K km/s]}}
-  \startdata
-    CO J=2-1 & 13.0$\arcsec$ & 0.305 & 7\% \\
-  \enddata
-\end{deluxetable}
+%\begin{deluxetable}{cccc}
+%  \tablecolumns{4}
+%  \tablewidth{0pt}
+%  \tablecaption{Properties of NGC3627 HERACLES Observations\label{tab_obs_heracles}}
+%  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
+%  & $\theta_{beam}$ & \it{[K km/s]}}
+%  \startdata
+%    CO J=2-1 & 13.0$\arcsec$ & 0.305 & 7\% \\
+%  \enddata
+%\end{deluxetable}
 
 \subsection{The HI Nearby Galaxy Survey (THINGS)}
 
-To determine the gas-to-dust ratio we had to determine the total amount of gas present which includes both atomic and molecular hydrogen.  We approximated the amount of molecular hydrogen by using CO J=1-0, and measured the amount of atomic hydrogen (HI) present from The HI Nearby Galaxy Survey (THINGS) designed to observe HI emission in nearby galaxies with the extreme spatial resolution of the Very Large Array (VLA).  Targets in THINGS included many of the SINGS targets with the exception of known HI poor sources (E/S0 type galaxies), dynamically complex systems (edge-on spirals), and large extended galaxies found in the Local Group \citep{walter2008}.  The resolution and rms of the filtered image are shown in Table \ref{tab_obs_things} for 8$\arcsec$ by 8$\arcsec$ pixels.  The final data product is shown in Figure \ref{fig_HI} and has been converted to M$_\odot$ pc$^{-2}$ using 
+To determine the gas-to-dust ratio we had to determine the total amount of gas present which includes both atomic and molecular hydrogen.  We approximated the amount of molecular hydrogen by using CO J=1-0, and measured the amount of atomic hydrogen (HI) present from The HI Nearby Galaxy Survey (THINGS) designed to observe HI emission in nearby galaxies with the extreme spatial resolution of the Very Large Array (VLA).  Targets in THINGS included many of the SINGS targets with the exception of known HI poor sources (E/S0 type galaxies), dynamically complex systems (edge-on spirals), and large extended galaxies found in the Local Group \citep{walter2008}.  The resolution and rms of the filtered image are shown in Table \ref{tab_obs_gas} for 8$\arcsec$ by 8$\arcsec$ pixels.  The final data product is shown in Figure \ref{fig_HI} and has been converted to M$_\odot$ pc$^{-2}$ using 
 
 \begin{equation}\label{eq:things_surf_den}
   M_{HI}\left[ M_\odot \right]=2.36 \times 10^5 D^2 \times \sum_{i}S_i\Delta v
 \end{equation}
 
-\noindent \citep{walter2008} and then dividing by the pixel area in pc$^2$ where D is the distance, and $\sum_{i}$S$_i\Delta$v is the first moment of the flux.  Since most of the HI emission is diffuse and extended, the filtering process removed nearly all of the HI features.  The removal of most of the HI resulted in a severe depression feature resempling a bowl in the middle of the map around the galaxy that was lower than the mean background value of the map.  The bowling effect ended up furthur lowering the surface densities of the final maps by lowering the peak value and removing a significant fraction of the surface density.
+\noindent \citep{walter2008} and then dividing by the pixel area in pc$^2$ where D is the distance, and $\sum_{i}$S$_i\Delta$v is the first moment of the flux.  Since most of the HI emission is diffuse and extended, the filtering process removed nearly all of the HI features.  The removal of most of the HI resulted in a severe depression feature resampling a bowl in the middle of the map around the galaxy that was lower than the mean background value of the map.  The bowling effect ended up further lowering the surface densities of the final maps by lowering the peak value and removing a significant fraction of the surface density.
 
 \begin{figure}
   \centering
@@ -228,20 +238,20 @@ To determine the gas-to-dust ratio we had to determine the total amount of gas p
   \label{fig_HI}
 \end{figure}
 
-\begin{deluxetable}{cccccc}
-  \tablecolumns{6}
-  \tablewidth{0pt}
-  \tablecaption{Properties of NGC3627 THINGS Observations\label{tab_obs_things}}
-  \tablehead{\colhead{Observation} & \multicolumn{3}{c}{Beam Properties} & \colhead{RMS} & \colhead{Percentage of Surface Density Removed} \\
-   & $\theta_{maj}$ & $\theta_{min}$ & $\theta_{PA}$ & \it{[$M_{\odot} / pc^2$]}}
-  \startdata
-    HI & 10.6$\arcsec$ & 8.85$\arcsec$ & -48.0$^\circ$ & 0.760 & $>$99\% \\  
-  \enddata
-\end{deluxetable}
+%\begin{deluxetable}{cccccc}
+%  \tablecolumns{6}
+%  \tablewidth{0pt}
+%  \tablecaption{Properties of NGC3627 THINGS Observations\label{tab_obs_things}}
+%  \tablehead{\colhead{Observation} & \multicolumn{3}{c}{Beam Properties} & \colhead{RMS} & \colhead{Percentage of Surface Density Removed} \\
+%   & $\theta_{maj}$ & $\theta_{min}$ & $\theta_{PA}$ & \it{[$M_{\odot} / pc^2$]}}
+%  \startdata
+%    HI & 10.6$\arcsec$ & 8.85$\arcsec$ & -48.0$^\circ$ & 0.760 & $>$99\% \\  
+%  \enddata
+%\end{deluxetable}
 
 \section{Data Preparation for Analysis}\label{data_agree}
 
-Looking at Figures \ref{fig_450}, \ref{fig_850} and comparing them with the ancillary data images in Figures \ref{fig_100}-\ref{fig_HI} it is clear the data do not agree completely even with their extended sructure removed.  Other than the presence of the large scale/extended structure prior to filtering, the main difference between each image is its resolution, in particular the beam shape of the 450$\mu$m data.  We have taken several steps to correct for these disagreements and maximize the compatibility of the data.  In order to account for the varying beam resolutions, we use a gaussian convolution to degrade the resolution of our maps to the largest beam size in our dataset, $\sigma_{max}$=36$\arcsec$.  An appropriate convolution beam width is determined by 
+Looking at Figures \ref{fig_450}, \ref{fig_850} and comparing them with the ancillary data images in Figures \ref{fig_100}-\ref{fig_HI} it is clear the data do not agree completely even with their extended structure removed.  Other than the presence of the large scale/extended structure prior to filtering, the main difference between each image is its resolution, in particular the beam shape of the 450$\mu$m data.  We have taken several steps to correct for these disagreements and maximize the compatibility of the data.  In order to account for the varying beam resolutions, we use a gaussian convolution to degrade the resolution of our maps to the largest beam size in our dataset, $\sigma_{max}$=36$\arcsec$.  An appropriate convolution beam width is determined by 
 
 \begin{equation}\label{eq:gaus_kern}
   \sigma_{desire} = \sqrt{\sigma_{max}^2 - \sigma_{given}^2}
@@ -279,7 +289,7 @@ Preparing the data to be added via fakemap consists of either converting the ima
 
 The data used in the SED fitting (KINGFISH and NGLS) were scaled to pW so they could have a similar reduction and calibration process as the SCUBA-2 maps.   The KINGFISH data are regridded to a 2$\arcsec$ by 2$\arcsec$ pixel size and have the appropriate calibration factor from \cite{dempsey2013} applied to convert from either MJy/sr to pW in the case of the 250$\mu$m, 350$\mu$m, and 500$\mu$m or from Jy/pixel to pW for the 100$\mu$m and 160$\mu$m.  Converting the CO J=3-2 data requires the final product to be in the same units as the 850$\mu$m observations in order to properly remove the molecular gas contribution.  Converting from K km/s to mJy/beam involves applying a scaling constant of 0.70 [mJy/beam][K km/s]$^{-1}$ \citep{drabek2012} prior to applying the 850$\mu$m flux calibration factor to convert to pW.  
 
-After the data has been converted to pW, the image used in fakemap is then scaled down to the same order of magnitude as the base image using a scaling factor specified prior to the map production.  After the fakemap image has been processed and the 850$\mu$m map subtracted, the maps are scaled back up using the same scaling factor used to scale them down and calibrated using the same flux calibration factors as the 850$\mu$m map and scaled to an 8$\arcsec$ by 8$\arcsec$ grid.  The amount of extended flux lost from the KINGFISH and NGLS images is shown in Tables \ref{tab_obs_kfish} and \ref{tab_obs_NGLS}.  This process is illustrated in Figure \ref{fig_100_transform} from the original Herschel 100$\mu$m map, to the final image used in SED fitting convolved to the 500$\mu$m beam resolution, 36.0$\arcsec$.
+After the data has been converted to pW, the image used in fakemap is then scaled down to the same order of magnitude as the base image using a scaling factor specified prior to the map production.  After the fakemap image has been processed and the 850$\mu$m map subtracted, the maps are scaled back up using the same scaling factor used to scale them down and calibrated using the same flux calibration factors as the 850$\mu$m map and scaled to an 8$\arcsec$ by 8$\arcsec$ grid.  The amount of extended flux lost from the KINGFISH and NGLS images is shown in Tables \ref{tab_obs_kfish} and \ref{tab_obs_gas}.  This process is illustrated in Figure \ref{fig_100_transform} from the original Herschel 100$\mu$m map, to the final image used in SED fitting convolved to the 500$\mu$m beam resolution, 36.0$\arcsec$.
 
 \begin{figure}
   \centering
@@ -311,7 +321,7 @@ After the data has been converted to pW, the image used in fakemap is then scale
 \end{figure}
   
 
-The rest of the ancillary data are used in calculating a dust to gas ratio, and follow nearly the same process as the SED data filtering.  The major difference is the CO J=1-0, CO J=2-1 and HI maps need to remain in their original units of K km/s and M$_\odot$/pc$^2$.  This requirement simplified the process by only requiring a scaling factor of 0.001 to be applied to the original maps.  After the image is scaled, it is filtered using the fakesource option in MAKEMAP with the 850$\mu$m observation as the base image.  The atomic and molecular gas maps were then isolated in the same fashion as the KINGFISH and NGLS by subtracting the 850$\mu$m map.  Then they were rescaled back to their original values, fit to an 8$\arcsec$ by 8$\arcsec$ grid and finally convolved to a 36.0$\arcsec$ resolution.  The process is illustrated in Figure \ref{fig_HI_transform}.  The amount of emission lost is shown in tables \ref{tab_obs_n45}, \ref{tab_obs_heracles}, and \ref{tab_obs_things}.
+The rest of the ancillary data are used in calculating a dust to gas ratio, and follow nearly the same process as the SED data filtering.  The major difference is the CO J=1-0, CO J=2-1 and HI maps need to remain in their original units of K km/s and M$_\odot$/pc$^2$.  This requirement simplified the process by only requiring a scaling factor of 0.001 to be applied to the original maps.  After the image is scaled, it is filtered using the fakesource option in MAKEMAP with the 850$\mu$m observation as the base image.  The atomic and molecular gas maps were then isolated in the same fashion as the KINGFISH and NGLS by subtracting the 850$\mu$m map.  Then they were rescaled back to their original values, fit to an 8$\arcsec$ by 8$\arcsec$ grid and finally convolved to a 36.0$\arcsec$ resolution.  The process is illustrated in Figure \ref{fig_HI_transform}.  The amount of emission lost is shown in tables \ref{tab_obs_gas}.
 
 \begin{figure}
   \centering

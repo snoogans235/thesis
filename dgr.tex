@@ -2,7 +2,7 @@
 
 \section{Minimizing the Scatter in the Dust-to-Gas Ratio}
 
-In order to determine the amount of molecular hydrogen present, we have chosen to use the dust based method to determine the CO-to-H$_2$ conversion factor.  In our analysis we have used the conversion factor $\alpha_{CO}$ which will return the amount of molecular hydrogen present in units of surface density.  Calculating the amount of molecular hydrogen present with this method involves minimizinging the scatter in the dust to gas ratio for a collection of pixels in a region.  The dust-to-gas ratio is calculated using
+In order to determine the amount of molecular hydrogen present, we have chosen to use the dust based method to determine the CO-to-H$_2$ conversion factor.  In our analysis we have used the conversion factor $\alpha_{CO}$ which will return the amount of molecular hydrogen present in units of surface density.  Calculating the amount of molecular hydrogen present with this method involves minimizing the scatter in the dust to gas ratio for a collection of pixels in a region.  The dust-to-gas ratio is calculated using
 
 \begin{equation}\label{eq:dgr}
   \delta_{DGR} = \frac{\Sigma_{dust}}{I_{CO}*\alpha_{CO} + \Sigma_{HI}}
@@ -19,13 +19,13 @@ The results using the Planck model with the CO J=1-0 line are shown in Figure \r
 \begin{figure}%\label{fig:dgr_co10}
   \begin{subfigure}[t]{1\textwidth}
     \centering
-    \includegraphics[width=1.\textwidth]{dgr_imgs/region_1_aco_output_10.eps}
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_1_aco_output_10f.eps}
     \caption{Region 1}
   \end{subfigure}
 
   \begin{subfigure}[t]{1\textwidth}
     \centering
-    \includegraphics[width=1.\textwidth]{dgr_imgs/region_2_aco_output_10.eps}
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_2_aco_output_10f.eps}
     \caption{Region 2}
   \end{subfigure}
    \caption[Dust-to-Gas Ratio Determination Plots for CO J=1-0]{Plots of the dust-to-gas ratio vs the H$_2$ to HI surface density using the best fit $\alpha_{CO}$ (left) and the scatter in the dust-to-gas ratio as a function of $\alpha_{CO}$ (right).  Each parameter was calculated using the CO J=1-0 line and the Planck dust model.}
@@ -36,14 +36,14 @@ The results using the Planck model with the CO J=1-0 line are shown in Figure \r
   \ContinuedFloat
   \begin{subfigure}[t]{1\textwidth}
     \centering
-    \includegraphics[width=1.\textwidth]{dgr_imgs/region_3_aco_output_10.eps}
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_3_aco_output_10f.eps}
     \caption{Region 3}
     \label{fig:dgr_co10_3}
   \end{subfigure}
 
   \begin{subfigure}[t]{1\textwidth}
     \centering
-    \includegraphics[width=1.\textwidth]{dgr_imgs/region_4_aco_output_10.eps}
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_4_aco_output_10f.eps}
     \caption{Region 4}
   \end{subfigure}
    \caption{(continued)}
@@ -54,13 +54,13 @@ The results using the Planck model with the CO J=1-0 line are shown in Figure \r
   \ContinuedFloat
   \begin{subfigure}[t]{1\textwidth}
     \centering
-    \includegraphics[width=1.\textwidth]{dgr_imgs/region_5_aco_output_10.eps}
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_5_aco_output_10f.eps}
     \caption{Region 5}
   \end{subfigure}
 
   \begin{subfigure}[t]{1\textwidth}
     \centering
-    \includegraphics[width=1.\textwidth]{dgr_imgs/region_6_aco_output_10.eps}
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_6_aco_output_10f.eps}
     \caption{Region 6}
   \end{subfigure}
    \caption{(continued)}
@@ -71,7 +71,7 @@ The results using the Planck model with the CO J=1-0 line are shown in Figure \r
   \ContinuedFloat
   \begin{subfigure}[t]{1\textwidth}
     \centering
-    \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_output_10.eps}
+    \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_output_10f.eps}
     \caption{Region 1 Without the Nucleus}
   \end{subfigure}
   \caption{(Continued)}
@@ -119,7 +119,7 @@ The results using the Planck model with the CO J=1-0 line are shown in Figure \r
 
 \begin{figure}
   \centering
-  \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_dgr.eps}
+  \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_dgrf.eps}
   \caption[Mean Dust-to-Gas Ratio vs $\alpha_{CO}$]{The dust-to-gas ratio as a function of $\alpha_{CO}$ in region 1 without the nucleus.  The dust model used is the Planck model with CO J=1-0 as the molecular gas tracer.}
   \label{fig:aco_dgr}
 \end{figure}
@@ -167,15 +167,15 @@ While CO J=1-0 is the standard molecular tracer of H$_2$ \citep{bolatto2013}, th
 
 \section{Effects of the Dust Model and CO Treatment}
 
-The effects of the dust model (Planck vs Li and Draine) are mainly seen in the dust-to-gas ratio for the CO J=1-0 emission.  Since the major difference in the two models was the resulting dust mass, it is reasonable that the Li and Draine model produces larger dust-to-gas ratios.  The values of $\alpha_{CO}$ derived from the two dust models agree within uncertainty and the overall molecular gas surface densities all agree within error for each region for the two dust models.  The same trend is seen when scaling the CO J=2-1 emission, where the dust-to-gas ratio of the Planck model is also smaller than the Li and Draine model.  %However, for the $\alpha_{CO}$ values, the galaxy as a whole and regions 4 and 5 also show a larger $\alpha_{CO}$ which increases the average surface density of those regions.
+The effects of the dust model (Planck vs Li and Draine) are mainly seen in the dust-to-gas ratio for the CO J=1-0 emission.  Since the major difference in the two models was the resulting dust mass due to different reference opacity values, it is reasonable that the Li and Draine model produces larger dust-to-gas ratios since it has a smaller reference opacity.  The values of $\alpha_{CO}$ derived from the two dust models agree within uncertainty and the overall molecular gas surface densities all agree within error for each region for the two dust models.  The same trend is seen when scaling the CO J=2-1 emission, where the dust-to-gas ratio of the Planck model is also smaller than the Li and Draine model.  %However, for the $\alpha_{CO}$ values, the galaxy as a whole and regions 4 and 5 also show a larger $\alpha_{CO}$ which increases the average surface density of those regions.
   
-  The difference in using either the CO J=1-0 or CO J=2-1 as the molecular hydrogen tracer is seen in the value of $\alpha_{CO}$.  Using the CO J=2-1 emission with a 2-1/1-0 ratio applied, the conversion factor is significantly increased in regions 4 and 5, while the conversion factor iss decreased in regions 2 and 6.  The increase in regions 4 and 5 is large enough to increase the conversion factor for the galaxy as a whole despite the decrease in regions 2 and 6.  Despite the change in $\alpha_{CO}$ values in each region, we still see the same masses for all of the regions except for regions 4 and 5.  The change in H$_2$ surface densities are due to the behavior of the 2-1/1-0 ratio in these regions.  Region 5 displays a large gradient in the 2-1/1-0 ratio from north to south along the spiral arm, and the factor of 4 change in region 4 is due to the entire region's 2-1/1-0 ratio being nearly double the mean value of the galaxy. 
+  The difference in using either the CO J=1-0 or CO J=2-1 as the molecular hydrogen tracer is seen in the value of $\alpha_{CO}$.  Using the CO J=2-1 emission with a 2-1/1-0 ratio applied, the conversion factor is significantly increased in regions 4 and 5, while the conversion factor is decreased in regions 2 and 6.  The increase in regions 4 and 5 is large enough to increase the conversion factor for the galaxy as a whole despite the decrease in regions 2 and 6.  Despite the change in $\alpha_{CO}$ values in each region, we still see the same masses for all of the regions except for regions 4 and 5.  The change in H$_2$ surface densities are due to the behavior of the 2-1/1-0 ratio in these regions.  Region 5 displays a large gradient in the 2-1/1-0 ratio from north to south along the spiral arm, and the factor of 4 change in region 4 is due to the entire region's 2-1/1-0 ratio being nearly double the mean value of the galaxy. 
   
-The difference in $\alpha_{CO}$ between the CO J=1-0 emission and the converted CO J=2-1 emission raises the question of which value we should trust.  The answer lies primarily in whether we are concerned with the dense or diffuse molecular ISM.  If we are interested in the diffuse molecular ISM such as the outer regions of a GMC, \cite{wilson1990} showed in M33 that over half of the CO J=1-0 emission is due to diffuse gas, so using this transition would be ideal.  If the dense molecular ISM is being examined such as the inner regions of a GMC, then the CO J=2-1 emission would be more appropriate to determine the H$_2$ abundance.  Since we are not able to resolve individual GMCs and are interested in the overall molecular ISM of NGC3627, both play a role in understanding the abundance of H$_2$ in the system.
+The difference in $\alpha_{CO}$ between the CO J=1-0 emission and the converted CO J=2-1 emission raises the question of which value we should trust.  The answer lies primarily in whether we are concerned with the dense or diffuse molecular ISM, or the dense and less dense components of a GMC.  If we are interested in the diffuse molecular ISM such as the outer regions of a GMC, \cite{wilson1990} showed in M33 that over half of the CO J=1-0 emission is due to diffuse gas, so using this transition would be ideal.  If the dense molecular ISM is being examined such as the inner regions of a GMC, then the CO J=2-1 emission would be more appropriate to determine the H$_2$ abundance.  Since we are not able to resolve individual GMCs and are interested in the overall molecular ISM of NGC3627, both play a role in understanding the abundance of H$_2$ in the system since both the dense areas of a GMC traced by CO J=2-1 and less dense areas of a GMC traced by CO J=1-0 will be present in all of the regions being analyzed.
 
 \section{Comparison of Results with Previous Work}
 
-If NGC3627 were to have Milky Way like values for $\alpha_{CO}$, we would expect $\alpha_{CO}\approx$4 \citep{sandstrom2013}.  However, the $\alpha_{CO}$ values calculated using the the CO J=2-1 emission suggest NGC3627 is similar to U/LIRG type galaxies whose $\alpha_{CO}$ range is more like 0.3 - 1.3 M$_\odot$ pc$^{-2}$ (K km s$^{-1}$)$^{-1}$ \citep{downes1998}.  The results using the CO J=1-0 emission fall below even the U/LIRG range.  Even our smallest dust-to-gas ratio lies above the typical values found in late type galaxies of 0.005 - 0.01 \citep{smith2012}.  If we compare our Li and Draine results to values recently calculated using the same method by \cite{sandstrom2013}, we find that our conversion factor is much lower than their average for NGC3627 of 1.2 M$_\odot$ pc$^{-2}$ (K km s$^{-1}$)$^{-1}$, and our dust-to-gas ratio is much larger than their average of $\approx$0.017.  
+If NGC3627 were to have Milky Way like values for $\alpha_{CO}$, we would expect $\alpha_{CO}\approx$4 M$_\odot$ pc$^{-2}$\citep{sandstrom2013}.  However, the $\alpha_{CO}$ values calculated using the the CO J=2-1 emission suggest NGC3627 is similar to U/LIRG type galaxies whose $\alpha_{CO}$ range is more like 0.3 - 1.3 M$_\odot$ pc$^{-2}$ (K km s$^{-1}$)$^{-1}$ \citep{downes1998}.  The results using the CO J=1-0 emission fall below even the U/LIRG range.  Even our smallest dust-to-gas ratio lies above the typical values found in late type galaxies of 0.005 - 0.01 \citep{smith2012}.  If we compare our Li and Draine results to values recently calculated using the same method by \cite{sandstrom2013}, we find that our conversion factor is much lower than their average for NGC3627 of 1.2 M$_\odot$ pc$^{-2}$ (K km s$^{-1}$)$^{-1}$, and our dust-to-gas ratio is much larger than their average of $\approx$0.017.  
 
 The low $\alpha_{CO}$ and high dust-to-gas ratios are likely due to the filtering process applied to our data ($\S$\ref{ancillary}), in particular, the amount of the HI surface density removed by the filtering.  If the HI emission is small, the product of I$_{CO}\alpha_{CO}$ will dominate the denominator of equation \ref{eq:dgr} essentially removing the $\Sigma_{HI}$ term.  The effect of this would result in 
 
@@ -185,7 +185,7 @@ The low $\alpha_{CO}$ and high dust-to-gas ratios are likely due to the filterin
 
 \noindent where the degeneracy between $\delta_{dgr}$ and $\alpha_{CO}$ is apparent.  By removing a significant portion of the HI surface density we have weakened the constraint of the method, and strengthened the possibility for degeneracy.
 
-As a crude test, we used the unfiltered gas data with the filtered Li and Draine dust surface densities to establish comparable values with the results reported by \cite{sandstrom2013}.  This process gives the results shown in Table \ref{tab:no_filt} and a plot similar to Figure \ref{fig:dgr_co10} for region 1 with the nucleus removed is shown in Figure \ref{fig:filt_dgr}.  The unfiltered mean dust-to-gas ratio is shown a function of $\alpha_{CO}$ in Figure \ref{fig:filt_aco_dgr} where the increase in the HI surface density has introduced a plateau at low values for $\alpha_{CO}$.  Removing the filtering has increased the CO J=2-1 results to be in reasonable agreement with the values from \cite{sandstrom2013} over region 1.  The lower dust-to-gas ratios are primarily attributed to the spatial filtering that has occurred, but can also be linked to how the dust mass was calculated.  Using the method we used to determine the dust mass by fitting a single blackbody fit over the cold component can lead to a dust mass nearly a factor of two larger compared to the approach taken by \cite{sandstrom2013} of using the entire infrared spectrum \citep{dale2012}.
+As a crude test, we used the unfiltered gas data with the filtered Li and Draine dust surface densities to establish comparable values with the results reported by \cite{sandstrom2013}.  This process gives the results shown in Table \ref{tab:no_filt} and a plot similar to Figure \ref{fig:dgr_co10} for region 1 with the nucleus removed is shown in Figure \ref{fig:filt_dgr}.  The unfiltered mean dust-to-gas ratio is shown as a function of $\alpha_{CO}$ in Figure \ref{fig:filt_aco_dgr} where the increase in the HI surface density has introduced a plateau at low values for $\alpha_{CO}$.  Removing the filtering has increased the CO J=2-1 results to be in reasonable agreement with the values from \cite{sandstrom2013} over region 1.  The lower dust-to-gas ratios are primarily attributed to the spatial filtering that has occurred, but can also be linked to how the dust mass was calculated.  Using the method we used to determine the dust mass by fitting a single blackbody fit over the cold component can lead to a dust mass nearly a factor of two larger compared to the approach taken by \cite{sandstrom2013} of using the entire infrared spectrum \citep{dale2012}.
 
 \begin{deluxetable}{cccc}
   \tabletypesize{\footnotesize}
@@ -228,14 +228,14 @@ As a crude test, we used the unfiltered gas data with the filtered Li and Draine
  
  \begin{figure}
    \centering
-   \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_output_21_no_filt.eps}
+   \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_output_21_no_filtf.eps}
    \caption[Unfiltered Dust-to-Gas Ratio Determination Plots for CO J=2-1]{Plots of the dust-to-gas ratio vs the H$_2$ to HI surface densities using the best fit $\alpha_{CO}$ (left) and the scatter in the dust-to-gas ratio as a function of $\alpha_{CO}$ (right).  The plots were made using the Li and Draine dust model with the CO J=2-1 molecular tracer with the extended emission in the HI and CO J=2-1 data.}
    \label{fig:filt_dgr}
 \end{figure}
  
  \begin{figure}
    \centering
-   \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_dgr_nf.eps}
+   \includegraphics[width=1.\textwidth]{dgr_imgs/region_1-3_aco_dgr_nff.eps}
    \caption[Mean Dust-to-Gas Ratio vs $\alpha_{CO}$ Without Extended Emission Filtering]{The mean dust-to-gas ratio as a function of $\alpha_{CO}$ in region 1 with the nucleus removed using the Li and Draine dust model and the CO J=2-1 emission as the molecular tracer without any extended emission filtering in the HI or CO J=2-1 data.} 
     \label{fig:filt_aco_dgr}
 \end{figure}

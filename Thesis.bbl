@@ -22,6 +22,14 @@
   {Burton}, {Desert}, {Hartmann}, {Lagache}, \& {Puget}}]{boulanger1996}
 {Boulanger}, F., {Abergel}, A., {Bernard}, J.-P., {et~al.} 1996, \aap, 312, 256
 
+\bibitem[{{Braine} {et~al.}(2010){Braine}, {Gratier}, {Kramer}, {Xilouris},
+  {Rosolowsky}, {Buchbender}, {Boquien}, {Calzetti}, {Quintana-Lacaci},
+  {Tabatabaei}, {Verley}, {Israel}, {van der Tak}, {Aalto}, {Combes},
+  {Garcia-Burillo}, {Gonzalez}, {Henkel}, {Koribalski}, {Mookerjea}, {Roellig},
+  {Schuster}, {Rela{\~n}o}, {Bertoldi}, {van der Werf}, \&
+  {Wiedner}}]{braine2010}
+{Braine}, J., {Gratier}, P., {Kramer}, C., {et~al.} 2010, \aap, 518, L69
+
 \bibitem[{{Burden} \& {Faires}(2001)}]{burden2001}
 {Burden}, R.~L., \& {Faires}, J.~D. 2001, {Numerical analysis}
 
@@ -229,6 +237,9 @@
 
 \bibitem[{{McKee} \& {Ostriker}(2007)}]{mckee2007}
 {McKee}, C.~F., \& {Ostriker}, E.~C. 2007, \araa, 45, 565
+
+\bibitem[{{McMillan}(2011)}]{mcmillan2011}
+{McMillan}, P.~J. 2011, \mnras, 414, 2446
 
 \bibitem[{{Moustakas} {et~al.}(2010){Moustakas}, {Kennicutt}, {Tremonti},
   {Dale}, {Smith}, \& {Calzetti}}]{moustakas2010}
