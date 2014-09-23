@@ -71,12 +71,12 @@ The final 450$\mu$m image was then re-gridded down to a 4$\arcsec$ by 4$\arcsec$
   \tabletypesize{\footnotesize}
   \tablecolumns{6}
   \tablewidth{0pt}
+  \setlength{\tabcolsep}{0.02in} 
   \tablecaption{Properties of NGC3627 SCUBA-2 Observations\label{tab_obs_scuba2}}
-  \tablehead{\colhead{Observation} & \multicolumn{4}{c}{Beam Properties} & \colhead{RMS} \\
-& Main Beam Amplitude & Main Beam FWHM & Error Beam Amplitude & Error Beam FWHM & \it{[mJy / Pixel]}}
+  \tablehead{\colhead{Observation} & \multicolumn{2}{c}{Main Beam} & \multicolumn{2}{c}{Error Beam} & \colhead{RMS} \\ & Amplitude & $\theta_{beam}$ & Amplitude & $\theta_{beam}$ & \it{[mJy / Pixel]}}
   \startdata
     450$\mu$m & 0.854 $\pm$ 0.002 & 7.48$\arcsec$ $\pm$ 0.03$\arcsec$ & 0.146 $\pm$ 0.003 & 23.1$\arcsec$ $\pm$ 0.2$\arcsec$ & 3.42  \\
-    850$\mu$m & 0.9624 $\pm$ 0.0002 & 12.8$\arcsec$ $\pm$ 0.004$\arcsec$ & 0.0376 $\pm$ 0.0002 & 44.5$\arcsec$ $\pm$ 0.09$\arcsec$ &  0.476 \\
+    850$\mu$m & 0.9624 $\pm$ 0.0002 & 12.8$\arcsec$ $\pm$ 0.4$\arcsec$ & 0.0376 $\pm$ 0.0002 & 44.5$\arcsec$ $\pm$ 0.9$\arcsec$ &  0.476 \\
    \enddata
 \end{deluxetable}
 
@@ -138,8 +138,8 @@ The Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGSF
   \tablecolumns{4}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 KINGFISH Observations\label{tab_obs_kfish}}
-  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
- & $\theta_{beam}$ & \it{[mJy/Pixel]}}
+  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of} \\
+ & $\theta_{beam}$ & \it{[mJy/Pixel]} & Emission Removed}
   \startdata
     100$\mu$m & 6.8$\arcsec$ & 2.24 & 11\% \\
     160$\mu$m & 11.6$\arcsec$ & 3.95 & 17\% \\
@@ -164,8 +164,8 @@ The Nearby Galaxies Legacy Survey is an HI-selected set of 155 galaxies containe
   \tablecolumns{4}
   \tablewidth{0pt}
   \tablecaption{Properties of NGC3627 Gas Observations\label{tab_obs_gas}}
-  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of Emission Removed} \\
- & $\theta_{beam}$ & }
+  \tablehead{\colhead{Observation} & \colhead{Beam Properties } & \colhead{RMS} & \colhead{Percentage of } \\
+ & $\theta_{beam}$ & & Emission Removed}
   \startdata
     CO J=1-0 & 15.0$\arcsec$ & 0.681 [K km s$^{-1}$]& 20\% \\
     CO J=2-1 & 13.0$\arcsec$ & 0.305 [K km s$^{-1}$]& 7\% \\    
